@@ -97,7 +97,7 @@
             <div class="col-md-2 col-sm-2 col-xs-7">
                 <div class="logo">
                     <a href="{{ url('/') }}"><img
-                                src="/assets/image/logo.png" alt="Vay tín chấp tiêu dùng VPBank">
+                                src="/assets/image/logo.png" alt="Tài chính thông minh - Tài chính Smart">
                         <h1>
                             Tài chính thông minh - Tài chính Smart
                         </h1>
