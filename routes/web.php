@@ -52,7 +52,10 @@ Route::get('dang-ky', 'Backend\AuthController@registerView');
 Route::post('register', 'Backend\AuthController@register');
 Route::get('logout', 'Backend\AuthController@logout');
 
+// upload image
+Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeController@guiLienHe']);
+
 // frontend
 Route::get('/', 'Frontend\HomeController@index');
-
-Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeController@guiLienHe']);
+Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
+Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');

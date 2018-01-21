@@ -1,3 +1,11 @@
 #vay-tin-chap .vay-vip-xe-may {
     margin-top: 0px !important;
 }
+
+.top-form {
+    overflow: hidden;
+}
+
+.top-form .sunmite_button button {
+    margin-right: 0;
+}
