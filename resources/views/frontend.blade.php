@@ -88,6 +88,38 @@
     @yield('styles')
 </head>
 <body class="home-2">
+<script>
+    window.fbMessengerPlugins = window.fbMessengerPlugins || {
+            init: function () {
+                FB.init({
+                    appId            : '1678638095724206',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v2.10'
+                });
+            }, callable: []
+        };
+    window.fbAsyncInit = window.fbAsyncInit || function () {
+            window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+            window.fbMessengerPlugins.init();
+        };
+    setTimeout(function () {
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    }, 0);
+</script>
+
+<div
+        class="fb-customerchat"
+        page_id="175253416410272"
+        ref="">
+</div>
 
 
 <!--Start nav  area -->
@@ -137,7 +169,7 @@
                         <li class=""><a
                                     href="{{ url('/#') }}">Đầu tư hiệu quả</a></li>
                         <li class=""><a
-                                    href="{{ url('/#') }}">Tin tức Tài chính Smart</a></li>
+                                    href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
 
                     </ul>
                 </div>
@@ -145,11 +177,13 @@
             <!--moblie menu area-->
             <div class="dropdown mabile_menu">
                 <a data-toggle="dropdown" class="mobile-menu"
-                   href="#"><span>  </span><i
+                   href="#" ><span>  </span><i
                             class="fa fa-bars" style="font-size: 25px"></i></a>
                 <ul class="dropdown-menu mobile_menus drop_mobile navid">
-                    <li class="current">
-                        <a href="{{ url('/vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
+                    <li>
+                        <a href="{{ url('/') }}">Trang chủ</a></li>
+                    <li >
+                        <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li ><a
                                 href="{{ url('/') }}">Khuyến mãi tối ưu</a></li>
                     <li class=""><a
@@ -157,7 +191,7 @@
                     <li class=""><a
                                 href="{{ url('/') }}">Đầu tư hiệu quả</a></li>
                     <li class=""><a
-                                href="{{ url('/') }}">Tin tức Tài chính Smart</a></li>
+                                href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
                 </ul>
             </div>
             <!--end nav area-->
@@ -168,6 +202,45 @@
 
 @yield('content')
 
+<!-- JS -->
+<!-- jquery-1.11.3.min js
+============================================ -->
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap js
+============================================ -->
+<script src="/assets/js/bootstrap.min.js"></script>
+<!-- owl.carousel.min js
+============================================ -->
+<script src="/assets/js/owl.carousel.min.js"></script>
+
+<!-- bootstrap-slider.min js
+============================================ -->
+<script src="/assets/js/bootstrap-slider.min.js"></script>
+
+<!-- plugins js
+============================================ -->
+<!-- counterup js
+============================================ -->
+<!-- MixItUp js-->
+<script src="/assets/js/jquery.mixitup.js"></script>
+<!-- Nivo Slider JS -->
+<script src="/assets/js/jquery.nivo.slider.pack.js"></script>
+<script src="/assets/js/jquery.nav.js"></script>
+<!-- wow js
+============================================ -->
+<script src="/assets/js/wow.js"></script>
+<!--Activating WOW Animation only for modern browser-->
+<!--[if !IE]><!-->
+<script type="text/javascript">new WOW().init();</script>
+<!--<![endif]-->
+<!-- Add venobox ja -->
+<script type="text/javascript" src="/assets/js/venobox.min.js"></script>
+
+
+<!-- main js
+============================================ -->
+<script src="/assets/js/main.js"></script>
+
 @yield('scripts')
 
 <script>
@@ -177,8 +250,8 @@
         $('.menu .navid li a').each(function (index) {
             var menu = $(this).attr('href');
 
-            if (menu.search(path) > -1) {
-                $(this).parent().addClass('current');
+            if (menu.search(path) > -1 && path != '/') {
+                $(this).parent().addClass('current1');
             }
         })
     })

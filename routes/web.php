@@ -58,4 +58,6 @@ Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeContro
 // frontend
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
+Route::get('tin-tuc', 'Frontend\NewsController@index');
+
 Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Customer;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class VayVonController extends Controller
 {
@@ -16,6 +18,7 @@ class VayVonController extends Controller
         $name = $request->input('name');
         $phone = $request->input('phone');
         $email = $request->input('email');
+        $bank = $request->input('bank');
 
         $name = trim($name);
         $phone = trim($phone);
@@ -29,11 +32,14 @@ class VayVonController extends Controller
         }
 
         try {
-            Customer::create([
-                'name' => $name,
+            DB::table('customers')->updateOrInsert([
                 'phone' => $phone,
+                'bank' => $bank
+            ],[
+                'name' => $name,
                 'email' => $email,
-                'source' => config('const.FROM_WEB')
+                'source' => config('const.FROM_WEB'),
+                'created_at' => Carbon::now()
             ]);
         } catch (\Exception $ex) {
 //            dd($ex->getMessage() . '|' . $ex->getLine());

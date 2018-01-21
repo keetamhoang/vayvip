@@ -32,6 +32,10 @@
                 margin-top: 30px;
             }
         }
+
+        #tai-sao img {
+
+        }
     </style>
 @endsection
 
@@ -53,6 +57,19 @@
 
 
                     <div class="top-form">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 col">
+                                <div class="inputt input_change">
+                                    <span class="message_icon"><img src="/assets/image/icon_bank.png"></span>
+                                    <select class="form-control name bank" name="bank" id="top-bank">
+                                        <option value="" selected>-- Chọn đơn vị cho vay --</option>
+                                        <option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>
+                                        <option value="OCB">Ngân hàng OCB</option>
+                                        <option value="DoctorDong">Doctor Đồng</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-4 col">
                                 <div class="inputt input_change">
@@ -555,7 +572,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="row">
                         <!--section title-->
                         <div class="col-md-12">
@@ -565,29 +582,23 @@
                         </div>
                         <!--end section title-->
                     </div>
-                    <div class="row">
-                        <p style="color:#fff">
+                    <div class="row" id="tai-sao">
+                        <p style="color:#fff; text-align: center">
                             Là một trong những đơn vị chuyên nghiệp với mạng lưới đối tác là các tổ chức tài chính hàng đầu của Việt Nam, Tài chính SMART luôn nỗ lực cải tiến, đem đến những sản phẩm dịch vụ với lợi ích lớn nhất cho Khách hàng. Tại Tài chính SMART, khách hàng sẽ nhận được sự tư vấn để sử dụng dịch vụ phù hợp nhất với nhu cầu của mình.
 
                         </p>
-                        <div class="col-md-6 col-sm-6">
-                            <img src="/assets/image/vpbank_award_01.png" alt="Giải thưởng VPBank"><br><br>
-                            <img src="/assets/image/vpbank_award_03.png" alt="Giải thưởng VPBank"><br><br>
-                            <img src="/assets/image/vpbank_award_05.png" alt="Giải thưởng VPBank"><br><br>
+                        <div class="col-md-12 col-sm-12">
+                            <img src="/assets/image/taisao.png" alt="Đối tác Tài chính Smart">
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <img src="/assets/image/vpbank_award_02.png" alt="Giải thưởng VPBank"><br><br>
-                            <img src="/assets/image/vpbank_award_04.png" alt="Giải thưởng VPBank"><br><br>
-                            <img src="/assets/image/vpbank_award_06.png" alt="Giải thưởng VPBank"><br><br>
-                        </div>
+
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service_thum">
-                        <div class="service_img"><img src="/assets/image/tai-sao-chon-vpbank-sr2.png" alt="Tại sao chọn VPBank">
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="col-md-4">--}}
+                    {{--<div class="service_thum">--}}
+                        {{--<div class="service_img"><img src="/assets/image/tai-sao-chon-vpbank-sr2.png" alt="Tại sao chọn VPBank">--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -708,6 +719,19 @@
                 </div>
                 <!--end section title-->
             </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col">
+                    <div class="inputt input_change">
+                        <span class="message_icon"><img src="/assets/image/icon_bank.png"></span>
+                        <select class="form-control name bank" name="bank" id="bot-bank">
+                            <option value="" selected>-- Chọn đơn vị cho vay --</option>
+                            <option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>
+                            <option value="OCB">Ngân hàng OCB</option>
+                            <option value="DoctorDong">Doctor Đồng</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="row bot-form text-center">
 
                 {{--<div class="col-md-2">--}}
@@ -757,20 +781,59 @@
     <div class="modal fade dang-ky-modal" style="z-index: 1071" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLongTitle">Còn 1 bước nữa thôi - VAY SMART
-                        <a type="button" href="http://member.civi.vn/cpc/?sid=30429&bid=10031700" target="_blank" class="btn btn-danger" style="margin-left: 20px">Tiếp tục với ngân hàng COM-B</a>
-                        <a type="button" href="https://m.me/IBVayvonOnline" target="_blank" class="btn" style="margin-left: 20px;border: 2px solid #0080ff;color: #0080ff;font-weight: bold">
-                            <img style="width: 24px;margin-top: -2px;" src="/assets/image/messenger.png"> <span>Hỗ trợ vay vốn trực tuyến</span></a>
-                    </h4>
+                <div class="modal-header" style="padding-bottom: 5px;">
+                    <h4 class="modal-title" id="exampleModalLongTitle">Còn 1 bước nữa thôi - <span id="name-bank">Ngân hàng OCB</span></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    <div style="margin-top: 10px;">
+                        <a id="next-bank" type="button" href="http://member.civi.vn/cpc/?sid=30429&bid=10031700" target="_blank" class="btn btn-danger" style="margin-bottom: 10px;margin-right: 20px;"><i class="fa fa-hand-o-right "></i> Tiếp tục với ngân hàng OCB</a>
+                        <a type="button" href="https://m.me/IBVayvonOnline" target="_blank" class="btn" style="margin-bottom: 10px;border: 2px solid #0080ff;color: #0080ff;font-weight: bold">
+                            <img style="width: 24px;margin-top: -2px;" src="/assets/image/messenger.png"> <span>Tư vấn vay vốn trực tuyến</span></a>
+                    </div>
                 </div>
                 <div class="modal-body">
-                    <p style="color: red">Clip - Hướng dẫn hoàn thành quá trình vay vốn tại ngân hàng COM-B</p>
+                    <p style="color: red" id="clip-bank">Clip - Hướng dẫn hoàn thành quá trình vay vốn tại ngân hàng OCB</p>
                     <div class="videoWrapper">
-                        <iframe  src="https://www.youtube.com/embed/ifj7aGzuNIc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe id="yt-frame" src="https://www.youtube.com/embed/ifj7aGzuNIc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade tu-van-modal" style="z-index: 1071" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="padding-bottom: 5px;">
+                    <h4 class="modal-title" id="exampleModalLongTitle">Tư vấn đơn vị cho vay phù hợp cho bạn</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div style="margin-top: 10px;">
+                        <a type="button" href="https://m.me/IBVayvonOnline" target="_blank" class="btn" style="margin-bottom: 10px;border: 2px solid #0080ff;color: #0080ff;font-weight: bold">
+                            <img style="width: 24px;margin-top: -2px;" src="/assets/image/messenger.png"> <span>Tư vấn vay vốn trực tuyến</span></a>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h5><b>* Bạn nên chọn Doctor Đồng nếu:</b></h5>
+                        <p style="color: #000">- Bạn cần lấy tiền ngay trong 24h<br>
+                            - Khoản vay dưới 10 triệu, thanh toán trong thời gian 1 tháng<br>
+                            - Vay để tiêu dùng khi có nhu cầu gấp<br>
+                            - Hiện những giấy tờ bạn có thể đáp ứng ngay là Chứng minh thư</p>
+                        <h5><b>* Bạn nên chọn Ngân hàng OCB khi:</b></h5>
+                        <p style="color: #000">
+                            - Bạn vay vốn lớn hơn 10 triệu<br>
+                            - Thời hạn thanh toán được chấp thuận từ 6 đến 36 tháng<br>
+                            - Vay phục vụ tiêu dùng lớn hoặc kinh doanh...<br>
+                            - Các giấy tờ bạn có là Chứng minh bản thân, sổ hộ khẩu, nếu có thêm chứng minh thu nhập thì càng chắc chắn<br>
+                            - Thời gian nhận tiền cũng rất nhanh, có thể là trong ngày nếu bạn đáp ứng đủ hồ sơ yêu cầu
+                        </p>
                     </div>
 
                 </div>
@@ -783,44 +846,7 @@
 @endsection
 
 @section('scripts')
-    <!-- JS -->
-    <!-- jquery-1.11.3.min js
-    ============================================ -->
-    <script src="/assets/js/jquery-1.11.3.min.js"></script>
-    <!-- bootstrap js
-    ============================================ -->
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <!-- owl.carousel.min js
-    ============================================ -->
-    <script src="/assets/js/owl.carousel.min.js"></script>
 
-    <!-- bootstrap-slider.min js
-    ============================================ -->
-    <script src="/assets/js/bootstrap-slider.min.js"></script>
-
-    <!-- plugins js
-    ============================================ -->
-    <!-- counterup js
-    ============================================ -->
-    <!-- MixItUp js-->
-    <script src="/assets/js/jquery.mixitup.js"></script>
-    <!-- Nivo Slider JS -->
-    <script src="/assets/js/jquery.nivo.slider.pack.js"></script>
-    <script src="/assets/js/jquery.nav.js"></script>
-    <!-- wow js
-    ============================================ -->
-    <script src="/assets/js/wow.js"></script>
-    <!--Activating WOW Animation only for modern browser-->
-    <!--[if !IE]><!-->
-    <script type="text/javascript">new WOW().init();</script>
-    <!--<![endif]-->
-    <!-- Add venobox ja -->
-    <script type="text/javascript" src="/assets/js/venobox.min.js"></script>
-
-
-    <!-- main js
-    ============================================ -->
-    <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
         $('#top-name').change(function () {
             $('#bot-name').val($('#top-name').val());
@@ -920,10 +946,25 @@
                 var name = $('#top-name').val();
                 var phone = $('#top-phone').val();
                 var email = $('#top-email').val();
+                var bank = $('#top-bank').val();
 
                 if (name.trim() == '' || phone.trim() == '') {
                     alert('Không được để trống thông tin của bạn!');
                     return;
+                }
+
+                var textBank = $("#top-bank option:selected").text();
+
+                $('#name-bank').html('Tiếp tục với ' + textBank);
+                $('#next-bank').html('<i class="fa fa-hand-o-right "></i> Tiếp tục với ' + textBank);
+                $('#clip-bank').html('Clip - Hướng dẫn hoàn thành quá trình vay vốn tại ' + textBank);
+
+                if (bank == 'OCB') {
+                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/ifj7aGzuNIc?rel=0&amp;controls=0&amp;showinfo=0')
+                    $('#next-bank').attr('href', 'http://member.civi.vn/cpc/?sid=30429&bid=10031700')
+                } else if (bank == 'DoctorDong') {
+                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/5_f670NXxEw?rel=0&amp;controls=0&amp;showinfo=0')
+                    $('#next-bank').attr('href', 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=https%3A%2F%2Fdoctordong.vn%2F%3Fpartner_token%3DBq7OGnaSE-nrzepIjzrKeUszWQFY0YM49EHU5LLo6g8')
                 }
 
                 $.ajax({
@@ -931,7 +972,8 @@
                     data: {
                         name: name,
                         phone: phone,
-                        email: email
+                        email: email,
+                        bank: bank
                     },
                     url: '{{ url('dang-ky-khoan-vay') }}',
                     dataType: 'json',
@@ -951,10 +993,25 @@
                 var name = $('#bot-name').val();
                 var phone = $('#bot-phone').val();
                 var email = $('#bot-email').val();
+                var bank = $('#bot-bank').val();
 
                 if (name.trim() == '' || phone.trim() == '') {
                     alert('Không được để trống thông tin của bạn!');
                     return;
+                }
+
+                var textBank = $("#bot-bank option:selected").text();
+
+                $('#name-bank').html('Tiếp tục với ' + textBank);
+                $('#next-bank').html('<i class="fa fa-hand-o-right "></i> Tiếp tục với ' + textBank);
+                $('#clip-bank').html('Clip - Hướng dẫn hoàn thành quá trình vay vốn tại ' + textBank);
+
+                if (bank == 'OCB') {
+                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/ifj7aGzuNIc?rel=0&amp;controls=0&amp;showinfo=0')
+                    $('#next-bank').attr('href', 'http://member.civi.vn/cpc/?sid=30429&bid=10031700')
+                } else if (bank == 'DoctorDong') {
+                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/5_f670NXxEw?rel=0&amp;controls=0&amp;showinfo=0')
+                    $('#next-bank').attr('href', 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=https%3A%2F%2Fdoctordong.vn%2F%3Fpartner_token%3DBq7OGnaSE-nrzepIjzrKeUszWQFY0YM49EHU5LLo6g8')
                 }
 
                 $.ajax({
@@ -962,7 +1019,8 @@
                     data: {
                         name: name,
                         phone: phone,
-                        email: email
+                        email: email,
+                        bank: bank
                     },
                     url: '{{ url('dang-ky-khoan-vay') }}',
                     dataType: 'json',
@@ -975,6 +1033,14 @@
                     }
                 });
             });
+
+            $('#top-bank, #bot-bank').on('change', function () {
+                if (this.value == 'UNKNOWN') {
+                    $('.tu-van-modal').modal('show');
+                }
+            });
         });
     </script>
+
+
 @endsection
