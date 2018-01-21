@@ -1,7 +1,7 @@
 @extends('frontend')
 
 @section('styles')
-    <link rel="preload" href="https://kenh14cdn.com/web_font/SFD-Bold.woff2" as="font">
+    <link rel="preload" href="/assets/news/fonts/SFD-Bold.woff2" as="font">
 
 
     <link href="/assets/news/css/kenh14per-20180119v1.min.css" rel="stylesheet" type="text/css">
