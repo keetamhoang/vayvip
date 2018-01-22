@@ -367,7 +367,7 @@
                                                 </div>
                                                 <div class="kds-hot-daily" id="ulTinNoiBat"
                                                      data-marked-zoneid="k14_detail_tin_noi_bat">
-                                                    <h3 class="kds-title">Bài viết có thể bạn quan tâm</h3>
+                                                    <h3 class="kds-title">có thể bạn quan tâm</h3>
                                                     <div class="knd-wrapper swiper-container-horizontal">
                                                         <ul class="khd-list swiper-wrapper">
                                                             @php $relates = \App\Models\Post::where('category_id', $post->category_id)->inRandomOrder()->limit(4)->get() @endphp
