@@ -20,14 +20,14 @@
         <li class="nav-item">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-users"></i>
-                <span class="title">Quản lý thành viên</span>
+                <span class="title">Quản lý quản trị viên</span>
                 <span class="selected"></span>
                 <span class="arrow open"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start">
                     <a href="{{ url('admin/users') }}" class="nav-link ">
-                        <span class="title">Danh sách thành viên</span>
+                        <span class="title">Danh sách quản trị viên</span>
                         <span class="selected"></span>
                     </a>
                 </li>

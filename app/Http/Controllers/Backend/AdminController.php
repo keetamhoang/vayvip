@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminController extends Controller
         try {
             $filename = md5(time()) . str_slug($file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
 
-            $name = '/public/files/'. $filename;
+            $name = '/files/'. $filename;
             $filename = public_path('files').'/'.$filename;
 
             Image::make($file->getRealPath())->save($filename);
