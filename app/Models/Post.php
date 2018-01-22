@@ -14,4 +14,9 @@ class Post extends Model
     {
         return $this->attributes['slug'].'-'.$this->attributes['id'];
     }
+
+    public function account()
+    {
+        return $this->belongsTo('App\User', 'account_id', 'id');
+    }
 }

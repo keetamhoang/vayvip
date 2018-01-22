@@ -204,15 +204,11 @@
                                                         <div class="kbwc-header mb-20">
 
 
-                                                            <h1 class="kbwc-title">SỐC: Em trai Ha Ji Won qua đời ở tuổi 34
-                                                                vì bệnh trầm cảm</h1>
+                                                            <h1 class="kbwc-title">{{ $post->title }}</h1>
 
                                                             <div class="kbwc-meta" sourceid="7">
-                                                                <span class="kbwcm-author">Nhã An, </span>
-                                                                <span class="kbwcm-source">Theo <a target="_blank"
-                                                                                                   rel="nofollow"
-                                                                                                   href="http://ttvn.vn/">Trí Thức Trẻ</a> </span>
-                                                                <span class="kbwcm-time" title="2018-01-21T22:20:10">22:20 21/01/2018</span>
+                                                                <span class="kbwcm-author"><i class="fa fa-user"></i> {{ $post->account->name }}, </span>
+                                                                <span class="kbwcm-time" title="{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i') }}">{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i') }}</span>
                                                             </div>
 
                                                             <div class="kbwc-socials">
@@ -227,8 +223,7 @@
 
 
                                                             <h2 class="knc-sapo">
-                                                                Hiện tại, các fan đang gửi tới gia đình Ha Ji Won những lời
-                                                                động viên và chia buồn sâu sắc nhất.
+                                                                {!! $post->short_desc !!}
                                                             </h2>
 
 
@@ -284,62 +279,7 @@
                                                                 <!-- Kham pha -->
 
 
-                                                                <p>Hàng loạt các trang báo xứ Hàn đưa tin sốc, Jeon Tae
-                                                                    Soo - cậu em trai của<a title="Ha Ji Won"
-                                                                                                           class="link-tag"
-                                                                                                           target="_blank"
-                                                                                                           href="http://kenh14.vn/ha-ji-won.html"> Ha Ji Won</a> đã qua đời ngày hôm nay, hưởng dương 34 tuổi. Nam diễn viên qua đời sau một thời gian dài chiến đấu với chứng bệnh trầm cảm.
-                                                                </p>
-                                                                <div class="VCSortableInPreviewMode alignCenter active"
-                                                                     type="Photo" data-style="align-center" style="">
-                                                                    <div><a href="/assets/news/detail/image/gas-1516547205102.jpg"
-                                                                            data-fancybox-group="img-lightbox"
-                                                                            title="Jeon Tae Soo - em trai của Ha Ji Won"
-                                                                            target="_blank" class="detail-img-lightbox"><img
-                                                                                    src="/assets/news/detail/image/gas-1516547205102.jpg"
-                                                                                    id="img_b2813b50-febc-11e7-8811-033600859e0f"
-                                                                                    w="550" h="389"
-                                                                                    alt="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm - Ảnh 1."
-                                                                                    title="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm - Ảnh 1."
-                                                                                    rel="lightbox"
-                                                                                    photoid="b2813b50-febc-11e7-8811-033600859e0f"
-                                                                                    type="photo" style="width:100%;max-width:100%;"
-                                                                                    data-original="https://kenh14cdn.com/2018/gas-1516547205102.jpg"
-                                                                                    width="" height="" class="lightbox-content"></a>
-                                                                    </div>
-                                                                    <div class="PhotoCMS_Caption"><p
-                                                                                data-placeholder="[nhập chú thích]" class="">
-                                                                            Jeon Tae Soo - em trai của Ha Ji Won</p></div>
-                                                                </div>
-                                                                <p>Được biết, lễ tang sẽ được tổ chức kín đáo và lặng lẽ với
-                                                                    sự tham dự của người thân và gia đình. Hiện những dòng
-                                                                    chia sẻ và động viên trên mạng xã hội đang được gửi đến
-                                                                    gia đình Ha Ji Won.</p>
-                                                                <div class="VCSortableInPreviewMode active noCaption big-image-detail"
-                                                                     type="Photo" style="">
-                                                                    <div>
-                                                                        <a href="/assets/news/detail/image/1387193888-1541190820-1516547492442.jpg"
-                                                                           data-fancybox-group="img-lightbox" title=""
-                                                                           target="_blank" class="detail-img-lightbox"><img
-                                                                                    src="/assets/news/detail/image/1387193888-1541190820-1516547492442.jpg"
-                                                                                    id="img_5ddd2ea0-febd-11e7-a98d-1b9a1f1c3ac8"
-                                                                                    w="958" h="1440"
-                                                                                    alt="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm - Ảnh 2."
-                                                                                    title="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm - Ảnh 2."
-                                                                                    rel="lightbox"
-                                                                                    photoid="5ddd2ea0-febd-11e7-a98d-1b9a1f1c3ac8"
-                                                                                    type="photo" style="max-width:100%;"
-                                                                                    data-original="https://kenh14cdn.com/2018/1387193888-1541190820-1516547492442.jpg"
-                                                                                    width="" height="" class="lightbox-content"></a>
-                                                                    </div>
-                                                                    <div class="PhotoCMS_Caption"></div>
-                                                                </div>
-                                                                <p>Jeon Tae Soo sinh năm 1984, được chú ý với những tác phẩm
-                                                                    điện ảnh như "Sungkyunkwan scandal", "It's alright,
-                                                                    daddy's daughter" của SBS và "All my love" của MBC.</p>
-                                                                <p style="text-align: right;"><span
-                                                                            style="">Nguồn: Sina</span></p>
-                                                                <div id="admzone474524"></div>
+                                                                {!! $post->content !!}
 
                                                             </div>
                                                             <!-- LIVE -->

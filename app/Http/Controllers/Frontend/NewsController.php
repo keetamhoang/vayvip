@@ -16,7 +16,9 @@ class NewsController extends Controller
         return view('frontend.news.index')->with(compact('bigPosts', 'otherPosts'));
     }
 
-    public function detail(Request $request) {
-        return view('frontend.news.detail');
+    public function detail($slug, $id) {
+        $post = Post::find($id);
+
+        return view('frontend.news.detail', compact('post'));
     }
 }
