@@ -1,10 +1,19 @@
 @extends('frontend')
 
+@section('meta')
+    <meta property="og:url" content="http://taichinhsmart.vn/tin-tuc/{{ $post->slug }}">
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ $post->title }} - Tài chính SMART" />
+    <meta property="og:description"   content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Tài chính thông minh trong tầm tay của bạn.'  !!}" />
+    <meta property="og:image"         content="http://taichinhsmart.vn{{ $post->image }}" />
+@endsection
+
 @section('styles')
     <link rel="preload" href="/assets/news/fonts/SFD-Bold.woff2" as="font">
     <link href="/assets/news/detail/css/kenh14flat-20180109v1.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/news/detail/css/detailflat-20171205v3.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/news/detail/css/responsive-20170407v1.min.css" rel="stylesheet">
+
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
     <style>
@@ -117,7 +126,11 @@
 
                             <div class="kbw-submenu">
                                 <div class="w1040 clearfix">
-                                    <div style="padding: 17px 0px;color: #078145"><a href="#">ABC</a> <i class="fa fa-angle-right"></i> <a href="#">AXX</a></div>
+                                    <div style="padding: 17px 0px;color: #078145"><a href="#">{{ $post->category->name }}</a>
+                                        {{--<i class="fa fa-angle-right"></i> <a href="#">AXX</a>--}}
+                                        @if (auth('admin')->check())
+                                            <a style="float: right;" href="{{ url('admin/posts/' . $post->id) }}">Sửa bài viết</a>
+                                        @endif</div>
                                 </div>
                             </div>
                             <style>
@@ -212,8 +225,7 @@
                                                             </div>
 
                                                             <div class="kbwc-socials">
-
-                                                                <div>Chia se</div>
+                                                                <div class="fb-like" data-href="{{ url('tin-tuc/' . $post->slug.'?ref=fb') }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                                             </div>
 
 
@@ -230,43 +242,18 @@
                                                             <div class="knc-relate-wrapper">
                                                                 <ul class="krw-list">
 
-                                                                    <li class="krwli">
-                                                                        <a data-newsid="20180116171506947"
-                                                                           href="http://kenh14.vn/pgone-sinh-tram-cam-doi-tu-sat-sau-scandal-ngoai-tinh-va-su-nghiep-xuong-doc-20180116171506947.chn"
-                                                                           title="PGone sinh trầm cảm, đòi tự sát sau scandal ngoại tình và sự nghiệp xuống dốc?"
-                                                                           data-popup-url="/pgone-sinh-tram-cam-doi-tu-sat-sau-scandal-ngoai-tinh-va-su-nghiep-xuong-doc-20180116171506947rf20180121221924009.chn"
-                                                                           class="show-popup visit-popup">
-                                                                            PGone sinh trầm cảm, đòi tự sát sau scandal
-                                                                            ngoại tình và sự nghiệp xuống dốc?
-                                                                            <i class="icon-show-popup"></i>
-                                                                        </a>
-                                                                    </li>
-
-                                                                    <li class="krwli">
-                                                                        <a data-newsid="20180102214442498"
-                                                                           href="http://kenh14.vn/gay-tranh-cai-vi-phat-ngon-ve-benh-tram-cam-sau-khi-jonghyun-mat-baekhyun-chinh-thuc-len-tieng-giai-bay-20180102214442498.chn"
-                                                                           title="Gây tranh cãi vì phát ngôn về bệnh trầm cảm sau khi Jonghyun mất, Baekhyun chính thức lên tiếng giãi bày"
-                                                                           data-popup-url="/gay-tranh-cai-vi-phat-ngon-ve-benh-tram-cam-sau-khi-jonghyun-mat-baekhyun-chinh-thuc-len-tieng-giai-bay-20180102214442498rf20180121221924009.chn"
-                                                                           class="show-popup visit-popup">
-                                                                            Gây tranh cãi vì phát ngôn về bệnh trầm cảm sau
-                                                                            khi Jonghyun mất, Baekhyun chính thức lên tiếng
-                                                                            giãi bày
-                                                                            <i class="icon-show-popup"></i>
-                                                                        </a>
-                                                                    </li>
-
-                                                                    <li class="krwli">
-                                                                        <a data-newsid="20171224001054466"
-                                                                           href="http://kenh14.vn/kha-chan-dong-tram-cam-doi-tu-tu-sau-khi-chia-tay-nguoi-yeu-hon-6-tuoi-sau-3-nam-hen-ho-20171224001054466.chn"
-                                                                           title="Kha Chấn Đông trầm cảm, đòi tự tử sau khi chia tay người yêu hơn 6 tuổi sau 3 năm hẹn hò?"
-                                                                           data-popup-url="/kha-chan-dong-tram-cam-doi-tu-tu-sau-khi-chia-tay-nguoi-yeu-hon-6-tuoi-sau-3-nam-hen-ho-20171224001054466rf20180121221924009.chn"
-                                                                           class="show-popup visit-popup">
-                                                                            Kha Chấn Đông trầm cảm, đòi tự tử sau khi chia
-                                                                            tay người yêu hơn 6 tuổi sau 3 năm hẹn hò?
-                                                                            <i class="icon-show-popup"></i>
-                                                                        </a>
-                                                                    </li>
-
+                                                                    @php $randoms = \App\Models\Post::inRandomOrder()->limit(3)->get(); @endphp
+                                                                    @foreach($randoms as $random)
+                                                                        <li class="krwli">
+                                                                            <a href="{{ url('tin-tuc/' . $random->slug) }}"
+                                                                               title="{{ $random->title }}"
+                                                                               data-popup-url="{{ url('tin-tuc/' . $random->slug) }}"
+                                                                               class="show-popup visit-popup">
+                                                                                {{ $random->title }}
+                                                                                <i class="icon-show-popup"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                    @endforeach
                                                                 </ul>
                                                             </div>
 
@@ -284,19 +271,28 @@
                                                             </div>
                                                             <!-- LIVE -->
 
-
                                                             <div data-check-position="body_end"></div>
 
                                                             <div class="knc-rate-link">
-
-                                                                <a href="http://kenh14.vn/lan-truyen-cip-con-gai-thua-nhan-gia-nai-luong-bi-ly-tieu-lo-cam-sung-va-su-that-bat-ngo-dang-sau-20180121182958509.chn"
-                                                                   title="Lan truyền clip con gái thừa nhận Giả Nãi Lượng bị Lý Tiểu Lộ &quot;cắm sừng&quot; và sự thật bất ngờ đằng sau"
+                                                                @php
+                                                                    $nextPost = \App\Models\Post::where('id', '>', $post->id)->orderBy('id', 'asc')->first();
+                                                                    if (empty($nextPost)) {
+                                                                        $nextPost = \App\Models\Post::where('id', '<', $post->id)->orderBy('id', 'desc')->first();
+                                                                        if (empty($nextPost)) {
+                                                                            $nextPost = $post;
+                                                                        }
+                                                                    }
+                                                                @endphp
+                                                                @if (!empty($nextPost))
+                                                                <a href="{{ url('tin-tuc/'.$nextPost->slug) }}"
+                                                                   title="{{ $nextPost->title }}"
                                                                    class="krl">
-                                                                    Lan truyền clip con gái thừa nhận Giả Nãi Lượng bị Lý
-                                                                    Tiểu Lộ "cắm sừng" và sự thật bất ngờ đằng sau
+                                                                    {{ $nextPost->title }}
                                                                 </a>
+                                                                @endif
 
                                                             </div>
+
                                                         </div>
                                                         <div class="post_embed">
                                                             <div id="admzone38016"></div>
@@ -306,7 +302,7 @@
                                                         <div class="klw-nomargin">
                                                             <div class="klw-new-socials clearfix">
                                                                 <div class="kns-social clearfix">
-
+                                                                        <div class="fb-like" data-href="{{ url('tin-tuc/' . $post->slug.'?ref=fb') }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                                                 </div>
                                                             </div>
                                                             {{--<div class="klw-new-tags clearfix">--}}
@@ -371,70 +367,27 @@
                                                 </div>
                                                 <div class="kds-hot-daily" id="ulTinNoiBat"
                                                      data-marked-zoneid="k14_detail_tin_noi_bat">
-                                                    <h3 class="kds-title">Tin nổi bật kenh 14</h3>
+                                                    <h3 class="kds-title">Bài viết có thể bạn quan tâm</h3>
                                                     <div class="knd-wrapper swiper-container-horizontal">
                                                         <ul class="khd-list swiper-wrapper">
+                                                            @php $relates = \App\Models\Post::where('category_id', $post->category_id)->inRandomOrder()->limit(4)->get() @endphp
+                                                            @foreach($relates as $relate)
+                                                                <li class="khdli swiper-slide col-lg-3">
+                                                                    <a href="{{ url('tin-tuc/'.$relate->slug) }}"
+                                                                       class="kdhli-ava"
+                                                                       title="{{ $relate->title }}">
+                                                                        <img src="{{ $relate->image }}"
+                                                                             alt="{{ $relate->title }}">
+                                                                    </a>
+                                                                    <h3 class="kdhli-title">
+                                                                        <a href="{{ url('tin-tuc/'.$relate->slug) }}"
+                                                                           title="{{ $relate->title }}">
+                                                                            {{ $relate->title }}
+                                                                        </a>
+                                                                    </h3>
+                                                                </li>
+                                                            @endforeach
 
-                                                            <li class="khdli swiper-slide col-lg-3">
-                                                                <a href="http://kenh14.vn/giao-su-quan-dui-noi-ve-he-dieu-hanh-cua-con-nguoi-trong-ky-nguyen-40-20180120022124338.chn"
-                                                                   class="kdhli-ava"
-                                                                   title="&quot;GS quần đùi&quot; nói về những giới hạn trong tư duy của người trẻ ở thời đại công nghệ làm được mọi thứ">
-                                                                    <img src="/assets/news/detail/image/photo1516389576500-1516389576500.jpg"
-                                                                         alt="&quot;GS quần đùi&quot; nói về những giới hạn trong tư duy của người trẻ ở thời đại công nghệ làm được mọi thứ">
-                                                                </a>
-                                                                <h3 class="kdhli-title">
-                                                                    <a href="http://kenh14.vn/giao-su-quan-dui-noi-ve-he-dieu-hanh-cua-con-nguoi-trong-ky-nguyen-40-20180120022124338.chn"
-                                                                       title="&quot;GS quần đùi&quot; nói về những giới hạn trong tư duy của người trẻ ở thời đại công nghệ làm được mọi thứ">
-                                                                        "GS quần đùi" nói về những giới hạn trong tư duy của
-                                                                        người trẻ ở thời đại công nghệ làm được mọi thứ
-                                                                    </a>
-                                                                </h3>
-                                                            </li>
-                                                            <li class="khdli swiper-slide col-lg-3">
-                                                                <a href="http://kenh14.vn/truong-giang-chinh-thuc-noi-loi-xin-loi-sau-man-cau-hon-nha-phuong-gay-tranh-cai-20180122094833416.chn"
-                                                                   class="kdhli-ava"
-                                                                   title="Trường Giang chính thức nói lời xin lỗi sau màn cầu hôn Nhã Phương gây tranh cãi">
-                                                                    <img src="/assets/news/detail/image/photo1516589297610-1516589297611(1).jpg"
-                                                                         alt="Trường Giang chính thức nói lời xin lỗi sau màn cầu hôn Nhã Phương gây tranh cãi">
-                                                                </a>
-                                                                <h3 class="kdhli-title">
-                                                                    <a href="http://kenh14.vn/truong-giang-chinh-thuc-noi-loi-xin-loi-sau-man-cau-hon-nha-phuong-gay-tranh-cai-20180122094833416.chn"
-                                                                       title="Trường Giang chính thức nói lời xin lỗi sau màn cầu hôn Nhã Phương gây tranh cãi">
-                                                                        Trường Giang chính thức nói lời xin lỗi sau màn cầu
-                                                                        hôn Nhã Phương gây tranh cãi
-                                                                    </a>
-                                                                </h3>
-                                                            </li>
-                                                            <li class="khdli swiper-slide col-lg-3">
-                                                                <a href="http://kenh14.vn/soc-em-trai-ha-ji-won-qua-doi-o-tuoi-34-vi-benh-tram-cam-20180121221924009.chn"
-                                                                   class="kdhli-ava"
-                                                                   title="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm">
-                                                                    <img src="/assets/news/detail/image/photo1516547905486-1516547905486.jpg"
-                                                                         alt="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm">
-                                                                </a>
-                                                                <h3 class="kdhli-title">
-                                                                    <a href="http://kenh14.vn/soc-em-trai-ha-ji-won-qua-doi-o-tuoi-34-vi-benh-tram-cam-20180121221924009.chn"
-                                                                       title="SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh trầm cảm">
-                                                                        SỐC: Em trai Ha Ji Won qua đời ở tuổi 34 vì bệnh
-                                                                        trầm cảm
-                                                                    </a>
-                                                                </h3>
-                                                            </li>
-                                                            <li class="khdli swiper-slide col-lg-3" >
-                                                                <a href="http://kenh14.vn/mang-lai-tieng-cuoi-cho-khan-gia-nhung-trong-hanh-trinh-15-nam-tao-quan-cung-khong-it-lan-vuong-phai-nhung-lum-xum-20180110161507369.chn"
-                                                                   class="kdhli-ava"
-                                                                   title="Mang lại tiếng cười cho khán giả nhưng trong hành trình 15 năm, Táo Quân cũng không ít lần vướng phải những lùm xùm">
-                                                                    <img src="/assets/news/detail/image/photo1516263953873-1516263953873(1).jpg"
-                                                                         alt="Mang lại tiếng cười cho khán giả nhưng trong hành trình 15 năm, Táo Quân cũng không ít lần vướng phải những lùm xùm">
-                                                                </a>
-                                                                <h3 class="kdhli-title">
-                                                                    <a href="http://kenh14.vn/mang-lai-tieng-cuoi-cho-khan-gia-nhung-trong-hanh-trinh-15-nam-tao-quan-cung-khong-it-lan-vuong-phai-nhung-lum-xum-20180110161507369.chn"
-                                                                       title="Mang lại tiếng cười cho khán giả nhưng trong hành trình 15 năm, Táo Quân cũng không ít lần vướng phải những lùm xùm">
-                                                                        Mang lại tiếng cười cho khán giả nhưng trong hành
-                                                                        trình 15 năm, Táo Quân cũng không ít lần vướng ...
-                                                                    </a>
-                                                                </h3>
-                                                            </li>
                                                         </ul>
                                                         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
                                                         </div>
@@ -464,82 +417,41 @@
 
                                                     <!-- Cuối trang, check load -->
                                                     <div data-check-position="k14_detail_list1_start"></div>
-                                                    <li class="knswli need-get-value-facebook clearfix  done-get-type done-get-sticker done-get-brand-content"
-                                                        data-boxtype="NewsPublish">
-                                                        <div class="knswli-left fl">
-                                                            <a href="http://kenh14.vn/moi-dau-nam-angela-phuong-trinh-va-minh-tu-da-thieu-dot-tham-do-voi-nhung-thiet-ke-dam-xe-cao-tit-tap-20180122102230353.chn"
-                                                               class="kscliw-ava" newsid="20180122102230353" newstype="0"
-                                                               type="0" rel="newstype"
-                                                               title="Mới đầu năm, Angela Phương Trinh và Minh Tú đã thiêu đốt thảm đỏ với những thiết kế đầm xẻ cao tít tắp"
-                                                               init-sapo-type="" init-sapo-value="">
-                                                                <img src="/assets/news/detail/image/photo1516591296685-1516591296686.jpg"
-                                                                     alt="Mới đầu năm, Angela Phương Trinh và Minh Tú đã thiêu đốt thảm đỏ với những thiết kế đầm xẻ cao tít tắp">
-                                                            </a>
-                                                        </div>
-                                                        <div class="knswli-right">
 
-                                                            <h3 class="knswli-title">
-                                                                <a href="http://kenh14.vn/moi-dau-nam-angela-phuong-trinh-va-minh-tu-da-thieu-dot-tham-do-voi-nhung-thiet-ke-dam-xe-cao-tit-tap-20180122102230353.chn"
-                                                                   data-id="20180122102230353" newstype="0" type="0"
-                                                                   rel="/news-20180122102230353.chn"
-                                                                   title="Mới đầu năm, Angela Phương Trinh và Minh Tú đã thiêu đốt thảm đỏ với những thiết kế đầm xẻ cao tít tắp">
-                                                                    Mới đầu năm, Angela Phương Trinh và Minh Tú đã thiêu đốt
-                                                                    thảm đỏ với những thiết kế đầm xẻ cao tít tắp
-                                                                </a>
-                                                            </h3>
-                                                            <div class="knswli-meta">
-                                                                <a href="http://kenh14.vn/fashion.chn"
-                                                                   class="knswli-category">Fashion</a> -
-                                                                <span class="knswli-time" title="2018-01-22T11:18:44">19 phút trước</span>
-                                                                <span class="item-comment knswli-comment"
-                                                                      href="/moi-dau-nam-angela-phuong-trinh-va-minh-tu-da-thieu-dot-tham-do-voi-nhung-thiet-ke-dam-xe-cao-tit-tap-20180122102230353.chn#mingid_comments_content"
-                                                                      rel="/news-20180122102230353.chn"
-                                                                      style="display:none;"></span>
-                                                                <span class="knswli-facebook1 item-fb"
-                                                                      rel="/news-20180122102230353.chn"
-                                                                      style="display:none;"></span>
-                                                            </div>
-                                                            <span class="knswli-sapo sapo-need-trim">Minh Tú và Angela Phương Trinh chính là 2 người đẹp mở màn những pha diện đầm xẻ ngút ngàn trong năm 2018 này.</span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="knswli need-get-value-facebook clearfix  done-get-type done-get-sticker done-get-brand-content"
-                                                        data-boxtype="NewsPublish">
-                                                        <div class="knswli-left fl">
-                                                            <a href="http://kenh14.vn/danh-bom-tai-khu-cho-thai-lan-lam-3-nguoi-chet-18-nguoi-bi-thuong-2018012211171465.chn"
-                                                               class="kscliw-ava" newsid="2018012211171465" newstype="0"
-                                                               type="0" rel="newstype"
-                                                               title="Đánh bom tại khu chợ Thái Lan làm 3 người chết, 18 người bị thương"
-                                                               init-sapo-type="" init-sapo-value="">
-                                                                <img src="/assets/news/detail/image/photo1516594556296-1516594556296.jpg"
-                                                                     alt="Đánh bom tại khu chợ Thái Lan làm 3 người chết, 18 người bị thương">
-                                                            </a>
-                                                        </div>
-                                                        <div class="knswli-right">
+                                                    @php $newests = \App\Models\Post::orderBy('created_at', 'desc')->limit(10)->get() @endphp
 
-                                                            <h3 class="knswli-title">
-                                                                <a href="http://kenh14.vn/danh-bom-tai-khu-cho-thai-lan-lam-3-nguoi-chet-18-nguoi-bi-thuong-2018012211171465.chn"
-                                                                   data-id="2018012211171465" newstype="0" type="0"
-                                                                   rel="/news-2018012211171465.chn"
-                                                                   title="Đánh bom tại khu chợ Thái Lan làm 3 người chết, 18 người bị thương">
-                                                                    Đánh bom tại khu chợ Thái Lan làm 3 người chết, 18 người
-                                                                    bị thương
+                                                    @foreach($newests as $newest )
+                                                        <li class="knswli need-get-value-facebook clearfix  done-get-type done-get-sticker done-get-brand-content"
+                                                            data-boxtype="NewsPublish">
+                                                            <div class="knswli-left fl">
+                                                                <a href="{{ url('tin-tuc/'.$newest->slug) }}"
+                                                                   class="kscliw-ava"
+                                                                   type="0" rel="newstype"
+                                                                   title="{{ $newest->title }}"
+                                                                   init-sapo-type="" init-sapo-value="">
+                                                                    <img src="{{ $newest->image }}"
+                                                                         alt="{{ $newest->title }}">
                                                                 </a>
-                                                            </h3>
-                                                            <div class="knswli-meta">
-                                                                <a href="http://kenh14.vn/the-gioi.chn"
-                                                                   class="knswli-category">Thế Giới</a> -
-                                                                <span class="knswli-time" title="2018-01-22T11:17:19">20 phút trước</span>
-                                                                <span class="item-comment knswli-comment"
-                                                                      href="/danh-bom-tai-khu-cho-thai-lan-lam-3-nguoi-chet-18-nguoi-bi-thuong-2018012211171465.chn#mingid_comments_content"
-                                                                      rel="/news-2018012211171465.chn"
-                                                                      style="display:none;"></span>
-                                                                <span class="knswli-facebook1 item-fb"
-                                                                      rel="/news-2018012211171465.chn"
-                                                                      style="display:none;"></span>
                                                             </div>
-                                                            <span class="knswli-sapo sapo-need-trim">Sáng 22/1, xảy ra một vụ đánh bom tại khu chợ ở tỉnh Yala miền nam Thái Lan, khiến 3 người thiệt mạng và 18 người khác ...</span>
-                                                        </div>
-                                                    </li>
+                                                            <div class="knswli-right">
+
+                                                                <h3 class="knswli-title">
+                                                                    <a href="{{ url('tin-tuc/'.$newest->slug) }}"
+                                                                        newstype="0" type="0"
+                                                                       title="{{ $newest->title }}">
+                                                                        {{ $newest->title }}
+                                                                    </a>
+                                                                </h3>
+                                                                <div class="knswli-meta">
+                                                                    <a href="{{ url('danh-muc/'.$newest->category->slug) }}"
+                                                                       class="knswli-category">{{ $newest->category->name }}</a> -
+                                                                    <span class="knswli-time" title="{{ \Carbon\Carbon::parse($newest->created_at)->format('d/m/Y H:i') }}">{{ \Carbon\Carbon::parse($newest->created_at)->format('d/m/Y H:i') }}</span>
+                                                                </div>
+                                                                <span class="knswli-sapo sapo-need-trim">{!!   $newest->short_desc !!}</span>
+                                                            </div>
+                                                        </li>
+                                                    @endforeach
+
                                                 </ul>
                                             </div>
 

@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('content')
-    <h3 class="h3-title">Chỉnh sửa bài viết</h3>
+    <h3 class="h3-title">Chỉnh sửa bài viết <a class="btn btn-primary" href="{{ url('tin-tuc').'/'.$post->slug }}"> Xem bài viết</a></h3>
 
     @include('flash_message')
 
@@ -66,7 +66,7 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label">Là dự án nổi bật?</label>
+                <label class="col-md-2 control-label">Là bài viết nổi bật?</label>
                 <div class="col-md-9">
                     <div class="mt-checkbox-inline">
                         <label class="mt-checkbox mt-checkbox-outline">

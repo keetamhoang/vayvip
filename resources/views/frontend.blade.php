@@ -3,6 +3,16 @@
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
       lang="" style="">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64597649-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-64597649-5');
+    </script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -14,14 +24,10 @@
     <meta http-equiv="pragma" content="no-cache">
     <title>Tài chính thông minh trong tầm tay của bạn | taichinhsmart.vn</title>
     <meta name="keywords" content="vay tin chap, vay tieu dung, vay tien nhanh, vay khong the chap, vay vip">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Tài chính thông minh trong tầm tay của bạn">
-    <meta property="fb:app_id" content="544866779187138">
-    <meta property="og:description"
-          content="Tài chính thông minh trong tầm tay của bạn - taichinhsmart.vn">
-    <meta property="og:url" content="http://taichinhsmart.vn">
-    <meta property="og:site_name" content="Tài chính Smart">
-    <meta property="og:image" content="https://vaytinchap.vpbank.com.vn/LOSWebDE/langding/img/og-vayvip.jpg">
+    <meta property="fb:app_id" content="114309889249840">
+
+    @yield('meta')
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- google font  -->
@@ -88,6 +94,9 @@
     @yield('styles')
 </head>
 <body class="home-2">
+
+
+
 <script>
     window.fbMessengerPlugins = window.fbMessengerPlugins || {
             init: function () {
@@ -242,6 +251,7 @@
 <script src="/assets/js/main.js"></script>
 
 @yield('scripts')
+
 
 <script>
     $(document).ready(function () {

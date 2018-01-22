@@ -62,7 +62,7 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label">Là dự án nổi bật?</label>
+                <label class="col-md-2 control-label">Là bài viết nổi bật?</label>
                 <div class="col-md-9">
                     <div class="mt-checkbox-inline">
                         <label class="mt-checkbox mt-checkbox-outline">

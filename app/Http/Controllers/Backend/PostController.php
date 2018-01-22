@@ -83,6 +83,13 @@ class PostController extends AdminController
 
         try {
             $post = Post::create($data);
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/".$post->slug);
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_exec($ch);
+            curl_close($ch);
+
         } catch (\Exception $e) {
             dd($e->getMessage());
             return redirect('admin/posts/add')->with('error','Lỗi! Thêm mới không thành công');
@@ -116,12 +123,23 @@ class PostController extends AdminController
             unset($data['image']);
         }
 
-        $data['slug'] = Unit::create_slug($data['title']);
+//        $data['slug'] = Unit::create_slug($data['title']);
 
         $data['status'] = !empty($data['status']) and $data['status'] == 'on' ? 1: 0;
         $data['is_highlight'] = !empty($data['is_highlight']) and $data['is_highlight'] == 'on' ? 1: 0;
 
-        $post->update($data);
+        try {
+            $post->update($data);
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/" . $post->slug);
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_exec($ch);
+            curl_close($ch);
+        } catch (\Exception $ex) {
+            dd($ex->getMessage());
+            return redirect('admin/posts/add')->with('error','Lỗi! Thêm mới không thành công');
+        }
 
         return redirect('admin/posts/'. $post->id)->with('success', 'Cập nhật thành công');
     }

@@ -1,5 +1,15 @@
 @extends('frontend')
 
+@section('meta')
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Tài chính thông minh trong tầm tay của bạn">
+    <meta property="og:description"
+          content="Tài chính thông minh trong tầm tay của bạn - taichinhsmart.vn">
+    <meta property="og:url" content="http://taichinhsmart.vn">
+    <meta property="og:site_name" content="Tài chính SMART">
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/og-vayvip.jpg">
+@endsection
+
 @section('styles')
     <style>
         @media (min-width: 768px) {
