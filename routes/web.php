@@ -59,5 +59,7 @@ Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeContro
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
 Route::get('tin-tuc', 'Frontend\NewsController@index');
+Route::get('tin-tuc/{slug}-{id}', 'Frontend\NewsController@detail')
+    ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
 
 Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');
