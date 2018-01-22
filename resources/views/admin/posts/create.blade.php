@@ -11,7 +11,7 @@
             <div class="form-group">
                 <label class="col-md-2 control-label">Tên bài viết</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Điền tên bài viết" name="name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" placeholder="Điền tên bài viết" name="title" value="{{ old('title') }}">
                 </div>
             </div>
             <div class="form-group">
@@ -57,7 +57,7 @@
                 <label class="control-label col-md-2">Chi tiết</label>
                 <div class="col-md-9">
                                 <textarea class="form-control ckeditor" placeholder="Điền chi tiết"
-                                          name="desc">{{ old('desc') }}</textarea>
+                                          name="content">{{ old('content') }}</textarea>
                 </div>
             </div>
 

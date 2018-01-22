@@ -9,4 +9,9 @@ class Post extends Model
     protected $fillable = [
         'title', 'short_desc', 'content', 'form', 'category_id', 'account_id', 'status', 'type', 'is_highlight', 'image', 'slug'
     ];
+
+    public function getSlugAttribute()
+    {
+        return $this->attributes['slug'].'-'.$this->attributes['id'];
+    }
 }

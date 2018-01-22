@@ -90,7 +90,7 @@
             },
             columns: [
                 {data: 'id', name: 'id'},
-                {data: 'name', name: 'name'},
+                {data: 'title', name: 'title'},
                 {data: 'image', name: 'image'},
                 {data: 'category_id', name: 'category_id'},
                 {data: 'status', name: 'status'},

@@ -58,35 +58,26 @@
                     <div class="w1014">
 
                         <div class="top-data">
+                            @if (count($bigPosts) > 0)
                             <div class="tbw-cover-wrapper col-md-12">
-                                <a href="http://kenh14.vn/midu-cua-nam-2017-la-sao-hang-a-ma-danh-mat-ban-than-va-nhung-dieu-tot-dep-thi-vi-tri-do-cung-chang-co-y-nghia-gi-20180118180231744.chn"
+                                <a href="/tin-tuc/{{ $bigPosts[0]->slug }}"
                                    class="tbwcw-thumb k14-topic-fancy fancybox.iframe"
-                                   title="Midu - Cô gái đặc biệt của showbiz: Chẳng cần ồn ào cũng được yêu thương, chẳng cần chiêu trò cũng thành công"
-                                   newsid="20180118180231744">
-                                    <img src="/assets/news/image/photo1516338064537-1516338064538.png"
-                                         alt="Midu - Cô gái đặc biệt của showbiz: Chẳng cần ồn ào cũng được yêu thương, chẳng cần chiêu trò cũng thành công"></a>
+                                   title="{{ $bigPosts[0]->title }}" >
+                                    <img src="{{ $bigPosts[0]->image }}"
+                                         alt="{{ $bigPosts[0]->title }}"></a>
 
                                 <div class="tbwcw-content clearfix">
                                     <h2>
-                                        <a href="http://kenh14.vn/midu-cua-nam-2017-la-sao-hang-a-ma-danh-mat-ban-than-va-nhung-dieu-tot-dep-thi-vi-tri-do-cung-chang-co-y-nghia-gi-20180118180231744.chn"
+                                        <a href="/tin-tuc/{{ $bigPosts[0]->slug }}"
                                            class="tbwcw-title k14-topic-fancy fancybox.iframe news-title"
-                                           newsid="20180118180231744"
-                                           title="Midu - Cô gái đặc biệt của showbiz: Chẳng cần ồn ào cũng được yêu thương, chẳng cần chiêu trò cũng thành công">Midu
-                                            - Cô gái đặc biệt của showbiz: Chẳng cần ồn ào cũng được yêu thương, chẳng
-                                            cần chiêu
-                                            trò
-                                            cũng thành công</a></h2>
+                                           title="{{ $bigPosts[0]->title }}">{{ $bigPosts[0]->title }}</a></h2>
 
                                     <div class="tbwcw-info-user">
-                                        <span class="tbwcwiu-info" title="1/19/2018 8:07:00 AM">3 ngày trước</span>
-                                        <a href="http://kenh14.vn/midu-cua-nam-2017-la-sao-hang-a-ma-danh-mat-ban-than-va-nhung-dieu-tot-dep-thi-vi-tri-do-cung-chang-co-y-nghia-gi-20180118180231744.chn#mingid_comments_content"
-                                           class="kscndsl-comment" style="display: none;"
-                                           rel="/news-20180118180231744.chn"></a>
-                                        <label class="kscndsl-facebook" style=""
-                                               rel="/news-20180118180231744.chn">8K</label>
+                                        <span class="tbwcwiu-info" title="{{ \Carbon\Carbon::parse($bigPosts[0]->created_at)->format('d/m/Y H:i') }}">{{ \Carbon\Carbon::parse($bigPosts[0]->created_at)->format('d/m/Y H:i') }}</span>
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             <!-- End .tbw-cover-wrapper -->
 
                             <div class="tbw-hightlights-wrapper clearfix col-lg-12">

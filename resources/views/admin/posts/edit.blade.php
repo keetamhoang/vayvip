@@ -10,9 +10,9 @@
         <input type="hidden" name="id" value="{{ $post->id }}">
         <div class="form-body">
             <div class="form-group">
-                <label class="col-md-2 control-label">Tên danh mục</label>
+                <label class="col-md-2 control-label">Tên bài viết</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Điền tên danh mục" name="name" value="{{ $post->name }}">
+                    <input type="text" class="form-control" placeholder="Điền tên danh mục" name="title" value="{{ $post->title }}">
                 </div>
             </div>
             <div class="form-group">
@@ -61,7 +61,7 @@
                 <label class="control-label col-md-2">Chi tiết</label>
                 <div class="col-md-9">
                                 <textarea class="form-control ckeditor" placeholder="Điền chi tiết"
-                                          name="desc">{{ $post->desc }}</textarea>
+                                          name="content">{{ $post->content }}</textarea>
                 </div>
             </div>
 
