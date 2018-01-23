@@ -31,7 +31,34 @@
     </style>
 @endsection
 
+@section('pageId')
+    <div
+            class="fb-customerchat"
+            page_id="2150730271821209"
+            ref="">
+    </div>
+@endsection
+
 @section('content')
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '171691203603021');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=171691203603021&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    {!! $post->pixel !!}
     <div class="container ">
         <div id="admWrapsite">
             <div id="admzone13602"></div>
@@ -242,7 +269,7 @@
                                                             <div class="knc-relate-wrapper">
                                                                 <ul class="krw-list">
 
-                                                                    @php $randoms = \App\Models\Post::inRandomOrder()->limit(3)->get(); @endphp
+                                                                    @php $randoms = \App\Models\Post::where('status', config('const.ACTIVE'))->inRandomOrder()->limit(3)->get(); @endphp
                                                                     @foreach($randoms as $random)
                                                                         <li class="krwli">
                                                                             <a href="{{ url('tin-tuc/' . $random->slug) }}"
@@ -275,7 +302,7 @@
 
                                                             <div class="knc-rate-link">
                                                                 @php
-                                                                    $nextPost = \App\Models\Post::where('id', '>', $post->id)->orderBy('id', 'asc')->first();
+                                                                    $nextPost = \App\Models\Post::where('id', '>', $post->id)->where('status', config('const.ACTIVE'))->orderBy('id', 'asc')->first();
                                                                     if (empty($nextPost)) {
                                                                         $nextPost = \App\Models\Post::where('id', '<', $post->id)->orderBy('id', 'desc')->first();
                                                                         if (empty($nextPost)) {
@@ -370,7 +397,7 @@
                                                     <h3 class="kds-title">có thể bạn quan tâm</h3>
                                                     <div class="knd-wrapper swiper-container-horizontal">
                                                         <ul class="khd-list swiper-wrapper">
-                                                            @php $relates = \App\Models\Post::where('category_id', $post->category_id)->inRandomOrder()->limit(4)->get() @endphp
+                                                            @php $relates = \App\Models\Post::where('category_id', $post->category_id)->where('status', config('const.ACTIVE'))->inRandomOrder()->limit(4)->get() @endphp
                                                             @foreach($relates as $relate)
                                                                 <li class="khdli swiper-slide col-lg-3">
                                                                     <a href="{{ url('tin-tuc/'.$relate->slug) }}"
@@ -418,7 +445,7 @@
                                                     <!-- Cuối trang, check load -->
                                                     <div data-check-position="k14_detail_list1_start"></div>
 
-                                                    @php $newests = \App\Models\Post::orderBy('created_at', 'desc')->limit(10)->get() @endphp
+                                                    @php $newests = \App\Models\Post::where('status', config('const.ACTIVE'))->orderBy('created_at', 'desc')->limit(10)->get() @endphp
 
                                                     @foreach($newests as $newest )
                                                         <li class="knswli need-get-value-facebook clearfix  done-get-type done-get-sticker done-get-brand-content"

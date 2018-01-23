@@ -46,6 +46,13 @@
             </div>
 
             <div class="form-group">
+                <label class="control-label col-md-2">Pixel code</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" id="pixel" rows="5" name="pixel"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label class="control-label col-md-2">Miêu tả ngắn</label>
                 <div class="col-md-9">
                                 <textarea class="form-control ckeditor" placeholder="Điền miêu tả ngắn"

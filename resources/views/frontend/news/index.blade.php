@@ -46,6 +46,14 @@
     </style>
 @endsection
 
+@section('pageId')
+    <div
+            class="fb-customerchat"
+            page_id="2150730271821209"
+            ref="">
+    </div>
+@endsection
+
 @section('content')
     <div class="container ">
         <div class="k14-topic-brightlgbt magazine-topic-body">
