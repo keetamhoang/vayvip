@@ -1,13 +1,20 @@
 @extends('frontend')
 
 @section('meta')
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Tài chính thông minh trong tầm tay của bạn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vay vốn tín dụng thông minh - Tài chính SMART">
     <meta property="og:description"
-          content="Tài chính thông minh trong tầm tay của bạn - taichinhsmart.vn">
-    <meta property="og:url" content="http://taichinhsmart.vn">
-    <meta property="og:site_name" content="Tài chính SMART">
+          content="Tài chính thông minh trong tầm tay của bạn - Tài chính SMART">
+    <meta property="og:url" content="http://taichinhsmart.vn/vay-von-tin-dung">
+    <meta property="og:site_name" content="Vay vốn tín dụng - Tài chính SMART">
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/og-vayvip.jpg">
+@endsection
+
+@section('pageId')
+    <div class="fb-customerchat"
+            page_id="175253416410272"
+            ref="">
+    </div>
 @endsection
 
 @section('styles')

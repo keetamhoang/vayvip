@@ -124,12 +124,7 @@
     }, 0);
 </script>
 
-<div
-        class="fb-customerchat"
-        page_id="175253416410272"
-        ref="">
-</div>
-
+@yield('pageId')
 
 <!--Start nav  area -->
 <div class="nav_area" id="sticker" >
@@ -172,11 +167,11 @@
                                         {{--src="/assets/image/vayvip-btn.png"></a></li>--}}
                         <li >
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
-                        <li ><a href="{{ url('/') }}">Khuyến mãi tối ưu</a></li>
+                        <li ><a href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
                         <li class=""><a
-                                    href="{{ url('/#') }}">Sản phẩm thông minh</a></li>
+                                    href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
                         <li class=""><a
-                                    href="{{ url('/#') }}">Đầu tư hiệu quả</a></li>
+                                    href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>
                         <li class=""><a
                                     href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
 
@@ -194,11 +189,11 @@
                     <li >
                         <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li ><a
-                                href="{{ url('/') }}">Khuyến mãi tối ưu</a></li>
+                                href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
                     <li class=""><a
-                                href="{{ url('/') }}">Sản phẩm thông minh</a></li>
+                                href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
                     <li class=""><a
-                                href="{{ url('/') }}">Đầu tư hiệu quả</a></li>
+                                href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>
                     <li class=""><a
                                 href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
                 </ul>
@@ -274,4 +269,8 @@
 </script>
 
 </body>
+
+<script>
+    $(document).ready('')
+</script>
 </html>
