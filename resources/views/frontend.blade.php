@@ -88,6 +88,8 @@
     <link rel="stylesheet" href="/assets/css_new/custom-vayvip.css">
     <!--<script src="js/main.js"></script>-->
 
+    <link rel="stylesheet" href="/form/style.css">
+
     <link rel="stylesheet" href="/css/style.css">
     <!--  <script src="/assets/js/4052764.js" type="text/javascript" id="hs-analytics"></script><script src="/assets/js/collectedforms.js" type="text/javascript" id="CollectedForms-4052764" crossorigin="anonymous" data-leadin-portal-id="4052764" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="4052764" data-hsjs-env="prod"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/analytics.js"></script><script async="" src="/assets/js/gtm.js"></script><script src="/assets/js/modernizr-2.8.3.min.js"></script> -->
 
@@ -203,9 +205,9 @@
     </div>
 </div>
 
-<div style="margin-top: 390px">
-    <a  href=".dang-ky-modal" data-toggle="modal">Click</a>
-</div>
+{{--<div style="margin-top: 390px">--}}
+    {{--<a  href=".dang-ky-modal" data-toggle="modal">Click</a>--}}
+{{--</div>--}}
 
 <div class="modal fade dang-ky-modal" style="z-index: 1071;margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered " role="document">
