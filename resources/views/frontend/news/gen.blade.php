@@ -98,16 +98,50 @@
         });
 
         $('#form-code').val(
-            '<div class="register-form"> <form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post"> <h1 class="sign-up-title">Để lại thông tin nhận tư vấn ngay!</h1> <div class="alert-form kee-alert" style="display: none">Thành công</div> <input type="text" class="sign-up-input" name="name" placeholder="Họ tên" autofocus required> <input type="text" class="sign-up-input" name="phone" placeholder="Số điện thoại" required> <input type="submit" value="Gửi thông tin tư vấn" class="sign-up-button"> </form> </div>'
+            '<div class="register-form"><form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post"> <h1 class="sign-up-title">Để lại thông tin nhận tư vấn ngay!</h1> <div class="alert-form kee-alert" style="display: none">Thành công</div> <input type="text" class="sign-up-input" name="name" placeholder="Họ tên" autofocus required> <input type="text" class="sign-up-input" name="phone" placeholder="Số điện thoại" required> <input type="submit" value="Gửi thông tin tư vấn" class="sign-up-button"> </form> </div>'
         );
 
         $("#title").spectrum({
             color: "#0072ff",
             change: function(color) {
+                var code = $('#form-code').val();
+
+                var index = code.indexOf('<h1 class="sign-up-title"');
+
+                var end = index + 1;
+                for (var i=index+1; i<code.length ;i++) {
+                    if (code[i] === '>') {
+                        end = i;
+                        break;
+                    }
+                }
+
+                var cut = code.substring(index, end+1);
+
+                var newCode = code.replace(cut, '<h1 class="sign-up-title" style="background: '+color.toHexString()+'">');
+
+                $('#form-code').val(newCode);
+
                 $('.sign-up-title').attr('style', "background: " + color.toHexString());
             },
             move: function(color) {
                 var code = $('#form-code').val();
+
+                var index = code.indexOf('<h1 class="sign-up-title"');
+
+                var end = index + 1;
+                for (var i=index+1; i<code.length ;i++) {
+                    if (code[i] === '>') {
+                        end = i;
+                        break;
+                    }
+                }
+
+                var cut = code.substring(index, end+1);
+
+                var newCode = code.replace(cut, '<h1 class="sign-up-title" style="background: '+color.toHexString()+'">');
+
+                $('#form-code').val(newCode);
 
                 $('.sign-up-title').attr('style', "background: " + color.toHexString());
             }
