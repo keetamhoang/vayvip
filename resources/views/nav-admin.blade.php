@@ -84,12 +84,39 @@
         </li>
 
         <li class="nav-item">
-            <a href="{{ url('admin/lien-he') }}" class="nav-link">
-                <i class="fa fa-address-card-o"></i>
-                <span class="title">Quản lý Liên hệ</span>
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-user-circle-o"></i>
+                <span class="title">Quản lý khách hàng</span>
                 <span class="selected"></span>
+                <span class="arrow open"></span>
             </a>
+            <ul class="sub-menu">
+                <li class="nav-item start">
+                    <a href="{{ url('admin/customers') }}" class="nav-link ">
+                        <span class="title">Tất cả</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="{{ url('admin/customers?type=vay-von') }}" class="nav-link ">
+                        <span class="title">Khách hàng vay vốn</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="{{ url('admin/customers?type=san-pham') }}" class="nav-link ">
+                        <span class="title">Khách hàng sản phẩm</span>
+                    </a>
+                </li>
+            </ul>
         </li>
+
+        {{--<li class="nav-item">--}}
+            {{--<a href="{{ url('admin/lien-he') }}" class="nav-link">--}}
+                {{--<i class="fa fa-address-card-o"></i>--}}
+                {{--<span class="title">Quản lý Liên hệ</span>--}}
+                {{--<span class="selected"></span>--}}
+            {{--</a>--}}
+        {{--</li>--}}
 
         {{--<li class="nav-item">--}}
             {{--<a href="javascript:;" class="nav-link nav-toggle">--}}

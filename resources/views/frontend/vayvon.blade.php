@@ -18,6 +18,7 @@
 @endsection
 
 @section('styles')
+
     <style>
         @media (min-width: 768px) {
             .modal-dialog {

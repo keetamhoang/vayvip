@@ -43,6 +43,9 @@ Route::group(['prefix' => 'admin',
 
     Route::get('lien-he', 'Backend\HomeController@lienHe');
     Route::get('lienHeAttribute.data', 'Backend\HomeController@lienHeAttribute');
+
+    Route::get('customers', 'Backend\CustomerController@index');
+    Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
 });
 
 // auth
@@ -64,6 +67,8 @@ Route::get('san-pham', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
 Route::get('generate', 'Frontend\NewsController@generateForm');
+Route::post('dang-ky/thong-tin', 'Frontend\HomeController@registerForm');
+
 Route::get('tin-tuc/{slug}-{id}', 'Frontend\NewsController@detail')
     ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
 

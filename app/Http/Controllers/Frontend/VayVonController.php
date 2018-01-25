@@ -34,11 +34,11 @@ class VayVonController extends Controller
         try {
             DB::table('customers')->updateOrInsert([
                 'phone' => $phone,
-                'bank' => $bank
+                'bank' => $bank,
+                'source' => config('const.VAY_VON')
             ],[
                 'name' => $name,
                 'email' => $email,
-                'source' => config('const.FROM_WEB'),
                 'created_at' => Carbon::now()
             ]);
         } catch (\Exception $ex) {

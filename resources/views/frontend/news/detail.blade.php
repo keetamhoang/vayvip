@@ -13,6 +13,7 @@
     <link href="/assets/news/detail/css/kenh14flat-20180109v1.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/news/detail/css/detailflat-20171205v3.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/news/detail/css/responsive-20170407v1.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/form/style.css">
 
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
@@ -577,4 +578,40 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            if ($('.register-form').html() != 'undefined') {
+                $('.register-form .sign-up').append(
+                    '<input type="hidden" name="post_id" value="{{ $post->id }}">'
+                );
+            }
+
+            $('.sign-up').submit(function (e) {
+                e.preventDefault();
+                var thisForm = $(this);
+                var form = $(this).serialize();
+
+                $.ajax({
+                    type: 'post',
+                    data: form,
+                    url: '{{ url('dang-ky/thong-tin') }}',
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.status == 1) {
+                            thisForm.find('.alert-form').removeClass('kee-alert-danger').addClass('kee-alert-success');
+                            thisForm.find('.alert-form').html(response.message);
+                            thisForm.find('.alert-form').show()
+                        } else {
+                            thisForm.find('.alert-form').removeClass('kee-alert-success').addClass('kee-alert-danger');
+                            thisForm.find('.alert-form').html(response.message);
+                            thisForm.find('.alert-form').show()
+                        }
+                    }
+                });
+            })
+        })
+    </script>
 @endsection

@@ -1483,26 +1483,26 @@ font-weight:700;
 }
 
 
-input::-webkit-input-placeholder,select::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #a7a8a9 !important;
-  background:#404041 !important;
-}
-input::-webkit-input-placeholder,select::-webkit-input-placeholder  { /* Chrome/Opera/Safari */
-  color: #a7a8a9 !important;
-   background:#404041 !important;
-}
-input::-moz-placeholder,select::-moz-placeholder { /* Firefox 19+ */
-  color: #a7a8a9 !important;
-   background:#404041 !important;
-}
-input:-ms-input-placeholder,select:-ms-input-placeholder { /* IE 10+ */
-  color: #a7a8a9 !important;
-   background:#404041 !important;
-}
-input:-moz-placeholder,select:-moz-placeholder { /* Firefox 18- */
-  color: #a7a8a9 !important;
-   background:#404041 !important;
-}
+/*input::-webkit-input-placeholder,select::-webkit-input-placeholder { !* Chrome/Opera/Safari *!*/
+  /*color: #a7a8a9 !important;*/
+  /*background:#404041 !important;*/
+/*}*/
+/*input::-webkit-input-placeholder,select::-webkit-input-placeholder  { !* Chrome/Opera/Safari *!*/
+  /*color: #a7a8a9 !important;*/
+   /*background:#404041 !important;*/
+/*}*/
+/*input::-moz-placeholder,select::-moz-placeholder { !* Firefox 19+ *!*/
+  /*color: #a7a8a9 !important;*/
+   /*background:#404041 !important;*/
+/*}*/
+/*input:-ms-input-placeholder,select:-ms-input-placeholder { !* IE 10+ *!*/
+  /*color: #a7a8a9 !important;*/
+   /*background:#404041 !important;*/
+/*}*/
+/*input:-moz-placeholder,select:-moz-placeholder { !* Firefox 18- *!*/
+  /*color: #a7a8a9 !important;*/
+   /*background:#404041 !important;*/
+/*}*/
 .vay-vip-col {
 	margin:10px 0;
 	height: 5px;
