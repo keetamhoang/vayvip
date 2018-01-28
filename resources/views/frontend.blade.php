@@ -17,7 +17,9 @@
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tài chính thông minh trong tầm tay của bạn | taichinhsmart.vn</title>
+
+    @yield('title')
+
     <meta name="keywords" content="vay tin chap, vay tieu dung, vay tien nhanh, vay khong the chap, vay vip">
     <meta property="fb:app_id" content="114309889249840">
 

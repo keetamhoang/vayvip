@@ -1,5 +1,9 @@
 @extends('frontend')
 
+@section('title')
+    <title>Tin tức tài chính thông minh | TaichinhSMART.vn</title>
+@endsection
+
 @section('meta')
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tin tức tài chính - Tài chính SMART">

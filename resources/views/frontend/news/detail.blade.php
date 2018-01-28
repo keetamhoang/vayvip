@@ -1,9 +1,13 @@
 @extends('frontend')
 
+@section('title')
+    <title>{{ $post->title }} | TaichinhSMART.vn</title>
+@endsection
+
 @section('meta')
     <meta property="og:url" content="http://taichinhsmart.vn/tin-tuc/{{ $post->slug }}">
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ $post->title }} - Tài chính SMART" />
+    <meta property="og:title"         content="{{ $post->title }} | TaichinhSMART.vn" />
     <meta property="og:description"   content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Tài chính thông minh trong tầm tay của bạn.'  !!}" />
     <meta property="og:image"         content="http://taichinhsmart.vn{{ $post->image }}" />
 @endsection
