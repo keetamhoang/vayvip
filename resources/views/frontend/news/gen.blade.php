@@ -20,7 +20,7 @@
 <div class="container">
     <h2>Code nhúng form đăng ký</h2>
     <div class="form-group">
-        <div class="col-md-12">
+        <div class="col-md-12" style="overflow: hidden;margin-bottom: 25px;">
 
             <div class="col-md-6" style="float: left">
                 <div>
@@ -45,6 +45,7 @@
             </div>
         </div>
     </div>
+
 
     <h2>Mã nhúng Civi</h2>
     <div class="form-group">
@@ -98,7 +99,7 @@
         });
 
         $('#form-code').val(
-            '<div class="register-form"><form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post"> <h1 class="sign-up-title">Để lại thông tin nhận tư vấn ngay!</h1> <div class="alert-form kee-alert" style="display: none">Thành công</div> <input type="text" class="sign-up-input" name="name" placeholder="Họ tên" autofocus required> <input type="text" class="sign-up-input" name="phone" placeholder="Số điện thoại" required> <input type="submit" value="Gửi thông tin tư vấn" class="sign-up-button"> </form> </div>'
+            '<div class="register-form"><form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post"> <h1 class="sign-up-title">Để lại thông tin nhận tư vấn ngay!</h1> <div class="alert-form kee-alert" style="display: none">Thành công</div> <input type="text" class="sign-up-input" name="name" placeholder="Họ tên" required> <input type="text" class="sign-up-input" name="phone" placeholder="Số điện thoại" required> <input type="submit" class="sign-up-button" value="Gửi thông tin tư vấn"> </form> </div>'
         );
 
         $("#title").spectrum({
@@ -150,9 +151,45 @@
         $("#body").spectrum({
             color: "#71b6fe",
             change: function(color) {
+                var code = $('#form-code').val();
+
+                var index = code.indexOf('<form class="sign-up"');
+
+                var end = index + 1;
+                for (var i=index+1; i<code.length ;i++) {
+                    if (code[i] === '>') {
+                        end = i;
+                        break;
+                    }
+                }
+
+                var cut = code.substring(index, end+1);
+
+                var newCode = code.replace(cut, '<form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post" style="background: '+color.toHexString()+'">');
+
+                $('#form-code').val(newCode);
+
                 $('.sign-up').attr('style', "background: " + color.toHexString());
             },
             move: function(color) {
+                var code = $('#form-code').val();
+
+                var index = code.indexOf('<form class="sign-up"');
+
+                var end = index + 1;
+                for (var i=index+1; i<code.length ;i++) {
+                    if (code[i] === '>') {
+                        end = i;
+                        break;
+                    }
+                }
+
+                var cut = code.substring(index, end+1);
+
+                var newCode = code.replace(cut, '<form class="sign-up" action="{{ url('dang-ky/thong-tin') }}" method="post" style="background: '+color.toHexString()+'">');
+
+                $('#form-code').val(newCode);
+
                 $('.sign-up').attr('style', "background: " + color.toHexString());
             }
         });
@@ -163,6 +200,24 @@
                 $('.sign-up-button').attr('style', "background: " + color.toHexString());
             },
             move: function(color) {
+                var code = $('#form-code').val();
+
+                var index = code.indexOf('<input type="submit" class="sign-up-button"');
+
+                var end = index + 1;
+                for (var i=index+1; i<code.length ;i++) {
+                    if (code[i] === '>') {
+                        end = i;
+                        break;
+                    }
+                }
+
+                var cut = code.substring(index, end+1);
+
+                var newCode = code.replace(cut, '<input type="submit" class="sign-up-button" value="Gửi thông tin tư vấn" style="background: '+color.toHexString()+'">');
+
+                $('#form-code').val(newCode);
+
                 $('.sign-up-button').attr('style', "background: " + color.toHexString());
             }
         });

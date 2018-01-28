@@ -68,4 +68,13 @@ class CustomerController extends AdminController
             ->make(true);
     }
 
+    public function delete($id) {
+        try {
+            Customer::where('id', $id)->delete();
+        } catch (\Exception $ex) {
+            return redirect()->back()->with('error', 'Xóa không thành công!');
+        }
+
+        return redirect()->back()->with('success', 'Xóa thành công!');
+    }
 }

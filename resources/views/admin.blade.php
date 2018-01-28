@@ -232,6 +232,8 @@
 <script src="/assets/global/scripts/datatable.js" type="text/javascript"></script>
 <script src="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"
         type="text/javascript"></script>
+<script src="/assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+<script src="/assets/pages/scripts/ui-sweetalert.min.js" type="text/javascript"></script>
 <script src="/js/admin/ckeditor/ckeditor.js"></script>
 
 <!-- END PAGE LEVEL PLUGINS -->

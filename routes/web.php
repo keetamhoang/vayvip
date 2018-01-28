@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin',
 
     Route::get('customers', 'Backend\CustomerController@index');
     Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
+    Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
 });
 
 // auth

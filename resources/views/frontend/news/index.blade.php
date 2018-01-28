@@ -1,5 +1,16 @@
 @extends('frontend')
 
+@section('meta')
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tin tức tài chính - Tài chính SMART">
+    <meta property="og:description"
+          content="Cập nhật tất cả về những thông tin sản phẩm, kinh nghiệm mua hàng mà bạn không thể bỏ qua. Tài chính SMART - Tài chính thông minh trong tầm tay của bạn.">
+    <meta property="og:url" content="http://taichinhsmart.vn/tin-tuc">
+    <meta property="og:site_name" content="Tin tức tài chính - Tài chính SMART">
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/tintucsmart.jpg">
+    <meta name="keywords" content="tin tuc, tin tung tieu dung, tin tuc san pham, san pham thong minh, dang ky san pham, tin tuc smart, tindungsmart, tin dung smart, vay tien thong minh, vay uy tin">
+@endsection
+
 @section('styles')
     <link rel="preload" href="/assets/news/fonts/SFD-Bold.woff2" as="font">
 
