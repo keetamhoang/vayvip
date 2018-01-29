@@ -32,7 +32,7 @@
                                  <span>{{ \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') }}</span><br> Xem
                                 các chương trình khuyến
                                 mãi, giảm giá sách mới nhất từ <a
-                                        href="{{ url('khuyen-mai/danh-muc/' . $discount->merchant_id) }}"><strong>{{ $discount->merchant }}</strong></a>
+                                        href="{{ url('khuyen-mai/danh-muc/' . $discount->merchant . '-' . $discount->merchant_id) }}"><strong>{{ $discount->merchant }}</strong></a>
                             </div>
                         </div>
                         <div class="cpbutton">
@@ -103,7 +103,7 @@
                                 <span>{{ \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') }}</span><br> Xem
                                 các chương trình khuyến
                                 mãi, giảm giá sách mới nhất từ <a
-                                        href="{{ url('khuyen-mai/danh-muc/' . $discount->merchant_id) }}"><strong>{{ $discount->merchant }}</strong></a>
+                                        href="{{ url('khuyen-mai/danh-muc/' . $discount->merchant . '-' . $discount->merchant_id) }}"><strong>{{ $discount->merchant }}</strong></a>
                             </div>
                         </div>
                         <div class="cpbutton">
