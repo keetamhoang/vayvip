@@ -27,6 +27,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('get:km-at')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
+//            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
     }
 
     /**
