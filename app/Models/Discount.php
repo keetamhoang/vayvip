@@ -15,4 +15,9 @@ class Discount extends Model
     {
         return $this->belongsTo('App\Models\Merchant');
     }
+
+    public function getSlugAttribute()
+    {
+        return $this->attributes['slug'].'-'.$this->attributes['id'];
+    }
 }

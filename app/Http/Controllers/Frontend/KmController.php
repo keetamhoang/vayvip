@@ -34,4 +34,14 @@ class KmController extends Controller
 
         return view('frontend.km.category', compact('newests', 'page', 'title'));
     }
+
+    public function detail($slug, $id) {
+        $discount = Discount::find($id);
+
+        if (empty($discount)) {
+            return redirect()->back();
+        }
+
+        return view('frontend.km.detail', compact('discount'));
+    }
 }

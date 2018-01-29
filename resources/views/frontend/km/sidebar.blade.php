@@ -20,13 +20,13 @@
 
                     @foreach($randomKms as $randomKm)
                         <li class="rpwe-li rpwe-clearfix">
-                            <a class="rpwe-img" target="_blank" href="{{ $randomKm->aff_link }}" rel="bookmark">
+                            <a class="rpwe-img"  href="{{ url('khuyen-mai/'.$randomKm->slug) }}" rel="bookmark">
                                 <img
                                         class="rpwe-alignleft rpwe-thumb"
                                         src="{{ $randomKm->image }}"
                                         alt="{{ $randomKm->name }}">
                             </a>
-                            <h3 class="rpwe-title"><a href="{{ $randomKm->aff_link }}"
+                            <h3 class="rpwe-title"><a href="{{ url('khuyen-mai/'.$randomKm->slug) }}"
                                                       title="{{ $randomKm->name }}"
                                                       rel="bookmark">{{ $randomKm->name }}</a></h3></li>
                     @endforeach
@@ -45,11 +45,11 @@
                     @foreach($randomCodes as $randomCode)
                         <li class="rpwe-li rpwe-clearfix">
                             <div class="post-side rpwe-thumb">
-                                <a class="rpwe-img" target="_blank" href="{{ $randomCode->aff_link }}" rel="bookmark" style="background: url('{{ $randomCode->image }}') no-repeat center;">
+                                <a class="rpwe-img" target="_blank" href="{{ url('khuyen-mai/'.$randomCode->slug) }}" rel="bookmark" style="background: url('{{ $randomCode->image }}') no-repeat center;">
                                 </a>
                             </div>
                             <h3 class="rpwe-title">
-                                <a href="{{ $randomCode->aff_link }}"
+                                <a href="{{ url('khuyen-mai/'.$randomCode->slug) }}"
                                    title="{{ $randomCode->name }}"
                                    rel="bookmark">{{ $randomCode->name }}</a></h3></li>
                     @endforeach

@@ -201,6 +201,12 @@
 @section('scripts')
     <script src="/js/jquery.dotdotdot.js"></script>
     <script>
+        function clickCoupon(link, couponId) {
+            var copyText = $('.copy-' + couponId);
+            copyText.select();
+            document.execCommand("Copy");
+            window.open(link,'_blank');
+        }
         $(document).ready(function () {
 
             $('.entry-header p span').each(function (index) {

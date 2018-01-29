@@ -34,13 +34,13 @@
     {{--@foreach($newests as $newest)--}}
     {{--<article class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">--}}
     {{--<div class="post-list alignleft">--}}
-    {{--<a href="{{ $newest->aff_link }}" target="_blank" class="alignleft" aria-hidden="true"--}}
+    {{--<a href="{{ $newest->slug }}" target="_blank" class="alignleft" aria-hidden="true"--}}
     {{--style="background: url('{{ $newest->image }}') no-repeat center;">--}}
     {{--</a>--}}
     {{--</div>--}}
     {{--<header class="entry-header">--}}
     {{--<h2 class="entry-title" itemprop="headline"><a target="_blank"--}}
-    {{--href="{{  $newest->aff_link }}">{{ $newest->name }}</a></h2>--}}
+    {{--href="{{  $newest->slug }}">{{ $newest->name }}</a></h2>--}}
     {{--<p>{{ $newest->content }}</p>--}}
     {{--</header>--}}
     {{--</article>--}}
@@ -57,15 +57,15 @@
             @foreach($newests as $newest)
                 <article class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">
                     <div class="post-list alignleft">
-                        <a href="{{ $newest->aff_link }}" target="_blank" class="alignleft" aria-hidden="true"
+                        <a href="{{ url('khuyen-mai/'.$newest->slug) }}" class="alignleft" aria-hidden="true"
                            style="background: url('{{ $newest->image }}') no-repeat center;">
                         </a>
                     </div>
                     <header class="entry-header">
                         <h2 class="entry-title" itemprop="headline">
-                            <a target="_blank" href="{{  $newest->aff_link }}">{{ $newest->name }}</a>
+                            <a href="{{  url('khuyen-mai/'.$newest->slug) }}">{{ $newest->name }}</a>
                         </h2>
-                        <a target="_blank" href="{{  $newest->aff_link }}"><p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $newest->content }}</span></p></a>
+                        <a  href="{{  url('khuyen-mai/'.$newest->slug) }}"><p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $newest->content }}</span></p></a>
                     </header>
                 </article>
             @endforeach
@@ -75,21 +75,21 @@
     </section>
     <section id="featured-post-4" class="widget featured-content featuredpost">
         <div class="widget-wrap"><a href="{{ url('khuyen-mai/coupon') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> MÃ GIẢM GIÁ <i class="fa fa-backward"></i></h4></a>
-            @php $newests = \App\Models\Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
+            @php $mggs = \App\Models\Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
-            @foreach($newests as $newest)
+            @foreach($mggs as $mgg)
                 <article class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">
                     <div class="post-list alignleft">
-                        <a href="{{ $newest->aff_link }}" target="_blank" class="alignleft" aria-hidden="true"
-                           style="background: url('{{ $newest->image }}') no-repeat center;">
+                        <a href="{{ url('khuyen-mai/'.$mgg->slug) }}"  class="alignleft" aria-hidden="true"
+                           style="background: url('{{ $mgg->image }}') no-repeat center;">
                         </a>
                     </div>
                     <header class="entry-header">
                         <h2 class="entry-title" itemprop="headline">
-                            <a target="_blank" href="{{  $newest->aff_link }}">{{ $newest->name }}</a>
+                            <a href="{{  url('khuyen-mai/'.$mgg->slug) }}">{{ $mgg->name }}</a>
                         </h2>
-                        <a target="_blank" href="{{  $newest->aff_link }}">
-                            <p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $newest->content }}</span></p>
+                        <a  href="{{  url('khuyen-mai/'.$mgg->slug) }}">
+                            <p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $mgg->content }}</span></p>
                         </a>
                     </header>
                 </article>

@@ -302,5 +302,10 @@
     .entry-header .entry-title {
         margin-bottom: 0px;
     }
+
+    .h1-detail {
+        font-size: 23px !important;
+        font-weight: bold !important;
+    }
 }
 

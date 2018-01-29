@@ -18294,6 +18294,10 @@ a.alignleft {
     overflow: hidden;
 }
 
+.entry-content p {
+    color: red;
+}
+
 @media screen and (max-width: 767px) {
     .coupontitle {
         font-size: 18px;

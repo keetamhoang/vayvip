@@ -9,15 +9,15 @@
                 <article
                         class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">
                     <div class="post-list alignleft">
-                        <a href="{{ $newest->aff_link }}" target="_blank" class="alignleft" aria-hidden="true"
+                        <a href="{{ url('khuyen-mai/'.$newest->slug) }}" class="alignleft" aria-hidden="true"
                            style="background: url('{{ $newest->image }}') no-repeat center;">
                         </a>
                     </div>
                     <header class="entry-header">
                         <h2 class="entry-title" itemprop="headline">
-                            <a target="_blank" href="{{  $newest->aff_link }}">{{ $newest->name }}</a>
+                            <a href="{{  url('khuyen-mai/'.$newest->slug) }}">{{ $newest->name }}</a>
                         </h2>
-                        <a target="_blank" href="{{  $newest->aff_link }}"><p style="word-wrap: break-word;"><span><i
+                        <a href="{{  url('khuyen-mai/'.$newest->slug) }}"><p style="word-wrap: break-word;"><span><i
                                             class="fa fa-forward"></i> {{ $newest->content }}</span></p></a>
                     </header>
                 </article>
