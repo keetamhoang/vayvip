@@ -1,5 +1,5 @@
 <aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar"
-       itemscope="" itemtype="https://schema.org/WPSideBar">
+       itemscope="" >
     <section id="search-2" class="widget widget_search">
         <div class="widget-wrap">
             <form class="search-form" itemprop="potentialAction" itemscope=""

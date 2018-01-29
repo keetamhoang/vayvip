@@ -67,6 +67,9 @@ Route::get('khuyen-mai', 'Frontend\KmController@index');
 Route::get('san-pham', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
+Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
+Route::get('khuyen-mai/coupon', 'Frontend\KmController@coupon');
+
 Route::get('generate', 'Frontend\NewsController@generateForm');
 Route::post('dang-ky/thong-tin', 'Frontend\HomeController@registerForm');
 

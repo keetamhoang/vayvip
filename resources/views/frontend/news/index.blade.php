@@ -244,9 +244,6 @@
             });
 
             $('.tbwnln-sapo').each(function (index) {
-                if (index == 0) {
-                    console.log($(this).height());
-                }
                 if ($(this).height() > 110) {
                     $(this).dotdotdot({
                         height: 110
