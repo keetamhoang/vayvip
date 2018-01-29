@@ -44,4 +44,13 @@ class KmController extends Controller
 
         return view('frontend.km.detail', compact('discount'));
     }
+
+    public function category($slug, $id) {
+        $title = 'KHUYẾN MẠI TỪ ' .$slug;
+
+        $newests = Discount::where('merchant_id', $id)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
+            ->orderBy('start_time', 'desc')->paginate(20);
+
+        return view('frontend.km.category', compact('newests', 'title'));
+    }
 }
