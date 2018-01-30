@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
+    const VOUCHER = 1;
+
     protected $fillable = [
         'name', 'phone', 'email', 'source', 'status', 'type', 'bank', 'post_id'
     ];

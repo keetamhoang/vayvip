@@ -46,7 +46,7 @@
                         <div class="cpbutton">
                             {{--<div class="xemngayz" onclick="window.open('/out/tiki','_blank')">XEM NGAY</div>--}}
                             <div class="xemngayz"><a href="{{ $discount->aff_link }}" target="_blank"
-                                                     style="color: #fff;background: #1fb20700;">XEM NGAY</a></div>
+                                                     style="color: #fff;background: #1fb20700;padding: 12px 18px">XEM NGAY</a></div>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         <div class="cpbutton">
                             {{--<div class="xemngayz" onclick="window.open('/out/tiki','_blank')">XEM NGAY</div>--}}
                             <div class="xemngayz"><a href="{{ $discount->aff_link }}" target="_blank"
-                                                     style="color: #fff;background: #1fb20700;">XEM NGAY</a></div>
+                                                     style="color: #fff;background: #1fb20700;padding: 12px 18px">XEM NGAY</a></div>
                         </div>
                     </div>
                 </div>

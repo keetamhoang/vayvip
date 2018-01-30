@@ -88,3 +88,4 @@ Route::get('tin-tuc/{slug}-{id}', 'Frontend\NewsController@detail')
     ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
 
 Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');
+Route::post('dang-ky/popup/voucher', 'Frontend\HomeController@registerCustomer');

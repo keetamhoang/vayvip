@@ -86,6 +86,9 @@
     <link rel="stylesheet" href="/form/style.css">
 
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/popup.css">
+
     <!--  <script src="/assets/js/4052764.js" type="text/javascript" id="hs-analytics"></script><script src="/assets/js/collectedforms.js" type="text/javascript" id="CollectedForms-4052764" crossorigin="anonymous" data-leadin-portal-id="4052764" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="4052764" data-hsjs-env="prod"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/conversion_async.js"></script><script type="text/javascript" async="" src="/assets/js/analytics.js"></script><script async="" src="/assets/js/gtm.js"></script><script src="/assets/js/modernizr-2.8.3.min.js"></script> -->
 
     @yield('styles')
@@ -204,9 +207,31 @@
     {{--<a  href=".dang-ky-modal" data-toggle="modal">Click</a>--}}
 {{--</div>--}}
 
-{{--<div class="modal fade dang-ky-modal" style="z-index: 1071;margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">--}}
-    {{--<div class="modal-dialog modal-dialog-centered " role="document">--}}
-        {{--<div class="modal-content">--}}
+<div class="modal fade info-modal" style="z-index: 1071;margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="" style="position: relative">
+                <div style="position:absolute;top: 0px;left: 0px">
+                    <img src="/assets/image/popup.jpg">
+                </div>
+                <div class="body-modal-dk" style="">
+                    {{--<div >--}}
+                        {{--<img style="width: 100%" src="https://static.accesstrade.vn/publisher/www/files/img_promo/offer/img/tikivn/tiki_29.01_3.jpg">--}}
+                    {{--</div>--}}
+                    <div class="div-content" >
+                        <h1 style="">ĐĂNG KÝ ĐỂ NHẬN VOUCHER MIỄN PHÍ T﻿﻿﻿ỐT NHẤT MỖI TUẦN</h1>
+                        <hr style="border-top: 1px solid #fff;">
+                        <div>
+                            <form id="popup-form">
+                                <input value="" name="email" style="" placeholder="Email của bạn" id="email-dk" type="email" required>
+                                <div>
+                                    <button type="submit" style="" id="dk-submit">Đăng ký</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {{--<div class="modal-header" style="padding-bottom: 5px;">--}}
                 {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
                     {{--<span aria-hidden="true">&times;</span>--}}
@@ -218,9 +243,9 @@
             {{--<div class="modal-footer">--}}
 
             {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</div>--}}
+        </div>
+    </div>
+</div>
 <!--end header  area -->
 
 @yield('content')
@@ -252,6 +277,7 @@
 <!-- wow js
 ============================================ -->
 <script src="/assets/js/wow.js"></script>
+<script src="/js/jquery.cookie.js"></script>
 <!--Activating WOW Animation only for modern browser-->
 <!--[if !IE]><!-->
 <script type="text/javascript">new WOW().init();</script>
@@ -266,8 +292,8 @@
 
 @yield('scripts')
 
-
 <script>
+
     $(document).ready(function () {
         var path = window.location.pathname;
 
@@ -277,8 +303,40 @@
             if (menu.search(path) > -1 && path != '/') {
                 $(this).parent().addClass('current1');
             }
-        })
-    })
+        });
+
+        console.log($.cookie('popupShow'));
+        if ($.cookie('popupShow') == undefined) {
+            setTimeout(showPopup, 1000);
+
+            function showPopup() {
+                $('.info-modal').modal('show');
+            }
+        }
+
+        $('#popup-form').submit(function (e) {
+            e.preventDefault();
+
+            var email = $('#email-dk').val();
+
+            $.ajax({
+                type: 'post',
+                data: {email: email},
+                url: '{{ url('dang-ky/popup/voucher') }}',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 1) {
+                        $.cookie('popupShow', 'true', { expires: 1 });
+                        alert(response.message);
+                        $('.info-modal').modal('hide');
+                    } else {
+                        alert(response.message);
+//                        $('.info-modal').modal('hide');
+                    }
+                }
+            });
+        });
+    });
 
     $.ajaxSetup({
         headers: {
