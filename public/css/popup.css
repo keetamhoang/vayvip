@@ -19,7 +19,7 @@
 
 .info-modal .body-modal-dk input {
     border-radius: 11px;
-    margin: 25px 0px;
+    margin: 25px 0px 25px;
     border: 2px solid #078145;
     box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.25);
     background-color: #fff;
@@ -67,3 +67,36 @@
     padding: 20px 50px;
 }
 
+.info-modal .div-form {
+    margin-bottom: 15px;
+}
+
+#popup-form p {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .info-modal .div-content {
+        padding: 0px 8px;
+    }
+
+    .info-modal .body-modal-dk h1 {
+        font-size: 24px;
+        padding-bottom: 0px;
+        padding-top: 5px;
+        margin-bottom: -8px;
+    }
+
+    .info-modal .body-modal-dk input {
+        margin: 0px;
+        height: 45px;
+        margin-bottom: 7px;
+    }
+
+    .info-modal .body-modal-dk button {
+        padding: 5px 23px;
+        margin-bottom: 5px;
+    }
+}

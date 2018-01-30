@@ -224,9 +224,10 @@
                         <div>
                             <form id="popup-form">
                                 <input value="" name="email" style="" placeholder="Email của bạn" id="email-dk" type="email" required>
-                                <div>
+                                <div class="div-form">
                                     <button type="submit" style="" id="dk-submit">Đăng ký</button>
                                 </div>
+                                <p id="dismiss-p">Để sau</p>
                             </form>
                         </div>
                     </div>
@@ -307,7 +308,7 @@
 
         console.log($.cookie('popupShow'));
         if ($.cookie('popupShow') == undefined) {
-            setTimeout(showPopup, 1000);
+            setTimeout(showPopup, 10000);
 
             function showPopup() {
                 $('.info-modal').modal('show');
@@ -336,6 +337,11 @@
                 }
             });
         });
+        
+        $('#dismiss-p').click(function () {
+            $.cookie('popupShow', 'true', { expires: 1 });
+            $('.info-modal').modal('hide');
+        })
     });
 
     $.ajaxSetup({
