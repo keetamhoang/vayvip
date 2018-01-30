@@ -1,5 +1,13 @@
 @extends('frontend.km.index')
 
+@section('meta')
+    <meta property="og:url" content="http://taichinhsmart.vn/khuyen-mai/{{ $discount->slug }}">
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ $discount->name }} | TaichinhSMART.vn" />
+    <meta property="og:description"   content="{!!  !empty(trim($discount->content)) ? $discount->content : 'Tài chính thông minh trong tầm tay của bạn.'  !!}" />
+    <meta property="og:image"         content="{{ $discount->image }}" />
+@endsection
+
 @section('content_km')
 
     <style>
