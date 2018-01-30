@@ -146,7 +146,7 @@
             link = this;
 
             swal({
-                    title: "Bạn muốn xóa khách hàng này?",
+                    title: "Bạn muốn xóa khuyến mại này?",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#DD6B55",
