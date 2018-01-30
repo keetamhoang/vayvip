@@ -47,6 +47,12 @@ Route::group(['prefix' => 'admin',
     Route::get('customers', 'Backend\CustomerController@index');
     Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
     Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
+
+    Route::get('discounts', 'Backend\DiscountController@index');
+    Route::get('discounts/{id}', 'Backend\DiscountController@detail');
+    Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
+    Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
+    Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
 });
 
 // auth

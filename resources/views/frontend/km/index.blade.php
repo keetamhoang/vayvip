@@ -122,10 +122,18 @@
                     {{--<p class="site-description" itemprop="description">Offers.vn</p></div>--}}
                     <div class="widget-area header-widget-area">
                         <section class="widget offer-widget">
-                            <div class="widget-wrap"><a href="http://bit.ly/2FmB279" target="_blank" class="external"
+                            @php
+                                $banner = \Cache::get('bannerKm');
+                                if (empty($banner)) {
+                                    $banner = \App\Models\Discount::where('is_banner', 1)->first();
+                                }
+                            @endphp
+                            @if (!empty($banner))
+                                <div class="widget-wrap"><a href="{{ $banner->aff_link }}" target="_blank" class="external"
                                                         rel="nofollow"><img
-                                            src="/assets/km/image/adayroi_16.01.jpg"
+                                            src="{{ $banner->image }}"
                                             width="728" height="90" border="0"></a></div>
+                            @endif
                         </section>
                     </div>
                 </div>
