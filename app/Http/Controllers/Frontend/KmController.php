@@ -53,4 +53,20 @@ class KmController extends Controller
 
         return view('frontend.km.category', compact('newests', 'title'));
     }
+
+    public function search(Request $request) {
+        $s = $request->input('s');
+
+        $title = 'Kết quả tìm kiếm: ' . $s;
+
+        $s = trim($s);
+
+        if (!empty($s)) {
+            $newests = Discount::where('name', 'like', '%'.$s.'%')->orderBy('start_time', 'desc')->paginate(20);
+        } else {
+            return redirect()->back();
+        }
+
+        return view('frontend.km.category', compact('newests', 'title', 's'));
+    }
 }

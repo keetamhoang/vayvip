@@ -93,6 +93,14 @@
     </style>
 @endsection
 
+@section('pageId')
+    <div
+            class="fb-customerchat"
+            page_id="584113478648609"
+            ref="">
+    </div>
+@endsection
+
 @section('content')
     <div class="home blog custom-header content-sidebar magazine-pro-blue primary-nav magazine-home js">
         <div class="site-container">

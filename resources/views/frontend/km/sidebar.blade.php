@@ -4,10 +4,10 @@
         <div class="widget-wrap">
             <form class="search-form" itemprop="potentialAction" itemscope=""
                   itemtype="" method="get"
-                  action="#"
+                  action="{{ url('khuyen-mai/tim-kiem') }}"
                   role="search">
                 <meta itemprop="target" content="#">
-                <input itemprop="query-input" name="s" placeholder="Điền từ khóa để tìm kiếm..."
+                <input itemprop="query-input" name="s" placeholder="Điền từ khóa để tìm kiếm..." value="{{ !empty($s) ? $s : '' }}"
                        type="search"><input value="Search" type="submit"></form>
         </div>
     </section>
