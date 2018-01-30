@@ -67,6 +67,13 @@ Route::get('khuyen-mai', 'Frontend\KmController@index');
 Route::get('san-pham', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
+Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
+Route::get('khuyen-mai/coupon', 'Frontend\KmController@coupon');
+Route::get('khuyen-mai/{slug}-{id}', 'Frontend\KmController@detail')
+    ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
+Route::get('khuyen-mai/danh-muc/{slug}-{id}', 'Frontend\KmController@category')
+    ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
+
 Route::get('generate', 'Frontend\NewsController@generateForm');
 Route::post('dang-ky/thong-tin', 'Frontend\HomeController@registerForm');
 

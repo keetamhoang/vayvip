@@ -14,8 +14,10 @@ $(document).ready(function () {
         var windowpos = $(window).scrollTop();
         if (windowpos > pos.top) {
             s.addClass("stick");
+            $('#child-menu-km').addClass("go-top");
         } else {
             s.removeClass("stick");
+            $('#child-menu-km').removeClass("go-top");
         }
     });
     //one page selection page

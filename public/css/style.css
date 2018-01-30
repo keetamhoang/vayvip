@@ -58,7 +58,7 @@
 }
 
 .site-container {
-    margin-top: 83px;
+    margin-top: 130px;
 }
 
 .post-list {
@@ -104,6 +104,10 @@
     height: 45px;
     width: 45px;
     border: 1px solid #1db76b;
+}
+
+.go-top {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -297,6 +301,11 @@
 
     .entry-header .entry-title {
         margin-bottom: 0px;
+    }
+
+    .h1-detail {
+        font-size: 23px !important;
+        font-weight: bold !important;
     }
 }
 
