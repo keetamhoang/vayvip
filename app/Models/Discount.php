@@ -11,6 +11,10 @@ class Discount extends Model
         'slug', 'is_coupon'
     ];
 
+    protected $dates = [
+        'created_at', 'updated_at'
+    ];
+
     public function merchant()
     {
         return $this->belongsTo('App\Models\Merchant');

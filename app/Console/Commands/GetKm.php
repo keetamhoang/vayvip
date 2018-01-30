@@ -61,6 +61,7 @@ class GetKm extends Command
         $output = json_decode($output, true);
 
         if (empty($output['message'])) {
+
             foreach ($output['data'] as $each) {
                 try {
                     $dataDiscount = [
@@ -132,6 +133,8 @@ class GetKm extends Command
                     $this->line($ex->getMessage() . '|' . $ex->getLine());
                 }
             }
+        } else {
+            $this->line($output['message']);
         }
 
         $this->line('END: ' . Carbon::now());
