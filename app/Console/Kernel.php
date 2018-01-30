@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\GetKm;
+use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        GetKm::class
+        GetKm::class,
+        UpdateExpireKm::class
     ];
 
     /**
@@ -28,6 +30,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('get:km-at')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 //            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
+
+        $schedule->command('update:expire-km')
+            ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
     }
 
     /**

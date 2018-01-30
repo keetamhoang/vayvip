@@ -131,7 +131,7 @@
         <div class="widget-wrap"><a href="{{ url('khuyen-mai/moi-nhat') }}" title="Khuyến mại"><h4
                         class="widget-title widgettitle"><i class="fa fa-forward"></i> KHUYẾN MẠI HẤP DẪN KHÁC <i
                             class="fa fa-backward"></i></h4></a>
-            @php $newests = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->inRandomOrder()->limit(7)->get() @endphp
+            @php $newests = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->inRandomOrder()->limit(8)->get() @endphp
 
             @foreach($newests as $newest)
                 <article

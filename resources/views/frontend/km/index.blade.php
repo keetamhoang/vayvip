@@ -102,14 +102,14 @@
                         class="menu genesis-nav-menu menu-primary js-superfish responsive-menu sf-js-enabled sf-arrows"
                         style="touch-action: pan-y;">
                         <li id="menu-item-1536"
-                            class="firstmenu1 menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1536">
+                            class="firstmenu1 menu-item menu-item-type-custom menu-item-object-custom  current_page_item menu-item-home menu-item-1536 {{ Request::is('khuyen-mai') ? 'current-menu-item' : '' }}">
                             <a href="{{ url('khuyen-mai') }}" itemprop="url"><span itemprop="name">TẤT CẢ</span></a></li>
                         <li id="menu-item-16456"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456"><a
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}"><a
                                     href="{{ url('khuyen-mai/moi-nhat') }}" itemprop="url"><span
                                         itemprop="name">KHUYẾN MẠI MỚI NHẤT</span></a></li>
                         <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457"><a
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/coupon') ? 'current-menu-item' : '' }}"><a
                                     href="{{ url('khuyen-mai/coupon') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
                         </li>
                     </ul>
