@@ -2,12 +2,12 @@
 
 @section('content')
     <h3 class="h3-title">
-        @if ($type == 'vay-von')
-            Quản lý khách hàng vay vốn
-        @elseif ($type == 'san-pham')
-            Quản lý khách hàng đăng ký tư vấn sản phẩm
+        @if ($type == 'citi')
+            Quản lý khách hàng Google Sheets (Citi)
+        @elseif ($type == 'vpbank')
+            Quản lý khách hàng Google Sheets (VPBank)
         @else
-            Quản lý khách hàng (Tất cả)
+            Quản lý khách hàng Google Sheets
         @endif
 
     </h3>
@@ -15,9 +15,10 @@
     @include('flash_message')
 
     <div class="portlet-title">
-        <a class="btn btn-default" href="{{ url('admin/customers') }}">Tất cả</a>
-        <a class="btn btn-primary" href="{{ url('admin/customers?type=vay-von') }}">KH vay vốn</a>
-        <a class="btn btn-danger" href="{{ url('admin/customers?type=san-pham') }}">KH sản phẩm</a>
+        <a class="btn btn-default" href="{{ url('admin/chatfuel-customers') }}">Tất cả</a>
+        <a class="btn btn-primary" href="{{ url('admin/chatfuel-customers?type=citi') }}">KH Citi</a>
+        <a class="btn btn-danger" href="{{ url('admin/chatfuel-customers?type=vpbank') }}">KH VPBank</a>
+        <button class="btn-warning btn" id="reload-iframe">Reload trang Citi</button>
     </div>
     <div class="portlet-body form">
     </div>
@@ -27,44 +28,29 @@
     {{--</div>--}}
 
     <div class="row" style="margin-top: 20px">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <table class="table table-striped table-bordered table-hover" id="orders-table">
                 <thead>
-
-                @if ($type == 'vay-von')
                     <tr>
-                        <th>#</th>
-                        <th>Tên</th>
+                        <th>Done?</th>
+                        <th>Họ tên</th>
+                        <th>Năm sinh</th>
+                        <th>Khu vực</th>
+                        <th>Quận</th>
                         <th>SĐT</th>
                         <th>Email</th>
-                        <th>Ngân hàng</th>
-                        <th>Cập nhật</th>
+                        <th>Mức lương</th>
+                        <th>Thắc mắc</th>
+                        <th>Loại</th>
                         <th>Hành động</th>
                     </tr>
-                @elseif ($type == 'san-pham')
-                    <tr>
-                        <th>#</th>
-                        <th>Tên</th>
-                        <th>SĐT</th>
-                        <th>Email</th>
-                        <th>Sản phẩm</th>
-                        <th>Cập nhật</th>
-                        <th>Hành động</th>
-                    </tr>
-                @else
-                    <tr>
-                        <th>#</th>
-                        <th>Tên</th>
-                        <th>SĐT</th>
-                        <th>Email</th>
-                        <th>Loại KH</th>
-                        <th>Cập nhật</th>
-                        <th>Hành động</th>
-                    </tr>
-                @endif
-
                 </thead>
             </table>
+        </div>
+        <div class="col-md-4">
+            <iframe id="citi-iframe" src="http://citibank.vnfiba.com/?utm_source=accesstrade&aff_sid=jFQNYTFx9gYOCQfvezyKeg3fBy7Cn9c6IGx4pv5GSKEnb8qC" width="100%" height="1000">
+                alternative content for browsers which do not support iframe.
+            </iframe>
         </div>
     </div>
 
@@ -119,38 +105,23 @@
 //            ],
             searching: false,
             ajax: {
-                url: '{{ url('admin/customerAttribute.data') }}',
+                url: '{{ url('admin/chatfuelAttribute.data') }}',
                 data: function (d) {
                     d.type = '{{ $type }}'
                 }
             },
             columns: [
-                @if ($type == 'vay-von')
-                {data: 'id', name: 'id'},
+                {data: 'status', name: 'status'},
                 {data: 'name', name: 'name'},
+                {data: 'birthday', name: 'birthday'},
+                {data: 'address', name: 'address'},
+                {data: 'quan', name: 'quan'},
                 {data: 'phone', name: 'phone'},
                 {data: 'email', name: 'email'},
-                {data: 'bank', name: 'bank'},
-                {data: 'created_at', name: 'created_at'},
+                {data: 'salary', name: 'salary'},
+                {data: 'note', name: 'note'},
+                {data: 'type', name: 'type'},
                 {data: 'action', name: 'action'},
-                @elseif ($type == 'san-pham')
-                {data: 'id', name: 'id'},
-                {data: 'name', name: 'name'},
-                {data: 'phone', name: 'phone'},
-                {data: 'email', name: 'email'},
-                {data: 'post_id', name: 'post_id'},
-                {data: 'created_at', name: 'created_at'},
-                {data: 'action', name: 'action'},
-                @else
-                {data: 'id', name: 'id'},
-                {data: 'name', name: 'name'},
-                {data: 'phone', name: 'phone'},
-                {data: 'email', name: 'email'},
-                {data: 'source', name: 'source'},
-                {data: 'created_at', name: 'created_at'},
-                {data: 'action', name: 'action'},
-            @endif
-
             ],
 
         });
@@ -207,22 +178,34 @@
             orderTable.ajax.reload();
         }
 
-        $(document).on('click', '.ck-btn', function () {
-            var id = $(this).attr('data-brand-id');
+        $(document).on('click', '.go-done', function () {
+            var thisHtml = $(this);
+            var id = $(this).attr('data-id');
 
             $.ajax({
-                url: '{{url('admin/get-ck-by-brand-id')}}',
+                url: '{{url('admin/update-customer')}}',
                 type: 'get',
                 data: {id: id},
-                dataType: 'html',
+                dataType: 'json',
                 success: function (response) {
-                    $('#modal-body').html(response);
-                    $('#basic').modal('show');
+                    if (response.status == 0) {
+                        swal('error', response.message);
+                    } else {
+                        thisHtml.parent().find('.label').html('XONG');
+                        thisHtml.parent().find('.label').removeClass('label-danger').addClass('label-success');
+                        thisHtml.remove();
+                    }
                 },
                 error: function (response) {
-                    $('#order-detail').html('');
+
                 }
             })
+        });
+
+        $(document).on('click', '#reload-iframe', function () {
+//            var iframe = ('#citi-iframe');
+//            iframe.src = iframe.src;
+            document.getElementById('citi-iframe').src += '';
         });
 
     </script>

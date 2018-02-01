@@ -48,11 +48,17 @@ Route::group(['prefix' => 'admin',
     Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
     Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
 
+    Route::get('chatfuel-customers', 'Backend\CustomerController@chatfuelIndex');
+    Route::get('chatfuelAttribute.data', 'Backend\CustomerController@chatfuelAttribute');
+    Route::get('chatfuel-customers/delete/{id}', 'Backend\CustomerController@chatfuelDelete');
+
     Route::get('discounts', 'Backend\DiscountController@index');
     Route::get('discounts/{id}', 'Backend\DiscountController@detail');
     Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
     Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
     Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
+
+    Route::get('update-customer', 'Backend\CustomerController@updateCustomer');
 });
 
 // auth

@@ -93,18 +93,13 @@
             <ul class="sub-menu">
                 <li class="nav-item start">
                     <a href="{{ url('admin/customers') }}" class="nav-link ">
-                        <span class="title">Tất cả</span>
+                        <span class="title">Vay vốn & Sản phẩm</span>
                         <span class="selected"></span>
                     </a>
                 </li>
                 <li class="nav-item start ">
-                    <a href="{{ url('admin/customers?type=vay-von') }}" class="nav-link ">
-                        <span class="title">Khách hàng vay vốn</span>
-                    </a>
-                </li>
-                <li class="nav-item start ">
-                    <a href="{{ url('admin/customers?type=san-pham') }}" class="nav-link ">
-                        <span class="title">Khách hàng sản phẩm</span>
+                    <a href="{{ url('admin/chatfuel-customers') }}" class="nav-link ">
+                        <span class="title">Khách hàng Google Sheets</span>
                     </a>
                 </li>
             </ul>
