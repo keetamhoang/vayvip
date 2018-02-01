@@ -165,9 +165,9 @@
                         {{--<li class="vay-ngay"><a--}}
                                     {{--href="{{ url('/') }}#vay-ngay"><img--}}
                                         {{--src="/assets/image/vayvip-btn.png"></a></li>--}}
+                        <li ><a href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
                         <li >
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
-                        <li ><a href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
                         <li class=""><a
                                     href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
                         <li class=""><a
@@ -186,10 +186,10 @@
                 <ul class="dropdown-menu mobile_menus drop_mobile navid">
                     <li>
                         <a href="{{ url('/') }}">Trang chủ</a></li>
-                    <li >
-                        <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li ><a
                                 href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
+                    <li >
+                        <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li class=""><a
                                 href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
                     <li class=""><a

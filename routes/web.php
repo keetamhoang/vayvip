@@ -89,3 +89,5 @@ Route::get('tin-tuc/{slug}-{id}', 'Frontend\NewsController@detail')
 
 Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');
 Route::post('dang-ky/popup/voucher', 'Frontend\HomeController@registerCustomer');
+
+Route::get('gg-sheet', 'Frontend\HomeController@ggSheet');

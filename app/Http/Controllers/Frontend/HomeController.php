@@ -8,11 +8,14 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Sheets;
+use Google;
 
 class HomeController extends Controller
 {
     public function index() {
-        return redirect(url('vay-von-tin-dung'));
+        return redirect(url('khuyen-mai'));
         return view('frontend.index');
     }
 
@@ -76,5 +79,21 @@ class HomeController extends Controller
             'status' => 1,
             'message' => 'Chúc mừng bạn! Bạn đã đăng ký thành công!'
         ]);
+    }
+
+    public function getInfoCustomerChatfuel(Request $request) {
+        $data = $request->all();
+
+        Log::info(json_encode($data));
+    }
+
+    public function ggSheet() {
+        Sheets::setService(Google::make('sheets'));
+        Sheets::spreadsheet('1byMQtSXtlWbmzQaJ0exEDj5xsmdsfVX1u2y4OxWPxBE');
+
+        $values = Sheets::sheet('Citi')->all();
+//        $values = Sheets::sheet('VPBank')->all();
+
+        dd($values);
     }
 }

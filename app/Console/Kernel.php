@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\GetDataFromSheetGG;
 use App\Console\Commands\GetKm;
 use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
@@ -16,7 +17,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         GetKm::class,
-        UpdateExpireKm::class
+        UpdateExpireKm::class,
+        GetDataFromSheetGG::class
     ];
 
     /**
@@ -33,6 +35,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
+
+        $schedule->command('get:data-gg-sheet')
+            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_cron.log'));
     }
 
     /**

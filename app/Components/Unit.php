@@ -43,4 +43,13 @@ class Unit {
 
         return $string;
     }
+
+    public static function formatPhone($phone)
+    {
+        $phone = preg_replace('/\s+/', '', $phone);
+        $phone = preg_replace("/[^0-9]/", "", $phone);
+
+
+        return $phone;
+    }
 }
