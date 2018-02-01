@@ -76,10 +76,22 @@ class GetDataFromSheetGG extends Command
                         'updated_at' => Carbon::now()
                     ];
 
-                    DB::table('chatfuel_customers')->updateOrInsert([
-                        'phone' => $value[4],
-                        'type' => ChatfuelCustomer::CITI
-                    ], $dataInsert);
+                    $checkCiti = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->first();
+
+                    if (!empty($checkCiti)) {
+                        $checkCiti->update($dataInsert);
+                    } else {
+                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::VPBANK)->where('is_from', 1)->first();
+
+                        if (empty($checkVPBank)) {
+                            ChatfuelCustomer::create($dataInsert);
+                        }
+                    }
+
+//                    DB::table('chatfuel_customers')->updateOrInsert([
+//                        'phone' => $value[4],
+//                        'type' => ChatfuelCustomer::CITI
+//                    ], $dataInsert);
                 }
             } catch (\Exception $ex) {
                 $this->line('ERROR CITI '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());
@@ -111,10 +123,22 @@ class GetDataFromSheetGG extends Command
                         'updated_at' => Carbon::now()
                     ];
 
-                    DB::table('chatfuel_customers')->updateOrInsert([
-                        'phone' => $value[4],
-                        'type' => ChatfuelCustomer::VPBANK
-                    ], $dataInsert);
+                    $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::VPBANK)->first();
+
+                    if (!empty($checkVPBank)) {
+                        $checkVPBank->update($dataInsert);
+                    } else {
+                        $checkCiti = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->where('is_from', 1)->first();
+
+                        if (empty($checkCiti)) {
+                            ChatfuelCustomer::create($dataInsert);
+                        }
+                    }
+
+//                    DB::table('chatfuel_customers')->updateOrInsert([
+//                        'phone' => $value[4],
+//                        'type' => ChatfuelCustomer::VPBANK
+//                    ], $dataInsert);
                 }
             } catch (\Exception $ex) {
                 $this->line('ERROR VPBANK '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());

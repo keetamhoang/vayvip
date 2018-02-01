@@ -92,14 +92,24 @@ class CustomerController extends AdminController
 
     public function chatfuelAttribute(Request $request) {
         $type = $request->input('type');
+        $search = $request->input('search');
 
         if ($type == 'citi') {
-            $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::CITI)->orderBy('status', 'asc')->get();
+            $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::CITI);
         } elseif ($type == 'vpbank') {
-            $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::VPBANK)->orderBy('status', 'asc')->get();
+            $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::VPBANK);
         } else {
-            $customers = ChatfuelCustomer::orderBy('status', 'asc')->get();
+            $customers = new ChatfuelCustomer;
         }
+
+        if (!empty($search)) {
+            $condi = $search[0];
+            $search = substr($search, 1, strlen($search) - 1);
+
+            $customers = $customers->where('salary', "$condi", intval($search));
+        }
+
+        $customers = $customers->orderBy('status', 'asc')->get();
 
         return $this->chatfuelDatatable($customers);
     }
@@ -160,7 +170,7 @@ class CustomerController extends AdminController
                 $text = '';
 
                 if ($customer->status == ChatfuelCustomer::DONE) {
-                    $text = '<label class="label label-success">Xong</label>';
+                    $text = '<label class="label label-success">Xong</label><span>'.Carbon::parse($customer->done_time)->format('m/d/Y H:s').'</span>';
                 } else if ($customer->status == ChatfuelCustomer::NOT_DONE) {
                     $text = '<label class="label label-danger">Chưa</label>';
                     $text .= '<button class="btn-success btn btn-sm go-done" data-id="'.$customer->id.'"><i class="fa fa-forward"></i> DONE!</button>';
@@ -169,7 +179,8 @@ class CustomerController extends AdminController
                 return $text;
             })
             ->addColumn('action', function ($customer) {
-                $url = '<a type="button" class="btn blue btn-outline" href="/admin/customers/'.$customer->id.'">Sửa</a><a href="/admin/customers/delete/'.$customer->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+                $url = '<button type="button" class="btn blue btn-outline change-btn" data-id="'.$customer->id.'" data-change="'.($customer->type == ChatfuelCustomer::CITI ? 'citi' : 'vpbank').'">Chuyển '.($customer->type == ChatfuelCustomer::CITI ? 'VPBank' : 'Citi').'</button>';
+                $url .= '<a href="/admin/chatfuel-customers/delete/'.$customer->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
 
                 return $url;
             })
@@ -179,7 +190,7 @@ class CustomerController extends AdminController
 
     public function chatfuelDelete($id) {
         try {
-            Customer::where('id', $id)->delete();
+            ChatfuelCustomer::where('id', $id)->delete();
         } catch (\Exception $ex) {
             return redirect()->back()->with('error', 'Xóa không thành công!');
         }
@@ -200,12 +211,44 @@ class CustomerController extends AdminController
         }
 
         $customer->update([
-            'status' => ChatfuelCustomer::DONE
+            'status' => ChatfuelCustomer::DONE,
+            'done_time' => Carbon::now()
         ]);
 
         return response([
             'status' => 1,
             'message' => 'Cập nhật thành công'
+        ]);
+    }
+
+    public function change(Request $request) {
+        $to = $request->input('to');
+        $id = $request->input('id');
+
+        $customer = ChatfuelCustomer::find($id);
+
+        if (empty($customer)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tìm thấy khách hàng'
+            ]);
+        }
+
+        if ($to == 'citi') {
+            $customer->update([
+                'type' => ChatfuelCustomer::VPBANK,
+                'is_from' => 1
+            ]);
+        } else if ($to == 'vpbank') {
+            $customer->update([
+                'type' => ChatfuelCustomer::CITI,
+                'is_from' => 1
+            ]);
+        }
+
+        return response([
+            'status' => 1,
+            'message' => 'Chuyển khách hàng thành công'
         ]);
     }
 }

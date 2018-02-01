@@ -13,6 +13,6 @@ class ChatfuelCustomer extends Model
     const NOT_DONE = 0;
 
     protected $fillable = [
-        'name', 'address', 'birthday', 'phone', 'email', 'salary', 'note', 'status', 'type', 'quan'
+        'name', 'address', 'birthday', 'phone', 'email', 'salary', 'note', 'status', 'type', 'quan', 'done_time', 'is_from'
     ];
 }

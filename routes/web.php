@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin',
     Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
 
     Route::get('chatfuel-customers', 'Backend\CustomerController@chatfuelIndex');
+    Route::get('chatfuel-customers/change', 'Backend\CustomerController@change');
     Route::get('chatfuelAttribute.data', 'Backend\CustomerController@chatfuelAttribute');
     Route::get('chatfuel-customers/delete/{id}', 'Backend\CustomerController@chatfuelDelete');
 

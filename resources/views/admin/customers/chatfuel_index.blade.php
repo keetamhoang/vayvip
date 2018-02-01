@@ -15,10 +15,16 @@
     @include('flash_message')
 
     <div class="portlet-title">
-        <a class="btn btn-default" href="{{ url('admin/chatfuel-customers') }}">Tất cả</a>
-        <a class="btn btn-primary" href="{{ url('admin/chatfuel-customers?type=citi') }}">KH Citi</a>
-        <a class="btn btn-danger" href="{{ url('admin/chatfuel-customers?type=vpbank') }}">KH VPBank</a>
-        <button class="btn-warning btn" id="reload-iframe">Reload trang Citi</button>
+        <div class="col-md-8">
+            <a class="btn btn-default" href="{{ url('admin/chatfuel-customers') }}">Tất cả</a>
+            <a class="btn btn-primary" href="{{ url('admin/chatfuel-customers?type=citi') }}">KH Citi</a>
+            <a class="btn btn-danger" href="{{ url('admin/chatfuel-customers?type=vpbank') }}">KH VPBank</a>
+            <button class="btn-warning btn" id="reload-iframe">Reload trang Citi</button>
+            <span style="width: 400px;float: right;display: block;">
+                <input style="width: 70%;display: inline-block;" name="salary" id="salary-input" placeholder="Lọc tiền lương" class="form-control">
+                <button class="btn btn-primary" id="salary-btn">Lọc</button>
+            </span>
+        </div>
     </div>
     <div class="portlet-body form">
     </div>
@@ -48,7 +54,7 @@
             </table>
         </div>
         <div class="col-md-4">
-            <iframe id="citi-iframe" src="http://citibank.vnfiba.com/?utm_source=accesstrade&aff_sid=jFQNYTFx9gYOCQfvezyKeg3fBy7Cn9c6IGx4pv5GSKEnb8qC" width="100%" height="1000">
+            <iframe id="citi-iframe" src="https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=http%3A%2F%2Fcitibank.vnfiba.com%2F" width="100%" height="1000">
                 alternative content for browsers which do not support iframe.
             </iframe>
         </div>
@@ -107,7 +113,8 @@
             ajax: {
                 url: '{{ url('admin/chatfuelAttribute.data') }}',
                 data: function (d) {
-                    d.type = '{{ $type }}'
+                    d.type = '{{ $type }}';
+                    d.search = $('#salary-input').val();
                 }
             },
             columns: [
@@ -189,7 +196,7 @@
                 dataType: 'json',
                 success: function (response) {
                     if (response.status == 0) {
-                        swal('error', response.message);
+                        swal(response.message, '', "error");
                     } else {
                         thisHtml.parent().find('.label').html('XONG');
                         thisHtml.parent().find('.label').removeClass('label-danger').addClass('label-success');
@@ -202,9 +209,34 @@
             })
         });
 
+        $(document).on('click', '.change-btn', function () {
+            var id = $(this).attr('data-id');
+            var to = $(this).attr('data-change');
+
+            $.ajax({
+                url: '{{url('admin/chatfuel-customers/change')}}',
+                type: 'get',
+                data: {id: id, to: to},
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 0) {
+                        swal(response.message, '', "error");
+                    } else {
+                        swal(response.message, '', "success");
+                        orderTable.ajax.reload();
+                    }
+                },
+                error: function (response) {
+
+                }
+            })
+        });
+
+        $(document).on('click', '#salary-btn', function () {
+            orderTable.ajax.reload();
+        });
+
         $(document).on('click', '#reload-iframe', function () {
-//            var iframe = ('#citi-iframe');
-//            iframe.src = iframe.src;
             document.getElementById('citi-iframe').src += '';
         });
 
