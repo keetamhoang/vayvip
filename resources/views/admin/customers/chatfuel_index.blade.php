@@ -19,8 +19,9 @@
             <a class="btn btn-default" href="{{ url('admin/chatfuel-customers') }}">Tất cả</a>
             <a class="btn btn-primary" href="{{ url('admin/chatfuel-customers?type=citi') }}">KH Citi</a>
             <a class="btn btn-danger" href="{{ url('admin/chatfuel-customers?type=vpbank') }}">KH VPBank</a>
-            <button class="btn-warning btn" id="reload-iframe">Reload trang Citi</button>
-            <span style="width: 400px;float: right;display: block;">
+            <a class="btn btn-success" href="{{ url('admin/chatfuel-customers?type=sacom') }}">KH Sacombank</a>
+            <button class="btn-warning btn" id="reload-iframe">Reload trang ĐK</button>
+            <span style="width: 300px;float: right;display: block;">
                 <input style="width: 70%;display: inline-block;" name="salary" id="salary-input" placeholder="Lọc tiền lương" class="form-control">
                 <button class="btn btn-primary" id="salary-btn">Lọc</button>
             </span>
@@ -54,7 +55,7 @@
             </table>
         </div>
         <div class="col-md-4">
-            <iframe id="citi-iframe" src="https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=http%3A%2F%2Fcitibank.vnfiba.com%2F" width="100%" height="1000">
+            <iframe id="citi-iframe" src="{{ $type == 'sacom' ? 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=http%3A%2F%2Fsacombank.vnfiba.com%2F' : 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=http%3A%2F%2Fcitibank.vnfiba.com%2F' }}" width="100%" height="1000">
                 alternative content for browsers which do not support iframe.
             </iframe>
         </div>

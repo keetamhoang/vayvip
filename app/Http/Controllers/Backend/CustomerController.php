@@ -98,6 +98,8 @@ class CustomerController extends AdminController
             $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::CITI);
         } elseif ($type == 'vpbank') {
             $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::VPBANK);
+        } elseif ($type == 'sacom') {
+            $customers = ChatfuelCustomer::where('type', ChatfuelCustomer::SACOM);
         } else {
             $customers = new ChatfuelCustomer;
         }
@@ -179,7 +181,20 @@ class CustomerController extends AdminController
                 return $text;
             })
             ->addColumn('action', function ($customer) {
-                $url = '<button type="button" class="btn blue btn-outline change-btn" data-id="'.$customer->id.'" data-change="'.($customer->type == ChatfuelCustomer::CITI ? 'citi' : 'vpbank').'">Chuyển '.($customer->type == ChatfuelCustomer::CITI ? 'VPBank' : 'Citi').'</button>';
+                $url = '';
+
+                if ($customer->type == ChatfuelCustomer::CITI || $customer->type == ChatfuelCustomer::SACOM) {
+                    $url .= '<button type="button" class="btn blue btn-outline change-btn" data-id="'.$customer->id.'" data-change="vpbank">Chuyển VPBank</button>';
+                }
+
+                if ($customer->type == ChatfuelCustomer::VPBANK || $customer->type == ChatfuelCustomer::SACOM) {
+                    $url .= '<button type="button" class="btn blue btn-outline change-btn" data-id="'.$customer->id.'" data-change="citi">Chuyển Citi</button>';
+                }
+
+                if ($customer->type == ChatfuelCustomer::CITI || $customer->type == ChatfuelCustomer::VPBANK) {
+                    $url .= '<button type="button" class="btn blue btn-outline change-btn" data-id="'.$customer->id.'" data-change="sacom">Chuyển Sacombank</button>';
+                }
+
                 $url .= '<a href="/admin/chatfuel-customers/delete/'.$customer->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
 
                 return $url;
@@ -242,6 +257,11 @@ class CustomerController extends AdminController
         } else if ($to == 'vpbank') {
             $customer->update([
                 'type' => ChatfuelCustomer::CITI,
+                'is_from' => 1
+            ]);
+        } else if ($to == 'sacom') {
+            $customer->update([
+                'type' => ChatfuelCustomer::SACOM,
                 'is_from' => 1
             ]);
         }

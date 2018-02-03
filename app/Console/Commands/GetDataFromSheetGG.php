@@ -81,17 +81,15 @@ class GetDataFromSheetGG extends Command
                     if (!empty($checkCiti)) {
                         $checkCiti->update($dataInsert);
                     } else {
-                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::VPBANK)->where('is_from', 1)->first();
+                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                            $query->where('type', ChatfuelCustomer::VPBANK)->orWhere('type', ChatfuelCustomer::SACOM);
+                        })->where('is_from', 1)->first();
 
                         if (empty($checkVPBank)) {
                             ChatfuelCustomer::create($dataInsert);
                         }
                     }
 
-//                    DB::table('chatfuel_customers')->updateOrInsert([
-//                        'phone' => $value[4],
-//                        'type' => ChatfuelCustomer::CITI
-//                    ], $dataInsert);
                 }
             } catch (\Exception $ex) {
                 $this->line('ERROR CITI '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());
@@ -128,9 +126,57 @@ class GetDataFromSheetGG extends Command
                     if (!empty($checkVPBank)) {
                         $checkVPBank->update($dataInsert);
                     } else {
-                        $checkCiti = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->where('is_from', 1)->first();
+                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                            $query->where('type', ChatfuelCustomer::CITI)->orWhere('type', ChatfuelCustomer::SACOM);
+                        })->where('is_from', 1)->first();
 
-                        if (empty($checkCiti)) {
+                        if (empty($checkVPBank)) {
+                            ChatfuelCustomer::create($dataInsert);
+                        }
+                    }
+
+                }
+            } catch (\Exception $ex) {
+                $this->line('ERROR VPBANK '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());
+            }
+        }
+
+
+        $valuesSacom = Sheets::sheet('Sacombank')->all();
+
+        foreach ($valuesSacom as $key => $value) {
+            try {
+                if ($key != 0) {
+                    $value[4] = Unit::formatPhone($value[4]);
+                    $value[6] = Unit::formatPhone($value[6]);
+
+                    if ($value[4][0] != '0') {
+                        $value[4] = '0' . $value[4];
+                    }
+
+                    $dataInsert = [
+                        'name' => $value[0],
+                        'address' => $value[1],
+                        'birthday' => $value[3],
+                        'phone' => $value[4],
+                        'email' => $value[5],
+                        'salary' => $value[6],
+                        'note' => $value[7],
+                        'quan' => $value[2],
+                        'type' => ChatfuelCustomer::SACOM,
+                        'updated_at' => Carbon::now()
+                    ];
+
+                    $checkSacom = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::SACOM)->first();
+
+                    if (!empty($checkSacom)) {
+                        $checkSacom->update($dataInsert);
+                    } else {
+                        $checkSacom = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                            $query->where('type', ChatfuelCustomer::CITI)->orWhere('type', ChatfuelCustomer::VPBANK);
+                        })->where('is_from', 1)->first();
+
+                        if (empty($checkSacom)) {
                             ChatfuelCustomer::create($dataInsert);
                         }
                     }
