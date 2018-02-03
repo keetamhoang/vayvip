@@ -97,4 +97,29 @@
             <p class="more-from-category"><a href="{{ url('khuyen-mai/coupon') }}"
                                              title="Mã giảm giá">Xem thêm...</a></p></div>
     </section>
+
+    <section id="featured-post-4" class="widget featured-content featuredpost">
+        <div class="widget-wrap"><a href="{{ url('khuyen-mai/review') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> REVIEW & ĐÁNH GIÁ <i class="fa fa-backward"></i></h4></a>
+            @php $reviews = \App\Models\Post::where('is_review', 1)->where('status', 1)->orderBy('updated_at', 'desc')->limit(7)->get() @endphp
+
+            @foreach($reviews as $review)
+                <article class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">
+                    <div class="post-list alignleft">
+                        <a href="{{ url('tin-tuc/'.$review->slug) }}"  class="alignleft" aria-hidden="true"
+                           style="background: url('{{ $review->image }}') no-repeat center;">
+                        </a>
+                    </div>
+                    <header class="entry-header">
+                        <h2 class="entry-title" itemprop="headline" style="line-height: 1.2;">
+                            <a href="{{  url('tin-tuc/'.$review->slug) }}">{{ $review->title }}</a>
+                        </h2>
+                        {{--<a  href="{{  url('tin-tuc/'.$review->slug) }}">--}}
+                            {{--<p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $review->short_desc }}</span></p>--}}
+                        {{--</a>--}}
+                    </header>
+                </article>
+            @endforeach
+            <p class="more-from-category"><a href="{{ url('khuyen-mai/review') }}"
+                                             title="Mã giảm giá">Xem thêm...</a></p></div>
+    </section>
 @endsection

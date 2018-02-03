@@ -80,19 +80,19 @@
 
 
                     <div class="top-form">
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-4 col">
-                                <div class="inputt input_change">
-                                    <span class="message_icon"><img src="/assets/image/icon_bank.png"></span>
-                                    <select class="form-control name bank" name="bank" id="top-bank">
-                                        <option value="" selected>-- Chọn đơn vị cho vay --</option>
-                                        <option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>
-                                        <option value="OCB">Ngân hàng OCB</option>
-                                        <option value="DoctorDong">Doctor Đồng</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-4 col-md-offset-4 col">--}}
+                                {{--<div class="inputt input_change">--}}
+                                    {{--<span class="message_icon"><img src="/assets/image/icon_bank.png"></span>--}}
+                                    {{--<select class="form-control name bank" name="bank" id="top-bank">--}}
+                                        {{--<option value="" selected>-- Chọn đơn vị cho vay --</option>--}}
+                                        {{--<option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>--}}
+                                        {{--<option value="OCB">Ngân hàng OCB</option>--}}
+                                        {{--<option value="DoctorDong">Doctor Đồng</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="row">
                             <div class="col-md-4 col">
                                 <div class="inputt input_change">
@@ -742,19 +742,19 @@
                 </div>
                 <!--end section title-->
             </div>
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4 col">
-                    <div class="inputt input_change">
-                        <span class="message_icon"><img src="/assets/image/icon_bank.png"></span>
-                        <select class="form-control name bank" name="bank" id="bot-bank">
-                            <option value="" selected>-- Chọn đơn vị cho vay --</option>
-                            <option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>
-                            <option value="OCB">Ngân hàng OCB</option>
-                            <option value="DoctorDong">Doctor Đồng</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="row">--}}
+                {{--<div class="col-md-4 col-md-offset-4 col">--}}
+                    {{--<div class="inputt input_change">--}}
+                        {{--<span class="message_icon"><img src="/assets/image/icon_bank.png"></span>--}}
+                        {{--<select class="form-control name bank" name="bank" id="bot-bank">--}}
+                            {{--<option value="" selected>-- Chọn đơn vị cho vay --</option>--}}
+                            {{--<option value="UNKNOWN">Tư vấn đơn vị phù hợp cho tôi</option>--}}
+                            {{--<option value="OCB">Ngân hàng OCB</option>--}}
+                            {{--<option value="DoctorDong">Doctor Đồng</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="row bot-form text-center">
 
                 {{--<div class="col-md-2">--}}
@@ -976,7 +976,10 @@
                     return;
                 }
 
-                var textBank = $("#top-bank option:selected").text();
+//                var textBank = $("#top-bank option:selected").text();
+
+                var textBank = 'Doctor Đồng';
+                var bank = 'DoctorDong';
 
                 $('#name-bank').html('Tiếp tục với ' + textBank);
                 $('#next-bank').html('<i class="fa fa-hand-o-right "></i> Tiếp tục với ' + textBank);
@@ -1023,7 +1026,10 @@
                     return;
                 }
 
-                var textBank = $("#bot-bank option:selected").text();
+//                var textBank = $("#bot-bank option:selected").text();
+
+                var textBank = 'Doctor Đồng';
+                var bank = 'DoctorDong';
 
                 $('#name-bank').html('Tiếp tục với ' + textBank);
                 $('#next-bank').html('<i class="fa fa-hand-o-right "></i> Tiếp tục với ' + textBank);

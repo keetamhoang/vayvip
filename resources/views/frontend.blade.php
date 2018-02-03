@@ -170,8 +170,8 @@
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                         <li class=""><a
                                     href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
-                        <li class=""><a
-                                    href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>
+                        {{--<li class=""><a--}}
+                                    {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                         <li class=""><a
                                     href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
 
@@ -192,8 +192,8 @@
                         <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li class=""><a
                                 href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
-                    <li class=""><a
-                                href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>
+                    {{--<li class=""><a--}}
+                                {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                     <li class=""><a
                                 href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
                 </ul>

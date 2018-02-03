@@ -76,6 +76,7 @@ class PostController extends AdminController
 
         $data['status'] = !empty($data['status']) and $data['status'] == 'on' ? 1: 0;
         $data['is_highlight'] = !empty($data['is_highlight']) and $data['is_highlight'] == 'on' ? 1: 0;
+        $data['is_review'] = !empty($data['is_review']) and $data['is_review'] == 'on' ? 1: 0;
 
         $data['slug'] = Unit::create_slug($data['title']);
 
@@ -127,6 +128,7 @@ class PostController extends AdminController
 
         $data['status'] = !empty($data['status']) and $data['status'] == 'on' ? 1: 0;
         $data['is_highlight'] = !empty($data['is_highlight']) and $data['is_highlight'] == 'on' ? 1: 0;
+        $data['is_review'] = !empty($data['is_review']) and $data['is_review'] == 'on' ? 1: 0;
 
         try {
             $post->update($data);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Discount;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -68,5 +69,15 @@ class KmController extends Controller
         }
 
         return view('frontend.km.category', compact('newests', 'title', 's'));
+    }
+
+    public function review(Request $request) {
+        $page = $request->input('page', 0);
+
+        $title = 'REVIEW & ĐÁNH GIÁ';
+
+        $newests = Post::where('is_review', 1)->where('status', 1)->orderBy('updated_at', 'desc')->paginate(20);
+
+        return view('frontend.km.review', compact('newests', 'page', 'title'));
     }
 }

@@ -120,6 +120,10 @@
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/coupon') ? 'current-menu-item' : '' }}"><a
                                     href="{{ url('khuyen-mai/coupon') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
                         </li>
+                        <li id="menu-item-16457"
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/review') ? 'current-menu-item' : '' }}"><a
+                                    href="{{ url('khuyen-mai/review') }}" itemprop="url"><span itemprop="name">REVIEW & ĐÁNH GIÁ</span></a>
+                        </li>
                     </ul>
                 </div>
             </nav>

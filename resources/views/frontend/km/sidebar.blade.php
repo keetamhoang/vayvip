@@ -45,13 +45,36 @@
                     @foreach($randomCodes as $randomCode)
                         <li class="rpwe-li rpwe-clearfix">
                             <div class="post-side rpwe-thumb">
-                                <a class="rpwe-img" target="_blank" href="{{ url('khuyen-mai/'.$randomCode->slug) }}" rel="bookmark" style="background: url('{{ $randomCode->image }}') no-repeat center;">
+                                <a class="rpwe-img"  href="{{ url('khuyen-mai/'.$randomCode->slug) }}" rel="bookmark" style="background: url('{{ $randomCode->image }}') no-repeat center;">
                                 </a>
                             </div>
                             <h3 class="rpwe-title">
                                 <a href="{{ url('khuyen-mai/'.$randomCode->slug) }}"
                                    title="{{ $randomCode->name }}"
                                    rel="bookmark">{{ $randomCode->name }}</a></h3></li>
+                    @endforeach
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="rpwe_widget-5" class="widget rpwe_widget recent-posts-extended">
+        <div class="widget-wrap"><h4 class="widget-title widgettitle">Review & Đánh giá</h4>
+            <div class="rpwe-block">
+                <ul class="rpwe-ul">
+                    @php $reandomReviews = \App\Models\Post::where('is_review', 1)->where('status', 1)->inRandomOrder()->limit(10)->get() @endphp
+
+                    @foreach($reandomReviews as $reandomReview)
+                        <li class="rpwe-li rpwe-clearfix">
+                            <div class="post-side rpwe-thumb">
+                                <a class="rpwe-img" href="{{ url('tin-tuc/'.$reandomReview->slug) }}" rel="bookmark" style="background: url('{{ $reandomReview->image }}') no-repeat center;">
+                                </a>
+                            </div>
+                            <h3 class="rpwe-title">
+                                <a href="{{ url('tin-tuc/'.$reandomReview->slug) }}"
+                                   title="{{ $reandomReview->name }}"
+                                   rel="bookmark">{{ $reandomReview->title }}</a></h3></li>
                     @endforeach
 
                 </ul>
