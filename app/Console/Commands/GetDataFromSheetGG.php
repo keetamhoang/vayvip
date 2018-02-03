@@ -187,7 +187,7 @@ class GetDataFromSheetGG extends Command
 //                    ], $dataInsert);
                 }
             } catch (\Exception $ex) {
-                $this->line('ERROR VPBANK '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());
+                $this->line('ERROR SACOM '.$key.': ' . $ex->getMessage() . '|'.$ex->getLine());
             }
         }
 
