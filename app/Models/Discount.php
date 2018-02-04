@@ -8,7 +8,7 @@ class Discount extends Model
 {
     protected $fillable = [
         'aff_link', 'content', 'domain', 'end_time', 'root_id', 'image', 'link', 'merchant', 'name', 'start_time', 'status', 'type', 'merchant_id',
-        'slug', 'is_coupon', 'is_banner'
+        'slug', 'is_coupon', 'is_banner', 'count_view'
     ];
 
     protected $dates = [

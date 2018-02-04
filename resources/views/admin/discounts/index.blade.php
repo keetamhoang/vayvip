@@ -37,6 +37,7 @@
                         <th>Có Coupon?</th>
                         <th>Nguồn</th>
                         <th>Mô tả</th>
+                        <th>View Total</th>
                         <th>Hành động</th>
                     </tr>
 
@@ -109,6 +110,7 @@
                 {data: 'is_coupon', name: 'is_coupon'},
                 {data: 'merchant', name: 'merchant'},
                 {data: 'content', name: 'content'},
+                {data: 'count_view', name: 'count_view'},
                 {data: 'action', name: 'action'},
             ],
 

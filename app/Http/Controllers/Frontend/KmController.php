@@ -43,6 +43,8 @@ class KmController extends Controller
             return redirect()->back();
         }
 
+        $discount->update(['count_view' => $discount->count_view + 1]);
+
         return view('frontend.km.detail', compact('discount'));
     }
 
