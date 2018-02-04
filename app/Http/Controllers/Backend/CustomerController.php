@@ -251,12 +251,12 @@ class CustomerController extends AdminController
 
         if ($to == 'citi') {
             $customer->update([
-                'type' => ChatfuelCustomer::VPBANK,
+                'type' => ChatfuelCustomer::CITI,
                 'is_from' => 1
             ]);
         } else if ($to == 'vpbank') {
             $customer->update([
-                'type' => ChatfuelCustomer::CITI,
+                'type' => ChatfuelCustomer::VPBANK,
                 'is_from' => 1
             ]);
         } else if ($to == 'sacom') {

@@ -76,12 +76,12 @@ class GetDataFromSheetGG extends Command
                         'updated_at' => Carbon::now()
                     ];
 
-                    $checkCiti = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->first();
+                    $checkCiti = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->first();
 
                     if (!empty($checkCiti)) {
                         $checkCiti->update($dataInsert);
                     } else {
-                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                        $checkVPBank = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where(function ($query){
                             $query->where('type', ChatfuelCustomer::VPBANK)->orWhere('type', ChatfuelCustomer::SACOM);
                         })->where('is_from', 1)->first();
 
@@ -121,12 +121,12 @@ class GetDataFromSheetGG extends Command
                         'updated_at' => Carbon::now()
                     ];
 
-                    $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::VPBANK)->first();
+                    $checkVPBank = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where('type', ChatfuelCustomer::VPBANK)->first();
 
                     if (!empty($checkVPBank)) {
                         $checkVPBank->update($dataInsert);
                     } else {
-                        $checkVPBank = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                        $checkVPBank = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where(function ($query){
                             $query->where('type', ChatfuelCustomer::CITI)->orWhere('type', ChatfuelCustomer::SACOM);
                         })->where('is_from', 1)->first();
 
@@ -167,12 +167,12 @@ class GetDataFromSheetGG extends Command
                         'updated_at' => Carbon::now()
                     ];
 
-                    $checkSacom = ChatfuelCustomer::where('phone', $value[4])->where('type', ChatfuelCustomer::SACOM)->first();
+                    $checkSacom = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where('type', ChatfuelCustomer::SACOM)->first();
 
                     if (!empty($checkSacom)) {
                         $checkSacom->update($dataInsert);
                     } else {
-                        $checkSacom = ChatfuelCustomer::where('phone', $value[4])->where(function ($query){
+                        $checkSacom = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where(function ($query){
                             $query->where('type', ChatfuelCustomer::CITI)->orWhere('type', ChatfuelCustomer::VPBANK);
                         })->where('is_from', 1)->first();
 
