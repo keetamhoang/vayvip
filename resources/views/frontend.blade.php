@@ -175,6 +175,11 @@
                         <li class=""><a
                                     href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
 
+                        @if (auth('admin')->check())
+                            <li class=""><a
+                                        href="{{ url('admin') }}">Admin</a></li>
+                        @endif
+
                     </ul>
                 </div>
             </div>
