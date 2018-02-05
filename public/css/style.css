@@ -172,6 +172,17 @@
     border-right-color: #e51b23;
 }
 
+.share-div {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+}
+
+.fb-share-btn {
+    display: inline-block;
+    width: 60px !important;
+}
+
 @media (max-width: 767px) {
     .container {
         padding: 0px;
@@ -368,6 +379,11 @@
     .h1-detail {
         font-size: 23px !important;
         font-weight: bold !important;
+    }
+
+    .share-div {
+        top: unset;
+        bottom: 20px;
     }
 }
 

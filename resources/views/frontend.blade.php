@@ -31,8 +31,7 @@
     <link href="/assets/css_new/css" rel="stylesheet" type="text/css">
     <!-- Favicon
     ============================================ -->
-    <link rel="shortcut icon" href="https://vaytinchap.vpbank.com.vn/LOSWebDE/langding/img/favicon.ico"
-          type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/image/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS
     ============================================ -->
@@ -174,6 +173,11 @@
                                     {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                         <li class=""><a
                                     href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
+
+                        @if (auth('admin')->check())
+                            <li class=""><a
+                                        href="{{ url('admin') }}">Admin</a></li>
+                        @endif
 
                     </ul>
                 </div>

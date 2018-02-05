@@ -81,7 +81,9 @@ Route::get('san-pham', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
 Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
+Route::get('khuyen-mai/khuyen-mai-moi-nhat', 'Frontend\KmController@newest');
 Route::get('khuyen-mai/coupon', 'Frontend\KmController@coupon');
+Route::get('khuyen-mai/ma-giam-gia', 'Frontend\KmController@coupon');
 Route::get('khuyen-mai/review', 'Frontend\KmController@review');
 Route::get('khuyen-mai/tim-kiem', 'Frontend\KmController@search');
 Route::get('khuyen-mai/{slug}-{id}', 'Frontend\KmController@detail')

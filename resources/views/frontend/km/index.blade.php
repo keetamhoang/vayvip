@@ -50,6 +50,7 @@
             line-height: 1.4em;
             padding-bottom: 0px;
         }
+
         .rpwe-thumb {
             border: 1px solid #eee;
             box-shadow: none !important;
@@ -102,6 +103,15 @@
 @endsection
 
 @section('content')
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '323042221521211',
+                xfbml      : true,
+                version    : 'v2.10'
+            });
+        };
+    </script>
     <div class="home blog custom-header content-sidebar magazine-pro-blue primary-nav magazine-home js">
         <div class="site-container">
             <nav class="nav-primary" id="child-menu-km">
@@ -111,17 +121,21 @@
                         style="touch-action: pan-y;">
                         <li id="menu-item-1536"
                             class="firstmenu1 menu-item menu-item-type-custom menu-item-object-custom  current_page_item menu-item-home menu-item-1536 {{ Request::is('khuyen-mai') ? 'current-menu-item' : '' }}">
-                            <a href="{{ url('khuyen-mai') }}" itemprop="url"><span itemprop="name">TẤT CẢ</span></a></li>
+                            <a href="{{ url('khuyen-mai') }}" itemprop="url"><span itemprop="name">TẤT CẢ</span></a>
+                        </li>
                         <li id="menu-item-16456"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}"><a
-                                    href="{{ url('khuyen-mai/moi-nhat') }}" itemprop="url"><span
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
+                            <a
+                                    href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" itemprop="url"><span
                                         itemprop="name">KHUYẾN MẠI MỚI NHẤT</span></a></li>
                         <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/coupon') ? 'current-menu-item' : '' }}"><a
-                                    href="{{ url('khuyen-mai/coupon') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/coupon') ? 'current-menu-item' : '' }}">
+                            <a
+                                    href="{{ url('khuyen-mai/ma-giam-gia') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
                         </li>
                         <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/review') ? 'current-menu-item' : '' }}"><a
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/review') ? 'current-menu-item' : '' }}">
+                            <a
                                     href="{{ url('khuyen-mai/review') }}" itemprop="url"><span itemprop="name">REVIEW & ĐÁNH GIÁ</span></a>
                         </li>
                     </ul>
@@ -141,10 +155,11 @@
                                 }
                             @endphp
                             @if (!empty($banner))
-                                <div class="widget-wrap"><a href="{{ $banner->aff_link }}" target="_blank" class="external"
-                                                        rel="nofollow"><img
-                                            src="{{ $banner->image }}"
-                                            width="728" height="90" border="0"></a></div>
+                                <div class="widget-wrap"><a href="{{ $banner->aff_link }}" target="_blank"
+                                                            class="external"
+                                                            rel="nofollow"><img
+                                                src="{{ $banner->image }}"
+                                                width="728" height="90" border="0"></a></div>
                             @endif
                         </section>
                     </div>
@@ -212,9 +227,17 @@
             <div class="wrap"><p>© {{ \Carbon\Carbon::now()->year }} TaichinhSMART.vn</p></div>
         </footer>
 
-    <span style="display:none" class="tl-placeholder-f-type-lightbox"></span>
+        <span style="display:none" class="tl-placeholder-f-type-lightbox"></span>
 
-    <a href="#" class="topbutton" style="display: inline;"></a>
+        <a href="#" class="topbutton" style="display: inline;"></a>
+        <div class="share-div">
+            <a class="fb-share-btn" href="javascript:;" title="Chia sẻ">
+                <img src="/assets/image/fb-share.png">
+            </a>
+            {{--<div>--}}
+                {{--<img src="/assets/image/messender-share.png">--}}
+            {{--</div>--}}
+        </div>
     </div>
 @endsection
 
@@ -225,7 +248,7 @@
             var copyText = $('.copy-' + couponId);
             copyText.select();
             document.execCommand("Copy");
-            window.open(link,'_blank');
+            window.open(link, '_blank');
         }
         $(document).ready(function () {
 
@@ -243,6 +266,13 @@
                         height: 90
                     });
                 }
+            });
+            
+            $('.fb-share-btn').click(function (e) {
+                FB.ui({
+                    method: 'share',
+                    href: '{{ Request::url() }}',
+                }, function(response){});
             });
         })
     </script>
