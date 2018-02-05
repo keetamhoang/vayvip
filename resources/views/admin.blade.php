@@ -68,7 +68,7 @@
     <link href="/assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" type="image/x-icon" href="/files/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/image/favicon.ico" type="image/x-icon">
     <style>
         .page-header.navbar {
             background-color: #009688;
