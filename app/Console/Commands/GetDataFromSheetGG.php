@@ -73,7 +73,7 @@ class GetDataFromSheetGG extends Command
                         'note' => $value[7],
                         'quan' => $value[2],
                         'type' => ChatfuelCustomer::CITI,
-                        'updated_at' => Carbon::now()
+                        'updated_at' => Carbon::now(),
                     ];
 
                     $checkCiti = ChatfuelCustomer::withTrashed()->where('phone', $value[4])->where('type', ChatfuelCustomer::CITI)->first();

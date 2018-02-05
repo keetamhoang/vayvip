@@ -49,6 +49,7 @@
                         <th>Mức lương</th>
                         <th>Thắc mắc</th>
                         <th>Loại</th>
+                        <th>Created At</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
@@ -129,6 +130,7 @@
                 {data: 'salary', name: 'salary'},
                 {data: 'note', name: 'note'},
                 {data: 'type', name: 'type'},
+                {data: 'created_at', name: 'created_at'},
                 {data: 'action', name: 'action'},
             ],
 
