@@ -51,7 +51,7 @@
     {{--</section>--}}
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/moi-nhat') }}" title="Khuyến mại"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> KHUYẾN MẠI MỚI NHẤT <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" title="Khuyến mại"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> KHUYẾN MẠI MỚI NHẤT <i class="fa fa-backward"></i></h4></a>
             @php $newests = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
             @foreach($newests as $newest)
@@ -70,11 +70,11 @@
                 </article>
             @endforeach
 
-            <p class="more-from-category"><a href="{{ url('khuyen-mai/moi-nhat') }}"
+            <p class="more-from-category"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}"
                                              title="Khuyến mại">Xem thêm...</a></p></div>
     </section>
     <section id="featured-post-4" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/coupon') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> MÃ GIẢM GIÁ <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('khuyen-mai/ma-giam-gia') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> MÃ GIẢM GIÁ <i class="fa fa-backward"></i></h4></a>
             @php $mggs = \App\Models\Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
             @foreach($mggs as $mgg)
@@ -94,7 +94,7 @@
                     </header>
                 </article>
             @endforeach
-            <p class="more-from-category"><a href="{{ url('khuyen-mai/coupon') }}"
+            <p class="more-from-category"><a href="{{ url('khuyen-mai/ma-giam-gia') }}"
                                              title="Mã giảm giá">Xem thêm...</a></p></div>
     </section>
 
