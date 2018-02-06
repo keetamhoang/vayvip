@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Discount;
+use App\Models\KmProduct;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -81,5 +82,15 @@ class KmController extends Controller
         $newests = Post::where('is_review', 1)->where('status', 1)->orderBy('updated_at', 'desc')->paginate(20);
 
         return view('frontend.km.review', compact('newests', 'page', 'title'));
+    }
+
+    public function top(Request $request) {
+        $page = $request->input('page', 0);
+
+        $title = 'TOP SẢN PHẨM BÁN CHẠY NHẤT 2018';
+
+        $newests = KmProduct::where('status', KmProduct::ACTIVE)->orderBy('id', 'desc')->paginate(21);
+
+        return view('frontend.km.top', compact('newests', 'page', 'title'));
     }
 }

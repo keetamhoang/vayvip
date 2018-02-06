@@ -5,6 +5,7 @@ namespace App\Console;
 use App\Console\Commands\GetDataFromSheetGG;
 use App\Console\Commands\GetGGSheetResponse;
 use App\Console\Commands\GetKm;
+use App\Console\Commands\GetKmProduct;
 use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -20,7 +21,8 @@ class Kernel extends ConsoleKernel
         GetKm::class,
         UpdateExpireKm::class,
         GetDataFromSheetGG::class,
-        GetGGSheetResponse::class
+        GetGGSheetResponse::class,
+        GetKmProduct::class
     ];
 
     /**
@@ -35,14 +37,17 @@ class Kernel extends ConsoleKernel
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 //            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 
+        $schedule->command('get:km-product')
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));
+
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
 
         $schedule->command('get:data-gg-sheet')
             ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_cron.log'));
 
-        $schedule->command('get:sheet-response')
-            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_response_cron.log'));
+//        $schedule->command('get:sheet-response')
+//            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_response_cron.log'));
     }
 
     /**

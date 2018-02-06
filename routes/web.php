@@ -82,6 +82,7 @@ Route::get('dau-tu', 'Frontend\DtController@index');
 
 Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
 Route::get('khuyen-mai/khuyen-mai-moi-nhat', 'Frontend\KmController@newest');
+Route::get('khuyen-mai/top-san-pham-ban-chay-nhat', 'Frontend\KmController@top');
 Route::get('khuyen-mai/coupon', 'Frontend\KmController@coupon');
 Route::get('khuyen-mai/ma-giam-gia', 'Frontend\KmController@coupon');
 Route::get('khuyen-mai/review', 'Frontend\KmController@review');

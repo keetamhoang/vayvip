@@ -1,9 +1,9 @@
 @extends('frontend.km.index')
 
 @section('content_km')
-    <section id="featured-post-2" class="widget featured-content featuredpost">
-        <div class="widget-wrap">
-            <h4 class="widget-title widgettitle">ĐỐI TÁC CỦA TÀI CHÍNH SMART</h4>
+    {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
+        {{--<div class="widget-wrap">--}}
+            {{--<h4 class="widget-title widgettitle">ĐỐI TÁC CỦA TÀI CHÍNH SMART</h4>--}}
             {{--<article--}}
             {{--class="post-5793 post type-post status-publish format-standard has-post-thumbnail category-lazada category-ma-giam-gia tag-khac entry">--}}
             {{--<a href="https://www.offers.vn/ma-giam-gia-lazada/" class="alignleft"--}}
@@ -21,34 +21,52 @@
             {{--<p class="more-from-category"><a href="https://www.offers.vn/ma-giam-gia/"--}}
             {{--title="Mã giảm giá, Voucher, Khuyến mãi mua sắm">Xem--}}
             {{--thêm...</a></p>--}}
-            <div>
-                <img src="/assets/km/image/logo-partner.png">
+            {{--<div>--}}
+                {{--<img src="/assets/km/image/logo-partner.png">--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+
+    <section id="featured-post-2" class="widget featured-content featuredpost">
+        <div class="widget-wrap">
+            <a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}" title="Top sản phẩm bán chạy nhất">
+                <h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> TOP SẢN PHẨM BÁN CHẠY NHẤT 2018 <i class="fa fa-backward"></i></h4></a>
+            <div class="col-lg-12 top-sp" style="padding: 0px">
+                @php $tops = \App\Models\KmProduct::where('status', \App\Models\KmProduct::ACTIVE)->orderBy('id', 'desc')->limit(6)->get(); @endphp
+
+                @foreach($tops as $top)
+                    <article class="col-lg-4 post-5793 post type-post status-publish format-standard has-post-thumbnail
+                    category-lazada category-ma-giam-gia tag-khac entry" style="padding-left: 0px; padding-bottom: 10px;">
+                        <div class="top-sp-img">
+                            <a href="{{ $top->aff_link }}" target="_blank" style="background: url('{{ $top->image }}') no-repeat center;"></a>
+                        </div>
+                        <a class="top-sp-title" href="{{ $top->aff_link }}" target="_blank">{{ $top->name }}</a>
+                        <div class="top-sp-info">
+                            @if ($top->discount != 0)
+                                <p class="top-sp-discount">{{ number_format($top->discount, 0, '.', '.') }} ₫</p>
+                            @else
+                                <p class="top-sp-discount">{{ number_format($top->price, 0, '.', '.') }} ₫</p>
+                            @endif
+                            <div class="top-sp-bot">
+                                <span class="top-sp-price">{{ number_format($top->price, 0, ',', '.') }}₫</span>
+                                @if ($top->discount != 0)
+                                    <span class="top-sp-percent">Giảm -{{ round(($top->price - $top->discount) / $top->price * 100) }}%</span>
+                                @else
+                                    <span class="top-sp-percent">Giảm -0%</span>
+                                @endif
+                            </div>
+                        </div>
+                        <a href="{{ $top->aff_link }}" target="_blank" class="top-sp-view">Xem sản phẩm</a>
+                    </article>
+                @endforeach
             </div>
+            <p class="more-from-category"><a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}"
+                                             title="Top sản phẩm bán chạy nhất">Xem tất cả...</a></p>
+            {{--<div>--}}
+                {{--<img src="/assets/km/image/logo-partner.png">--}}
+            {{--</div>--}}
         </div>
     </section>
-
-    {{--<section id="featured-post-3" class="widget featured-content featuredpost">--}}
-    {{--<div class="widget-wrap"><h4 class="widget-title widgettitle">KHUYẾN MẠI HOT</h4>--}}
-    {{--@php $hostests = \App\Models\Discount::orderBy('start_time', 'desc')->limit(6)->get() @endphp--}}
-
-    {{--@foreach($newests as $newest)--}}
-    {{--<article class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">--}}
-    {{--<div class="post-list alignleft">--}}
-    {{--<a href="{{ $newest->slug }}" target="_blank" class="alignleft" aria-hidden="true"--}}
-    {{--style="background: url('{{ $newest->image }}') no-repeat center;">--}}
-    {{--</a>--}}
-    {{--</div>--}}
-    {{--<header class="entry-header">--}}
-    {{--<h2 class="entry-title" itemprop="headline"><a target="_blank"--}}
-    {{--href="{{  $newest->slug }}">{{ $newest->name }}</a></h2>--}}
-    {{--<p>{{ $newest->content }}</p>--}}
-    {{--</header>--}}
-    {{--</article>--}}
-    {{--@endforeach--}}
-
-    {{--<p class="more-from-category"><a href="https://www.offers.vn/khuyen-mai/"--}}
-    {{--title="Khuyến mại">Xem thêm...</a></p></div>--}}
-    {{--</section>--}}
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
         <div class="widget-wrap"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" title="Khuyến mại"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> KHUYẾN MẠI MỚI NHẤT <i class="fa fa-backward"></i></h4></a>
@@ -71,7 +89,7 @@
             @endforeach
 
             <p class="more-from-category"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}"
-                                             title="Khuyến mại">Xem thêm...</a></p></div>
+                                             title="Khuyến mại">Xem tất cả...</a></p></div>
     </section>
     <section id="featured-post-4" class="widget featured-content featuredpost">
         <div class="widget-wrap"><a href="{{ url('khuyen-mai/ma-giam-gia') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> MÃ GIẢM GIÁ <i class="fa fa-backward"></i></h4></a>
@@ -95,11 +113,11 @@
                 </article>
             @endforeach
             <p class="more-from-category"><a href="{{ url('khuyen-mai/ma-giam-gia') }}"
-                                             title="Mã giảm giá">Xem thêm...</a></p></div>
+                                             title="Mã giảm giá">Xem tất cả...</a></p></div>
     </section>
 
     <section id="featured-post-4" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/review') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> REVIEW & ĐÁNH GIÁ <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('khuyen-mai/review') }}" title="Review & Đánh giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> REVIEW & ĐÁNH GIÁ <i class="fa fa-backward"></i></h4></a>
             @php $reviews = \App\Models\Post::where('is_review', 1)->where('status', 1)->orderBy('updated_at', 'desc')->limit(7)->get() @endphp
 
             @foreach($reviews as $review)
@@ -120,6 +138,6 @@
                 </article>
             @endforeach
             <p class="more-from-category"><a href="{{ url('khuyen-mai/review') }}"
-                                             title="Mã giảm giá">Xem thêm...</a></p></div>
+                                             title="Review & Đánh giá">Xem tất cả...</a></p></div>
     </section>
 @endsection

@@ -124,12 +124,17 @@
                             <a href="{{ url('khuyen-mai') }}" itemprop="url"><span itemprop="name">TẤT CẢ</span></a>
                         </li>
                         <li id="menu-item-16456"
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/top-san-pham-ban-chay-nhat') ? 'current-menu-item' : '' }}">
+                            <a
+                                    href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}" itemprop="url"><span
+                                        itemprop="name">TOP SẢN PHẨM BÁN CHẠY NHẤT</span></a></li>
+                        <li id="menu-item-16456"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
                             <a
                                     href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" itemprop="url"><span
                                         itemprop="name">KHUYẾN MẠI MỚI NHẤT</span></a></li>
                         <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/coupon') ? 'current-menu-item' : '' }}">
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/ma-giam-gia') ? 'current-menu-item' : '' }}">
                             <a
                                     href="{{ url('khuyen-mai/ma-giam-gia') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
                         </li>

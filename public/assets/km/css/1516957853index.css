@@ -17657,14 +17657,15 @@ body .ztb-customchatbox-logo {
 }
 
 .magazine-home .content .widget-title {
-    background: none repeat scroll 0 0 #078145;
+    background: none repeat scroll 0 0 #00b7f0;
     /*border-top: 2px solid #555;*/
     border-bottom: none;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     box-shadow: 0 1px rgba(34, 34, 34, 0.1);
     color: #fff;
     font-size: 22px;
     text-align: center;
+    border-radius: 3px;
 }
 
 .genesis-nav-menu .sub-menu a {
