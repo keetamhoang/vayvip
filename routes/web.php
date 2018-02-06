@@ -59,6 +59,12 @@ Route::group(['prefix' => 'admin',
     Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
     Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
 
+    Route::get('km-products', 'Backend\DiscountController@productIndex');
+    Route::post('km-products/update', 'Backend\DiscountController@productUpdate');
+    Route::get('km-products/{id}', 'Backend\DiscountController@productDetail');
+    Route::get('productAttribute.data', 'Backend\DiscountController@productAttribute');
+    Route::get('km-products/delete/{id}', 'Backend\DiscountController@productDelete');
+
     Route::get('update-customer', 'Backend\CustomerController@updateCustomer');
 });
 

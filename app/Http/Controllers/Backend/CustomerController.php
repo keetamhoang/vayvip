@@ -120,7 +120,7 @@ class CustomerController extends AdminController
     {
         return DataTables::of($customers)
             ->editColumn('salary', function ($customer) {
-                $text = number_format($customer->salary, 0, '.', '.');
+                $text = number_format(intval($customer->salary), 0, '.', '.');
 
                 $text = '<input value="'.$text.'">';
 

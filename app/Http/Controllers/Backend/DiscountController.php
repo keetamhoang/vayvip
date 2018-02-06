@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Discount;
+use App\Models\KmProduct;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -103,5 +104,105 @@ class DiscountController extends AdminController
         }
 
         return redirect()->back()->with('success', 'Xóa thành công!');
+    }
+
+//    product KM
+
+    public function productIndex(Request $request) {
+        $type = $request->input('type');
+
+        return view('admin.discounts.product_index', compact('type'));
+    }
+
+    public function productAttribute(Request $request) {
+        $type = $request->input('type');
+
+        $discounts = KmProduct::orderBy('id', 'desc')->get();
+
+        return $this->productDatatable($discounts);
+    }
+
+    public function productDatatable($discounts)
+    {
+        return DataTables::of($discounts)
+            ->editColumn('image', function ($discount) {
+                $text = '<div style="width: 200px"><img style="width: 100%" src="'.$discount->image.'"></div>';
+
+                return $text;
+            })
+            ->editColumn('status', function ($discount) {
+                if ($discount->status == KmProduct::ACTIVE) {
+                    $text = ' <label class="label label-success">Hiện</label>';
+                } else {
+                    $text = ' <label class="label label-danger">Ẩn</label>';
+                }
+
+                return $text;
+            })
+            ->editColumn('name', function ($discount) {
+                $text = '<a href="'.$discount->aff_link.'" target="_blank">'.$discount->name.'</a>';
+
+                return $text;
+            })
+            ->editColumn('price', function ($discount) {
+                $text = number_format($discount->price, 0, '.', '.') . ' đ';
+
+                return $text;
+            })
+            ->editColumn('discount', function ($discount) {
+                $text = number_format($discount->discount, 0, '.', '.') . ' đ';
+
+                return $text;
+            })
+            ->addColumn('percent', function ($discount) {
+                $text = round(($discount->price - $discount->discount) / $discount->price * 100);
+                $text = 'Giảm -' . $text . '%';
+
+                return $text;
+            })
+            ->addColumn('action', function ($discount) {
+                $url = '<a type="button" class="btn blue btn-outline" href="/admin/km-products/'.$discount->id.'">Chi tiết</a><a href="/admin/km-products/delete/'.$discount->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+
+                return $url;
+            })
+            ->rawColumns(['action', 'aff_link', 'image', 'status', 'percent', 'discount', 'price', 'name'])
+            ->make(true);
+    }
+
+    public function productDetail($id) {
+        $discount = KmProduct::find($id);
+
+        if (empty($discount)) {
+            return redirect()->back()->with('error', 'Không tồn tại');
+        }
+
+        return view('admin.discounts.product_detail', compact('discount'));
+    }
+
+    public function productDelete($id) {
+        try {
+            Discount::where('id', $id)->delete();
+        } catch (\Exception $ex) {
+            return redirect()->back()->with('error', 'Xóa không thành công!');
+        }
+
+        return redirect()->back()->with('success', 'Xóa thành công!');
+    }
+
+    public function productUpdate(Request $request) {
+        $id = $request->input('id');
+        $status = $request->input('status', null);
+
+        $product = KmProduct::find($id);
+
+        if (empty($product)) {
+            return redirect()->back()->with('error', 'Không tìm thấy sản phẩm');
+        }
+
+        $status = $status == 'on' ? KmProduct::ACTIVE : KmProduct::IN_ACTIVE;
+
+        $product->update(['status' => $status]);
+
+        return redirect()->back()->with('success', 'Cập nhật thành công');
     }
 }
