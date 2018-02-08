@@ -30,7 +30,7 @@
     <section id="featured-post-2" class="widget featured-content featuredpost">
         <div class="widget-wrap">
             <a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}" title="Top sản phẩm bán chạy nhất">
-                <h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> TOP SẢN PHẨM BÁN CHẠY NHẤT 2018 <i class="fa fa-backward"></i></h4></a>
+                <h4 class="widget-title widgettitle">TOP SẢN PHẨM BÁN CHẠY NHẤT 2018</h4></a>
             <div class="col-lg-12 top-sp" style="padding: 0px">
                 @php $tops = \App\Models\KmProduct::where('status', \App\Models\KmProduct::ACTIVE)->orderBy('id', 'desc')->limit(6)->get(); @endphp
 

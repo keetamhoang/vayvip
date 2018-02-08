@@ -457,5 +457,22 @@
         top: unset;
         bottom: 20px;
     }
+
+    .top-sp article {
+        padding: 0px;
+    }
+
+    .top-sp-title {
+        height: auto;
+    }
+
+    .top-sp-discount {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .top-sp-bot {
+        text-align: center;
+    }
 }
 

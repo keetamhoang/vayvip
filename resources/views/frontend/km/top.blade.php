@@ -3,8 +3,8 @@
 @section('content_km')
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> {{ $title }} <i class="fa fa-backward"></i></h4>
-
+        <div class="widget-wrap"><h4 class="widget-title widgettitle"> {{ $title }} </h4>
+            <div class="col-lg-12 top-sp" style="padding: 0px">
             @foreach($newests as $top)
                 <article class="col-lg-4 post-5793 post type-post status-publish format-standard has-post-thumbnail
                     category-lazada category-ma-giam-gia tag-khac entry" style="padding-left: 0px; padding-bottom: 10px;">
@@ -30,6 +30,7 @@
                     <a href="{{ $top->aff_link }}" target="_blank" class="top-sp-view">Xem sản phẩm</a>
                 </article>
             @endforeach
+            </div>
 
             <div class="archive-pagination pagination">
                 {{ $newests->links('frontend.paginate') }}
