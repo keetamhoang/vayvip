@@ -14,9 +14,10 @@
     </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta name="google-site-verification" content="9NSmbcFWkumOGGqPeV2FmBJEi1ZBaDvsDdsI86X8Esg" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     @yield('title')
 
