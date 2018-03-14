@@ -2,7 +2,9 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AdminPermission;
 use App\Http\Middleware\LoginAdmin;
+use App\Http\Middleware\ShinhanBank;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -46,6 +48,14 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        'shinhanbank' => [
+            ShinhanBank::class
+        ],
+
+        'all' => [
+            AdminPermission::class
+        ]
     ];
 
     /**

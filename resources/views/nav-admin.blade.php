@@ -7,6 +7,16 @@
                 <span></span>
             </div>
         </li>
+
+        @if (auth('admin')->user()->type == 'shinhanbank')
+            <li class="nav-item start active open">
+                <a href="{{ url('admin/shinhanbank') }}" class="nav-link">
+                    <i class="icon-home"></i>
+                    <span class="title">Shinhan Bank</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+        @else
         <!-- END SIDEBAR TOGGLER BUTTON -->
         <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
         <li class="nav-item start active open">
@@ -138,6 +148,7 @@
             </ul>
         </li>
 
+        @endif
         {{--<li class="nav-item">--}}
             {{--<a href="{{ url('admin/lien-he') }}" class="nav-link">--}}
                 {{--<i class="fa fa-address-card-o"></i>--}}

@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\GetDataFromSheetGG;
+use App\Console\Commands\GetDataShinhanBank;
 use App\Console\Commands\GetGGSheetResponse;
 use App\Console\Commands\GetKm;
 use App\Console\Commands\GetKmProduct;
@@ -22,7 +23,8 @@ class Kernel extends ConsoleKernel
         UpdateExpireKm::class,
         GetDataFromSheetGG::class,
         GetGGSheetResponse::class,
-        GetKmProduct::class
+        GetKmProduct::class,
+        GetDataShinhanBank::class
     ];
 
     /**
@@ -45,6 +47,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('get:data-gg-sheet')
             ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_cron.log'));
+
+        $schedule->command('data:shinhanbank')
+            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('shinhanbank_cron.log'));
 
 //        $schedule->command('get:sheet-response')
 //            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_response_cron.log'));

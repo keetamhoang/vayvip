@@ -28,6 +28,7 @@
                     <select class="form-control" name="type">
                             <option value="admin" @if ($post->type == 'admin') selected @endif>Admin</option>
                             <option value="mod" @if ($post->type == 'mod') selected @endif>Mod</option>
+                            <option value="shinhanbank" @if ($post->type == 'shinhanbank') selected @endif>Shinhan Bank</option>
                     </select>
                 </div>
             </div>

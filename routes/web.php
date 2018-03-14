@@ -17,55 +17,64 @@ Route::group(['prefix' => 'admin',
 ], function () {
     Route::get('/', 'Backend\HomeController@index');
 
-    Route::get('users', 'Backend\UserController@index');
-    Route::get('userAttribute.data', 'Backend\UserController@userAttribute');
-    Route::get('users/{id}', 'Backend\UserController@edit');
-    Route::post('users/update', 'Backend\UserController@update');
+    Route::group(['middleware' => ['all']], function () {
+        Route::get('users', 'Backend\UserController@index');
+        Route::get('userAttribute.data', 'Backend\UserController@userAttribute');
+        Route::get('users/{id}', 'Backend\UserController@edit');
+        Route::post('users/update', 'Backend\UserController@update');
 
-    Route::get('posts', 'Backend\PostController@index');
-    Route::get('posts/add', 'Backend\PostController@create');
-    Route::get('posts/{id}', 'Backend\PostController@edit');
-    Route::post('posts/store', 'Backend\PostController@store');
-    Route::post('posts/update', 'Backend\PostController@update');
-    Route::get('postAttribute.data', 'Backend\PostController@postAttribute');
+        Route::get('posts', 'Backend\PostController@index');
+        Route::get('posts/add', 'Backend\PostController@create');
+        Route::get('posts/{id}', 'Backend\PostController@edit');
+        Route::post('posts/store', 'Backend\PostController@store');
+        Route::post('posts/update', 'Backend\PostController@update');
+        Route::get('postAttribute.data', 'Backend\PostController@postAttribute');
 
-    Route::get('categories', 'Backend\CategoryController@index');
-    Route::get('categories/add', 'Backend\CategoryController@create');
-    Route::get('categories/{id}', 'Backend\CategoryController@edit');
-    Route::post('categories/store', 'Backend\CategoryController@store');
-    Route::post('categories/update', 'Backend\CategoryController@update');
-    Route::get('categoryAttribute.data', 'Backend\CategoryController@categoryAttribute');
+        Route::get('categories', 'Backend\CategoryController@index');
+        Route::get('categories/add', 'Backend\CategoryController@create');
+        Route::get('categories/{id}', 'Backend\CategoryController@edit');
+        Route::post('categories/store', 'Backend\CategoryController@store');
+        Route::post('categories/update', 'Backend\CategoryController@update');
+        Route::get('categoryAttribute.data', 'Backend\CategoryController@categoryAttribute');
 
 
 
-    Route::get('users', 'Backend\UserController@index');
-    Route::get('users/add', 'Backend\UserController@create');
+        Route::get('users', 'Backend\UserController@index');
+        Route::get('users/add', 'Backend\UserController@create');
 
-    Route::get('lien-he', 'Backend\HomeController@lienHe');
-    Route::get('lienHeAttribute.data', 'Backend\HomeController@lienHeAttribute');
+        Route::get('lien-he', 'Backend\HomeController@lienHe');
+        Route::get('lienHeAttribute.data', 'Backend\HomeController@lienHeAttribute');
 
-    Route::get('customers', 'Backend\CustomerController@index');
-    Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
-    Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
+        Route::get('customers', 'Backend\CustomerController@index');
+        Route::get('customerAttribute.data', 'Backend\CustomerController@customerAttribute');
+        Route::get('customers/delete/{id}', 'Backend\CustomerController@delete');
 
-    Route::get('chatfuel-customers', 'Backend\CustomerController@chatfuelIndex');
-    Route::get('chatfuel-customers/change', 'Backend\CustomerController@change');
-    Route::get('chatfuelAttribute.data', 'Backend\CustomerController@chatfuelAttribute');
-    Route::get('chatfuel-customers/delete/{id}', 'Backend\CustomerController@chatfuelDelete');
+        Route::get('chatfuel-customers', 'Backend\CustomerController@chatfuelIndex');
+        Route::get('chatfuel-customers/change', 'Backend\CustomerController@change');
+        Route::get('chatfuelAttribute.data', 'Backend\CustomerController@chatfuelAttribute');
+        Route::get('chatfuel-customers/delete/{id}', 'Backend\CustomerController@chatfuelDelete');
 
-    Route::get('discounts', 'Backend\DiscountController@index');
-    Route::get('discounts/{id}', 'Backend\DiscountController@detail');
-    Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
-    Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
-    Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
+        Route::get('discounts', 'Backend\DiscountController@index');
+        Route::get('discounts/{id}', 'Backend\DiscountController@detail');
+        Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
+        Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
+        Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
 
-    Route::get('km-products', 'Backend\DiscountController@productIndex');
-    Route::post('km-products/update', 'Backend\DiscountController@productUpdate');
-    Route::get('km-products/{id}', 'Backend\DiscountController@productDetail');
-    Route::get('productAttribute.data', 'Backend\DiscountController@productAttribute');
-    Route::get('km-products/delete/{id}', 'Backend\DiscountController@productDelete');
+        Route::get('km-products', 'Backend\DiscountController@productIndex');
+        Route::post('km-products/update', 'Backend\DiscountController@productUpdate');
+        Route::get('km-products/{id}', 'Backend\DiscountController@productDetail');
+        Route::get('productAttribute.data', 'Backend\DiscountController@productAttribute');
+        Route::get('km-products/delete/{id}', 'Backend\DiscountController@productDelete');
 
-    Route::get('update-customer', 'Backend\CustomerController@updateCustomer');
+        Route::get('update-customer', 'Backend\CustomerController@updateCustomer');
+    });
+
+    Route::group(['middleware' => ['shinhanbank']], function () {
+        Route::get('update-customer-status', 'Backend\HomeController@updateCustomerStatus');
+
+        Route::get('shinhanbank', 'Backend\Bank\ShinhanBankController@index');
+        Route::get('shinhanBankAttribute.data', 'Backend\Bank\ShinhanBankController@shinhanBankAttribute');
+    });
 });
 
 // auth

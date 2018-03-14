@@ -49,7 +49,6 @@ class Unit {
         $phone = preg_replace('/\s+/', '', $phone);
         $phone = preg_replace("/[^0-9]/", "", $phone);
 
-
         return $phone;
     }
 }
