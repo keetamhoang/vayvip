@@ -73,7 +73,10 @@ class GetDataShinhanBank extends Command
                         'updated_at' => Carbon::now(),
                     ];
 
-                    ShinhanBank::create($dataInsert);
+                    $checkExist = ShinhanBank::where('phone', $value[4])->first();
+                    if (empty($checkExist)) {
+                        ShinhanBank::create($dataInsert);
+                    }
 
                 }
             } catch (\Exception $ex) {
