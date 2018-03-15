@@ -55,10 +55,10 @@ class GetDataShinhanBank extends Command
         foreach ($valuesShinhan as $key => $value) {
             try {
                 if ($key != 0) {
-                    $value[4] = Unit::formatPhone($value[3]);
+                    $value[3] = Unit::formatPhone($value[3]);
 
-                    if ($value[4][0] != '0') {
-                        $value[4] = '0' . $value[4];
+                    if ($value[3][0] != '0') {
+                        $value[3] = '0' . $value[3];
                     }
 
                     $dataInsert = [
@@ -73,7 +73,7 @@ class GetDataShinhanBank extends Command
                         'updated_at' => Carbon::now(),
                     ];
 
-                    $checkExist = ShinhanBank::where('phone', $value[4])->first();
+                    $checkExist = ShinhanBank::where('phone', $value[3])->first();
                     if (empty($checkExist)) {
                         ShinhanBank::create($dataInsert);
                     }

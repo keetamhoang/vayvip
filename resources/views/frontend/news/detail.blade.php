@@ -39,7 +39,7 @@
 @section('pageId')
     <div
             class="fb-customerchat"
-            page_id="2150730271821209"
+            page_id="{{ $post->category_id == 3 ? '175253416410272' : '2150730271821209' }}"
             ref="">
     </div>
 @endsection
@@ -271,6 +271,7 @@
                                                             </h2>
 
 
+                                                            @if ($post->category_id != 3)
                                                             <div class="knc-relate-wrapper">
                                                                 <ul class="krw-list">
 
@@ -288,6 +289,7 @@
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
+                                                            @endif
 
                                                             <div class="react-relate animated hiding-react-relate">
                                                             </div>
@@ -305,6 +307,7 @@
 
                                                             <div data-check-position="body_end"></div>
 
+                                                            @if ($post->category_id != 3)
                                                             <div class="knc-rate-link">
                                                                 @php
                                                                     $nextPost = \App\Models\Post::where('id', '>', $post->id)->where('status', config('const.ACTIVE'))->orderBy('id', 'asc')->first();
@@ -324,6 +327,7 @@
                                                                 @endif
 
                                                             </div>
+                                                            @endif
 
                                                         </div>
                                                         <div class="post_embed">

@@ -255,6 +255,25 @@
     border-radius: 2px;
 }
 
+.uu-dai-btn {
+    margin-top: 18px;
+    height: 37px;
+}
+
+.uu-dai-btn a {
+    background: #2196F3;
+    border: 2px solid #2196F3;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.home-banner {
+    padding-bottom: 2%;
+}
+
 @media (max-width: 767px) {
     .container {
         padding: 0px;
@@ -473,6 +492,10 @@
 
     .top-sp-bot {
         text-align: center;
+    }
+
+    .uu-dai-btn {
+        height: 60px;
     }
 }
 
