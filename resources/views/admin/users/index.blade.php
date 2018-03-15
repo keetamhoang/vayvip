@@ -24,6 +24,7 @@
                     <th>Tên</th>
                     <th>Email</th>
                     <th>Role</th>
+                    <th>Last Log</th>
                     <th>Trạng thái</th>
                     <th>Hành động</th>
                 </tr>
@@ -93,6 +94,7 @@
                 {data: 'name', name: 'name'},
                 {data: 'email', name: 'email'},
                 {data: 'type', name: 'type'},
+                {data: 'last_log', name: 'last_log'},
                 {data: 'status', name: 'status'},
                 {data: 'action', name: 'action'},
             ],

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend\Bank;
 
 use App\Http\Controllers\Backend\AdminController;
 use App\Models\ShinhanBank;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -11,6 +13,14 @@ use Yajra\DataTables\Facades\DataTables;
 class ShinhanBankController extends AdminController
 {
     public function index() {
+        if (auth('admin')->user()->type == 'shinhanbank') {
+            $acc = User::find(auth('admin')->user()->id);
+
+            $acc->update([
+                'last_log' => Carbon::now()
+            ]);
+        }
+
         return view('admin.bank.shinhanbank.index');
     }
 
