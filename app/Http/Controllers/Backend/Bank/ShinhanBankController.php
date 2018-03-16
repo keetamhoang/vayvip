@@ -65,6 +65,11 @@ class ShinhanBankController extends AdminController
 
                 return $text;
             })
+            ->editColumn('job', function ($customer) {
+                $text = '<input value="'.$customer->job.'">';
+
+                return $text;
+            })
             ->editColumn('birthday', function ($customer) {
                 $text = '<input value="'.$customer->birthday.'">';
 
@@ -91,7 +96,7 @@ class ShinhanBankController extends AdminController
 
                 return $text;
             })
-            ->rawColumns(['salary', 'type', 'birthday', 'name', 'email', 'phone', 'region', 'status'])
+            ->rawColumns(['salary', 'type', 'birthday', 'name', 'email', 'phone', 'region', 'status', 'job'])
             ->make(true);
     }
 }
