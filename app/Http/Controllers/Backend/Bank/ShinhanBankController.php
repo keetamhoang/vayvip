@@ -45,7 +45,7 @@ class ShinhanBankController extends AdminController
 //            $customers = $customers->where('salary', "$condi", intval($search));
 //        }
 
-        $customers = $customers->where('type', 'shinhanbank')->orderBy('id', 'desc')->get();
+        $customers = $customers->where('type', 'shinhanbank')->where('hide', 0)->orderBy('id', 'desc')->get();
 
         return $this->chatfuelDatatable($customers);
     }
@@ -96,7 +96,34 @@ class ShinhanBankController extends AdminController
 
                 return $text;
             })
-            ->rawColumns(['salary', 'type', 'birthday', 'name', 'email', 'phone', 'region', 'status', 'job'])
+            ->editColumn('hide', function ($customer) {
+                $text = '<button type="button" class="btn blue btn-outline hide-btn" data-id="'.$customer->id.'">Ẩn</button>';
+
+                return $text;
+            })
+            ->rawColumns(['salary', 'type', 'birthday', 'name', 'email', 'phone', 'region', 'status', 'job', 'hide'])
             ->make(true);
+    }
+
+    public function hideCustomer(Request $request) {
+        $id = $request->input('id');
+
+        $customer = ShinhanBank::find($id);
+
+        if (empty($customer)) {
+            return response([
+                'status' => 0,
+                'message' => 'Có lỗi xảy ra, vui lòng thử lại sau.'
+            ]);
+        }
+
+        $customer->update([
+            'hide' => 1
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Ẩn khách hàng thành công.'
+        ]);
     }
 }

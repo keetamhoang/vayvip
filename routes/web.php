@@ -67,6 +67,7 @@ Route::group(['prefix' => 'admin',
         Route::get('km-products/delete/{id}', 'Backend\DiscountController@productDelete');
 
         Route::get('update-customer', 'Backend\CustomerController@updateCustomer');
+        Route::get('hide-customer-bank', 'Backend\Bank\ShinhanBankController@hideCustomer');
     });
 
     Route::group(['middleware' => ['shinhanbank']], function () {

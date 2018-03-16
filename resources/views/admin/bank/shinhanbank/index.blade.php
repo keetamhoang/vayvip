@@ -40,6 +40,9 @@
                 <th>Thắc mắc</th>
                 <th>Email</th>
                 <th>Ngày tạo</th>
+                @if (auth('admin')->user()->type == 'admin')
+                    <th>Ngày tạo</th>
+                @endif
             </tr>
             </thead>
         </table>
@@ -113,6 +116,9 @@
                 {data: 'note', name: 'note'},
                 {data: 'email', name: 'email'},
                 {data: 'created_at', name: 'created_at'},
+                @if (auth('admin')->user()->type == 'admin')
+                    {data: 'hide', name: 'hide'},
+                @endif
             ],
 
         });
@@ -204,6 +210,28 @@
                         thisHtml.parent().find('.label').html('XONG');
                         thisHtml.parent().find('.label').removeClass('label-danger').addClass('label-success');
                         thisHtml.remove();
+                    }
+                },
+                error: function (response) {
+
+                }
+            })
+        });
+
+        $(document).on('click', '.hide-btn', function () {
+            var id = $(this).attr('data-id');
+
+            $.ajax({
+                url: '{{url('admin/hide-customer-bank')}}',
+                type: 'get',
+                data: {id: id},
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 0) {
+                        swal(response.message, '', "error");
+                    } else {
+                        swal(response.message, '', "success");
+                        orderTable.ajax.reload();
                     }
                 },
                 error: function (response) {
