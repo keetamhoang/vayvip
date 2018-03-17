@@ -51,10 +51,14 @@
                 <div class="footer-div">
                     <h3>Còn rất nhiều điều thú vị ở <a href="{{ url('/vay-von-tin-dung') }}">TaichinhSMART.vn</a> đang chờ bạn khám phá</h3>
                     <div class="other-left other">
-                        <a href="{{ url('/khuyen-mai') }}">KHUYẾN MẠI MUA SẮM</a>
+                        <a href="{{ url('/khuyen-mai') }}" title="KHUYẾN MẠI MUA SẮM">
+                            <img src="/assets/image/sale.png">
+                        </a>
                     </div>
                     <div class="other-right other">
-                        <a href="{{ url('/vay-von-tin-dung') }}">VAY VỐN TÍN DỤNG</a>
+                        <a href="{{ url('/vay-von-tin-dung') }}" title="VAY VỐN TÍN DỤNG">
+                            <img src="/assets/image/vayvontindung.png">
+                        </a>
                     </div>
                 </div>
             </div>
