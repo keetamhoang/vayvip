@@ -45,7 +45,11 @@ class ShinhanBankController extends AdminController
 //            $customers = $customers->where('salary', "$condi", intval($search));
 //        }
 
-        $customers = $customers->where('type', 'shinhanbank')->where('hide', 0)->orderBy('id', 'desc')->get();
+        if (auth('admin')->user()->type == 'shinhanbank') {
+            $customers = $customers->where('hide', 0);
+        }
+
+        $customers = $customers->where('type', 'shinhanbank')->orderBy('id', 'desc')->get();
 
         return $this->chatfuelDatatable($customers);
     }
@@ -97,7 +101,13 @@ class ShinhanBankController extends AdminController
                 return $text;
             })
             ->editColumn('hide', function ($customer) {
-                $text = '<button type="button" class="btn blue btn-outline hide-btn" data-id="'.$customer->id.'">Ẩn</button>';
+                if ($customer->hide == 1) {
+                    $text = '<label class="label label-danger">Đang ẩn</label><br>'
+                    .'<button type="button" class="btn blue btn-outline show-btn" data-id="'.$customer->id.'">Hiện</button>';
+                } else {
+                    $text = '<label class="label label-primary">Đang hiện</label><br>'.
+                        '<button type="button" class="btn red btn-outline hide-btn" data-id="'.$customer->id.'">Ẩn</button>';
+                }
 
                 return $text;
             })
@@ -107,6 +117,7 @@ class ShinhanBankController extends AdminController
 
     public function hideCustomer(Request $request) {
         $id = $request->input('id');
+        $status = $request->input('status');
 
         $customer = ShinhanBank::find($id);
 
@@ -118,7 +129,7 @@ class ShinhanBankController extends AdminController
         }
 
         $customer->update([
-            'hide' => 1
+            'hide' => $status
         ]);
 
         return response([

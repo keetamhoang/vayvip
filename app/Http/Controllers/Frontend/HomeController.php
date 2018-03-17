@@ -107,11 +107,18 @@ class HomeController extends Controller
 
         $data = $request->all();
 
+        if (empty($data['region'])) {
+            return redirect()->back()->with('error', 'Hãy chọn khu vực bạn đang làm việc');
+        }
+
         $data['phone'] =  Unit::formatPhone($data['phone']);
 
         $data['type'] = 'web';
+        $data['hide'] = 1;
 
         unset($data['_token']);
+
+        $data['salary'] = Unit::formatPhone($data['salary']);
 
         ShinhanBank::create($data);
 

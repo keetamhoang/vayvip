@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="uu-dai-btn" style="">
-                            <a style="" class="button" href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}"><i class="fa fa-gift"></i> ƯU ĐÃI LỚN THÁNG {{ \Carbon\Carbon::now()->month }} KHI MỞ THẺ TÍN DỤNG</a>
+                            <a style="" class="button" href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}"><img style="width: 400px;" src="/assets/image/uudai.png"></a>
                         </div>
                     </div>
 

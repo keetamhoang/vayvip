@@ -1,4 +1,4 @@
-    <option selected="">--Tỉnh/TP bạn đang làm việc--</option>
+    <option selected="" value="">--Tỉnh/TP bạn đang làm việc--</option>
     <option data-id="01" value="Hà Nội">Hà Nội</option>
     <option data-id="79" value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
     <option data-id="02" value="Hà Giang">Hà Giang</option>

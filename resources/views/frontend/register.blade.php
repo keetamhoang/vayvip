@@ -30,7 +30,7 @@
 @endsection
 
 @section('content')
-<div class="container" style="margin-top: 10%;">
+<div class="container register-body" style="margin-top: 10%;">
     <div class="form-dk">
         <div class="form-block">
             <div class="form-content form-left">
@@ -51,6 +51,7 @@
                 <form method="post" action="{{url('/tin-dung/dang-ky')}}">
                     {{csrf_field()}}
                     <h2>Thẻ tín dụng - Xu thế mới<br>Đăng ký <span>FREE</span> ngay hôm nay</h2>
+                    @include('flash_message')
                     <div class="body-register">
                         <div class="row">
                             <div class="col">
@@ -94,7 +95,7 @@
                             </div>
                             <div class="col right">
                                 <label>Email</label>
-                                <input placeholder="Điền Email của bạn" name="email">
+                                <input placeholder="Điền Email của bạn" name="email" type="email">
                             </div>
                         </div>
                         <div class="row">
@@ -109,6 +110,46 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div class="back">
+        <a href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}"><i class="fa fa-arrow-left"></i> Quay lại</a>
+    </div>
+
+    <hr>
+
+    <div class="footer-div">
+        <h3>Còn rất nhiều điều thú vị ở <a href="{{ url('/vay-von-tin-dung') }}">TaichinhSMART.vn</a> đang chờ bạn khám phá:</h3>
+        <div class="image-div">
+            <div class="other-left other">
+                <a href="{{ url('/khuyen-mai') }}" title="KHUYẾN MẠI MUA SẮM">
+                    <img src="/assets/image/sale.png">
+                </a>
+            </div>
+            <div class="other-right other">
+                <a href="{{ url('/vay-von-tin-dung') }}" title="VAY VỐN TÍN DỤNG">
+                    <img src="/assets/image/vayvontindung.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div id="" class=" col-lg-12" style="padding: 0px">
+    <div class="kfa-footer-menu" style="">
+        <div class="">
+            <ul class="kfa-list-footer-menu">
+            </ul>
+            <!-- End .kfa-list-footer-menu -->
+        </div>
+    </div>
+    <div class=" " style="padding: 0px 0px 30px;">
+        <div class="" style="color: #777; text-align: center">
+            <b style="font-weight: bold;">Tài chính SMART © 2018.</b><br><br>
+            Mọi vấn đề liên quan xin liên hệ tới địa chỉ Email: taichinhsmart.vn@gmail.com
         </div>
     </div>
 </div>

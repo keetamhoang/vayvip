@@ -30,6 +30,9 @@
         <table class="table table-striped table-bordered table-hover" id="orders-table">
             <thead>
             <tr>
+                @if (auth('admin')->user()->type == 'admin')
+                    <th>Ngày tạo</th>
+                @endif
                 <th>Trạng thái</th>
                 <th>Họ tên</th>
                 <th>SĐT</th>
@@ -40,9 +43,6 @@
                 <th>Thắc mắc</th>
                 <th>Email</th>
                 <th>Ngày tạo</th>
-                @if (auth('admin')->user()->type == 'admin')
-                    <th>Ngày tạo</th>
-                @endif
             </tr>
             </thead>
         </table>
@@ -91,9 +91,9 @@
             bServerSide: true,
             // "order": [[0, "desc"]],
 //            dom: 'lBfrtip',
-            "aaSorting": [],
+//            "aaSorting": [],
             // scrollX: true,
-//            stateSave: true,
+            stateSave: true,
 //            buttons: [
 //                {extend: 'colvis', text: '<i class="fa fa-list-ul"></i>'}
 //            ],
@@ -106,6 +106,9 @@
                 }
             },
             columns: [
+                @if (auth('admin')->user()->type == 'admin')
+                {data: 'hide', name: 'hide'},
+                @endif
                 {data: 'status', name: 'status'},
                 {data: 'name', name: 'name'},
                 {data: 'phone', name: 'phone'},
@@ -115,10 +118,7 @@
                 {data: 'birthday', name: 'birthday'},
                 {data: 'note', name: 'note'},
                 {data: 'email', name: 'email'},
-                {data: 'created_at', name: 'created_at'},
-                @if (auth('admin')->user()->type == 'admin')
-                    {data: 'hide', name: 'hide'},
-                @endif
+                {data: 'created_at', name: 'created_at'}
             ],
 
         });
@@ -224,14 +224,36 @@
             $.ajax({
                 url: '{{url('admin/hide-customer-bank')}}',
                 type: 'get',
-                data: {id: id},
+                data: {id: id, status: 1},
                 dataType: 'json',
                 success: function (response) {
                     if (response.status == 0) {
                         swal(response.message, '', "error");
                     } else {
                         swal(response.message, '', "success");
-                        orderTable.ajax.reload();
+                        location.reload();
+                    }
+                },
+                error: function (response) {
+
+                }
+            })
+        });
+
+        $(document).on('click', '.show-btn', function () {
+            var id = $(this).attr('data-id');
+
+            $.ajax({
+                url: '{{url('admin/hide-customer-bank')}}',
+                type: 'get',
+                data: {id: id, status: 0},
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 0) {
+                        swal(response.message, '', "error");
+                    } else {
+                        swal(response.message, '', "success");
+                        location.reload();
                     }
                 },
                 error: function (response) {

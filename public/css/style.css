@@ -257,18 +257,18 @@
 
 .uu-dai-btn {
     margin-top: 18px;
-    height: 37px;
+    height: 111px;
 }
 
-.uu-dai-btn a {
-    background: #2196F3;
-    border: 2px solid #2196F3;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 10px;
-    display: inline-block;
-}
+/*.uu-dai-btn a {*/
+    /*background: #2196F3;*/
+    /*border: 2px solid #2196F3;*/
+    /*border-radius: 5px;*/
+    /*color: #fff;*/
+    /*font-weight: bold;*/
+    /*padding: 5px 10px;*/
+    /*display: inline-block;*/
+/*}*/
 
 .home-banner {
     padding-bottom: 2%;
@@ -361,6 +361,89 @@
 .kenh14-wrapper.size-m .kbw-background, .kenh14-wrapper.size-m .kenh14-toolbar-wrapper .w1040 {
     width: 100%;
 }
+
+.success-page {
+    margin-top: 8%;
+    margin-bottom: 25px;
+}
+
+.success-page h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #16b969;
+}
+
+.success-page .info h3 {
+    line-height: 34px;
+}
+
+.success-page .info h3 a {
+    color: #16b969;
+}
+
+.success-page ul li p {
+    font-size: 18px;
+}
+
+.success-page ul li p span {
+    font-weight: bold;
+}
+
+.success-page ul {
+    padding-left: 35px;
+    margin-bottom: 25px;
+}
+
+.success-page ul i {
+    color: #16b969;
+}
+
+.success-page .info .back, .register-body .back {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.other {
+    display: block;
+    float: left;
+}
+
+.other-left {
+    width: 35%;
+}
+
+.other-right {
+    width: 60%;
+    float: right;
+}
+
+.success-page .info .back a, .register-body .back a {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: box-shadow .28s cubic-bezier(.4,0,.2,1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    padding: 8px 14px 7px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.footer-div h3 {
+    margin: 30px 0px;
+}
+
+.click-div {
+    text-align: center;
+}
+
 
 @media (max-width: 767px) {
     .container {
@@ -583,7 +666,47 @@
     }
 
     .uu-dai-btn {
-        height: 60px;
+        height: 85px;
+    }
+
+    .form-content.form-left {
+        display: none;
+    }
+
+    .form-right {
+        width: 100%;
+        padding: 15px 22px 10px;
+    }
+
+    .form-right h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .form-right h2 span {
+        font-size: 29px;
+    }
+
+    .body-register .col {
+        width: 100%;
+        margin-bottom: 9px;
+    }
+
+    .body-register .row {
+        margin-bottom: 0px;
+    }
+
+    .body-register {
+        margin-bottom: 30px;
+    }
+
+    .other {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .uu-dai-btn img {
+        max-width: 100%;
     }
 }
 

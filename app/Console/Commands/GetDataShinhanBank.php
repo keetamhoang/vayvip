@@ -70,6 +70,7 @@ class GetDataShinhanBank extends Command
                         'email' => $value[5],
                         'salary' => $value[6],
                         'note' => $value[7],
+                        'hide' => 1,
                         'type' => 'shinhanbank',
                         'updated_at' => Carbon::now(),
                     ];
