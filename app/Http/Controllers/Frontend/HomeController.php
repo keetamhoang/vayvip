@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Components\Unit;
 use App\Models\Customer;
 use App\Models\Post;
+use App\Models\ShinhanBank;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -95,5 +97,28 @@ class HomeController extends Controller
 //        $values = Sheets::sheet('VPBank')->all();
 
         dd($values);
+    }
+
+    public function registerCustomerBankGet(Request $request) {
+        return view('frontend.register');
+    }
+
+    public function registerCustomerBank(Request $request) {
+
+        $data = $request->all();
+
+        $data['phone'] =  Unit::formatPhone($data['phone']);
+
+        $data['type'] = 'web';
+
+        unset($data['_token']);
+
+        ShinhanBank::create($data);
+
+        return redirect(url('/tin-dung/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job'].'&region='.$data['region'].'&salary='.$data['salary'].'&salary_type='.$data['salary_type']));
+    }
+
+    public function success() {
+        return view('frontend.success');
     }
 }

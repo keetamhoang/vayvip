@@ -218,29 +218,7 @@
                                 <div class="w1040 wfull">
                                     <div class="w1040 kbwc-body clearfix" id="k14-detail-content">
 
-                                        <div class="w300 fr adm-rightsection">
-                                            <div id="admsection8"></div>
-
-                                            <div class="w300 mg0 clearfix">
-
-
-                                                <div id="admzone24309"></div>
-
-                                                <div id="admzone51"></div>
-
-                                                <div id="admzone253"></div>
-
-                                                <div id="admzone972"></div>
-
-                                                <div id="admzone55"></div>
-
-                                                <div id="admzone336"></div>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="w700 kbwcb-left kbwcb-top fl adm-leftsection">
+                                        <div class="kbwcb-left kbwcb-top fl adm-leftsection">
                                             <div class="kbwcb-left-wrapper">
                                                 <div class="clearfix">
                                                     <div class="klw-body-top">
@@ -381,7 +359,7 @@
                                     </div>
                                     <div id="adm_sponsor_footer1"></div>
                                     <div class="w1040">
-                                        <div class="klw-body-bottom w720 kbwcb-left">
+                                        <div class="klw-body-bottom kbwcb-left">
 
 
                                             <!-- Begin .same-category-stream -->

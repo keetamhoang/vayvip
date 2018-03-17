@@ -118,3 +118,7 @@ Route::post('dang-ky-khoan-vay', 'Frontend\VayVonController@registerCustomer');
 Route::post('dang-ky/popup/voucher', 'Frontend\HomeController@registerCustomer');
 
 Route::get('gg-sheet', 'Frontend\HomeController@ggSheet');
+
+Route::get('tin-dung/dang-ky', 'Frontend\HomeController@registerCustomerBankGet');
+Route::post('tin-dung/dang-ky', 'Frontend\HomeController@registerCustomerBank');
+Route::get('tin-dung/success', 'Frontend\HomeController@success');
