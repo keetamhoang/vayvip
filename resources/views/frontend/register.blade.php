@@ -45,7 +45,7 @@
                         <h4><i class="fa fa-check"></i> Ưu đãi bất tận</h4>
                         <p>Khi mua sắm tại các siêu thị, trung tâm thương mại, trang thương mại điện tử lớn như Lazada, Tiki, Shopee,...</p>
                     </div>
-                    <img src="/assets/image/credit-card.png">
+                    <img style="    margin-top: 54px;" src="/assets/image/credit-card.png">
                 </div>
             </div>
             <div class="form-content form-right">
