@@ -417,6 +417,19 @@
     float: right;
 }
 
+.register-body ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #c1c1c1;
+}
+.register-body ::-moz-placeholder { /* Firefox 19+ */
+    color: #c1c1c1;
+}
+.register-body :-ms-input-placeholder { /* IE 10+ */
+    color: #c1c1c1;
+}
+.register-body :-moz-placeholder { /* Firefox 18- */
+    color: #c1c1c1;
+}
+
 .success-page .info .back a, .register-body .back a {
     font-size: 12px;
     font-weight: 600;

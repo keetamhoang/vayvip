@@ -112,6 +112,67 @@ class HomeController extends Controller
         }
 
         $data['phone'] =  Unit::formatPhone($data['phone']);
+        $data['salary'] =  Unit::formatPhone($data['salary']);
+
+        $data['type'] = 'web';
+        $data['hide'] = 1;
+
+        if (preg_match('/^[0-9.]+$/', $data['salary'])) {
+        } else {
+            return redirect()->back()->with('error', 'Hãy điền đúng định dạng số tiền lương');
+        }
+
+        if (intval($data['salary']) < 7000000) {
+            $fbPixel = '0t';
+        } else {
+            $fbPixel = '7t';
+        }
+
+        unset($data['_token']);
+
+        $data['salary'] = Unit::formatPhone($data['salary']);
+
+        ShinhanBank::create($data);
+
+        return redirect(url('/tin-dung/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job'].'&region='.$data['region'].'&salary='.$data['salary']
+            .'&salary_type='.$data['salary_type'].'&pixel='.$fbPixel));
+    }
+
+    public function success() {
+        return view('frontend.success');
+    }
+
+    public function registerCustomerBankGetVay(Request $request) {
+        return view('frontend.register_vay');
+    }
+
+    public function registerCustomerBankVay(Request $request) {
+
+        $data = $request->all();
+
+        if (empty($data['region'])) {
+            return redirect()->back()->with('error', 'Hãy chọn khu vực bạn đang làm việc');
+        }
+
+        if (preg_match('/^[0-9.]+$/', $data['salary'])) {
+        } else {
+            return redirect()->back()->with('error', 'Hãy điền đúng định dạng số tiền lương');
+        }
+
+        if (preg_match('/^[0-9.]+$/', $data['money'])) {
+        } else {
+            return redirect()->back()->with('error', 'Hãy điền đúng định dạng số tiền muốn vay');
+        }
+
+        $data['phone'] =  Unit::formatPhone($data['phone']);
+        $data['salary'] =  Unit::formatPhone($data['salary']);
+        $data['money'] =  Unit::formatPhone($data['money']);
+
+        if (intval($data['salary']) < 7000000) {
+            $fbPixel = '0t';
+        } else {
+            $fbPixel = '7t';
+        }
 
         $data['type'] = 'web';
         $data['hide'] = 1;
@@ -122,10 +183,12 @@ class HomeController extends Controller
 
         ShinhanBank::create($data);
 
-        return redirect(url('/tin-dung/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job'].'&region='.$data['region'].'&salary='.$data['salary'].'&salary_type='.$data['salary_type']));
+        return redirect(url('/vay-von/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job']
+            .'&region='.$data['region'].'&salary='.$data['salary'].'&salary_type='.$data['salary_type'].'&money='
+            .$data['money'].'&address='.$data['address'].'&pixel='.$fbPixel));
     }
 
-    public function success() {
-        return view('frontend.success');
+    public function successVay() {
+        return view('frontend.success_vay');
     }
 }

@@ -89,7 +89,7 @@
         var orderTable = $('#orders-table').DataTable({
             processing: true,
             bServerSide: true,
-            // "order": [[0, "desc"]],
+             "order": [[0, "desc"]],
 //            dom: 'lBfrtip',
 //            "aaSorting": [],
             // scrollX: true,

@@ -110,20 +110,21 @@
                             </div>
                             <div class="col-md-4 col">
                                 <div class="inputt input_change">
-                                    <span class="message_icon"><span class="message_icon"><img src="/assets/image/icon_email.png"></span></span>
-                                    <input type="text" required="" placeholder="Email " id="top-email"
+                                    <span class="message_icon"><span class="message_icon"><img src="/assets/image/money.png"></span></span>
+                                    <input type="text" required="" placeholder="Số tiền muốn vay " id="top-email"
                                            class="form-control phone" name="email">
                                 </div>
                             </div>
                             <div class="col-md-4 col-md-offset-4 col">
                                 <div class="sunmite_button">
-                                    <button name="ok" type="submit" id="dang-ky-btn"><i class="fa fa-hand-point-right"></i> Đăng ký khoản vay ngay</button>
+                                    {{--<button name="ok" type="submit" id="dang-ky-btn"><i class="fa fa-hand-point-right"></i> Đăng ký khoản vay ngay</button>--}}
+                                    <a href="#" id="dangkyngay"><img src="/assets/image/dangkyngay.png"></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="uu-dai-btn" style="">
-                            <a style="" class="button" href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}"><img style="width: 400px;" src="/assets/image/uudai.png"></a>
-                        </div>
+                        {{--<div class="uu-dai-btn" style="">--}}
+                            {{--<a style="" class="button" href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}"><img style="width: 400px;" src="/assets/image/uudai.png"></a>--}}
+                        {{--</div>--}}
                     </div>
 
 
@@ -1070,6 +1071,20 @@
                 if (this.value == 'UNKNOWN') {
                     $('.tu-van-modal').modal('show');
                 }
+            });
+
+            $('#dangkyngay').click(function (e) {
+                e.preventDefault();
+                var name = $('#top-name').val().trim();
+                var phone = $('#top-phone').val().trim();
+                var email = $('#top-email').val().trim();
+
+                if (name == '' || phone == '' || email == '') {
+                    alert('Bạn hãy điền đủ thông tin.');
+                    return;
+                }
+
+                window.location = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
             });
         });
     </script>

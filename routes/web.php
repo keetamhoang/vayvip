@@ -122,3 +122,7 @@ Route::get('gg-sheet', 'Frontend\HomeController@ggSheet');
 Route::get('tin-dung/dang-ky', 'Frontend\HomeController@registerCustomerBankGet');
 Route::post('tin-dung/dang-ky', 'Frontend\HomeController@registerCustomerBank');
 Route::get('tin-dung/success', 'Frontend\HomeController@success');
+
+Route::get('vay-von/dang-ky', 'Frontend\HomeController@registerCustomerBankGetVay');
+Route::post('vay-von/dang-ky', 'Frontend\HomeController@registerCustomerBankVay');
+Route::get('vay-von/success', 'Frontend\HomeController@successVay');

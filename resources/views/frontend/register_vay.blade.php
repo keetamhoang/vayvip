@@ -35,33 +35,37 @@
     <div class="form-dk">
         <div class="form-block">
             <div class="form-content form-left">
-                <h3>Lợi ích của thẻ tín dụng</h3>
+                <h3>Lợi ích vay vốn dễ dàng</h3>
                 <div class="form-left-content">
                     <div class="each-block-content">
-                        <h4><i class="fa fa-check"></i> Không phải chịu lãi suất</h4>
-                        <p>Bạn được ngân hàng ưu đãi trả không lãi suất 45 – 55 ngày. Sau khoảng thời gian này bạn có thể chọn hình thức trả hết hoặc trả một phần.</p>
+                        <h4><i class="fa fa-check"></i> Đã vay nơi khác vẫn có thể được hỗ trợ</h4>
+                        <p>Bạn đã có khoản vay ở ngân hàng khác vẫn có thể vay vốn ở những ngân hàng khác.</p>
                     </div>
                     <div class="each-block-content">
-                        <h4><i class="fa fa-check"></i> Ưu đãi bất tận</h4>
-                        <p>Khi mua sắm tại các siêu thị, trung tâm thương mại, trang thương mại điện tử lớn như Lazada, Tiki, Shopee,...</p>
+                        <h4><i class="fa fa-check"></i> Tư vấn ngay trong 24h</h4>
+                        <p>Nhân viên tư vấn ngân hàng sẽ gọi điện tư vấn bạn ngay trong 24h kể từ khi đăng ký.</p>
                     </div>
-                    <img src="/assets/image/credit-card.png">
+                    <div class="each-block-content">
+                        <h4><i class="fa fa-check"></i> Hồ sơ thủ tục đơn giản</h4>
+                        <p>Bạn sẽ có được khoản vay mình mong muốn mà không cần phải tới ngân hàng làm việc trực tiếp.</p>
+                    </div>
+                    <img src="/assets/image/vayvon.png">
                 </div>
             </div>
             <div class="form-content form-right">
-                <form method="post" action="{{url('/tin-dung/dang-ky')}}">
+                <form method="post" action="{{url('/vay-von/dang-ky')}}">
                     {{csrf_field()}}
-                    <h2>Thẻ tín dụng - Xu thế mới<br>Đăng ký <span>FREE</span> ngay hôm nay</h2>
+                    <h2>Vay vốn tín dụng<br>Đăng ký <span>FREE</span> ngay hôm nay</h2>
                     @include('flash_message')
                     <div class="body-register">
                         <div class="row">
                             <div class="col">
                                 <label>Họ và tên</label>
-                                <input placeholder="Điền họ tên của bạn" name="name" required>
+                                <input placeholder="Điền họ tên của bạn" name="name" required value="{{Request::input('name')}}">
                             </div>
                             <div class="col right">
                                 <label>Số điện thoại</label>
-                                <input placeholder="Điền số điện thoại của bạn" name="phone" required>
+                                <input placeholder="Điền số điện thoại của bạn" name="phone" required value="{{Request::input('phone')}}">
                             </div>
                         </div>
                         <div class="row">
@@ -79,7 +83,7 @@
                         <div class="row">
                             <div class="col">
                                 <label>Mức lương hiện tại</label>
-                                <input placeholder="Vd: 7.000.000" name="salary" required>
+                                <input placeholder="vd: 7.000.000" name="salary" required>
                             </div>
                             <div class="col right">
                                 <label style="    width: 100%;">Lương được nhận qua</label>
@@ -91,12 +95,22 @@
                         </div>
                         <div class="row">
                             <div class="col">
+                                <label>Số tiền muốn vay</label>
+                                <input placeholder="vd: 10.000.000" name="money" value="{{Request::input('money')}}" required>
+                            </div>
+                            <div class="col right">
+                                <label>Địa chỉ nơi ở hiện tại</label>
+                                <input placeholder="vd: 699 Trương Định, quận Hai Bà Trưng, Hà Nội" name="address" type="text" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
                                 <label>Ngày tháng năm sinh</label>
-                                <input placeholder="vd: 01/12/1994" name="birthday">
+                                <input placeholder="vd: 01/12/1994" name="birthday" required>
                             </div>
                             <div class="col right">
                                 <label>Email</label>
-                                <input placeholder="Điền Email của bạn" name="email" type="email">
+                                <input placeholder="Điền Email của bạn" name="email" type="email" required>
                             </div>
                         </div>
                         <div class="row">
@@ -154,4 +168,14 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            if($('[name="salary"]').is(":focus")) {
+                alert('aaaa');
+            }
+        })
+    </script>
 @endsection
