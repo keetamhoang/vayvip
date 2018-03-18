@@ -169,11 +169,11 @@
                         <li >
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                         <li class=""><a
-                                    href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
+                                    href="{{ url('tu-van-tieu-dung') }}">Tư vấn tiêu dùng</a></li>
                         {{--<li class=""><a--}}
                                     {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                         <li class=""><a
-                                    href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
+                                    href="{{ url('mua-sam-hom-nay') }}">Mua sắm hôm nay</a></li>
 
                         @if (auth('admin')->check())
                             <li class=""><a
@@ -196,11 +196,11 @@
                     <li >
                         <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li class=""><a
-                                href="{{ url('san-pham') }}">Sản phẩm thông minh</a></li>
+                                href="{{ url('tu-van-tieu-dung') }}">Tư vấn tiêu dùng</a></li>
                     {{--<li class=""><a--}}
                                 {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                     <li class=""><a
-                                href="{{ url('tin-tuc') }}">Tin tức Tài chính Smart</a></li>
+                                href="{{ url('mua-sam-hom-nay') }}">Mua sắm hôm nay</a></li>
                 </ul>
             </div>
             <!--end nav area-->
@@ -253,6 +253,23 @@
     </div>
 </div>
 <!--end header  area -->
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '179869195992101');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=179869195992101&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
 
 @yield('content')
 
@@ -312,41 +329,48 @@
         });
 
         console.log($.cookie('popupShow'));
-        if ($.cookie('popupShow') == undefined) {
-            setTimeout(showPopup, 10000);
 
-            function showPopup() {
-                $('.info-modal').modal('show');
-            }
-        }
+        var currentUrl = '{{ Request::getPathInfo() }}';
 
-        $('#popup-form').submit(function (e) {
-            e.preventDefault();
+        if (currentUrl.indexOf('khuyen-mai') >= 0) {
 
-            var email = $('#email-dk').val();
+            if ($.cookie('popupShow') == undefined) {
+                setTimeout(showPopup, 10000);
 
-            $.ajax({
-                type: 'post',
-                data: {email: email},
-                url: '{{ url('dang-ky/popup/voucher') }}',
-                dataType: 'json',
-                success: function (response) {
-                    if (response.status == 1) {
-                        $.cookie('popupShow', 'true', { expires: 1 });
-                        alert(response.message);
-                        $('.info-modal').modal('hide');
-                    } else {
-                        alert(response.message);
-//                        $('.info-modal').modal('hide');
-                    }
+                function showPopup() {
+                    $('.info-modal').modal('show');
                 }
+            }
+
+            $('#popup-form').submit(function (e) {
+                e.preventDefault();
+
+                var email = $('#email-dk').val();
+
+                $.ajax({
+                    type: 'post',
+                    data: {email: email},
+                    url: '{{ url('dang-ky/popup/voucher') }}',
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.status == 1) {
+                            $.cookie('popupShow', 'true', { expires: 1 });
+                            alert(response.message);
+                            $('.info-modal').modal('hide');
+                        } else {
+                            alert(response.message);
+    //                        $('.info-modal').modal('hide');
+                        }
+                    }
+                });
             });
-        });
-        
-        $('#dismiss-p').click(function () {
-            $.cookie('popupShow', 'true', { expires: 1 });
-            $('.info-modal').modal('hide');
-        })
+
+            $('#dismiss-p').click(function () {
+                $.cookie('popupShow', 'true', { expires: 1 });
+                $('.info-modal').modal('hide');
+            })
+
+        }
     });
 
     $.ajaxSetup({

@@ -117,7 +117,7 @@
                             </div>
                             <div class="col-md-4 col-md-offset-4 col">
                                 <div class="sunmite_button">
-                                    <button name="ok" type="submit" id="dang-ky-btn">Đăng ký khoản vay ngay</button>
+                                    <button name="ok" type="submit" id="dang-ky-btn"><i class="fa fa-hand-point-right"></i> Đăng ký khoản vay ngay</button>
                                 </div>
                             </div>
                         </div>

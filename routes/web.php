@@ -91,9 +91,9 @@ Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeContro
 // frontend
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
-Route::get('tin-tuc', 'Frontend\NewsController@index');
+Route::get('mua-sam-hom-nay', 'Frontend\NewsController@index');
 Route::get('khuyen-mai', 'Frontend\KmController@index');
-Route::get('san-pham', 'Frontend\SpController@index');
+Route::get('tu-van-tieu-dung', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
 Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
