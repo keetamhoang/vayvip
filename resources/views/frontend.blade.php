@@ -169,7 +169,7 @@
                         <li >
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                         <li class=""><a
-                                    href="{{ url('tu-van-tieu-dung') }}">Tư vấn tiêu dùng</a></li>
+                                    href="{{ url('tin-tuc-tai-chinh') }}">Tin tức tài chính</a></li>
                         {{--<li class=""><a--}}
                                     {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                         <li class=""><a
@@ -196,7 +196,7 @@
                     <li >
                         <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li class=""><a
-                                href="{{ url('tu-van-tieu-dung') }}">Tư vấn tiêu dùng</a></li>
+                                href="{{ url('tin-tuc-tai-chinh') }}">Tin tức tài chính</a></li>
                     {{--<li class=""><a--}}
                                 {{--href="{{ url('dau-tu') }}">Đầu tư hiệu quả</a></li>--}}
                     <li class=""><a

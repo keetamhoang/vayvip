@@ -30,7 +30,8 @@
 @endsection
 
 @section('content')
-<div class="container register-body" style="margin-top: 10%;">
+<div class="menu-div"></div>
+<div class="container register-body">
     <div class="form-dk">
         <div class="form-block">
             <div class="form-content form-left">

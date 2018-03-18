@@ -30,6 +30,7 @@
 @endsection
 
 @section('content')
+    <div class="menu-div"></div>
     <div class="container success-page">
         <div class="block">
             <h2>ĐĂNG KÝ THÀNH CÔNG!</h2>

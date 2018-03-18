@@ -363,7 +363,7 @@
 }
 
 .success-page {
-    margin-top: 8%;
+    margin-top: 35px;
     margin-bottom: 25px;
 }
 
@@ -444,8 +444,22 @@
     text-align: center;
 }
 
+.menu-div {
+    height: 83px;
+}
+.register-body {
+    margin-top: 50px;
+}
 
-@media (max-width: 767px) {
+.kenh14-wrapper.size-m .kbwcb-left {
+    padding: 20px 20px 0px;
+}
+
+.kbwc-meta {
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
     .container {
         padding: 0px;
         width: 95% !important;
@@ -707,6 +721,22 @@
 
     .uu-dai-btn img {
         max-width: 100%;
+    }
+
+    .success-page {
+        margin-top: 12%;
+    }
+
+    .menu-div {
+        height: 0px;
+    }
+
+    .register-body {
+        margin-top: 10px;
+    }
+
+    .kbw-submenu {
+        margin-bottom: 35px;
     }
 }
 
