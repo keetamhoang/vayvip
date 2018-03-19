@@ -174,6 +174,14 @@ class HomeController extends Controller
             $fbPixel = '7t';
         }
 
+        if (intval($data['money']) < 10000000) {
+            $mucvay = '0t';
+        } else if (intval($data['money']) < 25000000) {
+            $mucvay = '10t';
+        } else {
+            $mucvay = '25t';
+        }
+
         $data['type'] = 'web';
         $data['hide'] = 1;
 
@@ -185,7 +193,7 @@ class HomeController extends Controller
 
         return redirect(url('/vay-von/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job']
             .'&region='.$data['region'].'&salary='.$data['salary'].'&salary_type='.$data['salary_type'].'&money='
-            .$data['money'].'&address='.$data['address'].'&pixel='.$fbPixel));
+            .$data['money'].'&address='.$data['address'].'&pixel='.$fbPixel.'&mucvay='.$mucvay));
     }
 
     public function successVay() {
