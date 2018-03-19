@@ -45,7 +45,7 @@
             });
         </script>
     @endif
-    
+
     <div class="menu-div"></div>
     <div class="container success-page">
         <div class="block">
