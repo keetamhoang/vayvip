@@ -49,7 +49,7 @@ class ShinhanBankController extends AdminController
             $customers = $customers->where('hide', 0);
         }
 
-        $customers = $customers->where('type', 'shinhanbank')->orderBy('id', 'desc')->get();
+        $customers = $customers->whereIn('type', ['shinhanbank', 'web'])->orderBy('id', 'desc')->get();
 
         return $this->chatfuelDatatable($customers);
     }

@@ -38,6 +38,7 @@
                 <th>SĐT</th>
                 <th>Mức lương</th>
                 <th>Nghề nghiệp</th>
+                <th>Muốn vay</th>
                 <th>Tỉnh/TP</th>
                 <th>Năm sinh</th>
                 <th>Thắc mắc</th>
@@ -114,6 +115,7 @@
                 {data: 'phone', name: 'phone'},
                 {data: 'salary', name: 'salary'},
                 {data: 'job', name: 'job'},
+                {data: 'money', name: 'money'},
                 {data: 'region', name: 'address'},
                 {data: 'birthday', name: 'birthday'},
                 {data: 'note', name: 'note'},

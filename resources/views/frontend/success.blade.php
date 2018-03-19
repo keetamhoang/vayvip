@@ -30,6 +30,22 @@
 @endsection
 
 @section('content')
+    @if (Request::input('pixel') == '0t')
+        <!-- Event snippet for Đăng ký vay vốn thu nhập dưới 7 triệu conversion page -->
+        <script>
+            gtag('event', 'conversion', {'send_to': 'AW-930142557/MkRpCI73iX8Q3bLDuwM'});
+        </script>
+    @elseif (Request::input('pixel') == '7t')
+        <!-- Event snippet for Đăng ký vay vốn thu nhập trên 7 triệu conversion page -->
+        <script>
+            gtag('event', 'conversion', {
+                'send_to': 'AW-930142557/YoiiCLeZjX8Q3bLDuwM',
+                'value': 50000.0,
+                'currency': 'VND'
+            });
+        </script>
+    @endif
+    
     <div class="menu-div"></div>
     <div class="container success-page">
         <div class="block">

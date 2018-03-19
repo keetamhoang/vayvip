@@ -16,7 +16,7 @@ class ShinhanBank
     public function handle($request, Closure $next)
     {
         if (auth('admin')->check()) {
-            if (auth('admin')->user()->type != 'shinhanbank' and auth('admin')->user()->type != 'admin') {
+            if (auth('admin')->user()->type != 'shinhanbank' and auth('admin')->user()->type != 'admin' and auth('admin')->user()->type != 'mod') {
                 abort(403);
             }
         }

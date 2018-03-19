@@ -63,6 +63,11 @@
 @endsection
 
 @section('content')
+    <!-- Event snippet for Khách hàng tiềm năng conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-930142557/IlrTCNrviX8Q3bLDuwM'});
+    </script>
+
     <!-- HOME SLIDER -->
     <div class="vay-kinh-doanh" id="vay-tin-chap">
         <div class="home-banner vay-vip-xe-may">

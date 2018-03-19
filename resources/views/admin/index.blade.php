@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('content')
-    @if (auth('admin')->user()->type == 'admin')
+    @if (auth('admin')->user()->type == 'admin' || auth('admin')->user()->type == 'mod')
         <a class="btn btn-primary" href="{{ url('admin/shinhanbank') }}">Shinhan Bank</a>
     @endif
     <div style="text-align: center">

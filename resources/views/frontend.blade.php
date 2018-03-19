@@ -94,7 +94,15 @@
     @yield('styles')
 </head>
 <body class="home-2">
+<!-- Global site tag (gtag.js) - Google AdWords: 930142557 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-930142557"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'AW-930142557');
+</script>
 
 
 <script>
