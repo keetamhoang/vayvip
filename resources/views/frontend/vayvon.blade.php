@@ -786,14 +786,14 @@
                 <div class="col-md-4">
                     <div class="inputt input_change">
                     <span class="message_icon"><span class="message_icon"><img
-                                    src="/assets/image/icon_email.png"></span></span>
-                        <input type="email" required="" placeholder="Email " id="bot-email"
+                                    src="/assets/image/money.png"></span></span>
+                        <input type="text" required="" placeholder="Số tiền muốn vay" id="bot-email"
                                class="form-control phone" name="email">
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-4">
                     <div class="sunmite_button">
-                        <button name="ok" type="submit" id="dang-ky-bot-btn">Nhận khoản vay ngay</button>
+                        <a id="dang-ky-bot-btn" href="#"><img src="/assets/image/dangkyngay.png"></a>
                     </div>
                 </div>
 
@@ -1028,48 +1028,15 @@
                 var name = $('#bot-name').val();
                 var phone = $('#bot-phone').val();
                 var email = $('#bot-email').val();
-                var bank = $('#bot-bank').val();
 
-                if (name.trim() == '' || phone.trim() == '') {
+                if (name.trim() == '' || phone.trim() == '' || email.trim() == '') {
                     alert('Không được để trống thông tin của bạn!');
                     return;
                 }
 
 //                var textBank = $("#bot-bank option:selected").text();
 
-                var textBank = 'Doctor Đồng';
-                var bank = 'DoctorDong';
-
-                $('#name-bank').html('Tiếp tục với ' + textBank);
-                $('#next-bank').html('<i class="fa fa-hand-o-right "></i> Tiếp tục với ' + textBank);
-                $('#clip-bank').html('Clip - Hướng dẫn hoàn thành quá trình vay vốn tại ' + textBank);
-
-                if (bank == 'OCB') {
-                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/ifj7aGzuNIc?rel=0&amp;controls=0&amp;showinfo=0')
-                    $('#next-bank').attr('href', 'http://member.civi.vn/cpc/?sid=30429&bid=10031700')
-                } else if (bank == 'DoctorDong') {
-                    $('#yt-frame').attr('src', 'https://www.youtube.com/embed/5_f670NXxEw?rel=0&amp;controls=0&amp;showinfo=0')
-                    $('#next-bank').attr('href', 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=https%3A%2F%2Fdoctordong.vn%2F%3Fpartner_token%3DBq7OGnaSE-nrzepIjzrKeUszWQFY0YM49EHU5LLo6g8')
-                }
-
-                $.ajax({
-                    type: 'post',
-                    data: {
-                        name: name,
-                        phone: phone,
-                        email: email,
-                        bank: bank
-                    },
-                    url: '{{ url('dang-ky-khoan-vay') }}',
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.status == 1) {
-                            $('.dang-ky-modal').modal('show');
-                        } else {
-                            alert(response.message);
-                        }
-                    }
-                });
+                window.location = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
             });
 
             $('#top-bank, #bot-bank').on('change', function () {

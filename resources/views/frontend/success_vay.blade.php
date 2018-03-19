@@ -74,12 +74,12 @@
                     <div class="image-div">
                         <div class="other-left other">
                             <a href="{{ url('/khuyen-mai') }}" title="KHUYẾN MẠI MUA SẮM">
-                                <img src="/assets/image/sale.png">
+                                <img src="/assets/image/salebanner.png">
                             </a>
                         </div>
                         <div class="other-right other">
                             <a href="{{ url('/vay-von-tin-dung') }}" title="VAY VỐN TÍN DỤNG">
-                                <img src="/assets/image/vayvontindung.png">
+                                <img src="/assets/image/vayvonbanner.png">
                             </a>
                         </div>
                     </div>
