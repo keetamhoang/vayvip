@@ -64,6 +64,8 @@
                     </li>
                 </ul>
 
+                <h3>Bạn có muốn được tư vấn thêm về <a href="{{ url('/tin-tuc/the-tin-dung-la-gi-12') }}">thẻ tín dụng</a> ko? TaichinhSMART có thể giúp bạn đăng ký làm thẻ tín dụng nhanh nhất phù hợp với nhu cầu của bạn!</h3>
+
                 <div class="back">
                     <a href="{{ url('/vay-von/dang-ky') }}"><i class="fa fa-arrow-left"></i> Quay lại</a>
                 </div>
