@@ -122,8 +122,10 @@ class HomeController extends Controller
             return redirect()->back()->with('error', 'Hãy điền đúng định dạng số tiền lương');
         }
 
-        if (intval($data['salary']) < 7000000) {
+        if (intval($data['salary']) < 4500000) {
             $fbPixel = '0t';
+        } else if (intval($data['salary']) < 7000000) {
+            $fbPixel = '4t';
         } else {
             $fbPixel = '7t';
         }
@@ -168,8 +170,10 @@ class HomeController extends Controller
         $data['salary'] =  Unit::formatPhone($data['salary']);
         $data['money'] =  Unit::formatPhone($data['money']);
 
-        if (intval($data['salary']) < 7000000) {
+        if (intval($data['salary']) < 4500000) {
             $fbPixel = '0t';
+        } else if (intval($data['salary']) < 7000000) {
+            $fbPixel = '4t';
         } else {
             $fbPixel = '7t';
         }
