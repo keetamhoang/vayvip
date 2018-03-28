@@ -63,6 +63,8 @@
                     </li>
                 </ul>
 
+                <h3>Bạn có muốn được tư vấn thêm về <a href="{{ url('/vay-von-tin-dung') }}">vay vốn tín dụng</a> ko? TaichinhSMART có thể giúp bạn đăng ký vay tiền nhanh nhất phù hợp với nhu cầu của bạn!</h3>
+
                 <div class="back">
                     <a href="{{ url('/tin-dung/dang-ky') }}"><i class="fa fa-arrow-left"></i> Quay lại</a>
                 </div>
