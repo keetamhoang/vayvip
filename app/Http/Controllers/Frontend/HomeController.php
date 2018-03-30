@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use Sheets;
 use Google;
 
@@ -134,8 +135,14 @@ class HomeController extends Controller
 
         ShinhanBank::create($data);
 
-        return redirect(url('/tin-dung/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job'].'&region='.$data['region'].'&salary='.$data['salary']
-            .'&salary_type='.$data['salary_type'].'&pixel='.$fbPixel));
+        $url = '/tin-dung/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job'].'&region='.$data['region'].'&salary='.$data['salary']
+            .'&salary_type='.$data['salary_type'].'&pixel='.$fbPixel;
+
+        if (Session::has('vayvon')) {
+            $url .= '&' . Session::get('vayvon');
+        }
+
+        return redirect(url($url));
     }
 
     public function success() {
@@ -191,9 +198,15 @@ class HomeController extends Controller
 
         ShinhanBank::create($data);
 
-        return redirect(url('/vay-von/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job']
+        $url = '/vay-von/success?name=' . $data['name'].'&phone='.$data['phone'].'&job='.$data['job']
             .'&region='.$data['region'].'&salary='.$data['salary'].'&salary_type='.$data['salary_type'].'&money='
-            .$data['money'].'&address='.$data['address'].'&pixel='.$fbPixel.'&mucvay='.$mucvay));
+            .$data['money'].'&address='.$data['address'].'&pixel='.$fbPixel.'&mucvay='.$mucvay;
+
+        if (Session::has('vayvon')) {
+            $url .= '&' . Session::get('vayvon');
+        }
+
+        return redirect(url($url));
     }
 
     public function successVay() {

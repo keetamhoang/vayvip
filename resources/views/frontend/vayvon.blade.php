@@ -1034,9 +1034,13 @@
                     return;
                 }
 
-//                var textBank = $("#bot-bank option:selected").text();
+                var url = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
 
-                window.location = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                @if(\Session::has('vayvon'))
+                    url += '&' + '{{ \Session::get('vayvon') }}';
+                @endif
+
+                window.location = url;
             });
 
             $('#top-bank, #bot-bank').on('change', function () {
@@ -1056,7 +1060,13 @@
                     return;
                 }
 
-                window.location = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                var url = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+
+                @if(\Session::has('vayvon'))
+                    url += '&' + '{{ \Session::get('vayvon') }}';
+                @endif
+
+                window.location = url;
             });
         });
     </script>

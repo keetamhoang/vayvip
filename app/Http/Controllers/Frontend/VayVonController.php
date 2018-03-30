@@ -7,10 +7,19 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class VayVonController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
+        $data = $request->all();
+        Session::forget('vayvon');
+        $query = http_build_query($data, '', '&');
+
+        if (!empty($query)) {
+            Session::put('vayvon', $query);
+        }
+
         return view('frontend.vayvon');
     }
 
