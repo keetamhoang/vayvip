@@ -1,0 +1,147 @@
+.btn-call-popup{display: block;position: fixed; z-index: 10000000000;bottom: 50px;left: 60px;font-family: 'Open Sans', sans-serif }
+.btn-call-popup img {
+    width:70px;
+    height:70px;
+    background: #ff6b11;
+    border-radius: 100px;
+    box-shadow: 0px 0px 25px 0px #999;
+    -webkit-animation: roll 0.7s infinite;
+            animation: roll 0.7s infinite;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+}
+
+@-webkit-keyframes roll {
+    0% {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+    }
+    100% {
+      -webkit-transform: rotate(30deg);
+              transform: rotate(30deg);
+    }
+}
+
+@keyframes roll {
+    0% {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+    }
+    100% {
+      -webkit-transform: rotate(30deg);
+              transform: rotate(30deg);
+    }
+}
+
+.btn-call-popup:hover img{background: #24D75B;}
+.btn-call-popup span{
+    padding: 0px;
+    left: -1px;
+    top: -1px;
+    border-radius: 30px;
+    -webkit-animation: scale1 1s infinite;
+            animation: scale1 1s infinite;
+    -webkit-transform: scale(2,2);
+            transform: scale(2,2);
+}
+@-webkit-keyframes scale1 {
+    0% {
+      -webkit-transform: scale(1,1);
+              transform: scale(1,1);
+    }
+    100% {
+      -webkit-transform: scale(2,2);
+              transform: scale(2,2);
+    }
+}
+
+@keyframes scale1 {
+    0% {
+      -webkit-transform: scale(1,1);
+              transform: scale(1,1);
+    }
+    100% {
+      -webkit-transform: scale(2,2);
+              transform: scale(2,2);
+    }
+}
+
+.btn-haiau {background: #e21515;}
+.btn-haiau-hotline {display: block; position: fixed; z-index: 10000000000; bottom: 93px; left: 123px; font-family: 'Open Sans', sans-serif;}
+
+#popup-alo{display: none;font-family: 'Open Sans', sans-serif;max-height: 362px; border-radius: 10px; text-align: center; width: 680px;margin-left: -340px;padding-right:0px;left:50%;top:16%;background-color: #ffffff;overflow-y: hidden; z-index: 10000000; position: fixed; background-color: white; filter: alpha(opacity=20);}
+#popup-alo .modal-body{min-height: 360px;font-family: 'Open Sans', sans-serif;  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.alo-title{margin-top: 55px; font-size: 24px;line-height: initial;font-family: 'Open Sans', sans-serif;}
+.alo-title p {font-size: 24px;color:#000;line-height: initial;}
+.alo-input{margin-top: 25px;font-family: 'Open Sans', sans-serif;}
+.alo-input input{padding: 10px;width: 318px;height: auto;margin:auto;font-family: 'Open Sans', sans-serif;box-sizing: content-box;color: #1996d7;text-align: center;font-size: 25px;font-weight: normal;background-color: transparent;display: inline-block;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;border: #1996d7 solid 1px;}
+.alo-input input:focus {font-family: 'Open Sans', sans-serif;height: auto;box-sizing: content-box;color: #1996d7;text-align: center;font-size: 25px;font-weight: normal;background-color: transparent;display: inline-block;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;border: #1996d7 solid 1px;padding: 10px;width: 318px;outline: none;}
+#popup-alo .button-submit{font-family: 'Open Sans', sans-serif;margin-top: 25px;}
+#popup-alo .button-submit button{height:50px;padding: 15px 50px 15px 50px;font-family: 'Open Sans', sans-serif;font-size: 20px;font-weight: normal;line-height: 20px;border-radius: 50px;background: #1996d7;color: #fff; border: 0px;}
+#popup-alo .button-submit button:hover{font-family: 'Open Sans', sans-serif;opacity: 0.7;}
+.alo-message{font-family: 'Open Sans', sans-serif;line-height: initial;padding: 30px;text-align: center;margin-top: 90px;font-size: 30px;color:#000;}
+#popup-alo .modal-body .close {
+    width:18px;
+    height:18px;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+    filter: alpha(opacity=20);
+    background-color: #fff;
+    background: url(/img/thue-ngay/page-alo/icon-x.png) no-repeat;
+    cursor:pointer;
+    border:0px;
+}
+
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+
+#backdrop-alo {
+    background-color: #000000; 
+    z-index: 1000000; 
+    position: fixed; 
+    opacity: 0.7; 
+    height: 100%; 
+    width: 100%; 
+    top:0; 
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+
+.backdrop-alo {
+    background-color: #000000; 
+    z-index: 1000000; 
+    position: fixed; 
+    opacity: 0.7; 
+    height: 100%; 
+    width: 100%; 
+    top:0; 
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+
+@media (max-width: 976px) {
+#popup-alo {width: 720px;left: 50%;margin-left: -360px;} 
+}    
+@media (max-width: 768px) {
+#popup-alo {width: 320px;left: 50%;margin-left: -162px;}    
+.alo-input input, .alo-input input:focus {width:230px;}    
+}    
+
+@media (max-width: 639px) {
+#popup-alo {top:70px;}    
+.btn-call-popup {bottom: 30px;left: 10px;}  
+.btn-call-popup img {width:60px;height:60px;}
+.alo-title p {font-size:20px;}
+.btn-haiau-hotline {bottom: 66px; left: 63px;}
+}
