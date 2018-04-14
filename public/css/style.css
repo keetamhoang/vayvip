@@ -71,7 +71,7 @@
     webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover !important;
     height: 200px;
     width: 100%;
-    border: 1px solid #1db76b;
+    border: 1px solid #ddd;
 }
 
 .entry-header p {
@@ -487,6 +487,10 @@
 
 #menu-item-16457 .sub-menu a {
     width: 270px;
+}
+
+.lazada p {
+    color: #000;
 }
 
 @media (max-width: 768px) {

@@ -386,7 +386,7 @@
             $(this).find('ul').show();
         });
 
-        $('#menu-item-16456').click(function (e) {
+        $('#menu-item-16456 > a').click(function (e) {
             if (clickMenu1 == 0) {
                 e.preventDefault();
 
@@ -396,7 +396,7 @@
             clickMenu1++;
         });
 
-        $('#menu-item-16458').click(function (e) {
+        $('#menu-item-16458 > a').click(function (e) {
             if (clickMenu2 == 0) {
                 e.preventDefault();
 
@@ -406,7 +406,7 @@
             clickMenu2++;
         });
 
-        $('#menu-item-16457').click(function (e) {
+        $('#menu-item-16457 > a').click(function (e) {
             if (clickMenu3 == 0) {
                 e.preventDefault();
 

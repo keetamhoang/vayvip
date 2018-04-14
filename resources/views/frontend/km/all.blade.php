@@ -14,6 +14,33 @@
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
 @endsection
 
+@section('banner')
+    <header class="site-header">
+        <div class="wrap">
+            {{--<div class="title-area"><h1 class="site-title" itemprop="headline"><a href="https://www.offers.vn/">Mã giảm--}}
+            {{--giá, khuyến mãi, kinh nghiệm mua hàng</a></h1>--}}
+            {{--<p class="site-description" itemprop="description">Offers.vn</p></div>--}}
+            <div class="widget-area header-widget-area">
+                <section class="widget offer-widget">
+                    @php
+                        $banner = \Cache::get('bannerKm');
+                        if (empty($banner)) {
+                            $banner = \App\Models\Discount::where('is_banner', 1)->first();
+                        }
+                    @endphp
+                    @if (!empty($banner))
+                        <div class="widget-wrap"><a href="{{ $banner->aff_link }}" target="_blank"
+                                                    class="external"
+                                                    rel="nofollow"><img
+                                        src="{{ $banner->image }}"
+                                        width="728" height="90" border="0"></a></div>
+                    @endif
+                </section>
+            </div>
+        </div>
+    </header>
+@endsection
+
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
         {{--<div class="widget-wrap">--}}

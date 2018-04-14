@@ -17689,12 +17689,12 @@ body .ztb-customchatbox-logo {
     padding: 15px;
     position: relative;
     text-transform: none;
-    width: 190px;
+    width: 250px;
 }
 
 .nav-primary {
     background: none repeat scroll 0 0 #fff;
-    border-top: 1px solid #0FAD00;
+    border-bottom: 1px solid #f1612f;
     box-shadow: 0 1px rgba(34, 34, 34, 0.1);
     top: 82px;
     width: 100%;
@@ -17702,12 +17702,13 @@ body .ztb-customchatbox-logo {
 }
 
 .genesis-nav-menu a {
-    color: #000000;
+    color: #e51b23;
     display: block;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    padding: 1em;
+    padding: 1em 1em 0.7em;
     position: relative;
+    font-weight: 600;
 }
 
 .footer-widgets li {
@@ -17796,6 +17797,8 @@ button:hover, input:hover[type="button"], input:hover[type="reset"], input:hover
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     padding-top: 0 !important;
+    color: #015c71;
+    font-weight: bold;
 }
 
 .entry-title a, .sidebar .widget-title a {
@@ -17829,7 +17832,7 @@ button:hover, input:hover[type="button"], input:hover[type="reset"], input:hover
 }
 
 .magazine-pro-blue a:hover, .magazine-pro-blue .entry-content a, .magazine-pro-blue .entry-title a:hover, .magazine-pro-blue .genesis-nav-menu a:hover, .magazine-pro-blue .nav-primary a:hover, .magazine-pro-blue .nav-primary .sub-menu a:hover, .magazine-pro-blue .genesis-nav-menu .current-menu-item > a, .magazine-pro-blue .genesis-nav-menu .sub-menu .current-menu-item > a:hover, .magazine-pro-blue .nav-primary .genesis-nav-menu .current-menu-item > a {
-    color: #1FB207;
+    color: #f1612f;
 }
 
 .js.magazine-pro-blue .content .home-middle a .entry-time, .js.magazine-pro-blue .content .home-top a .entry-time, .magazine-pro-blue button:hover, .magazine-pro-blue input:hover[type="button"], .magazine-pro-blue input:hover[type="reset"], .magazine-pro-blue input:hover[type="submit"], .magazine-pro-blue .archive-pagination li a:hover, .magazine-pro-blue .archive-pagination li.active a, .magazine-pro-blue .button:hover, .magazine-pro-blue .enews-widget input[type="submit"], .magazine-pro-blue .entry-content .button:hover, .magazine-pro-blue .home-middle a.more-link:hover, .magazine-pro-blue .home-top a.more-link:hover, .magazine-pro-blue .sidebar .tagcloud a:hover {

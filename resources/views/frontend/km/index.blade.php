@@ -78,6 +78,22 @@
         .rpwe-clearfix {
             zoom: 1;
         }
+
+        .home-2 .nav_area {
+            background: #f1612f none repeat scroll 0 0;
+        }
+
+        .menu .current1 > a {
+            background: #f58158 none repeat scroll 0 0 !important;
+        }
+
+        .menu .current > a, .menu ul li a:hover {
+            background: #f58158 none repeat scroll 0 0;
+        }
+
+        .home-2 .nav_area.stick {
+            background: #f1612f none repeat scroll 0 0;
+        }
     </style>
 @endsection
 
@@ -113,7 +129,7 @@
                         <li id="menu-item-16456"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/top-san-pham-ban-chay-nhat') ? 'current-menu-item' : '' }}">
                             <a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}" itemprop="url" title="Mã giảm giá, khuyến mãi HOT, kinh nghiệm mua hàng online"><span
-                                        itemprop="name">MÃ GIẢM GIÁ THEO ĐƠN VỊ</span></a>
+                                        itemprop="name">MÃ GIẢM GIÁ THEO ĐƠN VỊ</span> <i class="fa fa-caret-down"></i></a>
                             <ul class="sub-menu" style="display: none;">
                                 <li id="menu-item-10012"
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10012">
@@ -152,7 +168,7 @@
                         <li id="menu-item-16458"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16458 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
                             <a href="{{ url('ma-giam-gia/danh-muc-ma-giam-gia') }}" itemprop="url" title="Mã giảm giá theo danh mục - Cập nhật liên tục hàng ngày"><span
-                                        itemprop="name">SẢN PHẨM GIẢM GIÁ</span></a>
+                                        itemprop="name">SẢN PHẨM GIẢM GIÁ</span> <i class="fa fa-caret-down"></i></a>
                             <ul class="sub-menu" style="display: none;">
                                 <li id="menu-item-10021"
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10021">
@@ -211,7 +227,7 @@
                         <li id="menu-item-16457"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/ma-giam-gia') ? 'current-menu-item' : '' }}">
                             <a href="{{ url('ma-giam-gia/nhan-ma-giam-gia-cap-nhat') }}" itemprop="url"><span
-                                        itemprop="name">NHẬN THÔNG TIN MÃ GIẢM GIÁ</span></a>
+                                        itemprop="name">NHẬN THÔNG TIN MÃ GIẢM GIÁ</span> <i class="fa fa-caret-down"></i></a>
                             <ul class="sub-menu" style="display: none;">
                                 <li id="menu-item-10021"
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10021">
@@ -227,30 +243,9 @@
                     </ul>
                 </div>
             </nav>
-            <header class="site-header">
-                <div class="wrap">
-                    {{--<div class="title-area"><h1 class="site-title" itemprop="headline"><a href="https://www.offers.vn/">Mã giảm--}}
-                    {{--giá, khuyến mãi, kinh nghiệm mua hàng</a></h1>--}}
-                    {{--<p class="site-description" itemprop="description">Offers.vn</p></div>--}}
-                    <div class="widget-area header-widget-area">
-                        <section class="widget offer-widget">
-                            @php
-                                $banner = \Cache::get('bannerKm');
-                                if (empty($banner)) {
-                                    $banner = \App\Models\Discount::where('is_banner', 1)->first();
-                                }
-                            @endphp
-                            @if (!empty($banner))
-                                <div class="widget-wrap"><a href="{{ $banner->aff_link }}" target="_blank"
-                                                            class="external"
-                                                            rel="nofollow"><img
-                                                src="{{ $banner->image }}"
-                                                width="728" height="90" border="0"></a></div>
-                            @endif
-                        </section>
-                    </div>
-                </div>
-            </header>
+
+            @yield('banner')
+
             <div class="site-inner">
                 <div class="content-sidebar-wrap">
                     <main class="content">
