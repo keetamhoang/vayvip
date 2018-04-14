@@ -18,7 +18,7 @@ use Google;
 class HomeController extends Controller
 {
     public function index() {
-        return redirect(url('khuyen-mai'));
+        return redirect(url('ma-giam-gia'));
         return view('frontend.index');
     }
 

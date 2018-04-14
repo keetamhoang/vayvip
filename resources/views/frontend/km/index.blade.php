@@ -1,18 +1,5 @@
 @extends('frontend')
 
-@section('title')
-    <title>Mã giảm giá, khuyến mãi, kinh nghiệm mua hàng | TaichinhSMART.vn</title>
-@endsection
-
-@section('meta')
-    <meta property="og:url" content="http://taichinhsmart.vn/khuyen-mai">
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Khuyến mãi tối ưu, tiêu dùng thông minh với TaichinhSMART.vn"/>
-    <meta property="og:description"
-          content="Cập nhật các thông tin Mã giảm giá, Khuyến mãi mới nhất. Ưu đãi mua sắm từ các sàn thương mại điện tử Lazada, Tiki, Adayroi, Lotte, Yes24, Robins. Các chương trình giảm giá dịch vụ du lịch, đặt phòng khách sạn Agoda, Booking.com, Mytour.vn"/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
-@endsection
-
 @section('styles')
     <link rel="stylesheet" type="text/css"
           href="/assets/km/css/1516957853index.css"
@@ -104,11 +91,11 @@
 
 @section('content')
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-                appId      : '323042221521211',
-                xfbml      : true,
-                version    : 'v2.10'
+                appId: '323042221521211',
+                xfbml: true,
+                version: 'v2.10'
             });
         };
     </script>
@@ -121,27 +108,121 @@
                         style="touch-action: pan-y;">
                         <li id="menu-item-1536"
                             class="firstmenu1 menu-item menu-item-type-custom menu-item-object-custom  current_page_item menu-item-home menu-item-1536 {{ Request::is('khuyen-mai') ? 'current-menu-item' : '' }}">
-                            <a href="{{ url('khuyen-mai') }}" itemprop="url"><span itemprop="name">TẤT CẢ</span></a>
+                            <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" itemprop="url" title="Mã giảm giá HOT nhất ngày {{ \Carbon\Carbon::now()->format('d/m') }}→ Giảm 30% - 50% - Tìm là Có"><span itemprop="name">MÃ GIẢM GIÁ HOT</span></a>
                         </li>
                         <li id="menu-item-16456"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/top-san-pham-ban-chay-nhat') ? 'current-menu-item' : '' }}">
-                            <a
-                                    href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}" itemprop="url"><span
-                                        itemprop="name">TOP SẢN PHẨM BÁN CHẠY NHẤT</span></a></li>
-                        <li id="menu-item-16456"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16456 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
-                            <a
-                                    href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" itemprop="url"><span
-                                        itemprop="name">KHUYẾN MẠI MỚI NHẤT</span></a></li>
-                        <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/ma-giam-gia') ? 'current-menu-item' : '' }}">
-                            <a
-                                    href="{{ url('khuyen-mai/ma-giam-gia') }}" itemprop="url"><span itemprop="name">MÃ GIẢM GIÁ</span></a>
+                            <a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}" itemprop="url" title="Mã giảm giá, khuyến mãi HOT, kinh nghiệm mua hàng online"><span
+                                        itemprop="name">MÃ GIẢM GIÁ THEO ĐƠN VỊ</span></a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-10012"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10012">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}" itemprop="url" title="Mã giảm giá Lazada, Voucher Lazada khuyến mãi HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"><span itemprop="name">Mã giảm giá Lazada</span></a>
+                                </li>
+                                <li id="menu-item-10013"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10013">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-tiki') }}" itemprop="url" title="Mã giảm giá Tiki tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Tiki khuyến mãi 200K"><span itemprop="name">Mã giảm giá Tiki</span></a>
+                                </li>
+                                <li id="menu-item-10014"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10014">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-shopee') }}" itemprop="url" title="Mã giảm giá Shopee, Voucher Shopee khuyến mãi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"><span
+                                                itemprop="name">Mã giảm giá Shopee</span></a></li>
+                                <li id="menu-item-10015"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10015">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-grab') }}" itemprop="url" title="Xem mã khuyến mãi Grab hôm nay ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}"><span itemprop="name">Mã giảm giá Grab</span></a>
+                                </li>
+                                <li id="menu-item-10016"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10016">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-yes24') }}" itemprop="url" title="Mã giảm giá Yes24 tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Yes24 khuyến mãi mới nhất"><span itemprop="name">Mã giảm giá Yes24</span></a>
+                                </li>
+                                <li id="menu-item-10018"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10018">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-adayroi') }}" itemprop="url" title="Mã giảm giá Adayroi mới, khuyến mãi Adayroi tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - 100% còn dùng được"><span itemprop="name">Mã giảm giá Adayroi</span></a>
+                                </li>
+                                <li id="menu-item-10019"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10019">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-du-lich') }}" itemprop="url" title="Mã giảm giá MyTour, tổng hợp coupon khuyến mãi MyTour.vn"><span itemprop="name">Mã giảm giá du lịch</span></a>
+                                </li>
+                                <li id="menu-item-10020"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10020">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-lotte') }}" itemprop="url" title="Mã giảm giá Lotte, Voucher Lotte.vn khuyến mãi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"><span
+                                                itemprop="name">Mã giảm giá Lotte</span></a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-16458"
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16458 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
+                            <a href="{{ url('ma-giam-gia/danh-muc-ma-giam-gia') }}" itemprop="url" title="Mã giảm giá theo danh mục - Cập nhật liên tục hàng ngày"><span
+                                        itemprop="name">SẢN PHẨM GIẢM GIÁ</span></a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-10021"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10021">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-san-pham-dien-tu-cong-nghe') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm điện tử công nghệ">
+                                        <span itemprop="name">Giảm giá điện tử - công nghệ</span></a>
+                                </li>
+                                <li id="menu-item-10022"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10022">
+                                    <a href="{{ url('ma-giam-gia/do-gia-dung-giam-gia') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm đồ gia dụng"><span itemprop="name">Đồ gia dụng giảm giá</span></a>
+                                </li>
+                                <li id="menu-item-10023"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10023">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-cho-me-va-be') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm Mẹ và Bé"><span itemprop="name">Giảm giá cho mẹ và bé</span></a>
+                                </li>
+                                <li id="menu-item-10024"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10024">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-lam-dep') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm làm đẹp"><span
+                                                itemprop="name">Giảm giá dịch vụ làm đẹp</span></a></li>
+                                <li id="menu-item-10025"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10025">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-du-lich-2') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các dịch vụ du lịch"><span itemprop="name">Giảm giá du lịch</span></a>
+                                </li>
+                                <li id="menu-item-10026"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10026">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-thoi-trang') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm thời trang"><span itemprop="name">Giảm giá thời trang</span></a>
+                                </li>
+                                <li id="menu-item-10027"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10027">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-nha-cua-doi-song') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm Nhà cửa & Đời sống"><span itemprop="name">Giảm giá nhà cửa đời sống</span></a>
+                                </li>
+                                <li id="menu-item-10028"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10028">
+                                    <a href="{{ url('ma-giam-gia/dich-vu-giam-gia') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} theo các loại hình dịch vụ"><span itemprop="name">Dịch vụ giảm giá</span></a>
+                                </li>
+                                <li id="menu-item-10029"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10029">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-bach-hoa') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các sản phẩm Bách hóa"><span itemprop="name">Giảm giá bách hóa</span></a>
+                                </li>
+                                <li id="menu-item-10030"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10030">
+                                    <a href="{{ url('ma-giam-gia/sach-giam-gia') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các tựa sách và Văn phòng phẩm"><span
+                                                itemprop="name">Sách giảm giá</span></a>
+                                </li>
+                                <li id="menu-item-10031"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10031">
+                                    <a href="{{ url('ma-giam-gia/xe-may-giam-gia') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} cho các dòng xe máy HOT"><span
+                                                itemprop="name">Xe máy giảm giá</span></a>
+                                </li>
+                                <li id="menu-item-10032"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10032">
+                                    <a href="{{ url('ma-giam-gia/ma-giam-gia-ngan-hang') }}" itemprop="url" title="Tổng hợp Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} khi thanh toán bằng thẻ ngân hàng"><span
+                                                itemprop="name">Giảm giá qua ngân hàng</span></a>
+                                </li>
+                            </ul>
                         </li>
                         <li id="menu-item-16457"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/review') ? 'current-menu-item' : '' }}">
-                            <a
-                                    href="{{ url('khuyen-mai/review') }}" itemprop="url"><span itemprop="name">REVIEW & ĐÁNH GIÁ</span></a>
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16457 {{ Request::is('khuyen-mai/ma-giam-gia') ? 'current-menu-item' : '' }}">
+                            <a href="{{ url('ma-giam-gia/nhan-ma-giam-gia-cap-nhat') }}" itemprop="url"><span
+                                        itemprop="name">NHẬN THÔNG TIN MÃ GIẢM GIÁ</span></a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li id="menu-item-10021"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10021">
+                                    <a href="{{ url('ma-giam-gia/nhan-ma-giam-gia-qua-inbox') }}" itemprop="url" title="Đăng Ký Nhận Tin cập nhật về các mã giảm giá mới nhất thông qua inbox">
+                                        <span itemprop="name">Nhận mã giảm giá qua inbox</span></a>
+                                </li>
+                                <li id="menu-item-10022"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10022">
+                                    <a href="{{ url('ma-giam-gia/nhan-ma-giam-gia-qua-email') }}" itemprop="url" title="Đăng Ký Nhận Tin cập nhật về các mã giảm giá mới nhất thông qua Email"><span itemprop="name">Nhận mã giảm giá qua email</span></a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -228,7 +309,7 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
+        <footer class="site-footer" itemscope="">
             <div class="wrap"><p>© {{ \Carbon\Carbon::now()->year }} TaichinhSMART.vn</p></div>
         </footer>
 
@@ -240,7 +321,7 @@
                 <img src="/assets/image/fb-share.png">
             </a>
             {{--<div>--}}
-                {{--<img src="/assets/image/messender-share.png">--}}
+            {{--<img src="/assets/image/messender-share.png">--}}
             {{--</div>--}}
         </div>
     </div>
@@ -272,12 +353,13 @@
                     });
                 }
             });
-            
+
             $('.fb-share-btn').click(function (e) {
                 FB.ui({
                     method: 'share',
                     href: '{{ Request::url() }}',
-                }, function(response){});
+                }, function (response) {
+                });
             });
         })
     </script>

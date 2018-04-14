@@ -108,7 +108,8 @@
 }
 
 .go-top {
-    display: none;
+    /*display: none;*/
+    top: 63px;
 }
 
 .expire-text {
@@ -470,6 +471,22 @@
 
 .kbwc-meta {
     margin-top: 5px;
+}
+
+.nav-primary .genesis-nav-menu .sub-menu a {
+    color: #555;
+}
+
+.nav-primary .genesis-nav-menu .sub-menu a::before {
+    bottom: 0;
+}
+
+#menu-item-16458 .sub-menu a {
+    width: 255px;
+}
+
+#menu-item-16457 .sub-menu a {
+    width: 270px;
 }
 
 @media (max-width: 768px) {

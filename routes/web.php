@@ -92,7 +92,7 @@ Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeContro
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
 Route::get('mua-sam-hom-nay', 'Frontend\NewsController@index');
-Route::get('khuyen-mai', 'Frontend\KmController@index');
+Route::get('ma-giam-gia', 'Frontend\KmController@index');
 Route::get('tin-tuc-tai-chinh', 'Frontend\SpController@index');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
@@ -126,3 +126,32 @@ Route::get('tin-dung/success', 'Frontend\HomeController@success');
 Route::get('vay-von/dang-ky', 'Frontend\HomeController@registerCustomerBankGetVay');
 Route::post('vay-von/dang-ky', 'Frontend\HomeController@registerCustomerBankVay');
 Route::get('vay-von/success', 'Frontend\HomeController@successVay');
+
+Route::group(['prefix' => 'ma-giam-gia'], function () {
+    Route::get('/', 'Frontend\SaleController@index');
+
+    Route::get('ma-giam-gia-hot', 'Frontend\SaleController@hot');
+    Route::get('ma-giam-gia-online', 'Frontend\SaleController@online');
+    Route::get('ma-giam-gia-lazada', 'Frontend\SaleController@lazada');
+    Route::get('ma-giam-gia-tiki', 'Frontend\SaleController@tiki');
+    Route::get('ma-giam-gia-shopee', 'Frontend\SaleController@shopee');
+    Route::get('ma-giam-gia-grab', 'Frontend\SaleController@grab');
+    Route::get('ma-giam-gia-yes24', 'Frontend\SaleController@yes24');
+    Route::get('ma-giam-gia-adayroi', 'Frontend\SaleController@adayroi');
+    Route::get('ma-giam-gia-du-lich', 'Frontend\SaleController@duLich');
+    Route::get('ma-giam-gia-lotte', 'Frontend\SaleController@lotte');
+
+    Route::get('danh-muc-ma-giam-gia', 'Frontend\SaleController@danhMuc');
+    Route::get('ma-giam-gia-san-pham-dien-tu-cong-nghe', 'Frontend\SaleController@congNghe');
+    Route::get('do-gia-dung-giam-gia', 'Frontend\SaleController@giaDung');
+    Route::get('ma-giam-gia-cho-me-va-be', 'Frontend\SaleController@meBe');
+    Route::get('ma-giam-gia-lam-dep', 'Frontend\SaleController@lamDep');
+    Route::get('ma-giam-gia-du-lich-2', 'Frontend\SaleController@duLich2');
+    Route::get('ma-giam-gia-thoi-trang', 'Frontend\SaleController@thoiTrang');
+    Route::get('ma-giam-gia-nha-cua-doi-song', 'Frontend\SaleController@doiSong');
+    Route::get('dich-vu-giam-gia', 'Frontend\SaleController@dichVuGiamGia');
+    Route::get('ma-giam-gia-bach-hoa', 'Frontend\SaleController@bachHoa');
+    Route::get('sach-giam-gia', 'Frontend\SaleController@Sach');
+    Route::get('xe-may-giam-gia', 'Frontend\SaleController@Xe');
+    Route::get('ma-giam-gia-ngan-hang', 'Frontend\SaleController@nganHang');
+});

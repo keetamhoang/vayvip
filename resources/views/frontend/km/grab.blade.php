@@ -1,44 +1,44 @@
 @extends('frontend.km.index')
 
 @section('title')
-    <title>Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
+    <title>Xem mã khuyến mãi Grab hôm nay ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}</title>
 @endsection
 
 @section('meta')
-    <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia">
+    <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia/ma-giam-gia-grab">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
+          content="Xem mã khuyến mãi Grab hôm nay ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}"/>
     <meta property="og:description"
-          content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
+          content="Dưới đây là danh sách các mã khuyến mãi và mã giảm giá Grab tháng {{ \Carbon\Carbon::now()->format('m/Y') }} bao gồm tất cả các dịch vụ như: GrabBike, GrabExpress (giao hàng), GrabCar, GrabTaxi, Grab 4 chỗ, Grab 7 chỗ, Grab đi tỉnh… tại tất cả các thành phố mà Grab hỗ trợ sẽ được mình cập nhật hàng ngày mọi người xem và tham ..."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
 @endsection
 
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
-        {{--<div class="widget-wrap">--}}
-            {{--<h4 class="widget-title widgettitle">ĐỐI TÁC CỦA TÀI CHÍNH SMART</h4>--}}
-            {{--<article--}}
-            {{--class="post-5793 post type-post status-publish format-standard has-post-thumbnail category-lazada category-ma-giam-gia tag-khac entry">--}}
-            {{--<a href="https://www.offers.vn/ma-giam-gia-lazada/" class="alignleft"--}}
-            {{--aria-hidden="true"><img--}}
-            {{--src="/assets/km/image/lazada-240x135.png"--}}
-            {{--class="entry-image attachment-post"--}}
-            {{--alt="Mã Giảm Giá Lazada Khuyến Mãi Flash Sale Tháng 1/2018"--}}
-            {{--itemprop="image"--}}
-            {{--width="240" height="135"></a>--}}
-            {{--<header class="entry-header"><h2 class="entry-title" itemprop="headline"><a--}}
-            {{--href="https://www.offers.vn/ma-giam-gia-lazada/">Mã Giảm Giá--}}
-            {{--Lazada Khuyến Mãi--}}
-            {{--Flash Sale Tháng 1/2018</a></h2></header>--}}
-            {{--</article>--}}
-            {{--<p class="more-from-category"><a href="https://www.offers.vn/ma-giam-gia/"--}}
-            {{--title="Mã giảm giá, Voucher, Khuyến mãi mua sắm">Xem--}}
-            {{--thêm...</a></p>--}}
-            {{--<div>--}}
-                {{--<img src="/assets/km/image/logo-partner.png">--}}
-            {{--</div>--}}
-        {{--</div>--}}
+    {{--<div class="widget-wrap">--}}
+    {{--<h4 class="widget-title widgettitle">ĐỐI TÁC CỦA TÀI CHÍNH SMART</h4>--}}
+    {{--<article--}}
+    {{--class="post-5793 post type-post status-publish format-standard has-post-thumbnail category-lazada category-ma-giam-gia tag-khac entry">--}}
+    {{--<a href="https://www.offers.vn/ma-giam-gia-lazada/" class="alignleft"--}}
+    {{--aria-hidden="true"><img--}}
+    {{--src="/assets/km/image/lazada-240x135.png"--}}
+    {{--class="entry-image attachment-post"--}}
+    {{--alt="Mã Giảm Giá Lazada Khuyến Mãi Flash Sale Tháng 1/2018"--}}
+    {{--itemprop="image"--}}
+    {{--width="240" height="135"></a>--}}
+    {{--<header class="entry-header"><h2 class="entry-title" itemprop="headline"><a--}}
+    {{--href="https://www.offers.vn/ma-giam-gia-lazada/">Mã Giảm Giá--}}
+    {{--Lazada Khuyến Mãi--}}
+    {{--Flash Sale Tháng 1/2018</a></h2></header>--}}
+    {{--</article>--}}
+    {{--<p class="more-from-category"><a href="https://www.offers.vn/ma-giam-gia/"--}}
+    {{--title="Mã giảm giá, Voucher, Khuyến mãi mua sắm">Xem--}}
+    {{--thêm...</a></p>--}}
+    {{--<div>--}}
+    {{--<img src="/assets/km/image/logo-partner.png">--}}
+    {{--</div>--}}
+    {{--</div>--}}
     {{--</section>--}}
 
     <section id="featured-post-2" class="widget featured-content featuredpost">
@@ -77,7 +77,7 @@
             <p class="more-from-category"><a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}"
                                              title="Top sản phẩm bán chạy nhất">Xem tất cả...</a></p>
             {{--<div>--}}
-                {{--<img src="/assets/km/image/logo-partner.png">--}}
+            {{--<img src="/assets/km/image/logo-partner.png">--}}
             {{--</div>--}}
         </div>
     </section>
@@ -146,7 +146,7 @@
                             <a href="{{  url('tin-tuc/'.$review->slug) }}">{{ $review->title }}</a>
                         </h2>
                         {{--<a  href="{{  url('tin-tuc/'.$review->slug) }}">--}}
-                            {{--<p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $review->short_desc }}</span></p>--}}
+                        {{--<p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $review->short_desc }}</span></p>--}}
                         {{--</a>--}}
                     </header>
                 </article>

@@ -21,7 +21,6 @@
 
     @yield('title')
 
-    <meta name="keywords" content="vay tin chap, vay tieu dung, vay tien nhanh, vay khong the chap, vay vip">
     <meta property="fb:app_id" content="114309889249840">
 
     @yield('meta')
@@ -173,7 +172,7 @@
                         {{--<li class="vay-ngay"><a--}}
                                     {{--href="{{ url('/') }}#vay-ngay"><img--}}
                                         {{--src="/assets/image/vayvip-btn.png"></a></li>--}}
-                        <li ><a href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
+                        <li ><a href="{{ url('ma-giam-gia') }}">Mã giảm giá MỚI</a></li>
                         <li >
                             <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                         <li class=""><a
@@ -200,7 +199,7 @@
                     <li>
                         <a href="{{ url('/') }}">Trang chủ</a></li>
                     <li ><a
-                                href="{{ url('khuyen-mai') }}">Khuyến mãi tối ưu</a></li>
+                                href="{{ url('ma-giam-gia') }}">Mã giảm giá MỚI</a></li>
                     <li >
                         <a href="{{ url('vay-von-tin-dung') }}">Vay vốn tín dụng</a></li>
                     <li class=""><a
@@ -327,6 +326,9 @@
 
     $(document).ready(function () {
         var path = window.location.pathname;
+        var clickMenu1 = 0;
+        var clickMenu2 = 0;
+        var clickMenu3 = 0;
 
         $('.menu .navid li a').each(function (index) {
             var menu = $(this).attr('href');
@@ -379,6 +381,40 @@
             })
 
         }
+        
+        $('#menu-item-16456, #menu-item-16458, #menu-item-16457').hover(function (e) {
+            $(this).find('ul').show();
+        });
+
+        $('#menu-item-16456').click(function (e) {
+            if (clickMenu1 == 0) {
+                e.preventDefault();
+
+                $(this).find('ul').show();
+            }
+
+            clickMenu1++;
+        });
+
+        $('#menu-item-16458').click(function (e) {
+            if (clickMenu2 == 0) {
+                e.preventDefault();
+
+                $(this).find('ul').show();
+            }
+
+            clickMenu2++;
+        });
+
+        $('#menu-item-16457').click(function (e) {
+            if (clickMenu3 == 0) {
+                e.preventDefault();
+
+                $(this).find('ul').show();
+            }
+
+            clickMenu3++;
+        });
     });
 
     $.ajaxSetup({
