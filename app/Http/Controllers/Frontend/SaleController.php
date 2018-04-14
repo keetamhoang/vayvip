@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Code;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -20,7 +22,11 @@ class SaleController extends Controller
     }
 
     public function lazada() {
-        return view('frontend.km.lazada');
+        $lazada = Partner::where('name', 'lazada')->first();
+
+        $coupons = Code::where('name', 'lazada')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.lazada', compact('lazada', 'coupons'));
     }
 
     public function tiki() {

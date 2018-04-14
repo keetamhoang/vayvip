@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Models\Discount;
 use App\Models\KmProduct;
+use App\Models\Partner;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -204,5 +205,84 @@ class DiscountController extends AdminController
         $product->update(['status' => $status]);
 
         return redirect()->back()->with('success', 'Cập nhật thành công');
+    }
+
+
+
+
+    public function kmIndex() {
+        return view('admin.km.index');
+    }
+
+    public function kmAttribute(Request $request) {
+        $posts = Partner::all();
+
+        return $this->kmDatatable($posts);
+    }
+
+    public function kmDatatable($posts)
+    {
+        return DataTables::of($posts)
+            ->editColumn('desc_up', function ($brand) {
+                $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_up.'</p></div>';
+
+                return $html;
+            })->editColumn('desc_bot', function ($brand) {
+                $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_bot.'</p></div>';
+
+                return $html;
+            })
+            ->addColumn('action', function ($brand) {
+                $url = '<a type="button" class="btn blue btn-outline" href="/admin/don-vi-khuyen-mai/'.$brand->id.'">Sửa</a><a href="/admin/don-vi-khuyen-mai/delete/'.$brand->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+
+                return $url;
+            })
+            ->rawColumns(['action', 'desc_up', 'desc_bot'])
+            ->make(true);
+    }
+
+    public function kmCreate() {
+        return view('admin.km.create');
+    }
+
+    public function kmStore(Request $request) {
+        $data = $request->all();
+
+        if (empty($data['name']) or empty($data['desc_up']) or empty($data['desc_bot'])) {
+            return redirect('admin/don-vi-khuyen-mai/them')->with('error', 'Lỗi! Thêm mới không thành công, hãy điền đủ thông tin');
+        }
+
+        try {
+            $post = Partner::create($data);
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+            return redirect('admin/don-vi-khuyen-mai/them')->with('error', 'Lỗi! Thêm mới không thành công');
+        }
+
+        return redirect('admin/don-vi-khuyen-mai/'. $post->id)->with('success', 'Thêm mới thành công');
+    }
+
+    public function kmEdit($id) {
+        $post = Partner::find($id);
+
+        if (empty($post)) {
+            return redirect()->back()->with('error', 'Không tồn tại');
+        }
+
+        return view('admin.km.edit', compact('post'));
+    }
+
+    public function kmUpdate(Request $request) {
+        $data = $request->all();
+
+        $category = Partner::find($data['id']);
+
+        if (empty($category)) {
+            return redirect()->back()->with('error', 'Không tồn tại');
+        }
+
+        $category->update($data);
+
+        return redirect('admin/don-vi-khuyen-mai/'. $category->id)->with('success', 'Cập nhật thành công');
     }
 }

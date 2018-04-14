@@ -431,6 +431,15 @@
     color: #c1c1c1;
 }
 
+.title-phu {
+    color: #015c71;
+    font-weight: bold;
+}
+
+.lazada p {
+    color: #0a0a0a;
+}
+
 .success-page .info .back a, .register-body .back a {
     font-size: 12px;
     font-weight: 600;

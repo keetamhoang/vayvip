@@ -23,6 +23,13 @@ Route::group(['prefix' => 'admin',
         Route::get('users/{id}', 'Backend\UserController@edit');
         Route::post('users/update', 'Backend\UserController@update');
 
+        Route::get('don-vi-khuyen-mai', 'Backend\DiscountController@kmIndex');
+        Route::get('kmAttribute.data', 'Backend\DiscountController@kmAttribute');
+        Route::get('don-vi-khuyen-mai/them', 'Backend\DiscountController@kmCreate');
+        Route::post('don-vi-khuyen-mai/store', 'Backend\DiscountController@kmStore');
+        Route::get('don-vi-khuyen-mai/{id}', 'Backend\DiscountController@kmEdit');
+        Route::post('don-vi-khuyen-mai/update', 'Backend\DiscountController@kmUpdate');
+
         Route::get('posts', 'Backend\PostController@index');
         Route::get('posts/add', 'Backend\PostController@create');
         Route::get('posts/{id}', 'Backend\PostController@edit');

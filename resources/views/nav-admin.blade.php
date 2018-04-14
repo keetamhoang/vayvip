@@ -135,18 +135,31 @@
                         <span class="selected"></span>
                     </a>
                 </li>
-                {{--<li class="nav-item start ">--}}
-                    {{--<a href="{{ url('admin/discounts/') }}" class="nav-link ">--}}
-                        {{--<span class="title">Khách hàng vay vốn</span>--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item start ">--}}
-                    {{--<a href="{{ url('admin/customers?type=san-pham') }}" class="nav-link ">--}}
-                        {{--<span class="title">Khách hàng sản phẩm</span>--}}
-                    {{--</a>--}}
-                {{--</li>--}}
             </ul>
         </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-gift"></i>
+                    <span class="title">Đơn vị khuyến mại</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item start">
+                        <a href="{{ url('admin/don-vi-khuyen-mai') }}" class="nav-link ">
+                            <span class="title">Danh sách</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="{{ url('admin/don-vi-khuyen-mai/them') }}" class="nav-link ">
+                            <span class="title">Thêm mới</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
         @endif
         {{--<li class="nav-item">--}}
