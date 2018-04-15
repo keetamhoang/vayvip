@@ -11,7 +11,7 @@
           content="Mã giảm giá Yes24 tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Yes24 khuyến mãi mới nhất"/>
     <meta property="og:description"
           content="Khuyến mãi mã giảm giá Yes24 giảm 10%, 12%, 15% Tháng {{ \Carbon\Carbon::now()->format('m') }} năm {{ \Carbon\Carbon::now()->format('Y') }}. Nhiều chương trình giảm giá hàng thời trang, mỹ phẩm, gia dụng. Coupon Yes24 và nhiều ưu đãi tích điểm. Kinh nghiệm chọn mua hàng ở Yes24 để mua được hàng giá rẻ. Khuyến mãi sinh nhật Tháng 4 của Yes24.vn."/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 @endsection
 
 @section('content_km')

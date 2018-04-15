@@ -11,7 +11,7 @@
           content="Mã giảm giá MyTour, tổng hợp coupon khuyến mãi MyTour.vn"/>
     <meta property="og:description"
           content="Chuyên mục cập nhật mã giảm giá Mytour, cập nhật thường xuyên các coupon khuyến mại Mytour khi đặt phòng - đặt tour du lịch online tại Mytour.vn. Voucher Mytour giảm giá không thường xuyên được tung ra, chỉ khi tới mùa du lịch mới có nhiều. Vậy nên nếu bạn hay đi du lịch và thích đặt phòng tại Mytour, hãy đăng ký"/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 @endsection
 
 @section('content_km')

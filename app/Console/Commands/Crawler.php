@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Code;
+use Carbon\Carbon;
 use Goutte\Client;
 use Illuminate\Console\Command;
 
@@ -39,16 +40,18 @@ class Crawler extends Command
      */
     public function handle()
     {
+        $this->line('BEGIN: ' . Carbon::now());
+
         $client = new Client();
 
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/lazada');
 
-        $res->filter('.coupon-live')->each(function ($node) {
+        $res->filter('.coupon-live')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
-
+                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
             }
 
             if (!empty($data['code'])) {
@@ -60,27 +63,27 @@ class Crawler extends Command
                         $percent = $node->filter('.coupon_code_discount')->text();
                         $data['percent'] = trim($percent);
                     } catch (\Exception $ex) {
-
+                        $this->line('ERROR2: '.$ex->getMessage());
                     }
                     try {
                         $typeKm = $node->filter('.coupon_code_label')->text();
                         $data['type_km'] = trim($typeKm);
                     } catch (\Exception $ex) {
-
+                        $this->line('ERROR3: '.$ex->getMessage());
                     }
 
                     try {
                         $title = $node->filter('.coupon-link')->text();
                         $data['title'] = trim($title);
                     } catch (\Exception $ex) {
-
+                        $this->line('ERROR4: '.$ex->getMessage());
                     }
 
                     try {
                         $hsd = $node->filter('.exp')->text();
                         $data['hsd'] = trim($hsd);
                     } catch (\Exception $ex) {
-
+                        $this->line('ERROR5: '.$ex->getMessage());
                     }
 
                     try {
@@ -109,7 +112,7 @@ class Crawler extends Command
                         }
 
                     } catch (\Exception $ex) {
-
+                        $this->line('ERROR6: '.$ex->getMessage());
                     }
 
                     if (!empty($data)) {
@@ -122,5 +125,6 @@ class Crawler extends Command
             }
         });
 
+        $this->line('END: ' . Carbon::now());
     }
 }

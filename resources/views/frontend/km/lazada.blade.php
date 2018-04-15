@@ -11,7 +11,7 @@
           content="Mã giảm giá Lazada, Voucher Lazada khuyến mãi HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"/>
     <meta property="og:description"
           content="Tổng hợp các mã giảm giá Lazada, voucher Lazada khuyến mãi mới nhất trong tháng. Các mã giảm giá Lazada app và web được chúng tôi cập nhật liên tục hàng ngày, hàng giờ. Hiện đang có các voucher Lazada 50K, 100K, mã Lazada 10%, 20% số lượng có hạn. Nhanh tay truy cập ngay để lấy mã sử dụng kẻo hết ..."/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 @endsection
 
 @section('content_km')
@@ -38,6 +38,7 @@
                                 <div class="promotagcont {{ $coupon->type == 2 ? 'tagsale' : '' }}">
                                     <div class="saveamount"> {{ $coupon->percent }}</div>
                                     <div class="saleorcoupon"> {{ $coupon->type_km }}</div>
+                                    <div class=""><a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}">Sửa</a></div>
                                 </div>
                             </div>
                             <div class="promotiondetails">

@@ -11,7 +11,7 @@
           content="Mã giảm giá Shopee, Voucher Shopee khuyến mãi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"/>
     <meta property="og:description"
           content="Danh mục tổng hợp mã giảm giá Shopee, voucher Shopee mới nhất trong tháng. Giúp bạn tổng hợp những mã giảm giá shopee nhanh nhất, còn sử dụng được. Các mã giảm giá Shopee được cập nhật hàng ngày, hàng giờ, 100% còn sử dụng được. Truy cập ngay để lấy mã giảm giá Shopee 10%, 15%, deal Shopee chỉ ..."/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 @endsection
 
 @section('content_km')

@@ -11,7 +11,7 @@
           content="Mã giảm giá Adayroi mới, khuyến mãi Adayroi tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - 100% còn dùng được"/>
     <meta property="og:description"
           content="Danh mục tổng hợp mã giảm giá Adayroi, Giftcode Adayroi khuyến mãi mới nhất trong tháng. Các mã giảm giá Adayroi được chúng tôi được cập liên tục hàng ngày, hàng giờ. Đang có rất nhiều voucher Adayroi giảm giá cực tốt đang còn lượt sử dụng. Lấy ngay mã giảm giá Adayroi 10%, 20%, voucher Adayroi 500K, ..."/>
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.jpg"/>
+    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 @endsection
 
 @section('content_km')
