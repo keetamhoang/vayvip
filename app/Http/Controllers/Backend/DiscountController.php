@@ -233,7 +233,8 @@ class DiscountController extends AdminController
                 return $html;
             })
             ->addColumn('action', function ($brand) {
-                $url = '<a type="button" class="btn blue btn-outline" href="/admin/don-vi-khuyen-mai/'.$brand->id.'">Sửa</a><a href="/admin/don-vi-khuyen-mai/delete/'.$brand->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+                $url = '<a type="button" class="btn blue btn-outline" href="/admin/don-vi-khuyen-mai/'.$brand->id.'">Sửa</a>';
+//<a href="/admin/don-vi-khuyen-mai/delete/'.$brand->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
 
                 return $url;
             })

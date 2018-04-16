@@ -22,18 +22,18 @@
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
         <div class="widget-wrap">
-            <h1 class="entry-title h1-lazada" itemprop="headline">Mã Giảm Giá Lazada Khuyến Mãi Lazada Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+            <h1 class="entry-title h1-lazada" itemprop="headline">
+                @if(!empty($lazada->title))
+                    {{ $lazada->title }}
+                @else
+                    Mã Giảm Giá {{ $lazada->name }} Khuyến Mãi {{ $lazada->name }} Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
+                @endif
+            </h1>
 
-            <div class="entry-content lazada" itemprop="text"><p>Hiện tại, Lazada là địa chỉ mua hàng trực tuyến lớn nhất Việt
-                    Nam. Bạn gần như sẽ tìm được mọi thứ cần mua ở đây. Những <strong>mã giảm giá Lazada, Voucher
-                        Lazada</strong> Tháng {{ \Carbon\Carbon::now()->format('m/Y') }} và các chương trình <strong>Lazada khuyến mãi Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</strong>
-                    được cập nhật liên tục ở nội dung bài này.</p>
-
-                <h2 class="title-phu">Mã giảm giá Lazada, Lazada khuyến mãi Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h2>
-
+            <div class="entry-content lazada" itemprop="text">
                 {!! $lazada->desc_up !!}
 
-                <div class="couponh2"><span class="h2white">MÃ VOUCHER LAZADA TỐT NHẤT</span></div>
+                <div class="couponh2"><h2 class="h2white">MÃ KHUYẾN MÃI LAZADA, VOUCHER LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
 
                 @foreach($coupons as $coupon)
                     <div class="coupondiv">

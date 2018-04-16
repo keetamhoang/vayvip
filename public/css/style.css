@@ -507,7 +507,9 @@
     overflow: visible;
 }
 
-
+.couponh2 h2 {
+    font-size: 21px;
+}
 
 
 @media (max-width: 768px) {

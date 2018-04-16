@@ -14,6 +14,15 @@
                     <input type="text" class="form-control" placeholder="Điền tên đơn vị" name="name" value="{{ old('name') }}">
                 </div>
             </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Tiêu đề</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="Điền tiêu đề" name="title" value="{{ old('title') }}">
+                    <i>*Để trống mặc định sẽ là: </i><b>Mã Giảm Giá Lazada Khuyến Mãi Lazada Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</b>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label class="control-label col-md-2">Miêu tả trên</label>
                 <div class="col-md-9">
