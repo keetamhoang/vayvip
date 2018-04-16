@@ -502,6 +502,14 @@
     color: #000;
 }
 
+.entry-header > p {
+    height: auto;
+    overflow: visible;
+}
+
+
+
+
 @media (max-width: 768px) {
     .container {
         padding: 0px;
@@ -780,6 +788,15 @@
 
     .kbw-submenu {
         margin-bottom: 35px;
+    }
+
+    .entry-header p {
+        height: auto;
+    }
+
+    .h1-lazada {
+        font-size: 24px !important;
+        font-weight: bold !important;
     }
 }
 

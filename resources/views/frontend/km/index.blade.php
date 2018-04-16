@@ -247,6 +247,7 @@
             @yield('banner')
 
             <div class="site-inner">
+                @yield('top_content')
                 <div class="content-sidebar-wrap">
                     <main class="content">
                         <div class="home-bottom widget-area">

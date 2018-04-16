@@ -76,8 +76,8 @@
 
     <section id="featured-post-2" class="widget featured-content featuredpost">
         <div class="widget-wrap">
-            <a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}" title="Top sản phẩm bán chạy nhất">
-                <h4 class="widget-title widgettitle">TOP SẢN PHẨM BÁN CHẠY NHẤT 2018</h4></a>
+            <a href="{{ url('ma-giam-gia/danh-muc-san-pham-co-ma-giam-gia') }}" title="TOP MÃ GIẢM GIÁ SẢN PHẨM BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->format('Y') }}">
+                <h2 class="widget-title widgettitle">TOP MÃ GIẢM GIÁ SẢN PHẨM BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->format('Y') }}</h2></a>
             <div class="col-lg-12 top-sp" style="padding: 0px">
                 @php $tops = \App\Models\KmProduct::where('status', \App\Models\KmProduct::ACTIVE)->orderBy('id', 'desc')->limit(6)->get(); @endphp
 
@@ -116,7 +116,7 @@
     </section>
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}" title="Khuyến mại"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> KHUYẾN MẠI MỚI NHẤT <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}" title="KHUYỄN MÃI – GIẢM GIÁ MỚI NHẤT"><h2 class="widget-title widgettitle">KHUYỄN MÃI – GIẢM GIÁ MỚI NHẤT</h2></a>
             @php $newests = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
             @foreach($newests as $newest)
@@ -127,9 +127,9 @@
                         </a>
                     </div>
                     <header class="entry-header">
-                        <h2 class="entry-title" itemprop="headline">
+                        <h4 class="entry-title" itemprop="headline">
                             <a href="{{  url('khuyen-mai/'.$newest->slug) }}">{{ $newest->name }}</a>
-                        </h2>
+                        </h4>
                         <a  href="{{  url('khuyen-mai/'.$newest->slug) }}"><p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $newest->content }}</span></p></a>
                     </header>
                 </article>
@@ -139,7 +139,7 @@
                                              title="Khuyến mại">Xem tất cả...</a></p></div>
     </section>
     <section id="featured-post-4" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/ma-giam-gia') }}" title="Mã giảm giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> MÃ GIẢM GIÁ <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" title="MÃ GIẢM GIÁ"><h2 class="widget-title widgettitle">MÃ GIẢM GIÁ</h2></a>
             @php $mggs = \App\Models\Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
             @foreach($mggs as $mgg)
@@ -150,9 +150,9 @@
                         </a>
                     </div>
                     <header class="entry-header">
-                        <h2 class="entry-title" itemprop="headline">
+                        <p class="entry-title" itemprop="headline">
                             <a href="{{  url('khuyen-mai/'.$mgg->slug) }}">{{ $mgg->name }}</a>
-                        </h2>
+                        </p>
                         <a  href="{{  url('khuyen-mai/'.$mgg->slug) }}">
                             <p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $mgg->content }}</span></p>
                         </a>
@@ -164,7 +164,7 @@
     </section>
 
     <section id="featured-post-4" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('khuyen-mai/review') }}" title="Review & Đánh giá"><h4 class="widget-title widgettitle"><i class="fa fa-forward"></i> REVIEW & ĐÁNH GIÁ <i class="fa fa-backward"></i></h4></a>
+        <div class="widget-wrap"><a href="{{ url('khuyen-mai/review') }}" title="Review & Đánh giá"><h2 class="widget-title widgettitle">REVIEW VÀ ĐÁNH GIÁ SẢN PHẨM</h2></a>
             @php $reviews = \App\Models\Post::where('is_review', 1)->where('status', 1)->orderBy('updated_at', 'desc')->limit(7)->get() @endphp
 
             @foreach($reviews as $review)
@@ -175,9 +175,9 @@
                         </a>
                     </div>
                     <header class="entry-header">
-                        <h2 class="entry-title" itemprop="headline" style="line-height: 1.2;">
+                        <p class="entry-title" itemprop="headline" style="line-height: 1.2;">
                             <a href="{{  url('tin-tuc/'.$review->slug) }}">{{ $review->title }}</a>
-                        </h2>
+                        </p>
                         {{--<a  href="{{  url('tin-tuc/'.$review->slug) }}">--}}
                             {{--<p style="word-wrap: break-word;"><span><i class="fa fa-forward"></i> {{ $review->short_desc }}</span></p>--}}
                         {{--</a>--}}

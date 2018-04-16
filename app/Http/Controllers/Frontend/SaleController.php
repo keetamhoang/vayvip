@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Code;
+use App\Models\Discount;
 use App\Models\Partner;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,12 +15,27 @@ class SaleController extends Controller
         return view('frontend.km.all');
     }
 
-    public function hot() {
-        return view('frontend.km.hot');
+    public function hot(Request $request) {
+        $page = $request->input('page', 0);
+
+        $title = 'TỔNG HỢP TẤT CẢ MÃ GIẢM GIÁ THÁNG '.Carbon::now()->format('m/Y');
+
+        $newests = Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
+            ->orderBy('start_time', 'desc')->paginate(20);
+
+        return view('frontend.km.hot', compact('newests', 'page', 'title'));
     }
 
-    public function online() {
-        return view('frontend.km.online');
+    public function online(Request $request) {
+        $page = $request->input('page', 0);
+
+        $title = 'KHUYẾN MÃI - GIẢM GIÁ MỚI NHẤT';
+
+        $newests = Discount::where('status', 0)->where('is_coupon', 0)
+            ->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
+            ->orderBy('start_time', 'desc')->paginate(20);
+
+        return view('frontend.km.online', compact('newests', 'page', 'title'));
     }
 
     public function lazada() {

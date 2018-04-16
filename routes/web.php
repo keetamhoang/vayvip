@@ -155,7 +155,7 @@ Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('ma-giam-gia-du-lich', 'Frontend\SaleController@duLich');
     Route::get('ma-giam-gia-lotte', 'Frontend\SaleController@lotte');
 
-    Route::get('danh-muc-san-pham-co-ma-giam-gia', 'Frontend\SaleController@danhMuc');
+    Route::get('danh-muc-san-pham-co-ma-giam-gia', 'Frontend\KmController@top');
     Route::get('ma-giam-gia-san-pham-dien-tu-cong-nghe', 'Frontend\SaleController@congNghe');
     Route::get('do-gia-dung-giam-gia', 'Frontend\SaleController@giaDung');
     Route::get('ma-giam-gia-cho-me-va-be', 'Frontend\SaleController@meBe');

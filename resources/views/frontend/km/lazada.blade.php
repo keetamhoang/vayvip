@@ -22,7 +22,7 @@
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
         <div class="widget-wrap">
-            <h1 class="entry-title" itemprop="headline">Mã Giảm Giá Lazada Khuyến Mãi Lazada Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+            <h1 class="entry-title h1-lazada" itemprop="headline">Mã Giảm Giá Lazada Khuyến Mãi Lazada Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
 
             <div class="entry-content lazada" itemprop="text"><p>Hiện tại, Lazada là địa chỉ mua hàng trực tuyến lớn nhất Việt
                     Nam. Bạn gần như sẽ tìm được mọi thứ cần mua ở đây. Những <strong>mã giảm giá Lazada, Voucher

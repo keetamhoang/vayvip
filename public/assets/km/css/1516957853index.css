@@ -17657,7 +17657,7 @@ body .ztb-customchatbox-logo {
 }
 
 .magazine-home .content .widget-title {
-    background: none repeat scroll 0 0 #00b7f0;
+    background: none repeat scroll 0 0 #078145;
     /*border-top: 2px solid #555;*/
     border-bottom: none;
     /*font-family: 'Roboto', sans-serif;*/
@@ -18013,7 +18013,7 @@ a.alignleft {
 
     .featured-content .entry-title, .featured-content .entry-title > a, .content .rpwe-block .rpwe-title > a, .content .rpwe-block .rpwe-title, .content .home-bottom .rpwe-block .rpwe-title a, .content .home-bottom .rpwe-block .rpwe-title {
         font-size: 16px;
-        font-weight: 400 !important;
+        font-weight: 400;
         line-height: 1.4;
     }
 
