@@ -12,6 +12,10 @@
     <meta property="og:description"
           content="Danh mục tổng hợp mã giảm giá Lotte, voucher Lotte khuyến mãi mới nhất trong tháng. Các mã giảm giá Lotte.vn được cập nhật liên tục hàng ngày, hàng giờ. Nhiều mã giảm giá Lotte cực tốt mức giảm lên tới 15%, mức giảm tối đa đến 1200000đ. Số lượng mã giảm giá có hạn, lấy mã dùng ngay kẻo hết."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Danh mục tổng hợp mã giảm giá Lotte, voucher Lotte khuyến mãi mới nhất trong tháng. Các mã giảm giá Lotte.vn được cập nhật liên tục hàng ngày, hàng giờ. Nhiều mã giảm giá Lotte cực tốt mức giảm lên tới 15%, mức giảm tối đa đến 1200000đ. Số lượng mã giảm giá có hạn, lấy mã dùng ngay kẻo hết."/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

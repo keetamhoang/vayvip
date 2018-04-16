@@ -12,6 +12,10 @@
     <meta property="og:description"
           content="Sở hữu thẻ ngân hàng nghĩa là bạn có thể tận dụng được vô vàn ưu đãi cùng các mã giảm giá khi mua sắm online. Khuyến mãi được tổng hợp từ các trang web thương mãi điện tử lớn tại Việt Nam. Đừng quên lưu lại để săn hàng giảm giá, tiết kiệm chi phí mua sắm nhé."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Sở hữu thẻ ngân hàng nghĩa là bạn có thể tận dụng được vô vàn ưu đãi cùng các mã giảm giá khi mua sắm online. Khuyến mãi được tổng hợp từ các trang web thương mãi điện tử lớn tại Việt Nam. Đừng quên lưu lại để săn hàng giảm giá, tiết kiệm chi phí mua sắm nhé."/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

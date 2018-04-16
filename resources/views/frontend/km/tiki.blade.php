@@ -12,6 +12,10 @@
     <meta property="og:description"
           content="Tổng hợp và chia sẻ miễn phí các mã giảm giá Tiki, Coupon Tiki mới nhất trong tháng. Các mã giảm giá Tiki được cập nhật liên tục hàng ngày hàng giờ. Chỉ cần vài phút truy cập là bạn đã tiết kiệm ngay cho mình được 100k, 200K...Hiện đang có Coupon Tiki 200K áp dụng tất cả các sản phẩm, mã giảm giá sách Tiki giảm ..."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Tổng hợp và chia sẻ miễn phí các mã giảm giá Tiki, Coupon Tiki mới nhất trong tháng. Các mã giảm giá Tiki được cập nhật liên tục hàng ngày hàng giờ. Chỉ cần vài phút truy cập là bạn đã tiết kiệm ngay cho mình được 100k, 200K...Hiện đang có Coupon Tiki 200K áp dụng tất cả các sản phẩm, mã giảm giá sách Tiki giảm ..."/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

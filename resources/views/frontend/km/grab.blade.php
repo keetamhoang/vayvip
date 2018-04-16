@@ -12,6 +12,10 @@
     <meta property="og:description"
           content="Dưới đây là danh sách các mã khuyến mãi và mã giảm giá Grab tháng {{ \Carbon\Carbon::now()->format('m/Y') }} bao gồm tất cả các dịch vụ như: GrabBike, GrabExpress (giao hàng), GrabCar, GrabTaxi, Grab 4 chỗ, Grab 7 chỗ, Grab đi tỉnh… tại tất cả các thành phố mà Grab hỗ trợ sẽ được mình cập nhật hàng ngày mọi người xem và tham ..."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Dưới đây là danh sách các mã khuyến mãi và mã giảm giá Grab tháng {{ \Carbon\Carbon::now()->format('m/Y') }} bao gồm tất cả các dịch vụ như: GrabBike, GrabExpress (giao hàng), GrabCar, GrabTaxi, Grab 4 chỗ, Grab 7 chỗ, Grab đi tỉnh… tại tất cả các thành phố mà Grab hỗ trợ sẽ được mình cập nhật hàng ngày mọi người xem và tham ..."/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

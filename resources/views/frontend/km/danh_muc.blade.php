@@ -12,6 +12,10 @@
     <meta property="og:description"
           content="Taichinhsmart.vn giúp bạn cập nhật thông tin khuyến mãi, mã giảm giá khi mua hàng. Hãy tìm kiếm thông minh cùng danh mục mã giảm giá cập nhật nhất với nhiều deal 30-50% cùng các FLASHSALE hot, đừng bỏ lỡ"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Taichinhsmart.vn giúp bạn cập nhật thông tin khuyến mãi, mã giảm giá khi mua hàng. Hãy tìm kiếm thông minh cùng danh mục mã giảm giá cập nhật nhất với nhiều deal 30-50% cùng các FLASHSALE hot, đừng bỏ lỡ"/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

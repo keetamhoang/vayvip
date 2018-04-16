@@ -167,7 +167,7 @@
                         </li>
                         <li id="menu-item-16458"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16458 {{ Request::is('khuyen-mai/moi-nhat') ? 'current-menu-item' : '' }}">
-                            <a href="{{ url('ma-giam-gia/danh-muc-ma-giam-gia') }}" itemprop="url" title="Mã giảm giá theo danh mục - Cập nhật liên tục hàng ngày"><span
+                            <a href="{{ url('ma-giam-gia/danh-muc-san-pham-co-ma-giam-gia') }}" itemprop="url" title="Mã giảm giá theo danh mục - Cập nhật liên tục hàng ngày"><span
                                         itemprop="name">SẢN PHẨM GIẢM GIÁ</span> <i class="fa fa-caret-down"></i></a>
                             <ul class="sub-menu" style="display: none;">
                                 <li id="menu-item-10021"

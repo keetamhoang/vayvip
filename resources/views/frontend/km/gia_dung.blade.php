@@ -12,6 +12,11 @@
     <meta property="og:description"
           content="Danh mục tổng hợp khuyến mãi, mã giảm giá cho các sản phẩm gia dụng. Khuyến mãi được tổng hợp từ các trang web thương mãi điện tử lớn tại Việt Nam. Các chị, các mẹ nhớ lưu lại để săn hàng giảm giá, tiết kiệm chi phí mua sắm nhé!"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Danh mục tổng hợp khuyến mãi, mã giảm giá cho các sản phẩm gia dụng. Khuyến mãi được tổng hợp từ các trang web thương mãi điện tử lớn tại Việt Nam. Các chị, các mẹ nhớ lưu lại để săn hàng giảm giá, tiết kiệm chi phí mua sắm nhé!"/>
+
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')

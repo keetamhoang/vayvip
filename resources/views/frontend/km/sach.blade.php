@@ -12,6 +12,11 @@
     <meta property="og:description"
           content="Nếu bạn là tín đồ của sách, đừng bỏ lỡ các mã giảm giá để làm giàu thêm kho tàng của mình. Nhiều lúc bạn sẽ phải bất ngờ với những mã giảm giá cực lớn từ các đơn vị phát hành đấy. Lưu lại và sử dụng ngay nhé."/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
+
+    <meta name="description"
+          content="Nếu bạn là tín đồ của sách, đừng bỏ lỡ các mã giảm giá để làm giàu thêm kho tàng của mình. Nhiều lúc bạn sẽ phải bất ngờ với những mã giảm giá cực lớn từ các đơn vị phát hành đấy. Lưu lại và sử dụng ngay nhé."/>
+
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('content_km')
