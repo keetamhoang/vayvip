@@ -190,11 +190,11 @@
     </section>
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><h2 class="widget-title widgettitle">{{ $title }}</h2>
+        <div class="widget-wrap" id="km-post"><h2 class="widget-title widgettitle">{{ $title }}</h2>
 
             @foreach($newests as $newest)
                 <article
-                        class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry">
+                        class="post-17389 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry km-post">
                     <div class="post-list alignleft">
                         <a href="{{ url('khuyen-mai/'.$newest->slug) }}" class="alignleft" aria-hidden="true"
                            style="background: url('{{ $newest->image }}') no-repeat center;">
@@ -210,10 +210,11 @@
                 </article>
             @endforeach
 
-            <div class="archive-pagination pagination">
-                {{ $newests->links('frontend.paginate') }}
-            </div>
 
+        </div>
+        <div class="archive-pagination pagination">
+            {{--                {{ $newests->links('frontend.paginate') }}--}}
+            <button id="load-more">Xem thêm</button>
         </div>
     </section>
 @endsection

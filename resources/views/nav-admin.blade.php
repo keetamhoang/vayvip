@@ -141,7 +141,7 @@
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-gift"></i>
-                    <span class="title">Đơn vị khuyến mại</span>
+                    <span class="title">Trang khuyến mại</span>
                     <span class="selected"></span>
                     <span class="arrow open"></span>
                 </a>

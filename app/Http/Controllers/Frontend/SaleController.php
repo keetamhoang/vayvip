@@ -15,13 +15,20 @@ class SaleController extends Controller
         return view('frontend.km.all');
     }
 
-    public function hot(Request $request) {
-        $page = $request->input('page', 0);
+    public function loadMore(Request $request) {
+        $count = $request->input('count', 0);
 
+        $newests = Discount::where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
+            ->orderBy('start_time', 'desc')->offset($count)->limit(20)->get();
+
+        return view('frontend.km.load_more', compact('newests'))->render();
+    }
+
+    public function hot() {
         $title = 'TỔNG HỢP TẤT CẢ MÃ GIẢM GIÁ THÁNG '.Carbon::now()->format('m/Y');
 
-        $newests = Discount::where('is_coupon', 1)->where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
-            ->orderBy('start_time', 'desc')->paginate(20);
+        $newests = Discount::where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
+            ->orderBy('start_time', 'desc')->limit(20)->get();
 
         return view('frontend.km.hot', compact('newests', 'page', 'title'));
     }

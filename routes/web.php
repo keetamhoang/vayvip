@@ -143,8 +143,12 @@ Route::get('vay-von/success', 'Frontend\HomeController@successVay');
 
 Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('/', 'Frontend\SaleController@index');
+    Route::get('load-more', 'Frontend\SaleController@loadMore');
 
     Route::get('ma-giam-gia-hot', 'Frontend\SaleController@hot');
+    Route::get('ma-giam-gia-hot-trang-{page}', 'Frontend\SaleController@hot')
+        ->where(['page' => '[0-9-]+']);
+
     Route::get('ma-giam-gia-online', 'Frontend\SaleController@online');
     Route::get('ma-giam-gia-lazada', 'Frontend\SaleController@lazada');
     Route::get('ma-giam-gia-tiki', 'Frontend\SaleController@tiki');
@@ -168,4 +172,8 @@ Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('sach-giam-gia', 'Frontend\SaleController@Sach');
     Route::get('xe-may-giam-gia', 'Frontend\SaleController@Xe');
     Route::get('ma-giam-gia-ngan-hang', 'Frontend\SaleController@nganHang');
+
+    Route::get('nhan-ma-giam-gia-qua-inbox', 'Frontend\SaleController@nganHang');
+    Route::get('nhan-ma-giam-gia-qua-email', 'Frontend\SaleController@nganHang');
+    Route::get('nhan-ma-giam-gia-cap-nhat', 'Frontend\SaleController@nganHang');
 });

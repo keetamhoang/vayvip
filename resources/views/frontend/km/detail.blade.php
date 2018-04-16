@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="cpbutton">
-                                    <div class="copyma " onclick="clickCoupon('{{ $discount->aff_link }}', '{{ $coupon->id }}')">
+                                    <div class="copyma " onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ $coupon->coupon_code }}');window.open('{{ $discount->aff_link }}','_blank')">
                                         <input class="copy-{{ $coupon->id }}" type="hidden" value="{{$coupon->coupon_code}}">
                                         <div class="coupon-code">{{ $coupon->coupon_code }}</div>
                                         <div>COPY MÃ</div>

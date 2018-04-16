@@ -405,4 +405,24 @@
                     $offerslider1277640232.unslider("start");
                 });
         });</script>
+
+    <script>
+        $(document).ready(function () {
+            $('#load-more').click(function (e) {
+                var count = $('.km-post').length;
+                console.log(count);
+                $.ajax({
+                    url: '{{ url('ma-giam-gia/load-more') }}',
+                    type: 'get',
+                    dataType: 'html',
+                    data: {
+                        count: count,
+                    },
+                    success: function (response) {
+                        $('#km-post').append(response);
+                    }
+                });
+            })
+        })
+    </script>
 @endsection
