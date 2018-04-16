@@ -46,7 +46,7 @@ class SaleController extends Controller
     }
 
     public function lazada() {
-        $lazada = Partner::where('name', 'lazada')->first();
+        $lazada = Partner::where('name', 'Lazada')->first();
 
         $coupons = Code::where('name', 'lazada')->orderBy('id', 'desc')->limit(25)->get();
 
@@ -54,7 +54,11 @@ class SaleController extends Controller
     }
 
     public function tiki() {
-        return view('frontend.km.tiki');
+        $lazada = Partner::where('name', 'Tiki')->first();
+
+        $coupons = Code::where('name', 'tiki')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.tiki', compact('lazada', 'coupons'));
     }
 
     public function shopee() {
