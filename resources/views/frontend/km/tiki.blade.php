@@ -109,7 +109,7 @@
 
 
                 {!! $lazada->desc_bot !!}
-                
+
 
             </div>
         </div>
