@@ -19,6 +19,11 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá đồ gia dụng trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }} lên đến 40%
+    </h1>
+@endsection
+
 @section('content_km')
     
 @endsection

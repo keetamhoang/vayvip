@@ -136,18 +136,16 @@
 <!--Start nav  area -->
 <div class="nav_area" id="sticker" >
     <div class="container">
+
         <div class="row">
             <!--logo area-->
             <div class="col-md-2 col-sm-2 col-xs-6">
                 <div class="logo">
                     <a href="{{ url('/') }}"><img
                                 src="/assets/image/logo.png" alt="Tài chính thông minh - Tài chính Smart">
-                        <h1>
-                            Tài chính thông minh - Tài chính Smart
-                        </h1>
                     </a>
                 </div>
-
+                @yield('h1_seo')
             </div>
             <!--end logo area-->
             <!--nav area-->
@@ -231,7 +229,7 @@
                         {{--<img style="width: 100%" src="https://static.accesstrade.vn/publisher/www/files/img_promo/offer/img/tikivn/tiki_29.01_3.jpg">--}}
                     {{--</div>--}}
                     <div class="div-content" >
-                        <h1 style="">ĐĂNG KÝ ĐỂ NHẬN VOUCHER MIỄN PHÍ T﻿﻿﻿ỐT NHẤT MỖI TUẦN</h1>
+                        <p style="">ĐĂNG KÝ ĐỂ NHẬN VOUCHER MIỄN PHÍ T﻿﻿﻿ỐT NHẤT MỖI TUẦN</p>
                         <hr style="border-top: 1px solid #fff;">
                         <div>
                             <form id="popup-form">

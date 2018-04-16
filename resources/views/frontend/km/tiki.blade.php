@@ -18,17 +18,21 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá Tiki tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Voucher Tiki khuyến mãi mới nhất, ưu đãi Tiki SIÊU KHỦNG</h1>
+@endsection
+
 @section('content_km')
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
         <div class="widget-wrap">
-            <h1 class="entry-title h1-lazada" itemprop="headline">
+            <h2 class="entry-title h1-lazada" itemprop="headline">
                 @if(!empty($lazada->title))
                     {{ $lazada->title }}
                 @else
                     Mã Giảm Giá {{ $lazada->name }} Khuyến Mãi {{ $lazada->name }} Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
                 @endif
-            </h1>
+            </h2>
 
             <div class="entry-content lazada" itemprop="text">
                 {!! $lazada->desc_up !!}

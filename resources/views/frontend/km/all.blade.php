@@ -20,12 +20,13 @@
           content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Tổng hợp mã giảm giá mới, khuyến mãi HOT trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+@endsection
+
 @section('banner')
     <header class="site-header">
         <div class="wrap">
-            {{--<div class="title-area"><h1 class="site-title" itemprop="headline"><a href="https://www.offers.vn/">Mã giảm--}}
-            {{--giá, khuyến mãi, kinh nghiệm mua hàng</a></h1>--}}
-            {{--<p class="site-description" itemprop="description">Offers.vn</p></div>--}}
             <div class="widget-area header-widget-area">
                 <section class="widget offer-widget">
                     @php

@@ -18,6 +18,10 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá Yes24 tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Yes24 mới nhất lên đến 50%</h1>
+@endsection
+
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
     {{--<div class="widget-wrap">--}}

@@ -18,6 +18,10 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá Lotte tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Voucher Lotte với  khuyến mãi lên tới 50%</h1>
+@endsection
+
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
     {{--<div class="widget-wrap">--}}

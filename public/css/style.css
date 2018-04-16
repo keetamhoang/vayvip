@@ -109,7 +109,7 @@
 
 .go-top {
     /*display: none;*/
-    top: 63px;
+    top: 61px;
 }
 
 .expire-text {
@@ -511,6 +511,22 @@
     font-size: 21px;
 }
 
+.h1-seo {
+    font-size: 11px;
+    color: #fff;
+    position: fixed;
+    top: 66px;
+    padding: 0px;
+}
+
+.h1-seo-resize {
+    font-size: 9px;
+    top: 48px;
+}
+
+.stick .logo img {
+    margin-top: -8px;
+}
 
 @media (max-width: 768px) {
     .container {
@@ -799,6 +815,10 @@
     .h1-lazada {
         font-size: 24px !important;
         font-weight: bold !important;
+    }
+
+    .h1-seo {
+        display: none;
     }
 }
 

@@ -15,9 +15,11 @@ $(document).ready(function () {
         if (windowpos > pos.top) {
             s.addClass("stick");
             $('#child-menu-km').addClass("go-top");
+            $('.h1-seo').addClass('h1-seo-resize');
         } else {
             s.removeClass("stick");
             $('#child-menu-km').removeClass("go-top");
+            $('.h1-seo').removeClass('h1-seo-resize');
         }
     });
     //one page selection page

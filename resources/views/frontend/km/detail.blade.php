@@ -19,8 +19,8 @@
         <article
                 class="post-17408 post type-post status-publish format-standard has-post-thumbnail category-khuyen-mai entry"
                 itemscope="">
-            <header class="entry-header"><h1 class="entry-title h1-detail"
-                                             itemprop="headline">{{ $discount->name }} <div class="expire-text {{ $discount->status == 1 ? 'het-han' : 'con-han' }}">{{ $discount->status == 1 ? 'Hết hạn' : 'Còn hạn' }}</div></h1>
+            <header class="entry-header"><h2 class="entry-title h1-detail"
+                                             itemprop="headline">{{ $discount->name }} <div class="expire-text {{ $discount->status == 1 ? 'het-han' : 'con-han' }}">{{ $discount->status == 1 ? 'Hết hạn' : 'Còn hạn' }}</div></h2>
             </header>
             <div class="entry-content" itemprop="text">
                 <p><i class="fa fa-forward"></i> {{ $discount->content }} </p>

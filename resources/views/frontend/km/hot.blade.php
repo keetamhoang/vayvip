@@ -20,6 +20,10 @@
     <link href="/assets/css_new/hot_blog.css" rel="stylesheet" type="text/css">
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Cập nhật mã giảm giá 100k - 200k - 500k, mã giảm giá 20% - 50%  trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+@endsection
+
 @section('top_content')
     <section class="custom-page-header single-store-header">
         <div class="">
@@ -46,7 +50,7 @@
                     </div>
                     <div class="header-content">
 
-                        <h1>Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng {{ \Carbon\Carbon::now()->month }} năm {{ \Carbon\Carbon::now()->year }}</h1>
+                        <h2>Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng {{ \Carbon\Carbon::now()->month }} năm {{ \Carbon\Carbon::now()->year }}</h2>
                         <p>
                             Chia sẻ <strong>mã giảm giá</strong> hoàn toàn miễn phí của Lazada, voucher Lazada, mã giảm giá Tiki,  ma giam gia Shopee, mã khuyễn mãi Grab, ma giam gia Adayroi, Lotte, <strong>mã giảm giá</strong> cho những bạn hay đi du lịch để chuyến đi thêm trọn vẹn...<br>
                             Những <strong>mã giảm giá</strong> được cập nhật hàng ngày, hàng giờ với các giá trị khuyến mãi không giới hạn từ 50k, 100k, 500k… có nhiều voucher giảm cực tốt lên đến 20%, 50% cho các đơn hàng. Hãy trở thành người tiêu dùng thông thái, tiết kiệm được nhiều khoản tiền với các <strong>MÃ GIẢM GIÁ HOT</strong>.

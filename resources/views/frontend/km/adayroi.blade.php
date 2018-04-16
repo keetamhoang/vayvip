@@ -17,6 +17,10 @@
           content="Danh mục tổng hợp mã giảm giá Adayroi, Giftcode Adayroi khuyến mãi mới nhất trong tháng. Các mã giảm giá Adayroi được chúng tôi được cập liên tục hàng ngày, hàng giờ. Đang có rất nhiều voucher Adayroi giảm giá cực tốt đang còn lượt sử dụng. Lấy ngay mã giảm giá Adayroi 10%, 20%, voucher Adayroi 500K, ...">
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá Adayroi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Voucher Adayroi lên đến 50%</h1>
+@endsection
+
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
     {{--<div class="widget-wrap">--}}

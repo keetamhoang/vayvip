@@ -18,6 +18,10 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã khuyến mãi Grab hôm nay - Cập nhật mã giảm giá Grab bike, Grab car tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+@endsection
+
 @section('content_km')
     {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
     {{--<div class="widget-wrap">--}}

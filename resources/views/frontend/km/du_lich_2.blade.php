@@ -19,6 +19,11 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá du lịch , săn vé máy bay giảm giá, đặt phòng khách sạn giá rẻ …
+    </h1>
+@endsection
+
 @section('content_km')
     
 @endsection

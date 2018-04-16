@@ -18,6 +18,11 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá thời trang, coupon canifa, M2, H&M
+    </h1>
+@endsection
+
 @section('content_km')
     
 @endsection

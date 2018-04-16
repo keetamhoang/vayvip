@@ -18,6 +18,11 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Các dịch vụ giảm giá siêu hot, mã giảm giá dịch vụ lên đến 50%
+    </h1>
+@endsection
+
 @section('content_km')
     
 @endsection

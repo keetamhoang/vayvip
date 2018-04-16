@@ -18,6 +18,11 @@
     <meta name="keywords" content=""/>
 @endsection
 
+@section('h1_seo')
+    <h1 class="h1-seo">Mã giảm giá dành cho mẹ và bé, khuyễn mãi giảm giá lên đến 50%
+    </h1>
+@endsection
+
 @section('content_km')
     
 @endsection
