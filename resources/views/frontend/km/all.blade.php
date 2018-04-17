@@ -40,7 +40,7 @@
                                                     class="external"
                                                     rel="nofollow"><img
                                         src="{{ $banner->image }}"
-                                        width="728" height="90" border="0"></a></div>
+                                        width="728" height="90" border="0" alt="{{ $banner->name }}"></a></div>
                     @endif
                 </section>
             </div>

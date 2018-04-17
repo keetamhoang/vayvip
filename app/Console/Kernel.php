@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\Crawler;
+use App\Console\Commands\DownloadImageLocal;
 use App\Console\Commands\GetDataFromSheetGG;
 use App\Console\Commands\GetDataShinhanBank;
 use App\Console\Commands\GetGGSheetResponse;
@@ -26,7 +27,8 @@ class Kernel extends ConsoleKernel
         GetGGSheetResponse::class,
         GetKmProduct::class,
         GetDataShinhanBank::class,
-        Crawler::class
+        Crawler::class,
+        DownloadImageLocal::class
     ];
 
     /**
@@ -43,6 +45,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('get:km-product')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));
+
+        $schedule->command('download:image')
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
 
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));

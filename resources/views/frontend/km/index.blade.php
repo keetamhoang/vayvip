@@ -314,7 +314,7 @@
         <a href="#" class="topbutton" style="display: inline;"></a>
         <div class="share-div">
             <a class="fb-share-btn" href="javascript:;" title="Chia sẻ">
-                <img src="/assets/image/fb-share.png">
+                <img src="/assets/image/fb-share.png" alt="Chia sẻ khuyến mại mã giảm giá HOT">
             </a>
             {{--<div>--}}
             {{--<img src="/assets/image/messender-share.png">--}}

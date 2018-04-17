@@ -222,7 +222,7 @@
         <div class="modal-content">
             <div class="" style="position: relative">
                 <div style="position:absolute;top: 0px;left: 0px">
-                    <img src="/assets/image/popup.jpg">
+                    <img src="/assets/image/popup.jpg" alt="Khuyến mãi giảm giá cực HOT">
                 </div>
                 <div class="body-modal-dk" style="">
                     {{--<div >--}}
@@ -272,7 +272,7 @@
     fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-               src="https://www.facebook.com/tr?id=179869195992101&ev=PageView&noscript=1"
+               src="https://www.facebook.com/tr?id=179869195992101&ev=PageView&noscript=1" alt="Khuyến mại mã giảm giá cực HOT"
     /></noscript>
 <!-- End Facebook Pixel Code -->
 

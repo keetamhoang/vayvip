@@ -8,12 +8,23 @@ class Discount extends Model
 {
     protected $fillable = [
         'aff_link', 'content', 'domain', 'end_time', 'root_id', 'image', 'link', 'merchant', 'name', 'start_time', 'status', 'type', 'merchant_id',
-        'slug', 'is_coupon', 'is_banner', 'count_view'
+        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local'
     ];
 
     protected $dates = [
         'created_at', 'updated_at'
     ];
+
+    public function getImageAttribute()
+    {
+
+        if (!empty($this->attributes['image_local'])) {
+            return $this->attributes['image_local'];
+        }
+
+        return $this->attributes['image'];
+
+    }
 
     public function merchant()
     {
