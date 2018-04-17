@@ -37,7 +37,7 @@
             <div class="entry-content lazada" itemprop="text">
                 {!! $lazada->desc_up !!}
 
-                <div class="couponh2"><h2 class="h2white">MÃ KHUYẾN MÃI LAZADA, VOUCHER LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
+                <div class="couponh2"><h2 class="h2white">MÃ KHUYẾN MÃI TIKI, VOUCHER TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 
                 @foreach($coupons as $coupon)
                     <div class="coupondiv">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="cpbutton">
                                 <div class="copyma"
-                                     onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ $coupon->code }}');window.open('http://bit.ly/2IVGKP4','_blank')">
+                                     onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ $coupon->code }}');window.open('http://bit.ly/2J1V4pe','_blank')">
                                     <div class="coupon-code">{{ $coupon->code }}</div>
                                     <div>COPY MÃ</div>
                                 </div>

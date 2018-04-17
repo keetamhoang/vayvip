@@ -21,8 +21,10 @@ class SitemapController extends Controller
         $muasamhomnay = Post::where('category_id', 2)->orderBy('updated_at', 'desc')->first();
         $lazada = Partner::where('name', 'Lazada')->first();
         $tiki = Partner::where('name', 'Tiki')->first();
+        $shopee = Partner::where('name', 'Shopee')->first();
+        $grab = Partner::where('name', 'Grab')->first();
 
-        return response()->view('frontend.sitemap.trangchinh', compact('magiamgia', 'tintuctaichinh', 'muasamhomnay', 'lazada', 'tiki'))
+        return response()->view('frontend.sitemap.trangchinh', compact('magiamgia', 'tintuctaichinh', 'muasamhomnay', 'lazada', 'tiki', 'shopee', 'grab'))
             ->header('Content-Type', 'text/xml');
     }
 

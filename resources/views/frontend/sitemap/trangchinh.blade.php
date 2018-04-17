@@ -72,14 +72,14 @@
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-shopee') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $shopee->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-grab') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $grab->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>

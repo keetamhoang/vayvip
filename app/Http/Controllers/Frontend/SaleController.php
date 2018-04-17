@@ -62,11 +62,19 @@ class SaleController extends Controller
     }
 
     public function shopee() {
-        return view('frontend.km.shopee');
+        $lazada = Partner::where('name', 'Shopee')->first();
+
+        $coupons = Code::where('name', 'shopee')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.shopee', compact('lazada', 'coupons'));
     }
 
     public function grab() {
-        return view('frontend.km.grab');
+        $lazada = Partner::where('name', 'Grab')->first();
+
+        $coupons = Code::where('name', 'grab')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.grab', compact('lazada', 'coupons'));
     }
 
     public function yes24() {
