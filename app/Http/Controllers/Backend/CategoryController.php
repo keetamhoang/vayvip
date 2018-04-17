@@ -31,7 +31,10 @@ class CategoryController extends AdminController
                 return $image;
             })
             ->addColumn('action', function ($brand) {
-                $url = '<a type="button" class="btn blue btn-outline" href="/admin/categories/'.$brand->id.'">Sửa</a><a href="/admin/categories/delete/'.$brand->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+                $url = '<a type="button" class="btn blue btn-outline" href="/admin/categories/'.$brand->id.'">Sửa</a>';
+                if (auth('admin')->user()->type == 'admin') {
+                    $url .= '<a href="/admin/categories/delete/' . $brand->id . '" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
+                }
 
                 return $url;
             })

@@ -105,9 +105,9 @@ Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeContro
 // frontend
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
-Route::get('mua-sam-hom-nay', 'Frontend\NewsController@index');
+Route::get('mua-sam-hom-nay', 'Frontend\NewsController@indexMuaSam');
 Route::get('ma-giam-gia', 'Frontend\KmController@index');
-Route::get('tin-tuc-tai-chinh', 'Frontend\SpController@index');
+Route::get('tin-tuc-tai-chinh', 'Frontend\NewsController@indexTinTuc');
 Route::get('dau-tu', 'Frontend\DtController@index');
 
 Route::get('khuyen-mai/moi-nhat', 'Frontend\KmController@newest');
@@ -177,3 +177,10 @@ Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('nhan-ma-giam-gia-qua-email', 'Frontend\SaleController@nganHang');
     Route::get('nhan-ma-giam-gia-cap-nhat', 'Frontend\SaleController@nganHang');
 });
+
+Route::get('sitemap.xml', 'Frontend\SitemapController@sitemap');
+Route::get('sitemap_trangchinh.xml', 'Frontend\SitemapController@trangchinh');
+Route::get('sitemap_anh.xml', 'Frontend\SitemapController@anh');
+Route::get('sitemap_tintuctaichinh.xml', 'Frontend\SitemapController@tintuctaichinh');
+Route::get('sitemap_muasamhomnay.xml', 'Frontend\SitemapController@muasamhomnay');
+Route::get('sitemap_sanpham.xml', 'Frontend\SitemapController@sanpham');

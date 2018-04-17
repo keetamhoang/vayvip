@@ -98,37 +98,36 @@ class GetKm extends Command
                     if (!empty($checkDiscount)) {
                         $checkDiscount->update($dataDiscount);
 
-                        Coupon::where('discount_id', $checkDiscount->id)->delete();
-                        KmCategory::where('discount_id', $checkDiscount->id)->delete();
-                        Banner::where('discount_id', $checkDiscount->id)->delete();
+//                        Coupon::where('discount_id', $checkDiscount->id)->delete();
+//                        KmCategory::where('discount_id', $checkDiscount->id)->delete();
+//                        Banner::where('discount_id', $checkDiscount->id)->delete();
                     } else {
                         $checkDiscount = Discount::create($dataDiscount);
-                    }
 
-                    if (count($each['coupons']) > 0) {
-                        foreach ($each['coupons'] as $keyCoupon => $eachCoupon) {
-                            $each['coupons'][$keyCoupon]['discount_id'] = $checkDiscount->id;
+                        if (count($each['coupons']) > 0) {
+                            foreach ($each['coupons'] as $keyCoupon => $eachCoupon) {
+                                $each['coupons'][$keyCoupon]['discount_id'] = $checkDiscount->id;
+                            }
+
+                            DB::table('coupons')->insert($each['coupons']);
                         }
 
-                        DB::table('coupons')->insert($each['coupons']);
-                    }
+                        if (count($each['categories']) > 0) {
+                            foreach ($each['categories'] as $keyCate => $eachCate) {
+                                $each['categories'][$keyCate]['discount_id'] = $checkDiscount->id;
+                            }
 
-                    if (count($each['categories']) > 0) {
-                        foreach ($each['categories'] as $keyCate => $eachCate) {
-                            $each['categories'][$keyCate]['discount_id'] = $checkDiscount->id;
+                            DB::table('km_categories')->insert($each['categories']);
                         }
 
-                        DB::table('km_categories')->insert($each['categories']);
-                    }
+                        if (count($each['banners']) > 0) {
+                            foreach ($each['banners'] as $keyBanner => $eachBanner) {
+                                $each['banners'][$keyBanner]['discount_id'] = $checkDiscount->id;
+                            }
 
-                    if (count($each['banners']) > 0) {
-                        foreach ($each['banners'] as $keyBanner => $eachBanner) {
-                            $each['banners'][$keyBanner]['discount_id'] = $checkDiscount->id;
+                            DB::table('banners')->insert($each['banners']);
                         }
-
-                        DB::table('banners')->insert($each['banners']);
                     }
-
                 } catch (\Exception $ex) {
                     $this->line($ex->getMessage() . '|' . $ex->getLine());
                 }

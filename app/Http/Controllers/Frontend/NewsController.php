@@ -8,10 +8,18 @@ use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
 {
-    public function index() {
+    public function indexTinTuc() {
         $bigPosts = Post::where('is_highlight', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(3)->get();
 
-        $otherPosts = Post::orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(21)->get();
+        $otherPosts = Post::where('category_id', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(21)->get();
+
+        return view('frontend.news.index')->with(compact('bigPosts', 'otherPosts'));
+    }
+
+    public function indexMuaSam() {
+        $bigPosts = Post::where('is_highlight', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(3)->get();
+
+        $otherPosts = Post::where('category_id', 2)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(21)->get();
 
         return view('frontend.news.index')->with(compact('bigPosts', 'otherPosts'));
     }

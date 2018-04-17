@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Banner;
 use App\Models\Discount;
 use App\Models\KmProduct;
 use Carbon\Carbon;
@@ -49,21 +50,23 @@ class DownloadImageLocal extends Command
                     try {
                         $file = $discount->image;
 
-                        if (!str_contains($file, 'uptheme.ishopgo.com')) {
-                            $files = file_get_contents($file);
+                        $files = file_get_contents($file);
 
-                            $filename = basename($file);
+                        $filename = basename($file);
 
-                            $filename = 'ma-giam-gia-' . $discount->merchant . '-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+                        $filename = 'ma-giam-gia-' . $discount->merchant . '-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
 
-                            Storage::disk('public')->put($filename, $files, 'public');
+                        Storage::disk('public')->put($filename, $files, 'public');
 
-                            $discount->update([
-                                'image_local' => '/uploads/' . $filename
-                            ]);
-                        }
+                        $discount->update([
+                            'image_local' => '/uploads/' . $filename
+                        ]);
                     } catch (\Exception $ex) {
                         $this->line($ex->getMessage() . '|' . $ex->getLine());
+
+                        $discount->update([
+                            'image_local' => '/assets/image/khuyenmai.png'
+                        ]);
                     }
                 }
             }
@@ -77,26 +80,54 @@ class DownloadImageLocal extends Command
                     try {
                         $file = $discount->image;
 
-                        if (!str_contains($file, 'uptheme.ishopgo.com')) {
-                            $files = file_get_contents($file);
+                        $files = file_get_contents($file);
 
-                            $filename = basename($file);
+                        $filename = basename($file);
 
-                            $filename = 'ma-giam-gia-san-pham-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+                        $filename = 'ma-giam-gia-san-pham-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
 
-                            Storage::disk('public')->put($filename, $files, 'public');
+                        Storage::disk('public')->put($filename, $files, 'public');
 
-                            $discount->update([
-                                'image_local' => '/uploads/' . $filename
-                            ]);
-                        }
+                        $discount->update([
+                            'image_local' => '/uploads/' . $filename
+                        ]);
                     } catch (\Exception $ex) {
                         $this->line($ex->getMessage() . '|' . $ex->getLine());
+
+                        $discount->update([
+                            'image_local' => '/assets/image/khuyenmai.png'
+                        ]);
                     }
                 }
             }
         });
 
         $this->line('END SP KM:' . Carbon::now());
+
+//        Banner::chunk(200, function ($discounts) {
+//            foreach ($discounts as $discount) {
+//                if (empty($discount->image_local)) {
+//                    try {
+//                        $file = $discount->link;
+//
+//                        $files = file_get_contents($file);
+//
+//                        $filename = basename($file);
+//
+//                        $filename = 'ma-giam-gia-san-pham-banner-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+//
+//                        Storage::disk('public')->put($filename, $files, 'public');
+//
+//                        $discount->update([
+//                            'image_local' => '/uploads/' . $filename
+//                        ]);
+//                    } catch (\Exception $ex) {
+//                        $this->line($ex->getMessage() . '|' . $ex->getLine());
+//                    }
+//                }
+//            }
+//        });
+//
+//        $this->line('END BANNER KM:' . Carbon::now());
     }
 }

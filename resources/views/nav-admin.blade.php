@@ -138,28 +138,28 @@
             </ul>
         </li>
 
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-gift"></i>
-                    <span class="title">Trang khuyến mại</span>
-                    <span class="selected"></span>
-                    <span class="arrow open"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item start">
-                        <a href="{{ url('admin/don-vi-khuyen-mai') }}" class="nav-link ">
-                            <span class="title">Danh sách</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item start">
-                        <a href="{{ url('admin/don-vi-khuyen-mai/them') }}" class="nav-link ">
-                            <span class="title">Thêm mới</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-gift"></i>
+                <span class="title">Trang khuyến mại</span>
+                <span class="selected"></span>
+                <span class="arrow open"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item start">
+                    <a href="{{ url('admin/don-vi-khuyen-mai') }}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item start">
+                    <a href="{{ url('admin/don-vi-khuyen-mai/them') }}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
             {{--<li class="nav-item">--}}
                 {{--<a href="javascript:;" class="nav-link nav-toggle">--}}
                     {{--<i class="fa fa-gift"></i>--}}

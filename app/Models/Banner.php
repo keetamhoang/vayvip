@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Banner extends Model
 {
     protected $fillable = [
-        'discount_id', 'height', 'width', 'link', 'status', 'type'
+        'discount_id', 'height', 'width', 'link', 'status', 'type', 'image_local'
     ];
 
     public function discount()

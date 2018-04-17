@@ -528,6 +528,14 @@
     margin-top: -8px;
 }
 
+.lazada p {
+    margin-bottom: 11px;
+}
+
+.lazada h2 {
+    padding: 0px;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0px;

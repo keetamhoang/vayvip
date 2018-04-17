@@ -9,6 +9,7 @@ use App\Console\Commands\GetDataShinhanBank;
 use App\Console\Commands\GetGGSheetResponse;
 use App\Console\Commands\GetKm;
 use App\Console\Commands\GetKmProduct;
+use App\Console\Commands\HoangCommand;
 use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -28,7 +29,8 @@ class Kernel extends ConsoleKernel
         GetKmProduct::class,
         GetDataShinhanBank::class,
         Crawler::class,
-        DownloadImageLocal::class
+        DownloadImageLocal::class,
+        HoangCommand::class
     ];
 
     /**
@@ -47,7 +49,7 @@ class Kernel extends ConsoleKernel
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));
 
         $schedule->command('download:image')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
+            ->everyThirtyMinutes()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
 
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
