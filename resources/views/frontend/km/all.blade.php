@@ -108,7 +108,7 @@
                     </article>
                 @endforeach
             </div>
-            <p class="more-from-category"><a href="{{ url('khuyen-mai/top-san-pham-ban-chay-nhat') }}"
+            <p class="more-from-category"><a href="{{ url('ma-giam-gia/danh-muc-san-pham-co-ma-giam-gia') }}"
                                              title="Top sản phẩm bán chạy nhất">Xem tất cả...</a></p>
             {{--<div>--}}
                 {{--<img src="/assets/km/image/logo-partner.png">--}}
@@ -136,7 +136,7 @@
                 </article>
             @endforeach
 
-            <p class="more-from-category"><a href="{{ url('khuyen-mai/khuyen-mai-moi-nhat') }}"
+            <p class="more-from-category"><a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}"
                                              title="Khuyến mại">Xem tất cả...</a></p></div>
     </section>
     <section id="featured-post-4" class="widget featured-content featuredpost">
@@ -160,7 +160,7 @@
                     </header>
                 </article>
             @endforeach
-            <p class="more-from-category"><a href="{{ url('khuyen-mai/ma-giam-gia') }}"
+            <p class="more-from-category"><a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"
                                              title="Mã giảm giá">Xem tất cả...</a></p></div>
     </section>
 
