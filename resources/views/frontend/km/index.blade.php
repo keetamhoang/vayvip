@@ -410,7 +410,7 @@
         $(document).ready(function () {
             $('#load-more').click(function (e) {
                 var count = $('.km-post').length;
-                console.log(count);
+
                 $.ajax({
                     url: '{{ url('ma-giam-gia/load-more') }}',
                     type: 'get',
@@ -422,7 +422,152 @@
                         $('#km-post').append(response);
                     }
                 });
-            })
+            });
+
+            $('.edit-coupon').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+
+                var title = $('#' + id + ' .coupontitle').html();
+                var desc = $('#' + id + ' .cpdesc').html();
+                var code = $('#' + id + ' .coupon-code').html();
+                var exp = $('#' + id + ' .cpexp').html();
+
+                $('#' + id +' .coupontitle').html('<input value="'+title+'" name="title">');
+                $('#' + id +' .cpexp').html('<input value="'+exp+'" name="exp">');
+                $('#' + id + ' .cpdesc').html('<textarea value="" name="desc">'+desc+'</textarea>');
+                $('#' + id + ' input[name="code"]').val(code);
+
+                $('#' + id + ' input[name="code"]').show();
+
+                $(this).hide();
+                $($('#' + id +' .save-coupon')).show();
+            });
+            
+            $('.save-coupon').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+                var title = $('#' + id + ' input[name="title"]').val();
+                var desc = $('#' + id + ' textarea[name="desc"]').val();
+                var code = $('#' + id + ' input[name="code"]').val();
+                var exp = $('#' + id + ' input[name="exp"]').val();
+
+                $.ajax({
+                    url: '{{ url('ma-giam-gia/save') }}',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        title: title,
+                        desc: desc,
+                        code: code,
+                        exp: exp,
+                        id: id
+                    },
+                    success: function (response) {
+                        alert(response.message);
+
+                        if (response.status == 1) {
+                            location.reload();
+                        }
+                    }
+                });
+            });
+
+            $('.hide-coupon').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+
+                if (confirm('Are you sure ?')) {
+                    $.ajax({
+                        url: '{{ url('ma-giam-gia/hide') }}',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            id: id
+                        },
+                        success: function (response) {
+                            alert(response.message);
+
+                            if (response.status == 1) {
+                                location.reload();
+                            }
+                        }
+                    });
+                }
+
+            });
+
+            $('.remove-index').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+
+                if (confirm('Are you sure ?')) {
+                    $.ajax({
+                        url: '{{ url('ma-giam-gia/remove-index') }}',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            id: id
+                        },
+                        success: function (response) {
+                            alert(response.message);
+
+                            if (response.status == 1) {
+                                location.reload();
+                            }
+                        }
+                    });
+                }
+
+            });
+
+            $('.up-coupon').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+
+                var current = $('#'+id);
+                var up = current.prev();
+                var upId = up.attr('id');
+
+                $.ajax({
+                    url: '{{ url('ma-giam-gia/up') }}',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                        upId: upId
+                    },
+                    success: function (response) {
+                        alert(response.message);
+
+                        if (response.status == 1) {
+                            location.reload();
+                        }
+                    }
+                });
+
+            });
+
+            $('.down-coupon').click(function (e) {
+                var id = $(this).parent().attr('data-id');
+
+                var current = $('#'+id);
+                var down = current.next();
+                var downId = down.attr('id');
+
+                $.ajax({
+                    url: '{{ url('ma-giam-gia/down') }}',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: id,
+                        downId: downId
+                    },
+                    success: function (response) {
+                        alert(response.message);
+
+                        if (response.status == 1) {
+                            location.reload();
+                        }
+                    }
+                });
+
+            });
         })
     </script>
 @endsection

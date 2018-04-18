@@ -8,6 +8,6 @@ class Code extends Model
 {
     //
     protected $fillable = [
-        'name', 'code', 'title', 'desc', 'hsd', 'percent', 'status', 'type', 'type_km'
+        'name', 'code', 'title', 'desc', 'hsd', 'percent', 'status', 'type', 'type_km', 'priority'
     ];
 }

@@ -48,7 +48,7 @@ class SaleController extends Controller
     public function lazada() {
         $lazada = Partner::where('name', 'Lazada')->first();
 
-        $coupons = Code::where('name', 'lazada')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.lazada', compact('lazada', 'coupons'));
     }
@@ -56,7 +56,7 @@ class SaleController extends Controller
     public function tiki() {
         $lazada = Partner::where('name', 'Tiki')->first();
 
-        $coupons = Code::where('name', 'tiki')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'tiki')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.tiki', compact('lazada', 'coupons'));
     }
@@ -64,7 +64,7 @@ class SaleController extends Controller
     public function shopee() {
         $lazada = Partner::where('name', 'Shopee')->first();
 
-        $coupons = Code::where('name', 'shopee')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'shopee')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.shopee', compact('lazada', 'coupons'));
     }
@@ -72,7 +72,7 @@ class SaleController extends Controller
     public function grab() {
         $lazada = Partner::where('name', 'Grab')->first();
 
-        $coupons = Code::where('name', 'grab')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'grab')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.grab', compact('lazada', 'coupons'));
     }
@@ -80,15 +80,15 @@ class SaleController extends Controller
     public function yes24() {
         $lazada = Partner::where('name', 'Yes24')->first();
 
-        $coupons = Code::where('name', 'yes24')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'yes24')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.yes24', compact('lazada', 'coupons'));
     }
 
     public function adayroi() {
-        $lazada = Partner::where('name', 'Yes24')->first();
+        $lazada = Partner::where('name', 'Adayroi')->first();
 
-        $coupons = Code::where('name', 'yes24')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'adayroi')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.adayroi', compact('lazada', 'coupons'));
     }
@@ -96,7 +96,7 @@ class SaleController extends Controller
     public function duLich() {
         $lazada = Partner::where('name', 'MyTour')->first();
 
-        $coupons = Code::where('name', 'dulich')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'dulich')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.du_lich', compact('lazada', 'coupons'));
     }
@@ -104,7 +104,7 @@ class SaleController extends Controller
     public function lotte() {
         $lazada = Partner::where('name', 'Lotte')->first();
 
-        $coupons = Code::where('name', 'lotte')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'lotte')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
 
         return view('frontend.km.lotte', compact('lazada', 'coupons'));
     }
@@ -163,4 +163,167 @@ class SaleController extends Controller
         return view('frontend.km.ngan_hang');
     }
 
+    public function saveCoupon(Request $request) {
+        $id = $request->input('id');
+        $title = $request->input('title');
+        $desc = $request->input('desc');
+        $coupon = $request->input('code');
+        $exp = $request->input('exp');
+
+        $id = explode('-', $id);
+        $id = $id[1];
+
+        $code = Code::find($id);
+
+        if (empty($code)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tồn tại coupon này'
+            ]);
+        }
+
+        $code->update([
+            'code' => $coupon,
+            'title' => $title,
+            'desc' => $desc,
+            'hsd' => $exp
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Cập nhật Coupon thành công'
+        ]);
+    }
+
+    public function hideCoupon(Request $request) {
+        $id = $request->input('id');
+
+        $id = explode('-', $id);
+        $id = $id[1];
+
+        $code = Code::find($id);
+
+        if (empty($code)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tồn tại coupon này'
+            ]);
+        }
+
+        $code->update([
+            'status' => 1, // hide
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Ẩn Coupon thành công'
+        ]);
+    }
+
+    public function removeIndex(Request $request) {
+        $id = $request->input('id');
+
+        $id = explode('-', $id);
+        $id = $id[1];
+
+        $code = Code::find($id);
+
+        if (empty($code)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tồn tại coupon này'
+            ]);
+        }
+
+        $code->update([
+            'priority' => 0, // hide
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Xóa Index Coupon thành công'
+        ]);
+    }
+
+    public function upCoupon(Request $request) {
+        $id = $request->input('id');
+        $upId = $request->input('upId');
+
+        $id = explode('-', $id);
+        $id = $id[1];
+
+        $upId = explode('-', $upId);
+        $upId = $upId[1];
+
+        $code = Code::find($id);
+        $upCode = Code::find($upId);
+
+        if (empty($code) or empty($upCode)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tồn tại coupon này'
+            ]);
+        }
+
+        $priority = $code->priority;
+        $upPriority = $upCode->priority;
+
+        if ($priority == $upPriority) {
+            $upPriority++;
+        }
+
+        $code->update([
+            'priority' => $upPriority, // hide
+        ]);
+
+        $upCode->update([
+            'priority' => $priority, // hide
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Sắp xếp Coupon thành công'
+        ]);
+    }
+
+    public function downCoupon(Request $request) {
+        $id = $request->input('id');
+        $downId = $request->input('downId');
+
+        $id = explode('-', $id);
+        $id = $id[1];
+
+        $downId = explode('-', $downId);
+        $downId = $downId[1];
+
+        $code = Code::find($id);
+        $downCode = Code::find($downId);
+
+        if (empty($code) or empty($downCode)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tồn tại coupon này'
+            ]);
+        }
+
+        $priority = $code->priority;
+        $downPriority = $downCode->priority;
+
+        if ($priority == $downPriority) {
+            $downPriority--;
+        }
+
+        $code->update([
+            'priority' => $downPriority, // hide
+        ]);
+
+        $downCode->update([
+            'priority' => $priority, // hide
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Sắp xếp Coupon thành công'
+        ]);
+    }
 }
