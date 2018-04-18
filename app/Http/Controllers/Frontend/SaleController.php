@@ -78,19 +78,35 @@ class SaleController extends Controller
     }
 
     public function yes24() {
-        return view('frontend.km.yes24');
+        $lazada = Partner::where('name', 'Yes24')->first();
+
+        $coupons = Code::where('name', 'yes24')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.yes24', compact('lazada', 'coupons'));
     }
 
     public function adayroi() {
-        return view('frontend.km.adayroi');
+        $lazada = Partner::where('name', 'Yes24')->first();
+
+        $coupons = Code::where('name', 'yes24')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.adayroi', compact('lazada', 'coupons'));
     }
 
     public function duLich() {
-        return view('frontend.km.du_lich');
+        $lazada = Partner::where('name', 'MyTour')->first();
+
+        $coupons = Code::where('name', 'dulich')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.du_lich', compact('lazada', 'coupons'));
     }
 
     public function lotte() {
-        return view('frontend.km.lotte');
+        $lazada = Partner::where('name', 'Lotte')->first();
+
+        $coupons = Code::where('name', 'lotte')->orderBy('id', 'desc')->limit(25)->get();
+
+        return view('frontend.km.lotte', compact('lazada', 'coupons'));
     }
 
 

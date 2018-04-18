@@ -37,7 +37,7 @@
             <div class="entry-content lazada" itemprop="text">
                 {!! $lazada->desc_up !!}
 
-                <div class="couponh2"><h2 class="h2white">MÃ KHUYẾN MÃI TIKI, VOUCHER TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
+                <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ TIKI, VOUCHER TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 
                 @foreach($coupons as $coupon)
                     <div class="coupondiv">

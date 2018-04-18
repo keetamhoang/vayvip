@@ -37,7 +37,7 @@
             <div class="entry-content lazada" itemprop="text">
                 {!! $lazada->desc_up !!}
 
-                <div class="couponh2"><h2 class="h2white">MÃ KHUYẾN MÃI LAZADA, VOUCHER LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
+                <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ LAZADA, VOUCHER LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
 
                 @foreach($coupons as $coupon)
                     <div class="coupondiv">
@@ -46,7 +46,12 @@
                                 <div class="promotagcont {{ $coupon->type == 2 ? 'tagsale' : '' }}">
                                     <div class="saveamount"> {{ $coupon->percent }}</div>
                                     <div class="saleorcoupon"> {{ $coupon->type_km }}</div>
-                                    <div class=""><a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}">Sửa</a></div>
+                                </div>
+                                <div class="">
+                                    <a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}"><i class="fa fa-level-up"></i> Cho lên</a><br>
+                                    <a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}"><i class="fa fa-level-down"></i> Cho xuống</a><br>
+                                    <a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}">Sửa</a><br>
+                                    <a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}">Xóa</a>
                                 </div>
                             </div>
                             <div class="promotiondetails">

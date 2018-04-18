@@ -24,31 +24,51 @@
 @endsection
 
 @section('content_km')
-    {{--<section id="featured-post-2" class="widget featured-content featuredpost">--}}
-    {{--<div class="widget-wrap">--}}
-    {{--<h4 class="widget-title widgettitle">ĐỐI TÁC CỦA TÀI CHÍNH SMART</h4>--}}
-    {{--<article--}}
-    {{--class="post-5793 post type-post status-publish format-standard has-post-thumbnail category-lazada category-ma-giam-gia tag-khac entry">--}}
-    {{--<a href="https://www.offers.vn/ma-giam-gia-lazada/" class="alignleft"--}}
-    {{--aria-hidden="true"><img--}}
-    {{--src="/assets/km/image/lazada-240x135.png"--}}
-    {{--class="entry-image attachment-post"--}}
-    {{--alt="Mã Giảm Giá Lazada Khuyến Mãi Flash Sale Tháng 1/2018"--}}
-    {{--itemprop="image"--}}
-    {{--width="240" height="135"></a>--}}
-    {{--<header class="entry-header"><h2 class="entry-title" itemprop="headline"><a--}}
-    {{--href="https://www.offers.vn/ma-giam-gia-lazada/">Mã Giảm Giá--}}
-    {{--Lazada Khuyến Mãi--}}
-    {{--Flash Sale Tháng 1/2018</a></h2></header>--}}
-    {{--</article>--}}
-    {{--<p class="more-from-category"><a href="https://www.offers.vn/ma-giam-gia/"--}}
-    {{--title="Mã giảm giá, Voucher, Khuyến mãi mua sắm">Xem--}}
-    {{--thêm...</a></p>--}}
-    {{--<div>--}}
-    {{--<img src="/assets/km/image/logo-partner.png">--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</section>--}}
+    <section id="featured-post-3" class="widget featured-content featuredpost">
+        <div class="widget-wrap">
+            <h2 class="entry-title h1-lazada" itemprop="headline">
+                @if(!empty($lazada->title))
+                    {{ $lazada->title }}
+                @else
+                    Mã Giảm Giá {{ $lazada->name }} Khuyến Mãi {{ $lazada->name }} Mới Nhất Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
+                @endif
+            </h2>
 
+            <div class="entry-content lazada" itemprop="text">
+                {!! $lazada->desc_up !!}
 
+                <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ MYTOUR, VOUCHER MYTOUR MỚI NHẤT, TỐT NHẤT</h2></div>
+
+                @foreach($coupons as $coupon)
+                    <div class="coupondiv">
+                        <div class="promotiontype">
+                            <div class="promotag">
+                                <div class="promotagcont {{ $coupon->type == 2 ? 'tagsale' : '' }}">
+                                    <div class="saveamount"> {{ $coupon->percent }}</div>
+                                    <div class="saleorcoupon"> {{ $coupon->type_km }}</div>
+                                    <div class=""><a target="_blank" href="{{ url('admin/codes/' . $coupon->id) }}">Sửa</a></div>
+                                </div>
+                            </div>
+                            <div class="promotiondetails">
+                                <div class="coupontitle"> {{ $coupon->title }}</div>
+                                <div class="cpinfo"><strong>{{ !empty($coupon->hsd) ? $coupon->hsd : 'Không giới hạn' }} </strong><br>
+                                    {!! $coupon->desc !!}
+                                </div>
+                            </div>
+                            <div class="cpbutton">
+                                <div class="copyma"
+                                     onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ $coupon->code }}');window.open('http://bit.ly/2HbbgUH','_blank')">
+                                    <div class="coupon-code">{{ $coupon->code }}</div>
+                                    <div>COPY MÃ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+                {!! $lazada->desc_bot !!}
+
+            </div>
+        </div>
+    </section>
 @endsection

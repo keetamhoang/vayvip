@@ -86,28 +86,28 @@
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-yes24') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $yes24->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-adayroi') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $adayroi->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-du-lich') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $dulich->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>{{ url('ma-giam-gia/ma-giam-gia-lotte') }}</loc>
-        <lastmod>{{ $magiamgia->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <lastmod>{{ $lotte->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>hourly</changefreq>
         <priority>0.6</priority>
     </url>

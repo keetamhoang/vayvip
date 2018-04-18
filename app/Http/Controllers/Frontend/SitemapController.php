@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Code;
 use App\Models\Discount;
 use App\Models\KmProduct;
 use App\Models\Partner;
@@ -19,12 +20,17 @@ class SitemapController extends Controller
         $magiamgia = Discount::where('status', 0)->orderBy('created_at', 'desc')->first();
         $tintuctaichinh = Post::where('category_id', 1)->orderBy('updated_at', 'desc')->first();
         $muasamhomnay = Post::where('category_id', 2)->orderBy('updated_at', 'desc')->first();
-        $lazada = Partner::where('name', 'Lazada')->first();
-        $tiki = Partner::where('name', 'Tiki')->first();
-        $shopee = Partner::where('name', 'Shopee')->first();
-        $grab = Partner::where('name', 'Grab')->first();
+        $lazada = Code::where('name', 'lazada')->orderBy('id', 'desc')->first();
+        $tiki = Code::where('name', 'tiki')->orderBy('id', 'desc')->first();
+        $shopee = Code::where('name', 'shopee')->orderBy('id', 'desc')->first();
+        $grab = Code::where('name', 'grab')->orderBy('id', 'desc')->first();
+        $yes24 = Code::where('name', 'yes24')->orderBy('id', 'desc')->first();
+        $adayroi = Code::where('name', 'adayroi')->orderBy('id', 'desc')->first();
+        $lotte = Code::where('name', 'lotte')->orderBy('id', 'desc')->first();
+        $dulich = Code::where('name', 'dulich')->orderBy('id', 'desc')->first();
 
-        return response()->view('frontend.sitemap.trangchinh', compact('magiamgia', 'tintuctaichinh', 'muasamhomnay', 'lazada', 'tiki', 'shopee', 'grab'))
+        return response()->view('frontend.sitemap.trangchinh', compact('magiamgia', 'tintuctaichinh', 'muasamhomnay', 'lazada', 'tiki', 'shopee', 'grab',
+            'yes24', 'adayroi', 'lotte', 'dulich'))
             ->header('Content-Type', 'text/xml');
     }
 
