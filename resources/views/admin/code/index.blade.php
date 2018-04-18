@@ -23,9 +23,11 @@
                     <th>#</th>
                     <th>Đơn vị</th>
                     <th>CODE</th>
+                    <th>Percent</th>
                     <th>Tên</th>
                     <th>Miêu tả</th>
                     <th>Hạn dùng</th>
+                    <th>Trạng thái</th>
                     <th>Created_At</th>
                     <th>Action</th>
                 </tr>
@@ -85,7 +87,7 @@
 //            ],
             searching: false,
             ajax: {
-                url: '{{ url('admin/kmAttribute.data') }}',
+                url: '{{ url('admin/codeAttribute.data') }}',
                 data: function (d) {
 
                 }
@@ -93,9 +95,13 @@
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'name', name: 'name'},
-//                {data: 'title', name: 'title'},
-                {data: 'desc_up', name: 'desc_up'},
-                {data: 'desc_bot', name: 'desc_bot'},
+                {data: 'code', name: 'code'},
+                {data: 'percent', name: 'percent'},
+                {data: 'title', name: 'title'},
+                {data: 'desc', name: 'desc'},
+                {data: 'hsd', name: 'hsd'},
+                {data: 'status', name: 'status'},
+                {data: 'created_at', name: 'created_at'},
                 {data: 'action', name: 'action'},
             ],
 

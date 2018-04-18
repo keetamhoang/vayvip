@@ -30,12 +30,12 @@ Route::group(['prefix' => 'admin',
         Route::get('don-vi-khuyen-mai/{id}', 'Backend\DiscountController@kmEdit');
         Route::post('don-vi-khuyen-mai/update', 'Backend\DiscountController@kmUpdate');
 
-        Route::get('codes', 'Backend\DiscountController@codeIndex');
-        Route::get('codeAttribute.data', 'Backend\DiscountController@codeAttribute');
-        Route::get('codes/add', 'Backend\DiscountController@codeCreate');
-        Route::post('codes/store', 'Backend\DiscountController@codeStore');
-        Route::get('codes/{id}', 'Backend\DiscountController@codeEdit');
-        Route::post('codes/update', 'Backend\DiscountController@codeUpdate');
+        Route::get('codes', 'Backend\CodeController@codeIndex');
+        Route::get('codeAttribute.data', 'Backend\CodeController@codeAttribute');
+        Route::get('codes/add', 'Backend\CodeController@codeCreate');
+        Route::post('codes/store', 'Backend\CodeController@codeStore');
+        Route::get('codes/{id}', 'Backend\CodeController@codeEdit');
+        Route::post('codes/update', 'Backend\CodeController@codeUpdate');
 
         Route::get('posts', 'Backend\PostController@index');
         Route::get('posts/add', 'Backend\PostController@create');
