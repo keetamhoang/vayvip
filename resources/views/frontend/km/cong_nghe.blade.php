@@ -21,5 +21,6 @@
 @endsection
 
 @section('content_km')
-    
+    <h2>Mã giảm giá đồ điện tử - công nghê, Coupon khuyễn mãi lên đến 60% trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h2>
+    <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

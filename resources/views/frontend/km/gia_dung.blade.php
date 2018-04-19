@@ -25,5 +25,7 @@
 @endsection
 
 @section('content_km')
-    
+    <h2>Mã giảm giá đồ gia dụng trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }} lên đến 40%
+    </h2>
+    <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

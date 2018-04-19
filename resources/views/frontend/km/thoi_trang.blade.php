@@ -24,5 +24,7 @@
 @endsection
 
 @section('content_km')
-    
+    <h2>Mã giảm giá thời trang, coupon canifa, M2, H&M
+    </h2>
+    <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

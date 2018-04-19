@@ -47,7 +47,7 @@ class Crawler extends Command
         // lazada
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/lazada');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
@@ -129,7 +129,7 @@ class Crawler extends Command
         // tiki
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/tiki');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
@@ -211,7 +211,7 @@ class Crawler extends Command
         // shopee
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/shopee');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
@@ -358,7 +358,7 @@ class Crawler extends Command
         // yes24
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/yes24');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
@@ -440,7 +440,7 @@ class Crawler extends Command
         // adayroi
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/adayroi');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);
@@ -522,7 +522,7 @@ class Crawler extends Command
         // lotte
         $res = $client->request('GET', 'https://magiamtot.com/ma-giam-gia/lotte');
 
-        $res->filter('.coupon-live')->each(function ($node, $i) {
+        $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
                 $code = $node->filter('.code-text')->text();
                 $data['code'] = trim($code);

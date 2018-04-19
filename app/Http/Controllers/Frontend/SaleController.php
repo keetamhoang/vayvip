@@ -48,7 +48,7 @@ class SaleController extends Controller
     public function lazada() {
         $lazada = Partner::where('name', 'Lazada')->first();
 
-        $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.lazada', compact('lazada', 'coupons'));
     }
@@ -56,7 +56,7 @@ class SaleController extends Controller
     public function tiki() {
         $lazada = Partner::where('name', 'Tiki')->first();
 
-        $coupons = Code::where('name', 'tiki')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'tiki')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.tiki', compact('lazada', 'coupons'));
     }
@@ -64,7 +64,7 @@ class SaleController extends Controller
     public function shopee() {
         $lazada = Partner::where('name', 'Shopee')->first();
 
-        $coupons = Code::where('name', 'shopee')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'shopee')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.shopee', compact('lazada', 'coupons'));
     }
@@ -72,7 +72,7 @@ class SaleController extends Controller
     public function grab() {
         $lazada = Partner::where('name', 'Grab')->first();
 
-        $coupons = Code::where('name', 'grab')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'grab')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.grab', compact('lazada', 'coupons'));
     }
@@ -80,7 +80,7 @@ class SaleController extends Controller
     public function yes24() {
         $lazada = Partner::where('name', 'Yes24')->first();
 
-        $coupons = Code::where('name', 'yes24')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'yes24')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.yes24', compact('lazada', 'coupons'));
     }
@@ -88,7 +88,7 @@ class SaleController extends Controller
     public function adayroi() {
         $lazada = Partner::where('name', 'Adayroi')->first();
 
-        $coupons = Code::where('name', 'adayroi')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'adayroi')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.adayroi', compact('lazada', 'coupons'));
     }
@@ -96,7 +96,7 @@ class SaleController extends Controller
     public function duLich() {
         $lazada = Partner::where('name', 'MyTour')->first();
 
-        $coupons = Code::where('name', 'dulich')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::whereIn('name', ['dulich', 'mytour'])->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.du_lich', compact('lazada', 'coupons'));
     }
@@ -104,7 +104,7 @@ class SaleController extends Controller
     public function lotte() {
         $lazada = Partner::where('name', 'Lotte')->first();
 
-        $coupons = Code::where('name', 'lotte')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(25)->get();
+        $coupons = Code::where('name', 'lotte')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
 
         return view('frontend.km.lotte', compact('lazada', 'coupons'));
     }

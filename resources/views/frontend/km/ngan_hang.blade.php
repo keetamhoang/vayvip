@@ -24,5 +24,7 @@
 @endsection
 
 @section('content_km')
-    
+    <h2>Mã giảm giá cho ngân hàng, thẻ ngân hàng
+    </h2>
+    <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection
