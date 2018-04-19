@@ -85,11 +85,11 @@ class PostController extends AdminController
         try {
             $post = Post::create($data);
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/".$post->slug);
-            curl_setopt($ch, CURLOPT_HEADER, false);
-            curl_exec($ch);
-            curl_close($ch);
+//            $ch = curl_init();
+//            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/".$post->slug);
+//            curl_setopt($ch, CURLOPT_HEADER, false);
+//            curl_exec($ch);
+//            curl_close($ch);
 
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -133,11 +133,11 @@ class PostController extends AdminController
         try {
             $post->update($data);
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/" . $post->slug);
-            curl_setopt($ch, CURLOPT_HEADER, false);
-            curl_exec($ch);
-            curl_close($ch);
+//            $ch = curl_init();
+//            curl_setopt($ch, CURLOPT_URL, "https://developers.facebook.com/tools/debug/sharing/?q=http://taichinhsmart.vn/tin-tuc/" . $post->slug);
+//            curl_setopt($ch, CURLOPT_HEADER, false);
+//            curl_exec($ch);
+//            curl_close($ch);
         } catch (\Exception $ex) {
             dd($ex->getMessage());
             return redirect('admin/posts/add')->with('error','Lỗi! Thêm mới không thành công');

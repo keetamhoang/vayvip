@@ -1,3 +1,13 @@
+.mobile-menu p {
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    color: #e51b23;
+}
+.row {
+    margin-right:0px;
+    margin-left:0px;
+}
 #vay-tin-chap .vay-vip-xe-may {
     margin-top: 0px !important;
 }
@@ -827,6 +837,14 @@
 
     .h1-seo {
         display: none;
+    }
+
+    #menu-item-16458 .sub-menu a {
+        width: 100%;
+    }
+
+    #menu-item-16457 .sub-menu a {
+        width: 100%;
     }
 }
 

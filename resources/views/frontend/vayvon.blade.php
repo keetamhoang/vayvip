@@ -9,9 +9,9 @@
     <meta property="og:title" content="Vay vốn tín dụng thông minh - Tài chính SMART">
     <meta property="og:description"
           content="Dịch vụ đăng ký vay vốn trực tuyến từ những đối tác uy tín giúp quý khách tiết kiệm thời gian. Nhận những ưu đãi bất ngờ khi vay tiền tại Tài chính SMART! - Tài chính thông minh trong tầm tay của bạn.">
-    <meta property="og:url" content="http://taichinhsmart.vn/vay-von-tin-dung">
+    <meta property="og:url" content="https://taichinhsmart.vn/vay-von-tin-dung">
     <meta property="og:site_name" content="Vay vốn tín dụng - Tài chính SMART">
-    <meta property="og:image" content="http://taichinhsmart.vn/assets/image/og-vayvip.jpg">
+    <meta property="og:image" content="https://taichinhsmart.vn/assets/image/og-vayvip.jpg">
     <meta name="keywords" content="vay tin chap, vay tieu dung, vay tien nhanh, vay khong the chap, vay vip, tin dung, tindungsmart, tin dung smart, vay tien thong minh, vay uy tin">
 @endsection
 
@@ -1034,7 +1034,7 @@
                     return;
                 }
 
-                var url = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
 
                 @if(\Session::has('vayvon'))
                     url += '&' + '{{ \Session::get('vayvon') }}';
@@ -1060,7 +1060,7 @@
                     return;
                 }
 
-                var url = "http://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
 
                 @if(\Session::has('vayvon'))
                     url += '&' + '{{ \Session::get('vayvon') }}';

@@ -6,7 +6,11 @@
     RewriteEngine On
 
     RewriteCond %{HTTP_HOST} ^www\.taichinhsmart\.vn [NC]
-    RewriteRule (.*) http://taichinhsmart.vn/$1 [R=301,L]
+    RewriteRule (.*) https://taichinhsmart.vn/$1 [R=301,L]
+
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

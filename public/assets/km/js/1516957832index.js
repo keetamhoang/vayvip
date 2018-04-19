@@ -6,7 +6,8 @@ $(this).find('a.alignleft, a.alignnone, a.alignright').append($time);
 });
 });
 jQuery(function($){
-$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>');
+$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu").addClass("responsive-menu")
+    .before('<div class="responsive-menu-icon"><div class="mobile-menu"><p><i class="fa fa-bars"></i> CHỌN MÃ GIẢM GIÁ</p></div></div>');
 $(".responsive-menu-icon").click(function(){
 $(this).next("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu").slideToggle();
 });
