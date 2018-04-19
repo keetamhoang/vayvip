@@ -35,4 +35,8 @@ class Discount extends Model
     {
         return $this->attributes['slug'].'-'.$this->attributes['id'];
     }
+
+    public function coupon() {
+        return $this->hasMany('App\Models\Coupon', 'id', 'discount_id');
+    }
 }

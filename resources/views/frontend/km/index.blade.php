@@ -410,7 +410,7 @@
     <script>
         $(document).ready(function () {
             $('#load-more').click(function (e) {
-                var count = $('.km-post').length;
+                var count = $('.coupon-dive').length;
 
                 $.ajax({
                     url: '{{ url('ma-giam-gia/load-more') }}',
@@ -421,6 +421,24 @@
                     },
                     success: function (response) {
                         $('#km-post').append(response);
+                    }
+                });
+            });
+
+            $('.load-more button').click(function (e) {
+                var count = $('#km-coupon .coupondiv').length;
+                var name = $(this).attr('data-id');
+
+                $.ajax({
+                    url: '{{ url('ma-giam-gia/load-more-coupon') }}',
+                    type: 'get',
+                    dataType: 'html',
+                    data: {
+                        count: count,
+                        name: name,
+                    },
+                    success: function (response) {
+                        $('#km-coupon').append(response);
                     }
                 });
             });

@@ -302,7 +302,7 @@ class Crawler extends Command
 
                 $data['code'] = $a[3];
             } catch (\Exception $ex) {
-                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
+                $this->line('ERROR1 GRAB: '.$ex->getMessage().'|'.$i);
             }
 
             if (!empty($data['code'])) {
@@ -613,7 +613,7 @@ class Crawler extends Command
 
                 $data['code'] = $a[3];
             } catch (\Exception $ex) {
-                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
+                $this->line('ERROR1 MYTOUR: '.$ex->getMessage().'|'.$i);
             }
 
             if (!empty($data['code'])) {

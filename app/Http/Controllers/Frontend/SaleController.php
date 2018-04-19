@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Code;
+use App\Models\Coupon;
 use App\Models\Discount;
 use App\Models\Partner;
 use Carbon\Carbon;
@@ -22,6 +23,15 @@ class SaleController extends Controller
             ->orderBy('start_time', 'desc')->offset($count)->limit(20)->get();
 
         return view('frontend.km.load_more', compact('newests'))->render();
+    }
+
+    public function loadMoreCoupon(Request $request) {
+        $count = $request->input('count', 0);
+        $name = $request->input('name');
+
+        $coupons = Code::where('name', $name)->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->offset($count)->limit(20)->get();
+
+        return view('frontend.km.load_more_coupon', compact('coupons'))->render();
     }
 
     public function hot() {
@@ -48,31 +58,43 @@ class SaleController extends Controller
     public function lazada() {
         $lazada = Partner::where('name', 'Lazada')->first();
 
-        $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.lazada', compact('lazada', 'coupons'));
+        $count = Code::where('name', 'lazada')->where('status', 0)->count();
+
+        if ($count > 20) {
+            
+        }
+
+        $discounts = Discount::where('merchant', 'lazada')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.lazada', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function tiki() {
         $lazada = Partner::where('name', 'Tiki')->first();
 
-        $coupons = Code::where('name', 'tiki')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'tiki')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.tiki', compact('lazada', 'coupons'));
+        $discounts = Discount::where('merchant', 'tikivn')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.tiki', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function shopee() {
         $lazada = Partner::where('name', 'Shopee')->first();
 
-        $coupons = Code::where('name', 'shopee')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'shopee')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.shopee', compact('lazada', 'coupons'));
+        $discounts = Discount::where('merchant', 'shopee')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.shopee', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function grab() {
         $lazada = Partner::where('name', 'Grab')->first();
 
-        $coupons = Code::where('name', 'grab')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'grab')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
         return view('frontend.km.grab', compact('lazada', 'coupons'));
     }
@@ -80,33 +102,41 @@ class SaleController extends Controller
     public function yes24() {
         $lazada = Partner::where('name', 'Yes24')->first();
 
-        $coupons = Code::where('name', 'yes24')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'yes24')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.yes24', compact('lazada', 'coupons'));
+        $discounts = Discount::where('merchant', 'yes24vn')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.yes24', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function adayroi() {
         $lazada = Partner::where('name', 'Adayroi')->first();
 
-        $coupons = Code::where('name', 'adayroi')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'adayroi')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.adayroi', compact('lazada', 'coupons'));
+        $discounts = Discount::where('merchant', 'adayroi')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.adayroi', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function duLich() {
         $lazada = Partner::where('name', 'MyTour')->first();
 
-        $coupons = Code::whereIn('name', ['dulich', 'mytour'])->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::whereIn('name', ['dulich', 'mytour'])->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.du_lich', compact('lazada', 'coupons'));
+        $discounts = Discount::whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.du_lich', compact('lazada', 'coupons', 'discounts'));
     }
 
     public function lotte() {
         $lazada = Partner::where('name', 'Lotte')->first();
 
-        $coupons = Code::where('name', 'lotte')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(30)->get();
+        $coupons = Code::where('name', 'lotte')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        return view('frontend.km.lotte', compact('lazada', 'coupons'));
+        $discounts = Discount::where('merchant', 'lottevn')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('frontend.km.lotte', compact('lazada', 'coupons', 'discounts'));
     }
 
 

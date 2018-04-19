@@ -546,6 +546,15 @@
     padding: 0px;
 }
 
+.load-more {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.load-more button {
+    background-color: #f1612f;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0px;

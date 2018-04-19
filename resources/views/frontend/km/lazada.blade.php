@@ -38,7 +38,7 @@
                 {!! $lazada->desc_up !!}
 
                 <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ LAZADA, VOUCHER LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
-
+                <div id="km-coupon">
                 @foreach($coupons as $key => $coupon)
                     <div class="coupondiv" id="coupon-{{ $coupon->id }}">
                         <div class="promotiontype">
@@ -79,6 +79,40 @@
                         </div>
                     </div>
                 @endforeach
+                </div>
+
+                <div class="load-more">
+                    <button data-id="lazada">Còn nhiều nữa, xem thêm</button>
+                </div>
+
+                <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI LAZADA MỚI NHẤT, TỐT NHẤT</h2></div>
+
+                @if (count($discounts) > 0)
+                    @foreach($discounts as $discount)
+                        <div class="coupondiv">
+                            <div class="promotiontype">
+                                <div class="promotag">
+                                    <div class="promotagcont {{ $discount->is_coupon == 0 ? 'tagsale' : '' }}">
+                                        <div class="saveamount"> KM</div>
+                                        <div class="saleorcoupon"> SALE</div>
+                                    </div>
+                                </div>
+                                <div class="promotiondetails">
+                                    <div class="coupontitle"> {{ $discount->name }}</div>
+                                    <div class="cpinfo"><strong>Hạn dùng:</strong>
+                                        <span>{{ \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') }}</span><br>
+                                        {!! $discount->content !!}
+                                    </div>
+                                </div>
+                                <div class="cpbutton">
+                                    {{--<div class="xemngayz" onclick="window.open('/out/tiki','_blank')">XEM NGAY</div>--}}
+                                    <div class="xemngayz"><a href="{{ $discount->aff_link }}" target="_blank"
+                                                             style="color: #fff;background: #1fb20700;padding: 12px 18px">XEM NGAY</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
 
                 {{--<div class="couponh2"><span class="h2white">MÃ GIẢM GIÁ LAZADA NGÀNH MỸ PHẨM</span></div>--}}
                 {{--<div class="coupondiv">--}}

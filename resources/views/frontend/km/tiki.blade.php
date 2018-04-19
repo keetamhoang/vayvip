@@ -80,51 +80,34 @@
                     </div>
                 @endforeach
 
-                {{--<div class="couponh2"><span class="h2white">MÃ GIẢM GIÁ LAZADA NGÀNH MỸ PHẨM</span></div>--}}
-                {{--<div class="coupondiv">--}}
-                {{--<div class="promotiontype">--}}
-                {{--<div class="promotag">--}}
-                {{--<div class="promotagcont">--}}
-                {{--<div class="saveamount"> 10%</div>--}}
-                {{--<div class="saleorcoupon"> COUPON</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="promotiondetails">--}}
-                {{--<div class="coupontitle"> Mã giảm giá 10% cho đơn hàng mỹ phẩm ZA</div>--}}
-                {{--<div class="cpinfo"><strong>Hạn dùng: </strong>30/4/2018<br> Áp dụng với đơn hàng từ--}}
-                {{--350.000đ--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="cpbutton">--}}
-                {{--<div class="copyma"--}}
-                {{--onclick="window.open('http://ho.lazada.vn/SHOegW?sku=&amp;redirect=http%3A%2F%2Fho.lazada.vn%2FSH79ra%3Furl%3Dhttps%253A%252F%252Fwww.lazada.vn%252Fshop%252Fza-official-store%253foffer_id%253D%257Boffer_id%257D%2526affiliate_id%253D%257Baffiliate_id%257D%2526offer_name%253D%257Boffer_name%257D_%257Boffer_file_id%257D%2526affiliate_name%253D%257Baffiliate_name%257D%2526transaction_id%253D%257Btransaction_id%257D%26aff_sub%3Dza','_blank')">--}}
-                {{--<div class="coupon-code">ZA10T4</div>--}}
-                {{--<div>COPY MÃ</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
+                <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 
-                {{--<div class="coupondiv">--}}
-                {{--<div class="promotiontype">--}}
-                {{--<div class="promotag">--}}
-                {{--<div class="promotagcont tagsale">--}}
-                {{--<div class="saveamount"> 15%</div>--}}
-                {{--<div class="saleorcoupon"> SALE</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="promotiondetails">--}}
-                {{--<div class="coupontitle"> Lazada khuyến mãi Flash Sale giảm giá tốt nhất mỗi ngày</div>--}}
-                {{--<div class="cpinfo"><strong>Hạn dùng: </strong>31/3/2018.<br> Danh mục các sản phẩm giảm giá--}}
-                {{--nhiều nhất hàng ngày ở Lazada, mở bán sản phẩm mới mỗi 2 tiếng.--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="cpbutton">--}}
-                {{--<div class="xemngayz" onclick="window.open('http://bit.ly/2yvnoL8','_blank')">XEM NGAY</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-
+                @if (count($discounts) > 0)
+                    @foreach($discounts as $discount)
+                        <div class="coupondiv">
+                            <div class="promotiontype">
+                                <div class="promotag">
+                                    <div class="promotagcont {{ $discount->is_coupon == 0 ? 'tagsale' : '' }}">
+                                        <div class="saveamount"> KM</div>
+                                        <div class="saleorcoupon"> SALE</div>
+                                    </div>
+                                </div>
+                                <div class="promotiondetails">
+                                    <div class="coupontitle"> {{ $discount->name }}</div>
+                                    <div class="cpinfo"><strong>Hạn dùng:</strong>
+                                        <span>{{ \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') }}</span><br>
+                                        {!! $discount->content !!}
+                                    </div>
+                                </div>
+                                <div class="cpbutton">
+                                    {{--<div class="xemngayz" onclick="window.open('/out/tiki','_blank')">XEM NGAY</div>--}}
+                                    <div class="xemngayz"><a href="{{ $discount->aff_link }}" target="_blank"
+                                                             style="color: #fff;background: #1fb20700;padding: 12px 18px">XEM NGAY</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
 
                 {!! $lazada->desc_bot !!}
 
