@@ -410,7 +410,7 @@
     <script>
         $(document).ready(function () {
             $('#load-more').click(function (e) {
-                var count = $('.coupon-dive').length;
+                var count = $('.km-post').length;
 
                 $.ajax({
                     url: '{{ url('ma-giam-gia/load-more') }}',
