@@ -56,11 +56,11 @@ class Kernel extends ConsoleKernel
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
 
-        $schedule->command('get:data-gg-sheet')
-            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_cron.log'));
-
-        $schedule->command('data:shinhanbank')
-            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('shinhanbank_cron.log'));
+//        $schedule->command('get:data-gg-sheet')
+//            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_cron.log'));
+//
+//        $schedule->command('data:shinhanbank')
+//            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('shinhanbank_cron.log'));
 
         $schedule->command('crawl:km')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_km_cron.log'));
