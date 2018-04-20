@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5">
                         <div class="banner-left">
-                            Đặc trị tiểu đường
+                            Phương pháp điều trị tiểu đường hiệu quả
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
@@ -39,10 +39,10 @@
                     <div class="col-xs-12 col-sm-3">
                         <div class="banner-right">
                             <div class="banner-right-top">
-                                680 000Đ/500gr
+                                680.000Đ/500gr
                             </div>
                             <div class="banner-right-bot">
-                                Giá thông thường 1 150 000đ
+                                Giá thông thường <span>1.150.000đ</span>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
 
             </div>
             <div class="banner-img">
-                <a href="http://toidenblaga.vn-thongtin.info/#dathang-form"><img src="/product/toiden/image/1.png" alt=""></a>
+                <a href="#dathang-form"><img src="/product/toiden/image/1.png" alt=""></a>
             </div>
         </div> <!-- banner -->
 
@@ -255,13 +255,14 @@
                             <div class="box6-text">
                                 Nghiên cứu cho thấy tỏi đen có thể ảnh hưởng đến gan glycogen tổng hợp, làm giảm lượng đường trong máu và tăng hoocmon insulin. Allicin trong tỏi đen cũng có thể làm giảm lượng đường trong máu bình thường, tỏi đen cũng chứa “S -methyl cysteine sulfoxide và “S – allyl cysteine sulfoxide, ” Đây là 2 loại sulfua có thể ức chế G-6-P enzyme NADPH, để ngăn chặn sự tàn phá của insulin, tác dụng hạ đường huyết tuyệt vời.”
                             </div>
-                            <div class="box6-link">
-                                <a href="http://toidenblaga.vn-thongtin.info/#dathang-form">mua ngay</a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="mua-ngay">
+            <a href="#dathang-form"><img src="/assets/image/mua-ngay.gif"></a>
         </div>
 
         <div class="box7">
@@ -474,7 +475,39 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                             <div class="box11-text">
-                                Tôi là Trimh năm nay 58 tuổi là cán bộ về hưu, sống gắn liền với bệnh tiểu đường gần 2 năm nay, cũng dùng thuốc Tây thuốc Ta, phương pháp chữa trị mà vẫn chưa khỏi. Tình cờ ông bạn đồng niên giới thiệu cho Tỏi đen một nhánh Blaga nói rằng đã giảm chỉ số đường huyết, ngăn chặn cả các biến chứng tiểu đường nữa, lại rất tốt cho sức khỏe. Thật sự bất ngờ sau 4 tháng sử dụng, đường huyết của tôi đã ở mức bình thường, mắt sáng hơn, cũng không còn tình trạng rối loạn tiêu hóa nữa. Tin tưởng vào chất lượng, tôi sử dụng sản phẩm hàng ngày kết hợp với chế độ ăn uống và luyện tập hợp lý để cơ thể khỏe mạnh hơn. Sản phẩm quá tuyệt vời cho những người đang mắc tiểu đường, tôi sẽ sử dụng lâu dài và giới thiệu cho bạn bè người thân.
+                                Tôi là Trinh năm nay 58 tuổi là cán bộ về hưu, sống gắn liền với bệnh tiểu đường gần 2 năm nay, cũng dùng thuốc Tây thuốc Ta, phương pháp chữa trị mà vẫn chưa khỏi. Tình cờ ông bạn đồng niên giới thiệu cho Tỏi đen một nhánh Blaga nói rằng đã giảm chỉ số đường huyết, ngăn chặn cả các biến chứng tiểu đường nữa, lại rất tốt cho sức khỏe. Thật sự bất ngờ sau 4 tháng sử dụng, đường huyết của tôi đã ở mức bình thường, mắt sáng hơn, cũng không còn tình trạng rối loạn tiêu hóa nữa. Tin tưởng vào chất lượng, tôi sử dụng sản phẩm hàng ngày kết hợp với chế độ ăn uống và luyện tập hợp lý để cơ thể khỏe mạnh hơn. Sản phẩm quá tuyệt vời cho những người đang mắc tiểu đường, tôi sẽ sử dụng lâu dài và giới thiệu cho bạn bè người thân.
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/ava1.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-7">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            BÁC DƯƠNG TRINH
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            58 tuổi - Hà Nội
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="box11-text">
+                                Tôi là Trinh năm nay 58 tuổi là cán bộ về hưu, sống gắn liền với bệnh tiểu đường gần 2 năm nay, cũng dùng thuốc Tây thuốc Ta, phương pháp chữa trị mà vẫn chưa khỏi. Tình cờ ông bạn đồng niên giới thiệu cho Tỏi đen một nhánh Blaga nói rằng đã giảm chỉ số đường huyết, ngăn chặn cả các biến chứng tiểu đường nữa, lại rất tốt cho sức khỏe. Thật sự bất ngờ sau 4 tháng sử dụng, đường huyết của tôi đã ở mức bình thường, mắt sáng hơn, cũng không còn tình trạng rối loạn tiêu hóa nữa. Tin tưởng vào chất lượng, tôi sử dụng sản phẩm hàng ngày kết hợp với chế độ ăn uống và luyện tập hợp lý để cơ thể khỏe mạnh hơn. Sản phẩm quá tuyệt vời cho những người đang mắc tiểu đường, tôi sẽ sử dụng lâu dài và giới thiệu cho bạn bè người thân.
                             </div>
                             <div class="box11-avatar">
                                 <div class="row">
@@ -514,7 +547,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5">
                         <div class="banner-left">
-                            Đặc trị tiểu đường
+                            Tỏi đen Blaga<br>Tiểu đường đi xa
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
@@ -525,10 +558,10 @@
                     <div class="col-xs-12 col-sm-3">
                         <div class="banner-right">
                             <div class="banner-right-top">
-                                680 000Đ/500gr
+                                680.000Đ/500gr
                             </div>
                             <div class="banner-right-bot">
-                                Giá thông thường 1 150 000đ
+                                Giá thông thường <span>1.150.000đ</span>
                             </div>
                         </div>
                     </div>
@@ -542,7 +575,7 @@
                                 <div class="countdown-text">
                                     Giảm giá sẽ kết thúc sau
                                 </div>
-                                <div class="time-countdown" id="time-countdown"><span>12</span> : <span>00</span> : <span>00</span></div>
+                                <div class="time-countdown" id="time-countdown"><span>8</span> : <span>46</span> : <span>23</span></div>
 
                             </div>
                             <div class="contact-info__right__form">
@@ -627,10 +660,18 @@
         <script async="" src="/product/toiden/js/main2.js" type="text/javascript"></script>
         <script async="" src="/product/toiden/js/flickity.pkgd.min.js" type="text/javascript"></script>
         <script async="" src="/product/toiden/js/bootstrap-dialog.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('.box11-content').slick({
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                });
+            })
+        </script>
 
         <script>
             // Set the date we're counting down to
-            var countDownDate = new Date(new Date().getTime() + 12 * 60 * 60 * 1000).getTime();
+            var countDownDate = new Date(new Date().getTime() + 12 * 47 * 56 * 1000).getTime();
 
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -657,6 +698,47 @@
                     document.getElementById("time-countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
+
+            $('#dathang-form').submit(function (e) {
+                e.preventDefault();
+
+                if ($('#name').val().trim() != '' && $('#phone').val().trim() != '' && $('#address').val().trim() != '') {
+                    var form = $(this).serialize();
+                    var url = $(this).attr('action');
+
+                    $.ajax({
+                        url: url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: form,
+                        success: function (response) {
+                            if (response.status == 1) {
+                                BootstrapDialog.alert({
+                                    title: 'Đặt hàng thành công!',
+                                    message: 'Cảm ơn bạn đã đặt hàng Tỏi đen 1 nhánh Blaga. Chúng tôi sẽ liên hệ sớm nhất với bạn sau khi nhận được đơn hàng này.',
+                                    type: BootstrapDialog.TYPE_SUCCESS,
+                                    size: BootstrapDialog.SIZE_LARGE,
+                                    closable: true,
+                                    buttonLabel: 'Đóng'
+                                });
+
+                                $('#name').val('');
+                                $('#phone').val('');
+                                $('#address').val('');
+                            } else {
+                                BootstrapDialog.alert({
+                                    title: 'Đặt hàng không thành công!',
+                                    message: response.message,
+                                    type: BootstrapDialog.TYPE_WARNING,
+                                    size: BootstrapDialog.SIZE_LARGE,
+                                    closable: true,
+                                    buttonLabel: 'Đóng'
+                                });
+                            }
+                        }
+                    });
+                }
+            });
         </script>
 
 

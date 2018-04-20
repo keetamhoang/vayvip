@@ -60,12 +60,6 @@ class SaleController extends Controller
 
         $coupons = Code::where('name', 'lazada')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
 
-        $count = Code::where('name', 'lazada')->where('status', 0)->count();
-
-        if ($count > 20) {
-            
-        }
-
         $discounts = Discount::where('merchant', 'lazada')->where('status', 0)->where('is_coupon', 0)->orderBy('id', 'desc')->limit(10)->get();
 
         return view('frontend.km.lazada', compact('lazada', 'coupons', 'discounts'));

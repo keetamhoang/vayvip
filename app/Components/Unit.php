@@ -51,4 +51,50 @@ class Unit {
 
         return $phone;
     }
+
+    public static function addRowToSpreadsheet($sheet_service, $spreadsheetId, $ary_values = array()) {
+        // Set the sheet ID
+        $fileId = $spreadsheetId; // Copy & paste from a spreadsheet URL
+        // Build the CellData array
+        $values = array();
+        foreach( $ary_values AS $d ) {
+            $cellData = new \Google_Service_Sheets_CellData();
+            $value = new \Google_Service_Sheets_ExtendedValue();
+            $value->setStringValue($d);
+            $cellData->setUserEnteredValue($value);
+            $values[] = $cellData;
+        }
+        // Build the RowData
+        $rowData = new \Google_Service_Sheets_RowData();
+        $rowData->setValues($values);
+        // Prepare the request
+        $append_request = new \Google_Service_Sheets_AppendCellsRequest();
+        $append_request->setSheetId(0);
+        $append_request->setRows($rowData);
+        $append_request->setFields('userEnteredValue');
+        // Set the request
+        $request = new \Google_Service_Sheets_Request();
+        $request->setAppendCells($append_request);
+        // Add the request to the requests array
+        $requests = array();
+        $requests[] = $request;
+        // Prepare the update
+        $batchUpdateRequest = new \Google_Service_Sheets_BatchUpdateSpreadsheetRequest(array(
+            'requests' => $requests
+        ));
+
+        try {
+            // Execute the request
+            $response = $sheet_service->spreadsheets->batchUpdate($fileId, $batchUpdateRequest);
+            if( $response->valid() ) {
+                // Success, the row has been added
+                return true;
+            }
+        } catch (\Exception $e) {
+            // Something went wrong
+            dd($e->getMessage());
+        }
+
+        return false;
+    }
 }

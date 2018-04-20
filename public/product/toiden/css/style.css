@@ -207,7 +207,7 @@ img#box4-absimg2 {
 }
 .box6 {
 	position: relative;
-	margin-bottom: 130px;
+	margin-bottom: 70px;
 }
 
 img#box6-absimg {
@@ -438,6 +438,7 @@ div#time-countdown span {
 	background: #252525;
 	padding: 8px;
 	min-width:46px;
+	border-radius: 5px;
 }
 .countdown-text {
 	margin-top: 66px;
@@ -486,6 +487,16 @@ footer {
 }
 .modal-dialog {
     color: #000;
+}
+
+.banner-right-bot span {
+	text-decoration: line-through;
+}
+
+.mua-ngay {
+	width: 400px;
+	margin: 0 auto;
+	margin-bottom: 60px;
 }
 @media (max-width: 767px) {
 	.banner {
@@ -672,6 +683,10 @@ footer {
 	.footer-bot {
 		font-size: 14px;
 	}
+
+	.slick-slide img {
+		margin: 0 auto;
+	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
 	.banner-left {
@@ -800,4 +815,6 @@ footer {
 	.footer-bot {
 		font-size: 18px;
 	}
+
+
 }
