@@ -498,9 +498,31 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
+
+.bg-primary {
+	background-color: #020204;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 99999;
+}
+.navbar-dark a {
+	color: #fff;
+}
+.left {
+	float: left;
+}
+
+#for-mobile {
+	display: none;
+}
+
+#for-web {
+	display: block;
+}
 @media (max-width: 767px) {
 	.banner {
-		padding-top: 20px;
+		padding-top: 56px;
 	}
 
 	.banner-left {
@@ -686,6 +708,22 @@ footer {
 
 	.slick-slide img {
 		margin: 0 auto;
+	}
+
+	#info-lich {
+		display: none;
+	}
+
+	#for-mobile {
+		display: block;
+	}
+	
+	#for-web {
+		display: none;
+	}
+
+	.bg-primary .container {
+		padding: 0px;
 	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {

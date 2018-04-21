@@ -23,17 +23,80 @@
 @section('body')
     <div class="container-fluid1">
         <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <div class="container">
+                <div id="for-web">
+                    <div class="col-lg-4">
+                        <div class="left">
+                            <i class="fa fa-clock-o" style="font-size: 39px;margin-top: 5px;"></i>
+                        </div>
+                        <div class="left" style="margin-left: 8px;">
+                            <div>
+                                <p style="margin-bottom: 2px;margin-top: 4px;">Thời gian làm việc</p>
+                            </div>
+                            <div>
+                                <strong>Từ 7h00 - 21h00</strong> (Cả T7, CN & Lễ)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="left">
+                            <i class="fa fa-gift" style="font-size: 39px;margin-top: 5px;"></i>
+                        </div>
+                        <div class="left" style="margin-left: 8px;">
+                            <div>
+                                <p style="margin-bottom: 2px;margin-top: 4px;">Tỏi đen 1 nhánh <strong>Blaga</strong></p>
+                            </div>
+                            <div>
+                                Giảm sốc tới <strong>40%</strong> - Giá chỉ <strong>680.000Đ/500gr</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="left">
+                            <i class="fa fa-volume-control-phone" style="font-size: 39px;margin-top: 5px;"></i>
+                        </div>
+                        <div class="left" style="margin-left: 8px;">
+                            <div>
+                                <p style="margin-bottom: 2px;margin-top: 4px;">Chuyên gia tư vấn:</p>
+                            </div>
+                            <div>
+                                <strong><a href="#dathang-form">Đăng ký ngay</a></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="for-mobile">
+                    <div class="col-lg-6" style="padding-left: 5px;">
+                        <div class="left">
+                            <i class="fa fa-gift" style="font-size: 30px;margin-top: 7px;"></i>
+                        </div>
+                        <div class="left" style="margin-left: 8px;">
+                            <div>
+                                <p style="margin-bottom: 2px;margin-top: 1px;">Giảm sốc tới <strong>40%</strong></p>
+                            </div>
+                            <div>
+                                Giá chỉ <strong>680.000Đ/500gr</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" style="overflow: hidden;">
+                        <div class="left">
+                            <i class="fa fa-volume-control-phone" style="font-size: 30px;margin-top: 7px;"></i>
+                        </div>
+                        <div class="left" style="margin-left: 8px;">
+                            <div>
+                                <p style="margin-bottom: 2px;margin-top: 1px;">Chuyên gia tư vấn:</p>
+                            </div>
+                            <div>
+                                <strong><a href="#dathang-form">Đăng ký ngay</a></strong>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
-
         <div class="banner">
             <div class="container">
                 <div class="row">
