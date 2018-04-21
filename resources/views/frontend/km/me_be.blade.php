@@ -19,12 +19,12 @@
 @endsection
 
 @section('h1_seo')
-    <h1 class="h1-seo">Mã giảm giá dành cho mẹ và bé, khuyễn mãi giảm giá lên đến 50%
+    <h1 class="h1-seo">Mã giảm giá dành cho mẹ và bé, khuyến mãi giảm giá lên đến 50%
     </h1>
 @endsection
 
 @section('content_km')
-    <h2>Mã giảm giá dành cho mẹ và bé, khuyễn mãi giảm giá lên đến 50%
+    <h2>Mã giảm giá dành cho mẹ và bé, khuyến mãi giảm giá lên đến 50%
     </h2>
     <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

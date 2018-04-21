@@ -195,5 +195,6 @@ Route::group(['prefix' => 'san-pham'], function () {
     Route::get('/', 'Frontend\SaleController@index');
 
     Route::get('san-pham-toi-den-1-nhanh-blaga', 'Frontend\ProductController@toidenBlaga');
+    Route::get('san-pham-toi-den-1-nhanh-blaga/success', 'Frontend\ProductController@toidenBlagaSuccess');
     Route::post('dang-ky', 'Frontend\ProductController@register');
 });

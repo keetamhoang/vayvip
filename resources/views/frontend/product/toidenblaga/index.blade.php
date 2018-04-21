@@ -21,7 +21,7 @@
 
 
 @section('body')
-    <div class="container-fluid1">
+    <div class="container-fluid1" style="width: 100%;display: inherit;">
         <nav class="navbar navbar-dark bg-primary">
             <div class="container">
                 <div id="for-web">
@@ -58,10 +58,10 @@
                         </div>
                         <div class="left" style="margin-left: 8px;">
                             <div>
-                                <p style="margin-bottom: 2px;margin-top: 4px;">Chuyên gia tư vấn:</p>
+                                <p style="margin-bottom: 2px;margin-top: 4px;">Tư vấn miễn phí:</p>
                             </div>
                             <div>
-                                <strong><a href="#dathang-form">Đăng ký ngay</a></strong>
+                                <strong><a href="#time-countdown">Đăng ký ngay</a></strong>
                             </div>
                         </div>
                     </div>
@@ -81,16 +81,16 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6" style="overflow: hidden;">
-                        <div class="left">
+                    <div class="col-lg-6" style="overflow: hidden;padding-right: 0px;padding-left: 0px;">
+                        <div class="left phone-nav">
                             <i class="fa fa-volume-control-phone" style="font-size: 30px;margin-top: 7px;"></i>
                         </div>
-                        <div class="left" style="margin-left: 8px;">
+                        <div class="" style="text-align: right;padding-right: 10px;">
                             <div>
-                                <p style="margin-bottom: 2px;margin-top: 1px;">Chuyên gia tư vấn:</p>
+                                <p style="margin-bottom: 2px;margin-top: 1px;">Tư vấn miễn phí</p>
                             </div>
                             <div>
-                                <strong><a href="#dathang-form">Đăng ký ngay</a></strong>
+                                <strong><a href="#time-countdown">Đăng ký ngay</a></strong>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
 
             </div>
             <div class="banner-img">
-                <a href="#dathang-form"><img src="/product/toiden/image/1.png" alt=""></a>
+                <a href="#time-countdown"><img src="/product/toiden/image/1.png" alt=""></a>
             </div>
         </div> <!-- banner -->
 
@@ -269,38 +269,38 @@
                     <div class="col-xs-12 col-sm-3 col-sm-offset-3">
                         <div class="box5-list">
                             <div class="box5-content">
-                                Khát nước và đi tiểu nhiều
+                                <span style="color: #d99500">1.</span> Khát nước và đi tiểu nhiều
                             </div>
                             <div class="box5-content">
-                                Chậm lành vết thương
+                                 <span style="color: #d99500">2.</span> Chậm lành vết thương
                             </div>
                             <div class="box5-content">
-                                Nhìn mờ
+                                 <span style="color: #d99500">3.</span> Nhìn mờ
                             </div>
                             <div class="box5-content">
-                                Nhiễm trùng thường xuyên
+                                 <span style="color: #d99500">4.</span> Nhiễm trùng thường xuyên
                             </div>
                             <div class="box5-content">
-                                Khó chịu, cau có
+                                 <span style="color: #d99500">5.</span> Khó chịu, cau có
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-sm-offset-1">
                         <div class="box5-list">
                             <div class="box5-content">
-                                Đói liên tục
+                                 <span style="color: #d99500">6.</span> Đói liên tục
                             </div>
                             <div class="box5-content">
-                                Sụt cân đột ngột
+                                 <span style="color: #d99500">7.</span> Sụt cân đột ngột
                             </div>
                             <div class="box5-content">
-                                Suy nhược, mệt mỏi
+                                 <span style="color: #d99500">8.</span> Suy nhược, mệt mỏi
                             </div>
                             <div class="box5-content">
-                                Da khô, ngứa hoặc có vảy
+                                 <span style="color: #d99500">9.</span> Da khô, ngứa hoặc có vảy
                             </div>
                             <div class="box5-content">
-                                Ngứa ran hoặc tê
+                                 <span style="color: #d99500">10.</span> Ngứa ran hoặc tê
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
         </div>
 
         <div class="mua-ngay">
-            <a href="#dathang-form"><img src="/assets/image/mua-ngay.gif"></a>
+            <a href="#time-countdown"><img src="/assets/image/mua-ngay.gif"></a>
         </div>
 
         <div class="box7">
@@ -376,25 +376,25 @@
                                 CÔNG DỤNG SẢN PHẨM
                             </div>
                             <div class="box8-text">
-                                Có tác dụng rất tốt cho người bị bệnh tiểu đường
+                                <p>- Có tác dụng rất tốt cho người bị bệnh tiểu đường</p>
                             </div>
                             <div class="box8-text">
-                                Bảo vệ cơ thể phòng ngừa ung thư và giảm cholesteron
+                                <p>- Bảo vệ cơ thể phòng ngừa ung thư và giảm cholesteron</p>
                             </div>
                             <div class="box8-text">
-                                Tăng cường miễn dịch, chống vi khuẩn và nhiễm trùng
+                                <p>- Tăng cường miễn dịch, chống vi khuẩn và nhiễm trùng</p>
                             </div>
                             <div class="box8-text">
-                                Chống oxy hóa (sự lão hóa) và ngăn ngừa bệnh tật
+                                <p>- Chống oxy hóa (sự lão hóa) và ngăn ngừa bệnh tật</p>
                             </div>
                             <div class="box8-text">
-                                Điều trị tăng huyết áp
+                                <p>- Điều trị tăng huyết áp</p>
                             </div>
                             <div class="box8-text">
-                                Cơ chế hạn chế tăng men gan, giải độc và bảo vệ gan
+                                <p>- Cơ chế hạn chế tăng men gan, giải độc và bảo vệ gan</p>
                             </div>
                             <div class="box8-text">
-                                Tăng trí nhớ, cải thiện chức năng não
+                                <p>- Tăng trí nhớ, cải thiện chức năng não</p>
                             </div>
                         </div>
                     </div>
@@ -423,13 +423,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            01
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Người bệnh tim mạch, tiểu đường
+                                            <i class="fa fa-male"></i> Người bệnh tim mạch, tiểu đường
                                         </div>
                                     </div>
                                 </div>
@@ -437,13 +434,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            02
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Các trường hợp béo phì hoặc mỡ trong máu cao, người cao huyết áp, người có nguy cơ tai biến mạch máu não
+                                            <i class="fa fa-male"></i> Các trường hợp béo phì hoặc mỡ trong máu cao, người cao huyết áp, người có nguy cơ tai biến mạch máu não
                                         </div>
                                     </div>
                                 </div>
@@ -451,13 +445,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            03
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Người bị gan nhiễm mỡ, viêm gan hoặc dùng nhiều bia rượu, thuốc lá
+                                            <i class="fa fa-male"></i> Người bị gan nhiễm mỡ, viêm gan hoặc dùng nhiều bia rượu, thuốc lá
                                         </div>
                                     </div>
                                 </div>
@@ -465,13 +456,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            04
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Người thường xuyên tiếp xúc với môi trường độc hại
+                                            <i class="fa fa-male"></i> Người thường xuyên tiếp xúc với môi trường độc hại
                                         </div>
                                     </div>
                                 </div>
@@ -479,13 +467,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            05
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Người muốn tăng cường sức khỏe, tăng cường sức đề kháng, phòng ngừa ung thư, người già yếu, cơ thể suy nhược
+                                            <i class="fa fa-male"></i> Người muốn tăng cường sức khỏe, tăng cường sức đề kháng, phòng ngừa ung thư, người già yếu, cơ thể suy nhược
                                         </div>
                                     </div>
                                 </div>
@@ -493,13 +478,10 @@
                             <div class="target-right-text">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-2">
-                                        <div class="target-right-text-left">
-                                            06
-                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-10">
                                         <div class="target-right-text-right">
-                                            Người cần tăng đề kháng khi bị u bướu, sau phẫu thuật, đang điều trị hoặc sau điều trị bằng tia xạ, hóa chất.
+                                            <i class="fa fa-male"></i> Người cần tăng đề kháng khi bị u bướu, sau phẫu thuật, đang điều trị hoặc sau điều trị bằng tia xạ, hóa chất.
                                         </div>
                                     </div>
                                 </div>
@@ -526,13 +508,14 @@
                                 Cách sử dụng
                             </div>
                             <div class="box10-content">
-                                Bóc vỏ ăn trực tiếp hoặc hấp nóng trước khi ăn
+                                <span style="color: #d99500;">1.</span> Bóc vỏ ăn trực tiếp hoặc hấp nóng trước khi ăn
                             </div>
                             <div class="box10-content">
-                                Chế biến với các món khác tùy theo khẩu vị
+                                <span style="color: #d99500;">2.</span> Chế biến với các món khác tùy theo khẩu vị
                             </div>
+                            <div id="danh-gia"></div>
                             <div class="box10-content">
-                                Dừng từ 2-3 củ/ngày
+                                <span style="color: #d99500;">3.</span> Dùng từ 2-3 củ/ngày
                             </div>
                         </div>
                     </div>
@@ -548,8 +531,9 @@
                 <div class="box11-content">
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
                             <div class="box11-text">
-                                Tôi là Trinh năm nay 58 tuổi là cán bộ về hưu, sống gắn liền với bệnh tiểu đường gần 2 năm nay, cũng dùng thuốc Tây thuốc Ta, phương pháp chữa trị mà vẫn chưa khỏi. Tình cờ ông bạn đồng niên giới thiệu cho Tỏi đen một nhánh Blaga nói rằng đã giảm chỉ số đường huyết, ngăn chặn cả các biến chứng tiểu đường nữa, lại rất tốt cho sức khỏe. Thật sự bất ngờ sau 4 tháng sử dụng, đường huyết của tôi đã ở mức bình thường, mắt sáng hơn, cũng không còn tình trạng rối loạn tiêu hóa nữa. Tin tưởng vào chất lượng, tôi sử dụng sản phẩm hàng ngày kết hợp với chế độ ăn uống và luyện tập hợp lý để cơ thể khỏe mạnh hơn. Sản phẩm quá tuyệt vời cho những người đang mắc tiểu đường, tôi sẽ sử dụng lâu dài và giới thiệu cho bạn bè người thân.
+                                2 tháng trước tôi được con mua tặng hộp tỏi đen này để hỗ trợ mẹ điều trị tiểu đường. Tỏi đen thì cũng không phải là ít phổ biển nữa, công dụng của nó thì trên ti vi báo đài tôi cũng nghe. Tôi vẫn dùng hàng ngày và thường hay ăn trực tiếp vì vị của nó cũng rất dễ ăn và ngon. Sức khỏe của tôi có sự cải thiện tương đối, hệ tiêu hóa tốt hơn hẳn sau 1 tuần đầu dùng và tôi vẫn đang dùng hàng ngày. đường huyết sau ăn tôi vẫn cố giữ ổn định 6.5 đến dưới 7 mmol. Tôi nghĩ dù có dùng bổ sung gì thì mình vẫn nên kết hợp với chế độ thường ngày tốt, cố gắng giữ gìn.
                             </div>
                             <div class="box11-avatar">
                                 <div class="row">
@@ -564,7 +548,7 @@
                                                 <div class="col-xs-12 col-sm-7">
                                                     <div class="box11-avatar-content">
                                                         <div class="box11-avatar-name">
-                                                            BÁC DƯƠNG TRINH
+                                                            BÁC QUỲNH CHÂU
                                                         </div>
                                                         <div class="box11-avatar-name">
                                                             58 tuổi - Hà Nội
@@ -578,10 +562,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
                             <div class="box11-text">
-                                Tôi là Trinh năm nay 58 tuổi là cán bộ về hưu, sống gắn liền với bệnh tiểu đường gần 2 năm nay, cũng dùng thuốc Tây thuốc Ta, phương pháp chữa trị mà vẫn chưa khỏi. Tình cờ ông bạn đồng niên giới thiệu cho Tỏi đen một nhánh Blaga nói rằng đã giảm chỉ số đường huyết, ngăn chặn cả các biến chứng tiểu đường nữa, lại rất tốt cho sức khỏe. Thật sự bất ngờ sau 4 tháng sử dụng, đường huyết của tôi đã ở mức bình thường, mắt sáng hơn, cũng không còn tình trạng rối loạn tiêu hóa nữa. Tin tưởng vào chất lượng, tôi sử dụng sản phẩm hàng ngày kết hợp với chế độ ăn uống và luyện tập hợp lý để cơ thể khỏe mạnh hơn. Sản phẩm quá tuyệt vời cho những người đang mắc tiểu đường, tôi sẽ sử dụng lâu dài và giới thiệu cho bạn bè người thân.
+                                Tôi rất sợ các sản phẩm được quảng cáo tùm lum trên mạng nên tôi đã tìm hiểu rất kĩ về chứng nhận rồi mới mua. Khi dùng tỏi thì thấy rất thoải mái và không khó chịu như nhiều loại thuốc khác. Tôi thấy tỏi đen đúng nghĩa là một sản phẩm hỗ trợ tăng cường sức khỏe một cách tổng quát, từ đó  có tác dụng chuyên hơn để chống tiểu đường.
                             </div>
                             <div class="box11-avatar">
                                 <div class="row">
@@ -590,16 +576,16 @@
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
                                                     <div class="box11-avatar-img">
-                                                        <img src="/product/toiden/image/ava1.png" alt="">
+                                                        <img src="/product/toiden/image/ava2.png" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-7">
                                                     <div class="box11-avatar-content">
                                                         <div class="box11-avatar-name">
-                                                            BÁC DƯƠNG TRINH
+                                                            BÁC QUANG HÀO
                                                         </div>
                                                         <div class="box11-avatar-name">
-                                                            58 tuổi - Hà Nội
+                                                            46 tuổi - Hải Phòng
                                                         </div>
                                                     </div>
                                                 </div>
@@ -610,11 +596,144 @@
                             </div>
                         </div>
                     </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
+                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
+                            {{--<div class="box11-text">--}}
+                                {{--Tôi sử dụng và thấy rất tốt. Tôi đã dùng liên tiếp đến nay là 3 tháng, giá cũng không quá đắt, dùng tăng cường sức khỏe và ổn định tiêu hóa, đường huyết. Tôi nghĩ rằng khi mà hấp thụ tốt bài tiết tốt vận động tốt thì tiểu đường cũng sẽ dần biến mất.--}}
+                            {{--</div>--}}
+                            {{--<div class="box11-avatar">--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
+                                        {{--<div class="box11-avatar-box">--}}
+                                            {{--<div class="row">--}}
+                                                {{--<div class="col-xs-12 col-sm-5">--}}
+                                                    {{--<div class="box11-avatar-img">--}}
+                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-xs-12 col-sm-7">--}}
+                                                    {{--<div class="box11-avatar-content">--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--BÁC VŨ CÔNG CHƯƠNG--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--58 tuổi - Hà Nội--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
+                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
+                            {{--<div class="box11-text">--}}
+                                {{--Tôi rất sợ các sản phẩm được quảng cáo tùm lum trên mạng nên tôi đã tìm hiểu rất kĩ về chứng nhận rồi mới mua. Khi dùng tỏi thì thấy rất thoải mái và không khó chịu như nhiều loại thuốc khác. Tôi thấy tỏi đen đúng nghĩa là một sản phẩm hỗ trợ tăng cường sức khỏe một cách tổng quát, từ đó  có tác dụng chuyên hơn để chống tiểu đường.--}}
+                            {{--</div>--}}
+                            {{--<div class="box11-avatar">--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
+                                        {{--<div class="box11-avatar-box">--}}
+                                            {{--<div class="row">--}}
+                                                {{--<div class="col-xs-12 col-sm-5">--}}
+                                                    {{--<div class="box11-avatar-img">--}}
+                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-xs-12 col-sm-7">--}}
+                                                    {{--<div class="box11-avatar-content">--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--BÁC HỒ THỊ NGA--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--58 tuổi - Hà Nội--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
+                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
+                            {{--<div class="box11-text">--}}
+                                {{--Đăng ký thông tin được tư vấn nhanh chóng, nhiệt tình, hiểu thêm nhiều kiến thức về chăm sóc sức khỏe khi bị tiểu đường. Tôi đã tin tưởng mua và hài lòng.--}}
+                            {{--</div>--}}
+                            {{--<div class="box11-avatar">--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
+                                        {{--<div class="box11-avatar-box">--}}
+                                            {{--<div class="row">--}}
+                                                {{--<div class="col-xs-12 col-sm-5">--}}
+                                                    {{--<div class="box11-avatar-img">--}}
+                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-xs-12 col-sm-7">--}}
+                                                    {{--<div class="box11-avatar-content">--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--BÁC HOÀI SA--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--58 tuổi - Hà Nội--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
+                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
+                            {{--<div class="box11-text">--}}
+                                {{--Đâu phải thuốc kích thích hay thuốc tiên đâu, không phải ai dùng cũng ngay lập tức là hiệu quả được. Tuần đầu tôi dùng nhưng không thấy hiệu quả tôi phải gọi lại để hỏi kĩ vấn đề và định không dùng nữa, nhưng được tư vấn kĩ hơn về ăn uống chăm sóc bản thân nên đã dùng tiếp thì tuần thứ 2 đã hiệu quả hơn rất nhiều. Tôi đang thuộc tiểu đường tuýp 2 và luôn cần chú ý giữ gìn chỉ số.--}}
+                            {{--</div>--}}
+                            {{--<div class="box11-avatar">--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
+                                        {{--<div class="box11-avatar-box">--}}
+                                            {{--<div class="row">--}}
+                                                {{--<div class="col-xs-12 col-sm-5">--}}
+                                                    {{--<div class="box11-avatar-img">--}}
+                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-xs-12 col-sm-7">--}}
+                                                    {{--<div class="box11-avatar-content">--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--BÁC NGUYỄN THỊ BẢY--}}
+                                                        {{--</div>--}}
+                                                        {{--<div class="box11-avatar-name">--}}
+                                                            {{--58 tuổi - Hà Nội--}}
+                                                        {{--</div>--}}
+                                                    {{--</div>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
+            <div id="contact"></div>
         </div>
 
-        <div class="contact">
+        <div class="contact" >
             <div class="container">
 
 
@@ -672,7 +791,10 @@
 
                                     <input class="form-control" name="title" id="title" type="hidden" value="Thông tin đăng ký được gửi từ Tỏi đen 1 nhánh Blaga">
 
-
+                                    <h4 style="text-align: center;line-height: 32px;">Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!</h4>
+                                    <div class="loading-gif" style="">
+                                        <img src="/product/toiden/image/loading.gif">
+                                    </div>
                                     <button class="btnsubmit" type="submit">mua ngay</button>
                                 </form>
                             </div>
@@ -697,7 +819,17 @@
 
                 </div></div>
         </footer>
-
+        <div id="footer-mobile">
+            <div class="col col-lg-4 left" style="background: #00ab4d">
+                <a href="#time-countdown"><i class="fa fa-shopping-cart"></i> ĐẶT HÀNG</a>
+            </div>
+            <div class="col col-lg-4 left" style="background: #d81921">
+                <a href="#contact"><i class="fa fa-gift"></i> ƯU ĐÃI</a>
+            </div>
+            <div class="col col-lg-4 left" style="background: #ff9002">
+                <a href="#danh-gia"><i class="fa fa-check-square-o"></i> ĐÁNH GIÁ</a>
+            </div>
+        </div>
 
 
         <script>
@@ -776,6 +908,9 @@
             $('#dathang-form').submit(function (e) {
                 e.preventDefault();
 
+                $('.btnsubmit').hide();
+                $('.loading-gif').show();
+
                 if ($('#name').val().trim() != '' && $('#phone').val().trim() != '' && $('#address').val().trim() != '') {
                     var form = $(this).serialize();
                     var url = $(this).attr('action');
@@ -787,18 +922,19 @@
                         data: form,
                         success: function (response) {
                             if (response.status == 1) {
-                                BootstrapDialog.alert({
-                                    title: 'Đặt hàng thành công!',
-                                    message: 'Cảm ơn bạn đã đặt hàng Tỏi đen 1 nhánh Blaga. Chúng tôi sẽ liên hệ sớm nhất với bạn sau khi nhận được đơn hàng này.',
-                                    type: BootstrapDialog.TYPE_SUCCESS,
-                                    size: BootstrapDialog.SIZE_LARGE,
-                                    closable: true,
-                                    buttonLabel: 'Đóng'
-                                });
-
-                                $('#name').val('');
-                                $('#phone').val('');
-                                $('#address').val('');
+//                                BootstrapDialog.alert({
+//                                    title: 'Đặt hàng thành công!',
+//                                    message: 'Cảm ơn bạn đã đặt hàng Tỏi đen 1 nhánh Blaga. Chúng tôi sẽ liên hệ sớm nhất với bạn sau khi nhận được đơn hàng này.',
+//                                    type: BootstrapDialog.TYPE_SUCCESS,
+//                                    size: BootstrapDialog.SIZE_LARGE,
+//                                    closable: true,
+//                                    buttonLabel: 'Đóng'
+//                                });
+//
+//                                $('#name').val('');
+//                                $('#phone').val('');
+//                                $('#address').val('');
+                                window.location.replace(response.link);
                             } else {
                                 BootstrapDialog.alert({
                                     title: 'Đặt hàng không thành công!',
@@ -808,9 +944,15 @@
                                     closable: true,
                                     buttonLabel: 'Đóng'
                                 });
+
+                                $('.btnsubmit').show();
+                                $('.loading-gif').hide();
                             }
                         }
                     });
+                } else {
+                    $('.btnsubmit').show();
+                    $('.loading-gif').hide();
                 }
             });
         </script>

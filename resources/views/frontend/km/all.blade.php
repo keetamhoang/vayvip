@@ -117,7 +117,7 @@
     </section>
 
     <section id="featured-post-3" class="widget featured-content featuredpost">
-        <div class="widget-wrap"><a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}" title="KHUYỄN MÃI – GIẢM GIÁ MỚI NHẤT"><h2 class="widget-title widgettitle">KHUYỄN MÃI – GIẢM GIÁ MỚI NHẤT</h2></a>
+        <div class="widget-wrap"><a href="{{ url('ma-giam-gia/ma-giam-gia-online') }}" title="KHUYẾN MÃI – GIẢM GIÁ MỚI NHẤT"><h2 class="widget-title widgettitle">KHUYẾN MÃI – GIẢM GIÁ MỚI NHẤT</h2></a>
             @php $newests = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')->orderBy('start_time', 'desc')->limit(7)->get() @endphp
 
             @foreach($newests as $newest)

@@ -17,10 +17,10 @@
 @endsection
 
 @section('h1_seo')
-    <h1 class="h1-seo">Mã giảm giá đồ điện tử - công nghê, Coupon khuyễn mãi lên đến 60% trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
+    <h1 class="h1-seo">Mã giảm giá đồ điện tử - công nghê, Coupon khuyến mãi lên đến 60% trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
 @endsection
 
 @section('content_km')
-    <h2>Mã giảm giá đồ điện tử - công nghê, Coupon khuyễn mãi lên đến 60% trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h2>
+    <h2>Mã giảm giá đồ điện tử - công nghê, Coupon khuyến mãi lên đến 60% trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h2>
     <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

@@ -17,6 +17,10 @@ class ProductController extends Controller
         return view('frontend.product.toidenblaga.index');
     }
 
+    public function toidenBlagaSuccess() {
+        return view('frontend.product.toidenblaga.success');
+    }
+
     public function register(Request $request) {
         $data = $request->all();
 
@@ -43,7 +47,8 @@ class ProductController extends Controller
 
         return response([
             'status' => 1,
-            'message' => 'Thành công'
+            'message' => 'Thành công',
+            'link' => 'https://taichinhsmart.vn/san-pham/san-pham-toi-den-1-nhanh-blaga/success'
         ]);
     }
 }

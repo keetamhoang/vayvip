@@ -20,12 +20,12 @@
 @endsection
 
 @section('h1_seo')
-    <h1 class="h1-seo">Mã giảm giá sách, sách Tiki , Nhà sách Nhã Nam khuyễn mãi
+    <h1 class="h1-seo">Mã giảm giá sách, sách Tiki , Nhà sách Nhã Nam khuyến mãi
     </h1>
 @endsection
 
 @section('content_km')
-    <h2>Mã giảm giá sách, sách Tiki , Nhà sách Nhã Nam khuyễn mãi
+    <h2>Mã giảm giá sách, sách Tiki , Nhà sách Nhã Nam khuyến mãi
     </h2>
     <p>Chúng tôi đang xây dựng nội dung cho trang này.</p>
 @endsection

@@ -52,7 +52,7 @@
 
                         <h2>Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng {{ \Carbon\Carbon::now()->month }} năm {{ \Carbon\Carbon::now()->year }}</h2>
                         <p>
-                            Chia sẻ <strong>mã giảm giá</strong> hoàn toàn miễn phí của Lazada, voucher Lazada, mã giảm giá Tiki,  ma giam gia Shopee, mã khuyễn mãi Grab, ma giam gia Adayroi, Lotte, <strong>mã giảm giá</strong> cho những bạn hay đi du lịch để chuyến đi thêm trọn vẹn...<br>
+                            Chia sẻ <strong>mã giảm giá</strong> hoàn toàn miễn phí của Lazada, voucher Lazada, mã giảm giá Tiki,  ma giam gia Shopee, mã khuyến mãi Grab, ma giam gia Adayroi, Lotte, <strong>mã giảm giá</strong> cho những bạn hay đi du lịch để chuyến đi thêm trọn vẹn...<br>
                             Những <strong>mã giảm giá</strong> được cập nhật hàng ngày, hàng giờ với các giá trị khuyến mãi không giới hạn từ 50k, 100k, 500k… có nhiều voucher giảm cực tốt lên đến 20%, 50% cho các đơn hàng. Hãy trở thành người tiêu dùng thông thái, tiết kiệm được nhiều khoản tiền với các <strong>MÃ GIẢM GIÁ HOT</strong>.
                         </p>
                         <div class="entry-share">
@@ -161,10 +161,10 @@
                                                                                                              height="135"
                                                                                                              src="/assets/image/Yes24-Vietnam-240x135.png"
                                                                                                              class="entry-image attachment-post"
-                                                                                                             alt="Mã Giảm Giá Yes24, Khuyễn Mãi Yes24 Tháng {{ \Carbon\Carbon::now()->format('m/Y') }} Mới Nhất"
+                                                                                                             alt="Mã Giảm Giá Yes24, Khuyến Mãi Yes24 Tháng {{ \Carbon\Carbon::now()->format('m/Y') }} Mới Nhất"
                                                                                                              itemprop="image"></a>
                 <header class="entry-header"><h2 class="entry-title" itemprop="headline"><a
-                                href="{{ url('ma-giam-gia/ma-giam-gia-yes24') }}">Mã Giảm Giá Yes24, Khuyễn Mãi Yes24 Tháng {{ \Carbon\Carbon::now()->format('m/Y') }} Mới Nhất</a></h2></header>
+                                href="{{ url('ma-giam-gia/ma-giam-gia-yes24') }}">Mã Giảm Giá Yes24, Khuyến Mãi Yes24 Tháng {{ \Carbon\Carbon::now()->format('m/Y') }} Mới Nhất</a></h2></header>
             </article>
 
             <article
