@@ -484,6 +484,76 @@ class CrawlerChanhTuoi extends Command
                 }
             }
         });
+
+        // tiki chanh tuoi
+        $res = $client->request('GET', 'https://chanhtuoi.com/ma-giam-gia-tiki-khuyen-mai.html');
+
+        $res->filter('.cs-row')->each(function ($node, $i) {
+            try {
+                $a = $node->filter('.cs-row-pri .ec-code')->text();
+
+                $data['code'] = trim($a);
+            } catch (\Exception $ex) {
+                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
+            }
+
+            if (!empty($data['code'])) {
+                $checkCode = Code::where('code', $data['code'])->where('name', 'tiki')->first();
+
+                if (empty($checkCode)) {
+
+                    try {
+                        $percent = $node->filter('.cs-row-pri .cs-col-pri-1')->text();
+                        $data['percent'] = trim($percent);
+                    } catch (\Exception $ex) {
+                        $this->line('ERROR2: '.$ex->getMessage());
+                    }
+                    try {
+//                        $typeKm = $node->filter('.coupon_code_label')->text();
+                        $data['type_km'] = 'COUPON';
+                    } catch (\Exception $ex) {
+                        $this->line('ERROR3: '.$ex->getMessage());
+                    }
+
+                    try {
+                        $title = $node->filter('.cs-row-pri .cs-des')->text();
+                        $data['title'] = trim($title);
+                    } catch (\Exception $ex) {
+                        $this->line('ERROR4: '.$ex->getMessage());
+                    }
+
+//                    try {
+//                        $hsd = $node->filter('.cs-col-exp-1 p')->first()->html();
+//                        $data['hsd'] = trim($hsd);
+//                    } catch (\Exception $ex) {
+//                        $this->line('ERROR5: '.$ex->getMessage());
+//                    }
+
+                    try {
+
+                        if ($node->filter('.cs-col-exp-1')->count() > 0) {
+                            $desc = $node->filter('.cs-col-exp-1')->html();
+//                            $desc = trim($desc);
+//                            $desc = preg_replace("/[\n\r]/", "", $desc);
+//
+//                            $desc = str_replace('<a class="more less" href="#" target="_blank" rel="nofollow">….Thu gọn</a>', '', $desc);
+
+                            $data['desc'] = trim($desc);
+                        }
+
+                    } catch (\Exception $ex) {
+                        $this->line('ERROR6: '.$ex->getMessage());
+                    }
+
+                    if (!empty($data)) {
+                        $data['name'] = 'tiki';
+                        $data['type'] = 1; //coupon
+
+                        Code::create($data);
+                    }
+                }
+            }
+        });
     }
 
 
