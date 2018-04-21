@@ -62,7 +62,10 @@ class HoangCommand extends Command
                 if (empty($checkCode)) {
 
                     try {
-                        $percent = $node->filter('.cs-row-pri .cs-col-pri-1')->text();
+                        $percent = $node->filter('.cs-col-exp-1 p')->eq(1)->text();
+                        $percent = trim($percent);
+                        $percent = preg_replace("/[\n\r]/", "", $percent);
+                        $percent = str_replace('Khuyến mãi:', '', $percent);
                         $data['percent'] = trim($percent);
                     } catch (\Exception $ex) {
                         $this->line('ERROR2: '.$ex->getMessage());
@@ -99,7 +102,6 @@ class HoangCommand extends Command
                     }
                 }
             }
-
             dd(1);
         });
     }

@@ -18227,7 +18227,7 @@ a.alignleft {
     z-index: -1;
     min-width: 50px;
     height: 45px;
-    padding: 0 5;
+    padding: 0;
     font-weight: 500;
     line-height: 45px;
     text-align: center;
@@ -18238,6 +18238,7 @@ a.alignleft {
     color: #222;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid #ddd;
+    overflow: hidden !important;
 }
 
 .xemngayz {

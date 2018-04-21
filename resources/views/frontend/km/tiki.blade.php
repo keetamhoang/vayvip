@@ -39,6 +39,7 @@
 
                 <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ TIKI, VOUCHER TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 
+                <div id="km-coupon">
                 @foreach($coupons as $key => $coupon)
                     <div class="coupondiv" id="coupon-{{ $coupon->id }}">
                         <div class="promotiontype">
@@ -64,7 +65,7 @@
                             </div>
                             <div class="promotiondetails">
                                 <div class="coupontitle"> {{ $coupon->title }}</div>
-                                <div class="cpinfo"><strong class="cpexp">{{ !empty($coupon->hsd) ? $coupon->hsd : 'Không giới hạn' }} </strong><br>
+                                <div class="cpinfo"><strong class="cpexp">{{ !empty($coupon->hsd) ? $coupon->hsd : '' }} </strong><br>
                                     <div class="cpdesc">{!! $coupon->desc !!}</div>
                                 </div>
                                 <input name="code" type="text" style="display: none">
@@ -79,6 +80,11 @@
                         </div>
                     </div>
                 @endforeach
+                </div>
+
+                <div class="load-more">
+                    <button data-id="tiki">Còn nhiều nữa, xem thêm</button>
+                </div>
 
                 <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 

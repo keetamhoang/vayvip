@@ -503,13 +503,15 @@ class CrawlerChanhTuoi extends Command
                 if (empty($checkCode)) {
 
                     try {
-                        $percent = $node->filter('.cs-row-pri .cs-col-pri-1')->text();
+                        $percent = $node->filter('.cs-col-exp-1 p')->eq(1)->text();
+                        $percent = trim($percent);
+                        $percent = preg_replace("/[\n\r]/", "", $percent);
+                        $percent = str_replace('Khuyến mãi:', '', $percent);
                         $data['percent'] = trim($percent);
                     } catch (\Exception $ex) {
                         $this->line('ERROR2: '.$ex->getMessage());
                     }
                     try {
-//                        $typeKm = $node->filter('.coupon_code_label')->text();
                         $data['type_km'] = 'COUPON';
                     } catch (\Exception $ex) {
                         $this->line('ERROR3: '.$ex->getMessage());
@@ -522,22 +524,10 @@ class CrawlerChanhTuoi extends Command
                         $this->line('ERROR4: '.$ex->getMessage());
                     }
 
-//                    try {
-//                        $hsd = $node->filter('.cs-col-exp-1 p')->first()->html();
-//                        $data['hsd'] = trim($hsd);
-//                    } catch (\Exception $ex) {
-//                        $this->line('ERROR5: '.$ex->getMessage());
-//                    }
-
                     try {
 
                         if ($node->filter('.cs-col-exp-1')->count() > 0) {
                             $desc = $node->filter('.cs-col-exp-1')->html();
-//                            $desc = trim($desc);
-//                            $desc = preg_replace("/[\n\r]/", "", $desc);
-//
-//                            $desc = str_replace('<a class="more less" href="#" target="_blank" rel="nofollow">….Thu gọn</a>', '', $desc);
-
                             $data['desc'] = trim($desc);
                         }
 
