@@ -45,7 +45,7 @@
                         </div>
                         <div class="left" style="margin-left: 8px;">
                             <div>
-                                <p style="margin-bottom: 2px;margin-top: 4px;">Tỏi đen 1 nhánh <strong>Blaga</strong></p>
+                                <p style="margin-bottom: 2px;margin-top: 3px;">Tỏi đen 1 nhánh <strong>Blaga</strong></p>
                             </div>
                             <div>
                                 Giảm sốc tới <strong>40%</strong> - Giá chỉ <strong>680.000Đ/500gr</strong>
@@ -103,7 +103,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5">
                         <div class="banner-left">
-                            Phương pháp điều trị tiểu đường hiệu quả
+                            <h1>Tỏi đen Blaga Nhật Bản</h1>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
@@ -125,28 +125,26 @@
 
             </div>
             <div class="banner-img">
-                <a href="#time-countdown"><img src="/product/toiden/image/toi-den-blaga-1.png" alt=""></a>
+                <a href="#time-countdown"><img src="/product/toiden/image/toi-den-blaga-1.png" alt="Tỏi đen - điều trị tiểu đường hiệu quả"></a>
             </div>
         </div> <!-- banner -->
 
         <div class="box2">
-            <img src="/product/toiden/image/toi-den-blaga-icon1.png" alt="" id="box2-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-icon1.png" alt="BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21" id="box2-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-4">
-                        <img src="/product/toiden/image/toi-den-blaga-leaf1.png" alt="" id="box2-absimg2">
+                        <img src="/product/toiden/image/toi-den-blaga-leaf1.png" alt="BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21" id="box2-absimg2">
                         <div class="box2-list">
                             <div class="box2-title">
-                                BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21
+                                <h2>BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21</h2>
                             </div>
                             <div class="box2-note">
                                 “Việt Nam là một trong số những quốc gia có tốc độ gia tăng bệnh nhân
                                 đái tháo đường cao nhất thế giới, với tỉ lệ ở mức báo động 211%”
                             </div>
                             <div class="box2-text">
-                                Cứ 20 người Việt Nam trưởng thành thì có 1 người mắc bệnh đái tháo đường.
-                                5 triệu người Việt Nam mắc bệnh tiểu đường
-
+                                Cứ 20 người Việt Nam trưởng thành thì có 1 người mắc bệnh đái tháo đường. Hiện có 5 triệu công dân Việt Nam mắc bệnh tiểu đường
                             </div>
                             <div class="box2-text">
                                 Mỗi ngày có 150 người Việt chết vì đái tháo đường, cao gấp 7 lần số người tử vong vì tai nạn giao thông
@@ -160,7 +158,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="percent-left">
-                                        <img src="/product/toiden/image/toi-den-blaga-icon2.png" alt="">
+                                        <img src="/product/toiden/image/toi-den-blaga-icon2.png" alt="BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-8">
@@ -175,7 +173,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="percent-left">
-                                        <img src="/product/toiden/image/toi-den-blaga-icon3.png" alt="">
+                                        <img src="/product/toiden/image/toi-den-blaga-icon3.png" alt="BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-8">
@@ -207,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="/product/toiden/image/toi-den-blaga-2.png" alt="" id="box3-absimg">
+                <img src="/product/toiden/image/toi-den-blaga-2.png" alt="BỆNH TIỂU ĐƯỜNG - KẺ GIẾT NGƯỜI THẦM LẶNG!" id="box3-absimg">
             </div>
         </div> <!-- box3 -->
 
@@ -223,11 +221,10 @@
                 </div>
                 <div class="box4-content">
                     <div class="box4-title">
-                        Tai biến mạnh máu não
+                        Tai biến mạch máu não
                     </div>
                     <div class="box4-text">
-
-                        Người bị bệnh tiểu đường có nguy cơ bị tai biến mạch máu não cao hơn người bình thường 2-4 lần.
+                        Bị bệnh tiểu đường có nguy cơ bị tai biến mạch máu não cao gấp 2-4 lần bình thường
                     </div>
                 </div>
                 <div class="box4-content">
@@ -236,7 +233,7 @@
                     </div>
                     <div class="box4-text">
 
-                        20% người bệnh đái tháo đường bị bệnh thận, gây suy thận, có thể phải chạy thận nhân tạo hoặc ghép thận.
+                        20% người bệnh đái tháo đường bị bệnh thận, gây suy thận, có thể phải chạy thận nhân tạo hoặc ghép thận
                     </div>
                 </div>
                 <div class="box4-content">
@@ -245,7 +242,7 @@
                     </div>
                     <div class="box4-text">
 
-                        Biến chứng cắt cụt chân là biến chứng thường gặp mà người mắc đái tháo đường sợ nhất, ước tính có hơn 5% các bệnh nhân đái tháo đường bị cắt cụt ngón chân, bàn chân, hoặc cẳng chân. Cứ mỗi 30 giây trôi qua, trên thế giới lại có một người bệnh ĐTĐ bị cắt cụt chân.
+                        Biến chứng cắt cụt chân là biến chứng thường gặp mà người mắc đái tháo đường sợ nhất, ước tính có hơn 5% các bệnh nhân đái tháo đường bị cắt cụt ngón chân, bàn chân, hoặc cẳng chân. Cứ mỗi 30 giây trôi qua, trên thế giới lại có một người bệnh ĐTĐ bị cắt cụt chân
                     </div>
                 </div>
                 <div class="box4-content">
@@ -257,14 +254,14 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/toi-den-blaga-4.png" alt="" id="box4-absimg">
-            <img src="/product/toiden/image/toi-den-blaga-3.png" alt="" id="box4-absimg2">
+            <img src="/product/toiden/image/toi-den-blaga-4.png" alt="BỆNH TIỂU ĐƯỜNG - KẺ GIẾT NGƯỜI THẦM LẶNG!" id="box4-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-3.png" alt="BỆNH TIỂU ĐƯỜNG - KẺ GIẾT NGƯỜI THẦM LẶNG!" id="box4-absimg2">
         </div>
 
         <div class="box5">
             <div class="container">
                 <div class="box5-title">
-                    10 DẤU HIỆU PHỔ BIẾN CẢNH BÁO NGUY CƠ BỊ TIỂU ĐƯỜNG CAO
+                    <h2>10 DẤU HIỆU PHỔ BIẾN CẢNH BÁO NGUY CƠ BỊ TIỂU ĐƯỜNG CAO</h2>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-3">
@@ -310,18 +307,18 @@
         </div>
 
         <div class="box6">
-            <img src="/product/toiden/image/toi-den-blaga-6.png" alt="" id="box6-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-6.png" alt="10 DẤU HIỆU PHỔ BIẾN CẢNH BÁO NGUY CƠ BỊ TIỂU ĐƯỜNG CAO" id="box6-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-4">
                         <div class="box6-left">
-                            <img src="/product/toiden/image/toi-den-blaga-5.png" alt="">
+                            <a href="#time-countdown"><img src="/product/toiden/image/toi-den-blaga-5.png" alt="10 DẤU HIỆU PHỔ BIẾN CẢNH BÁO NGUY CƠ BỊ TIỂU ĐƯỜNG CAO"></a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">
                         <div class="box6-right">
                             <div class="box6-title">
-                                Tỏi đen 1 nhánh <span>Blaga</span>
+                                <h2>Tỏi đen 1 nhánh Blaga</h2>
                             </div>
                             <div class="box6-note">
                                 GIẢI PHÁP AN TOÀN VÀ HIỆU QUẢ CHO
@@ -337,7 +334,7 @@
         </div>
 
         <div class="mua-ngay">
-            <a href="#time-countdown"><img src="/assets/image/mua-ngay.gif"></a>
+            <a href="#time-countdown"><img src="/assets/image/mua-ngay.gif" alt="10 DẤU HIỆU PHỔ BIẾN CẢNH BÁO NGUY CƠ BỊ TIỂU ĐƯỜNG CAO"></a>
         </div>
 
         <div class="box7">
@@ -346,8 +343,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="box7-title">
-                            THỰC PHẨM VÀNG <br>
-                            CHO MỘT SỨC KHỎE KIM CƯƠNG!
+                            <h2>TỎI ĐEN BLAGA - THỰC PHẨM VÀNG CHO MỘT SỨC KHỎE KIM CƯƠNG!</h2>
                         </div>
                     </div>
                 </div>
@@ -355,12 +351,12 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="box7-content">
-                            Tỏi đen một nhánh Blaga được làm từ tỏi tươi chỉ có một nhánh duy nhất được chọn lọc kỹ càng, trải qua giai đoạn lên men chậm với điều kiện khắt khe về độ ẩm và nhiệt độ. Sau từ 1 đên 2 tháng lên men, hoạt chất có trong các tép tỏi tăng lên rõ rệt, trong đó hoạt chất sallyl lcystein (SAC) được coi là quan trọng nhất tăng 6 lần, fructose tăng 52 lần, hàm lượng đường tăng 13 lần, đặc biệt hợp chất SOD (superoxide dismutase có tác dụng phòng ngừa ung thư tăng gấp 10 lần so với tỏi tươi.
+                            Tỏi đen một nhánh Blaga được làm từ tỏi tươi chỉ có một nhánh duy nhất được chọn lọc kỹ càng, trải qua giai đoạn lên men chậm với điều kiện khắt khe về độ ẩm và nhiệt độ. Sau từ 1 đên 2 tháng lên men, hoạt chất có trong các tép tỏi tăng lên rõ rệt, trong đó hoạt chất sallyl lcystein (SAC) được coi là quan trọng nhất tăng 6 lần, fructose tăng 52 lần, hàm lượng đường tăng 13 lần, đặc biệt hợp chất SOD (superoxide dismutase) có trong tỏi đen Blaga, có tác dụng phòng ngừa ung thư tăng gấp 10 lần so với tỏi tươi.
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/toi-den-blaga-8.png" alt="" id="box7-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-8.png" alt="TỎI ĐEN BLAGA - THỰC PHẨM VÀNG CHO MỘT SỨC KHỎE KIM CƯƠNG!" id="box7-absimg">
         </div>
 
         <div class="box8">
@@ -368,34 +364,34 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="box8-left">
-                            <img src="/product/toiden/image/toi-den-blaga-9.png" alt="">
+                            <img src="/product/toiden/image/toi-den-blaga-9.png" alt="CÔNG DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <div class="box8-right">
                             <div class="box8-title">
-                                CÔNG DỤNG SẢN PHẨM
+                                <h2>CÔNG DỤNG SẢN PHẨM TỎI ĐEN BLAGA</h2>
                             </div>
                             <div class="box8-text">
-                                <p>- Có tác dụng rất tốt cho người bị bệnh tiểu đường</p>
+                                <p>- Tỏi đen Blaga có tác dụng rất tốt cho người bị bệnh tiểu đường</p>
                             </div>
                             <div class="box8-text">
-                                <p>- Bảo vệ cơ thể phòng ngừa ung thư và giảm cholesteron</p>
+                                <p>- Sử dung tỏi đen Blaga để bảo vệ cơ thể, phòng ngừa ung thư và giảm cholesteron</p>
                             </div>
                             <div class="box8-text">
-                                <p>- Tăng cường miễn dịch, chống vi khuẩn và nhiễm trùng</p>
+                                <p>- Tỏi đen Blage giúp tăng cường hệ miễn dịch, chống vi khuẩn và nhiễm trùng</p>
                             </div>
                             <div class="box8-text">
-                                <p>- Chống oxy hóa (sự lão hóa) và ngăn ngừa bệnh tật</p>
+                                <p>- Tỏi đen cũng giúp chống oxy hóa (sự lão hóa) và ngăn ngừa bệnh tật</p>
                             </div>
                             <div class="box8-text">
                                 <p>- Điều trị tăng huyết áp</p>
                             </div>
                             <div class="box8-text">
-                                <p>- Cơ chế hạn chế tăng men gan, giải độc và bảo vệ gan</p>
+                                <p>- Trong tỏi đen Blaga có cơ chế hạn chế tăng men gan, giải độc và bảo vệ gan</p>
                             </div>
                             <div class="box8-text">
-                                <p>- Tăng trí nhớ, cải thiện chức năng não</p>
+                                <p>- Sử dụng tỏi đen Blaga cũng là một cách giúp tăng trí nhớ, cải thiện chức năng não</p>
                             </div>
                         </div>
                     </div>
@@ -404,13 +400,13 @@
         </div>
 
         <div class="box9">
-            <img src="/product/toiden/image/toi-den-blaga-bg3.jpg" alt="" id="target-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-bg3.jpg" alt="ĐỐI TƯỢNG SỬ DỤNG TỎI ĐEN BLAGA" id="target-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <div class="target-left">
                             <div class="target-left-title">
-                                ĐỐI TƯỢNG SỬ DỤNG
+                                <h2>ĐỐI TƯỢNG SỬ DỤNG TỎI ĐEN BLAGA</h2>
                             </div>
                             <div class="target-left-text">
                                 “Các chuyên gia khuyên dùng tỏi đen một nhánh Blaga mỗi ngày để có sức khỏe tốt không bệnh tật và không phải dùng đến thuốc kháng sinh”
@@ -491,8 +487,8 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/toi-den-blaga-10.png" alt="" id="box9-absimg2">
-            <img src="/product/toiden/image/toi-den-blaga-12.png" alt="" id="box9-absimg3">
+            <img src="/product/toiden/image/toi-den-blaga-10.png" alt="ĐỐI TƯỢNG SỬ DỤNG TỎI ĐEN BLAGA" id="box9-absimg2">
+            <img src="/product/toiden/image/toi-den-blaga-12.png" alt="ĐỐI TƯỢNG SỬ DỤNG TỎI ĐEN BLAGA" id="box9-absimg3">
         </div>
 
         <div class="box10">
@@ -500,23 +496,23 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <div class="box10-left">
-                            <img src="/product/toiden/image/toi-den-blaga-5.png" alt="">
+                            <a href="#time-countdown"><img src="/product/toiden/image/toi-den-blaga-5.png" alt="Cách sử dụng tỏi đen Blaga"></a>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-5">
+                    <div class="col-xs-12 col-sm-9">
                         <div class="box10-right">
                             <div class="box10-title">
-                                Cách sử dụng
+                                <h2>Cách sử dụng tỏi đen Blaga</h2>
                             </div>
                             <div class="box10-content">
-                                <span style="color: #d99500;">1.</span> Bóc vỏ ăn trực tiếp hoặc hấp nóng trước khi ăn
+                                <span style="color: #d99500;">1.</span> Bóc vỏ tỏi đen Blaga ăn trực tiếp hoặc hấp nóng tỏi đen trước khi ăn
                             </div>
                             <div class="box10-content">
-                                <span style="color: #d99500;">2.</span> Chế biến với các món khác tùy theo khẩu vị
+                                <span style="color: #d99500;">2.</span> Chế biến tỏi đen Blaga với các món khác tùy theo khẩu vị
                             </div>
                             <div id="danh-gia"></div>
                             <div class="box10-content">
-                                <span style="color: #d99500;">3.</span> Dùng từ 2-3 củ/ngày
+                                <span style="color: #d99500;">3.</span> Dùng từ 2-3 củ tỏi đen Blaga/ngày
                             </div>
                         </div>
                     </div>
@@ -527,7 +523,7 @@
         <div class="box11">
             <div class="container">
                 <div class="box11-title">
-                    PHẢN HỒI TỪ KHÁCH HÀNG
+                    <h2>PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA</h2>
                 </div>
                 <div class="box11-content">
                     <div class="row">
@@ -543,7 +539,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
                                                     <div class="box11-avatar-img">
-                                                        <img src="/product/toiden/image/toi-den-blaga-ava1.png" alt="">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava1.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-7">
@@ -577,7 +573,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
                                                     <div class="box11-avatar-img">
-                                                        <img src="/product/toiden/image/toi-den-blaga-ava2.png" alt="">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava2.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-7">
@@ -794,7 +790,7 @@
 
                                     <h4 style="text-align: center;line-height: 32px;">Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!</h4>
                                     <div class="loading-gif" style="">
-                                        <img src="/product/toiden/image/toi-den-blaga-loading.gif">
+                                        <img src="/product/toiden/image/toi-den-blaga-loading.gif" alt="Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!">
                                     </div>
                                     <button class="btnsubmit" type="submit">mua ngay</button>
                                 </form>
@@ -806,7 +802,7 @@
                 </div>
 
             </div>
-            <img src="/product/toiden/image/toi-den-blaga-13.png" alt="" id="contact-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-13.png" alt="Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!" id="contact-absimg">
         </div> <!-- contact -->
 
         <footer>
@@ -831,7 +827,6 @@
                 <a href="#danh-gia"><i class="fa fa-check-square-o"></i> ĐÁNH GIÁ</a>
             </div>
         </div>
-
 
         <script>
             function forceNumber(event){
@@ -874,6 +869,23 @@
                     autoplaySpeed: 3000,
                 });
             })
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('a[href*=\\#]:not([href=\\#])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
         </script>
 
         <script>

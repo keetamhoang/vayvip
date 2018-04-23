@@ -43,7 +43,7 @@ a:hover{
 	font-family: 'Cabin Condensed';
 }
 
-.banner-left {font-size: 57.25px;text-align: right;}
+.banner-left {font-size: 57.25px;text-align: center;}
 
 .banner-mid {
 	font-size: 24px;
@@ -329,7 +329,7 @@ img#target-absimg {
 	font-family: 'Roboto';
 	text-align: center;
 	font-size: 26px;
-	margin: 67px 0 40px;
+	margin: 45px 0 19px;
 }
 
 .target-right-text-left {
@@ -377,7 +377,8 @@ img#box9-absimg3 {
 	font-weight: bold;
 	font-size: 30px;
 	color: #d99500;
-	margin-bottom: 44px;
+	margin-bottom: 18px;
+	padding-top: 16px;
 }
 
 .box10-content {
@@ -547,6 +548,10 @@ footer {
 	float: left;
 	border: 1px solid #eea200;
 }
+.h2, h2 {
+	line-height: 46px;
+	margin: 0px;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
 	.banner-left {
 		font-size: 40px;
@@ -698,6 +703,10 @@ footer {
 	font-size: 20px;
 	margin-bottom: 10px;
 	color: #80f585;
+}
+
+.banner-left h1 {
+	font-size: 44px;
 }
 
 @media (max-width: 767px) {
@@ -954,5 +963,10 @@ footer {
 
 	.image-box4 {
 		width: 100%;
+	}
+
+	.banner-left h1 {
+		font-size: 34px;
+		margin-top: 20px;
 	}
 }

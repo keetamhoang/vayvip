@@ -118,7 +118,7 @@
         });
     </script>
     <div id="header">
-        <a href="/"><img src="/product/hoanxuanthang/images/logo.png" alt="Trang chủ"
+        <a href="#frmres"><img src="/product/hoanxuanthang/images/logo.png" alt="Trang chủ"
                          class="img-responsive"></a>
     </div>
     <div class="slide">
