@@ -86,9 +86,9 @@
                     <button data-id="tiki">Còn nhiều nữa, xem thêm</button>
                 </div>
 
-                <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
 
                 @if (count($discounts) > 0)
+                    <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI TIKI MỚI NHẤT, TỐT NHẤT</h2></div>
                     @foreach($discounts as $discount)
                         <div class="coupondiv">
                             <div class="promotiontype">

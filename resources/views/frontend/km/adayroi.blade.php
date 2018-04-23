@@ -36,7 +36,7 @@
                 {!! $lazada->desc_up !!}
 
                 <div class="couponh2"><h2 class="h2white">MÃ GIẢM GIÁ ADAYROI, VOUCHER ADAYROI MỚI NHẤT, TỐT NHẤT</h2></div>
-
+                <div id="km-coupon">
                 @foreach($coupons as $key => $coupon)
                     <div class="coupondiv" id="coupon-{{ $coupon->id }}">
                         <div class="promotiontype">
@@ -77,6 +77,11 @@
                         </div>
                     </div>
                 @endforeach
+                </div>
+
+                <div class="load-more">
+                    <button data-id="adayroi">Còn nhiều nữa, xem thêm</button>
+                </div>
 
                 <div class="couponh2"><h2 class="h2white">CHƯƠNG TRÌNH KHUYẾN MÃI ADAYROI MỚI NHẤT, TỐT NHẤT</h2></div>
 

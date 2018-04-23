@@ -267,7 +267,7 @@
                                 <div class="textwidget"><img
                                             style="border: 0;padding-bottom: 10px;margin-top: -20px;"
                                             alt="Tài chính SMART: Mã giảm giá, Voucher giảm giá, Khuyến mãi"
-                                            src="/assets/km/image/ngang-footer.png"
+                                            src="/assets/image/logo.png"
                                             width="180" height="57">
                                     <p style="font-size:15px;"><span>TaichinhSMART.vn</span>
                                         không cung cấp hàng hóa hay dịch vụ. Nhưng chúng tôi luôn tìm kiếm, nỗ
@@ -443,7 +443,8 @@
                 });
             });
 
-            $('.edit-coupon').click(function (e) {
+            $(document).on('click', '.edit-coupon', function (e) {
+//            $('.edit-coupon').click(function (e) {
                 var id = $(this).parent().attr('data-id');
 
                 var title = $('#' + id + ' .coupontitle').html();
@@ -461,8 +462,9 @@
                 $(this).hide();
                 $($('#' + id +' .save-coupon')).show();
             });
-            
-            $('.save-coupon').click(function (e) {
+
+            $(document).on('click', '.save-coupon', function (e) {
+//            $('.save-coupon').click(function (e) {
                 var id = $(this).parent().attr('data-id');
                 var title = $('#' + id + ' input[name="title"]').val();
                 var desc = $('#' + id + ' textarea[name="desc"]').val();
@@ -490,7 +492,8 @@
                 });
             });
 
-            $('.hide-coupon').click(function (e) {
+            $(document).on('click', '.hide-coupon', function (e) {
+//            $('.hide-coupon').click(function (e) {
                 var id = $(this).parent().attr('data-id');
 
                 if (confirm('Are you sure ?')) {
@@ -513,7 +516,8 @@
 
             });
 
-            $('.remove-index').click(function (e) {
+            $(document).on('click', '.remove-index', function (e) {
+//            $('.remove-index').click(function (e) {
                 var id = $(this).parent().attr('data-id');
 
                 if (confirm('Are you sure ?')) {
@@ -536,7 +540,8 @@
 
             });
 
-            $('.up-coupon').click(function (e) {
+            $(document).on('click', '.up-coupon', function (e) {
+//            $('.up-coupon').click(function (e) {
                 var id = $(this).parent().attr('data-id');
 
                 var current = $('#'+id);
@@ -562,7 +567,8 @@
 
             });
 
-            $('.down-coupon').click(function (e) {
+            $(document).on('click', '.down-coupon', function (e) {
+//            $('.down-coupon').click(function (e) {
                 var id = $(this).parent().attr('data-id');
 
                 var current = $('#'+id);

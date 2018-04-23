@@ -314,7 +314,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-4">
                         <div class="box6-left">
-                            <img src="/product/toiden/image/5.jpg" alt="">
+                            <img src="/product/toiden/image/5.png" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">
@@ -340,7 +340,7 @@
         </div>
 
         <div class="box7">
-            <img src="/product/toiden/image/bg2.jpg" alt="" id="box7-bg">
+            {{--<img src="/product/toiden/image/bg2.jpg" alt="" id="box7-bg">--}}
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
@@ -499,7 +499,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <div class="box10-left">
-                            <img src="/product/toiden/image/5.jpg" alt="">
+                            <img src="/product/toiden/image/5.png" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">

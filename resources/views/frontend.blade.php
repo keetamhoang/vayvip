@@ -28,7 +28,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- google font  -->
-    <link href="/assets/css_new/css" rel="stylesheet" type="text/css">
+    <link href="/assets/css_new/css.css" rel="stylesheet" type="text/css">
     <!-- Favicon
     ============================================ -->
     <link rel="shortcut icon" href="/assets/image/favicon.ico" type="image/x-icon">

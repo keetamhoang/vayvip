@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\Crawler;
 use App\Console\Commands\CrawlerChanhTuoi;
+use App\Console\Commands\CrawlerMaGiamGia;
 use App\Console\Commands\DownloadImageLocal;
 use App\Console\Commands\GetDataFromSheetGG;
 use App\Console\Commands\GetDataShinhanBank;
@@ -32,7 +33,8 @@ class Kernel extends ConsoleKernel
         Crawler::class,
         DownloadImageLocal::class,
         HoangCommand::class,
-        CrawlerChanhTuoi::class
+        CrawlerChanhTuoi::class,
+        CrawlerMaGiamGia::class
     ];
 
     /**
@@ -67,6 +69,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('crawl:chanhtuoi')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_chanhtuoi_cron.log'));
+
+        $schedule->command('crawl:magiamgia')
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_magiamgia_cron.log'));
 
 //        $schedule->command('get:sheet-response')
 //            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_response_cron.log'));

@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Code;
+use Carbon\Carbon;
 use Goutte\Client;
 use Illuminate\Console\Command;
 
@@ -39,6 +40,7 @@ class CrawlerChanhTuoi extends Command
      */
     public function handle()
     {
+        $this->line('BEGIN: ' . Carbon::now());
         // lazada
         $client = new Client();
 
@@ -544,6 +546,8 @@ class CrawlerChanhTuoi extends Command
                 }
             }
         });
+
+        $this->line('END: ' . Carbon::now());
     }
 
 

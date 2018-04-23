@@ -120,6 +120,7 @@
 .go-top {
     /*display: none;*/
     top: 61px;
+    transition: 1s;
 }
 
 .expire-text {
@@ -525,13 +526,13 @@
     font-size: 11px;
     color: #fff;
     position: fixed;
-    top: 66px;
+    /*top: 66px;*/
     padding: 0px;
 }
 
 .h1-seo-resize {
     font-size: 9px;
-    top: 48px;
+    /*top: 48px;*/
 }
 
 .stick .logo img {
