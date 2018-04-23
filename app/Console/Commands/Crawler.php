@@ -49,7 +49,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
@@ -131,7 +131,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
@@ -213,7 +213,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
@@ -360,7 +360,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
@@ -442,7 +442,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
@@ -524,7 +524,7 @@ class Crawler extends Command
 
         $res->filter('.c-type-code')->each(function ($node, $i) {
             try {
-                $code = $node->filter('.code-text')->text();
+                $code = $node->filter('.coupon-detail > a')->attr('data-code');
                 $data['code'] = trim($code);
             } catch (\Exception $ex) {
                 $this->line('ERROR1: '.$ex->getMessage().'|'.$i);

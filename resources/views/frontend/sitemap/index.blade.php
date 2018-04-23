@@ -16,4 +16,7 @@
     <sitemap>
         <loc>{{ url('sitemap_sanpham.xml') }}</loc>
     </sitemap>
+    <sitemap>
+        <loc>{{ url('sitemap_landingpage.xml') }}</loc>
+    </sitemap>
 </sitemapindex>

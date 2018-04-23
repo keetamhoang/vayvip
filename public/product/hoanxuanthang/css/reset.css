@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*font-family: arial;
+    font-size: 13px;*/
+    background: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    line-height: 19px;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+a{
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    /*font-size: 12px;*/
+}
+img:hover{opacity: 1;}
+a:hover{
+    text-decoration: none !important;
+    color: #ed1b24;
+}
+a h3:hover{
+    text-decoration: none !important;
+    color: #ed1b24;
+}
+p{
+    margin: 0 0 10px 0;
+}
+.color-tag-a a{
+    color: #055699;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: none;
+    text-decoration: underline;
+}
+form{
+    margin-bottom: 0;
+}
+
+
+/*************** Pagination ***************/
+.pagination {
+    text-align: right;
+    padding: 18px 10px 5px 0 !important;
+    margin: 0;
+    font-family: Arial;
+    font-size: 10px;
+    color: #000;
+}
+.pagination a {
+    margin: 0 5px 0 0;
+    padding: 4px 8px;
+    background: #f8f8f8;
+}
+.pagination span a {
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 4px 4px;
+}
+.pagination .next {
+    border-radius: 0px;
+    border:none;
+    color: #000;
+    text-decoration: none;
+}
+.pagination .current {
+    background: #e9e9e9 url('../images/bg-button-green.gif') top left repeat-x !important;
+    border-color: #e9e9e9 !important;
+    color: #000 !important;
+    border: 1px solid #ddd;
+    margin: 0 5px 0 0;
+    padding: 4px 8px;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 12px;
+}
+.pagination .current:hover {
+    text-decoration: underline;
+    border: 1px solid #DDDDDD;
+}
+/************ Shortcut Buttons ************/
+
+/**reset slide**/
+.slideslide{
+    background: #fff;
+    margin-bottom: 0px;
+}
+
+.slideslide .carousel-indicators li{
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    display: none;
+}
+.slideslide .carousel-indicators .active{background: #57711f;}
+.slideslide .carousel-control{
+    background: none;
+    border: 0;
+    top: 48%;
+    font-size: 55px;
+    opacity: 0.6;
+    border-radius: 0;
+    padding: 5px 8px 6px 8px;
+    color: #000;
+}
+.slideslide .carousel-indicators{
+    top: inherit;
+    bottom: 3%;
+}
+.slideslide .carousel{
+    margin-bottom: 8px;
+}
+.slideslide .carousel{
+    margin-bottom: 0;
+}
+/**css cs3 hover img**/
+.img-outer:hover img.image {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+}
+.img-outer {
+    overflow:hidden;
+}
+.image {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+/**css cs3 hover img thut**/
+/*.thutanh:hover .image {
+    -webkit-transform:scale(1);
+    transform:scale(1);
+}
+.thutanh {
+    overflow:hidden;
+}
+.thutanh .image {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}*/
+/**css cs3 xoay anh**/
+/*.xoayanh:hover .image{
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+.xoayanh .image, .xoayanh:hover .image {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}*/

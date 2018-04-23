@@ -4,8 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content=""> <meta name="description" content="">
-    <title>Tỏi đen 1 nhánh Blaga</title>
+    <meta name="keywords" content="tỏi đen, tỏi đen blaga, toi den, cach lam toi den, tỏi đen có tác dung gì, máy làm tỏi đen, nồi làm tỏi đen, tac dung cua toi den">
+    <meta name="description" content="Chỉ cần dùng 2-3 tép tỏi đen Blaga mỗi ngày, có thể phòng ngừa triệt để ung thư, ổn định đường huyết, bảo vệ cơ thể khỏi các vấn đề về tim mạch. Tỏi đen Blaga được chứng nhận Quốc tế, tự hào thương hiệu tỏi đen bán chạy nhất Việt Nam.">
+    <title>Tỏi đen Blaga - Tỏi đen công nghệ Nhật Bản mới nhất</title>
     <link rel="stylesheet" href="/product/toiden/css/bootstrap.min.css">
     <link rel="stylesheet" href="/product/toiden/css/slick.css">
     <link rel="stylesheet" href="/product/toiden/css/slick-theme.css">
@@ -38,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-5" style="padding-left: 80px;">
                         <div class="left">
                             <i class="fa fa-gift" style="font-size: 39px;margin-top: 5px;"></i>
                         </div>
@@ -52,17 +53,17 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="left">
-                            <i class="fa fa-volume-control-phone" style="font-size: 39px;margin-top: 5px;"></i>
-                        </div>
-                        <div class="left" style="margin-left: 8px;">
+                    <div class="col-lg-3">
+                        <div class="" style="margin-left: 8px;float: right">
                             <div>
                                 <p style="margin-bottom: 2px;margin-top: 4px;">Tư vấn miễn phí:</p>
                             </div>
                             <div>
                                 <strong><a href="#time-countdown">Đăng ký ngay</a></strong>
                             </div>
+                        </div>
+                        <div class="" style="float: right">
+                            <i class="fa fa-volume-control-phone" style="font-size: 39px;margin-top: 5px;"></i>
                         </div>
                     </div>
                 </div>
@@ -124,16 +125,16 @@
 
             </div>
             <div class="banner-img">
-                <a href="#time-countdown"><img src="/product/toiden/image/1.png" alt=""></a>
+                <a href="#time-countdown"><img src="/product/toiden/image/toi-den-blaga-1.png" alt=""></a>
             </div>
         </div> <!-- banner -->
 
         <div class="box2">
-            <img src="/product/toiden/image/icon1.png" alt="" id="box2-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-icon1.png" alt="" id="box2-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-4">
-                        <img src="/product/toiden/image/leaf1.png" alt="" id="box2-absimg2">
+                        <img src="/product/toiden/image/toi-den-blaga-leaf1.png" alt="" id="box2-absimg2">
                         <div class="box2-list">
                             <div class="box2-title">
                                 BỆNH TIỂU ĐƯỜNG - 1 TRONG 4 “ĐẠI DỊCH” CỦA THẾ KỶ 21
@@ -159,7 +160,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="percent-left">
-                                        <img src="/product/toiden/image/icon2.png" alt="">
+                                        <img src="/product/toiden/image/toi-den-blaga-icon2.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-8">
@@ -174,7 +175,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="percent-left">
-                                        <img src="/product/toiden/image/icon3.png" alt="">
+                                        <img src="/product/toiden/image/toi-den-blaga-icon3.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-8">
@@ -206,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="/product/toiden/image/2.png" alt="" id="box3-absimg">
+                <img src="/product/toiden/image/toi-den-blaga-2.png" alt="" id="box3-absimg">
             </div>
         </div> <!-- box3 -->
 
@@ -256,8 +257,8 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/4.png" alt="" id="box4-absimg">
-            <img src="/product/toiden/image/3.png" alt="" id="box4-absimg2">
+            <img src="/product/toiden/image/toi-den-blaga-4.png" alt="" id="box4-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-3.png" alt="" id="box4-absimg2">
         </div>
 
         <div class="box5">
@@ -309,12 +310,12 @@
         </div>
 
         <div class="box6">
-            <img src="/product/toiden/image/6.png" alt="" id="box6-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-6.png" alt="" id="box6-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-4">
                         <div class="box6-left">
-                            <img src="/product/toiden/image/5.png" alt="">
+                            <img src="/product/toiden/image/toi-den-blaga-5.png" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">
@@ -359,7 +360,7 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/8.png" alt="" id="box7-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-8.png" alt="" id="box7-absimg">
         </div>
 
         <div class="box8">
@@ -367,7 +368,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="box8-left">
-                            <img src="/product/toiden/image/9.png" alt="">
+                            <img src="/product/toiden/image/toi-den-blaga-9.png" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
@@ -403,7 +404,7 @@
         </div>
 
         <div class="box9">
-            <img src="/product/toiden/image/bg3.jpg" alt="" id="target-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-bg3.jpg" alt="" id="target-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
@@ -490,8 +491,8 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/10.png" alt="" id="box9-absimg2">
-            <img src="/product/toiden/image/12.png" alt="" id="box9-absimg3">
+            <img src="/product/toiden/image/toi-den-blaga-10.png" alt="" id="box9-absimg2">
+            <img src="/product/toiden/image/toi-den-blaga-12.png" alt="" id="box9-absimg3">
         </div>
 
         <div class="box10">
@@ -499,7 +500,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <div class="box10-left">
-                            <img src="/product/toiden/image/5.png" alt="">
+                            <img src="/product/toiden/image/toi-den-blaga-5.png" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">
@@ -542,7 +543,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
                                                     <div class="box11-avatar-img">
-                                                        <img src="/product/toiden/image/ava1.png" alt="">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava1.png" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-7">
@@ -576,7 +577,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
                                                     <div class="box11-avatar-img">
-                                                        <img src="/product/toiden/image/ava2.png" alt="">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava2.png" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-7">
@@ -793,7 +794,7 @@
 
                                     <h4 style="text-align: center;line-height: 32px;">Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!</h4>
                                     <div class="loading-gif" style="">
-                                        <img src="/product/toiden/image/loading.gif">
+                                        <img src="/product/toiden/image/toi-den-blaga-loading.gif">
                                     </div>
                                     <button class="btnsubmit" type="submit">mua ngay</button>
                                 </form>
@@ -805,7 +806,7 @@
                 </div>
 
             </div>
-            <img src="/product/toiden/image/13.png" alt="" id="contact-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-13.png" alt="" id="contact-absimg">
         </div> <!-- contact -->
 
         <footer>

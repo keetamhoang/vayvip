@@ -565,7 +565,7 @@ footer {
 	}
 
 	.banner {
-		padding-top: 30px;
+		padding-top: 130px;
 	}
 
 	img#box2-absimg2 {
@@ -673,6 +673,14 @@ footer {
 
 	.footer-bot {
 		font-size: 18px;
+	}
+
+	.phone-nav {
+		display: none;
+	}
+
+	.bg-primary .container {
+		padding: 0px;
 	}
 }
 

@@ -119,32 +119,32 @@
                 </div>
                 <div class="box4-content">
                     <div class="image-box4">
-                        <a href="http://vietnamnet.vn/vn/suc-khoe/cac-loai-benh/5-dieu-nguoi-bi-tieu-duong-buoc-phai-nho-trong-mua-he-370824.html" target="_blank"><img src="/product/toiden/image/vietnamnet.png"></a>
+                        <a href="http://vietnamnet.vn/vn/suc-khoe/cac-loai-benh/5-dieu-nguoi-bi-tieu-duong-buoc-phai-nho-trong-mua-he-370824.html" target="_blank"><img src="/product/toiden/image/toi-den-blaga-vietnamnet.png"></a>
                     </div>
                     <div class="image-box4">
-                        <a href="https://suckhoe.vnexpress.net/tin-tuc/tu-van/bai-thuoc-chua-benh-hay-tu-toi-den-2984876.html" target="_blank"><img src="/product/toiden/image/vnexpress.png"></a>
+                        <a href="https://suckhoe.vnexpress.net/tin-tuc/tu-van/bai-thuoc-chua-benh-hay-tu-toi-den-2984876.html" target="_blank"><img src="/product/toiden/image/toi-den-blaga-vnexpress.png"></a>
                     </div>
                     <div class="image-box4">
-                        <a href="https://baomoi.com/mach-ban-4-cach-dung-toi-den-tot-nhat-cho-suc-khoe/c/21141042.epi" target="_blank"><img src="/product/toiden/image/baomoi.png"></a>
+                        <a href="https://baomoi.com/mach-ban-4-cach-dung-toi-den-tot-nhat-cho-suc-khoe/c/21141042.epi" target="_blank"><img src="/product/toiden/image/toi-den-blaga-baomoi.png"></a>
                     </div>
                     <div class="image-box4">
-                        <a href="https://tuoitre.vn/toi-den-va-cong-dung-trong-y-hoc-1179687.htm" target="_blank"><img src="/product/toiden/image/tuoitre.png"></a>
+                        <a href="https://tuoitre.vn/toi-den-va-cong-dung-trong-y-hoc-1179687.htm" target="_blank"><img src="/product/toiden/image/toi-den-blaga-tuoitre.png"></a>
                     </div>
                 </div>
 
             </div>
-            <img src="/product/toiden/image/4.png" alt="" id="box4-absimg">
-            <img src="/product/toiden/image/3.png" alt="" id="box4-absimg2">
+            <img src="/product/toiden/image/toi-den-blaga-4.png" alt="" id="box4-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-3.png" alt="" id="box4-absimg2">
         </div>
 
 
         <div class="box6">
-            <img src="/product/toiden/image/6.png" alt="" id="box6-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-6.png" alt="" id="box6-absimg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-4">
                         <div class="box6-left">
-                            <img src="/product/toiden/image/5.jpg" alt="">
+                            <img src="/product/toiden/image/toi-den-blaga-5.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-5">
@@ -166,7 +166,7 @@
         </div>
 
         <div class="box7">
-            <img src="/product/toiden/image/bg2.jpg" alt="" id="box7-bg">
+            {{--<img src="/product/toiden/image/toi-den-blaga-bg2.jpg" alt="" id="box7-bg">--}}
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <img src="/product/toiden/image/8.png" alt="" id="box7-absimg">
+            <img src="/product/toiden/image/toi-den-blaga-8.png" alt="" id="box7-absimg">
         </div>
 
 

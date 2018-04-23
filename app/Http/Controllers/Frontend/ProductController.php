@@ -51,4 +51,12 @@ class ProductController extends Controller
             'link' => 'https://taichinhsmart.vn/san-pham/san-pham-toi-den-1-nhanh-blaga/success'
         ]);
     }
+
+    public function hoanxuanthang() {
+        return view('frontend.product.hoanxuanthang.index');
+    }
+
+    public function hoanxuanthangSuccess() {
+        return view('frontend.product.hoanxuanthang.success');
+    }
 }

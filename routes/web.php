@@ -190,11 +190,15 @@ Route::get('sitemap_anh.xml', 'Frontend\SitemapController@anh');
 Route::get('sitemap_tintuctaichinh.xml', 'Frontend\SitemapController@tintuctaichinh');
 Route::get('sitemap_muasamhomnay.xml', 'Frontend\SitemapController@muasamhomnay');
 Route::get('sitemap_sanpham.xml', 'Frontend\SitemapController@sanpham');
+Route::get('sitemap_landingpage.xml', 'Frontend\SitemapController@landingpage');
 
 Route::group(['prefix' => 'san-pham'], function () {
     Route::get('/', 'Frontend\SaleController@index');
+    Route::post('dang-ky', 'Frontend\ProductController@register');
 
     Route::get('san-pham-toi-den-1-nhanh-blaga', 'Frontend\ProductController@toidenBlaga');
     Route::get('san-pham-toi-den-1-nhanh-blaga/success', 'Frontend\ProductController@toidenBlagaSuccess');
-    Route::post('dang-ky', 'Frontend\ProductController@register');
+
+    Route::get('san-pham-hoan-xuan-thang', 'Frontend\ProductController@hoanxuanthang');
+    Route::get('san-pham-hoan-xuan-thang/success', 'Frontend\ProductController@hoanxuanthangSuccess');
 });

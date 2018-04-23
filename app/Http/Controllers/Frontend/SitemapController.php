@@ -64,4 +64,9 @@ class SitemapController extends Controller
         return response()->view('frontend.sitemap.sanpham', compact('discounts'))
             ->header('Content-Type', 'text/xml');
     }
+
+    public function landingpage() {
+        return response()->view('frontend.sitemap.landingpage')
+            ->header('Content-Type', 'text/xml');
+    }
 }
