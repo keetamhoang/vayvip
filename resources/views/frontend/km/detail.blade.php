@@ -1,5 +1,9 @@
 @extends('frontend.km.index')
 
+@section('title')
+    <title>{{ $discount->name }}</title>
+@endsection
+
 @section('meta')
     <meta property="og:url" content="http://taichinhsmart.vn/khuyen-mai/{{ $discount->slug }}">
     <meta property="og:type"          content="website" />
