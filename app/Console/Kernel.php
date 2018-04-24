@@ -70,8 +70,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('crawl:chanhtuoi')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_chanhtuoi_cron.log'));
 
-        $schedule->command('crawl:magiamgia')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_magiamgia_cron.log'));
+//        $schedule->command('crawl:magiamgia')
+//            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_magiamgia_cron.log'));
 
 //        $schedule->command('get:sheet-response')
 //            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('get_gg_sheets_response_cron.log'));

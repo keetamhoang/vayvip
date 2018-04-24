@@ -534,15 +534,15 @@
                             </div>
                             <div class="box11-avatar">
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-5 col-sm-offset-3">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                                         <div class="box11-avatar-box">
                                             <div class="row">
-                                                <div class="col-xs-12 col-sm-5">
+                                                <div class="col-xs-12 col-sm-4">
                                                     <div class="box11-avatar-img">
                                                         <img src="/product/toiden/image/toi-den-blaga-ava1.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-12 col-sm-7">
+                                                <div class="col-xs-12 col-sm-8">
                                                     <div class="box11-avatar-content">
                                                         <div class="box11-avatar-name">
                                                             BÁC QUỲNH CHÂU
@@ -568,15 +568,15 @@
                             </div>
                             <div class="box11-avatar">
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-5 col-sm-offset-3">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                                         <div class="box11-avatar-box">
                                             <div class="row">
-                                                <div class="col-xs-12 col-sm-5">
+                                                <div class="col-xs-12 col-sm-4">
                                                     <div class="box11-avatar-img">
                                                         <img src="/product/toiden/image/toi-den-blaga-ava2.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-12 col-sm-7">
+                                                <div class="col-xs-12 col-sm-8">
                                                     <div class="box11-avatar-content">
                                                         <div class="box11-avatar-name">
                                                             BÁC QUANG HÀO
@@ -593,138 +593,171 @@
                             </div>
                         </div>
                     </div>
-                    {{--<div class="row">--}}
-                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
-                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
-                            {{--<div class="box11-text">--}}
-                                {{--Tôi sử dụng và thấy rất tốt. Tôi đã dùng liên tiếp đến nay là 3 tháng, giá cũng không quá đắt, dùng tăng cường sức khỏe và ổn định tiêu hóa, đường huyết. Tôi nghĩ rằng khi mà hấp thụ tốt bài tiết tốt vận động tốt thì tiểu đường cũng sẽ dần biến mất.--}}
-                            {{--</div>--}}
-                            {{--<div class="box11-avatar">--}}
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
-                                        {{--<div class="box11-avatar-box">--}}
-                                            {{--<div class="row">--}}
-                                                {{--<div class="col-xs-12 col-sm-5">--}}
-                                                    {{--<div class="box11-avatar-img">--}}
-                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                                {{--<div class="col-xs-12 col-sm-7">--}}
-                                                    {{--<div class="box11-avatar-content">--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--BÁC VŨ CÔNG CHƯƠNG--}}
-                                                        {{--</div>--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--58 tuổi - Hà Nội--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
-                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
-                            {{--<div class="box11-text">--}}
-                                {{--Tôi rất sợ các sản phẩm được quảng cáo tùm lum trên mạng nên tôi đã tìm hiểu rất kĩ về chứng nhận rồi mới mua. Khi dùng tỏi thì thấy rất thoải mái và không khó chịu như nhiều loại thuốc khác. Tôi thấy tỏi đen đúng nghĩa là một sản phẩm hỗ trợ tăng cường sức khỏe một cách tổng quát, từ đó  có tác dụng chuyên hơn để chống tiểu đường.--}}
-                            {{--</div>--}}
-                            {{--<div class="box11-avatar">--}}
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
-                                        {{--<div class="box11-avatar-box">--}}
-                                            {{--<div class="row">--}}
-                                                {{--<div class="col-xs-12 col-sm-5">--}}
-                                                    {{--<div class="box11-avatar-img">--}}
-                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                                {{--<div class="col-xs-12 col-sm-7">--}}
-                                                    {{--<div class="box11-avatar-content">--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--BÁC HỒ THỊ NGA--}}
-                                                        {{--</div>--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--58 tuổi - Hà Nội--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
-                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
-                            {{--<div class="box11-text">--}}
-                                {{--Đăng ký thông tin được tư vấn nhanh chóng, nhiệt tình, hiểu thêm nhiều kiến thức về chăm sóc sức khỏe khi bị tiểu đường. Tôi đã tin tưởng mua và hài lòng.--}}
-                            {{--</div>--}}
-                            {{--<div class="box11-avatar">--}}
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
-                                        {{--<div class="box11-avatar-box">--}}
-                                            {{--<div class="row">--}}
-                                                {{--<div class="col-xs-12 col-sm-5">--}}
-                                                    {{--<div class="box11-avatar-img">--}}
-                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                                {{--<div class="col-xs-12 col-sm-7">--}}
-                                                    {{--<div class="box11-avatar-content">--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--BÁC HOÀI SA--}}
-                                                        {{--</div>--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--58 tuổi - Hà Nội--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-xs-12 col-sm-10 col-sm-offset-1">--}}
-                            {{--<div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>--}}
-                            {{--<div class="box11-text">--}}
-                                {{--Đâu phải thuốc kích thích hay thuốc tiên đâu, không phải ai dùng cũng ngay lập tức là hiệu quả được. Tuần đầu tôi dùng nhưng không thấy hiệu quả tôi phải gọi lại để hỏi kĩ vấn đề và định không dùng nữa, nhưng được tư vấn kĩ hơn về ăn uống chăm sóc bản thân nên đã dùng tiếp thì tuần thứ 2 đã hiệu quả hơn rất nhiều. Tôi đang thuộc tiểu đường tuýp 2 và luôn cần chú ý giữ gìn chỉ số.--}}
-                            {{--</div>--}}
-                            {{--<div class="box11-avatar">--}}
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-xs-12 col-sm-5 col-sm-offset-3">--}}
-                                        {{--<div class="box11-avatar-box">--}}
-                                            {{--<div class="row">--}}
-                                                {{--<div class="col-xs-12 col-sm-5">--}}
-                                                    {{--<div class="box11-avatar-img">--}}
-                                                        {{--<img src="/product/toiden/image/ava1.png" alt="">--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                                {{--<div class="col-xs-12 col-sm-7">--}}
-                                                    {{--<div class="box11-avatar-content">--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--BÁC NGUYỄN THỊ BẢY--}}
-                                                        {{--</div>--}}
-                                                        {{--<div class="box11-avatar-name">--}}
-                                                            {{--58 tuổi - Hà Nội--}}
-                                                        {{--</div>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
+                            <div class="box11-text">
+                                Mình có nghe nói đến tỏi đen này khá nhiều và cũng đã từng thử tự làm nhưng không tốt lắm và khá mất công nên mình đã đi mua. Mình cũng đã xem xét các giấy tờ kiểm định thì cũng an tâm về nguồn gốc sản phẩm, mình còn rủ cả bạn bè đến tận nơi để cùng mua nữa cho an tâm vì sợ bị lừa. Đến nơi được bác sĩ tư vấn tận tình và cũng hiểu rõ hơn nên mình rất hài lòng và mua hai hộp về uống. Mình đã uống được 2 tuần và thấy rất tốt, cảm thấy cơ thể ổn định hơn, các chỉ số được duy trì, mình nghĩ thế giới khoa học đã nói rõ là tốt rồi thì cũng có thể an tâm được, vì tỏi này còn có thể làm ở nhà, các công ty sản xuất thì họ theo quy trình thì sản phẩm sẽ càng chuẩn hơn và đáng tin.
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava4.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            CHỊ THẢO VI
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            36 tuổi - NAM ĐỊNH
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
+                            <div class="box11-text">
+                                Tôi sử dụng và thấy rất tốt. Tôi đã dùng liên tiếp đến nay là 3 tháng, giá cũng không quá đắt, dùng tăng cường sức khỏe và ổn định tiêu hóa, đường huyết. Tôi nghĩ rằng khi mà hấp thụ tốt bài tiết tốt vận động tốt thì tiểu đường cũng sẽ dần biến mất.
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava8.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            ANH VŨ CÔNG CHƯƠNG
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            42 tuổi - THÁI NGUYÊN
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
+                            <div class="box11-text">
+                                Đăng ký thông tin được tư vấn nhanh chóng, nhiệt tình, hiểu thêm nhiều kiến thức về chăm sóc sức khỏe khi bị tiểu đường. Tôi đã tin tưởng mua và hài lòng!
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava7.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            BÁC PHẠM ĐÌNH THÁI
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            54 tuổi - HÀ NỘI
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
+                            <div class="box11-text">
+                                Mẹ tôi uống được 1 tháng, thấy cũng khỏe hơn. Ăn uống ngon hơn, không có gì bất thường.
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava6.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            CHỊ VƯƠNG XUÂN HỒNG
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            28 tuổi - TP HỒ CHÍ MINH
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                            <div class="damuahang"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
+                            <div class="box11-text">
+                                Tôi đã sử dụng được 2 tháng cùng các chế độ tập luyện và ăn uống. Đường huyết của tôi luôn được duy trì ổn định và không gặp phải nhiều khó khăn do căn bệnh mang lại. Tôi thấy điều đó thật tuyệt vời. Quyết định mua hay không là ở mình như khi được tư vấn mình sẽ có thêm rất nhiều thông tin để quyết định. Các bạn hãy tìm hiểu thêm thông tin và đăng ký tư vấn thì tôi nghĩ sẽ có lựa chọn sáng suốt.
+                            </div>
+                            <div class="box11-avatar">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                        <div class="box11-avatar-box">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <div class="box11-avatar-img">
+                                                        <img src="/product/toiden/image/toi-den-blaga-ava3.png" alt="PHẢN HỒI TỪ KHÁCH HÀNG ĐÃ SỬ DỤNG SẢN PHẨM TỎI ĐEN BLAGA">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8">
+                                                    <div class="box11-avatar-content">
+                                                        <div class="box11-avatar-name">
+                                                            ANH TRỊNH HỮU HUY
+                                                        </div>
+                                                        <div class="box11-avatar-name">
+                                                            46 tuổi - NGHỆ AN
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="contact"></div>

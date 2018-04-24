@@ -46,9 +46,10 @@ class CrawlerChanhTuoi extends Command
 
         $res = $client->request('GET', 'https://bloggiamgia.vn/ma-giam-gia/lazada');
 
-        $res->filter('.c-type-code')->each(function ($node, $i) {
+        $res->filter('.offers-details')->each(function ($node, $i) {
+
             try {
-                $a = $node->filter('.coupon-detail a')->attr('onclick');
+                $a = $node->filter('.btn-your-voucher-code')->attr('onclick');
                 $a = explode("'", $a);
 
                 $data['code'] = $a[3];
@@ -62,20 +63,21 @@ class CrawlerChanhTuoi extends Command
                 if (empty($checkCode)) {
 
                     try {
-                        $percent = $node->filter('.coupon_code_discount')->text();
+                        $percent = $node->filter('.polyxgo_discount')->text();
+                        $percent = str_replace('Giảm', '', $percent);
                         $data['percent'] = trim($percent);
                     } catch (\Exception $ex) {
                         $this->line('ERROR2: '.$ex->getMessage());
                     }
                     try {
-                        $typeKm = $node->filter('.coupon_code_label')->text();
-                        $data['type_km'] = trim($typeKm);
+//                        $typeKm = $node->filter('.coupon_code_label')->text();
+                        $data['type_km'] = 'COUPON';
                     } catch (\Exception $ex) {
                         $this->line('ERROR3: '.$ex->getMessage());
                     }
 
                     try {
-                        $title = $node->filter('.coupon-title')->text();
+                        $title = $node->filter('.offers-voucher-title')->text();
                         $data['title'] = trim($title);
                     } catch (\Exception $ex) {
                         $this->line('ERROR4: '.$ex->getMessage());
@@ -487,65 +489,7 @@ class CrawlerChanhTuoi extends Command
             }
         });
 
-        // tiki chanh tuoi
-        $res = $client->request('GET', 'https://chanhtuoi.com/ma-giam-gia-tiki-khuyen-mai.html');
 
-        $res->filter('.cs-row')->each(function ($node, $i) {
-            try {
-                $a = $node->filter('.cs-row-pri .ec-code')->text();
-
-                $data['code'] = trim($a);
-            } catch (\Exception $ex) {
-                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
-            }
-
-            if (!empty($data['code'])) {
-                $checkCode = Code::where('code', $data['code'])->where('name', 'tiki')->first();
-
-                if (empty($checkCode)) {
-
-                    try {
-                        $percent = $node->filter('.cs-col-exp-1 p')->eq(1)->text();
-                        $percent = trim($percent);
-                        $percent = preg_replace("/[\n\r]/", "", $percent);
-                        $percent = str_replace('Khuyến mãi:', '', $percent);
-                        $data['percent'] = trim($percent);
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR2: '.$ex->getMessage());
-                    }
-                    try {
-                        $data['type_km'] = 'COUPON';
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR3: '.$ex->getMessage());
-                    }
-
-                    try {
-                        $title = $node->filter('.cs-row-pri .cs-des')->text();
-                        $data['title'] = trim($title);
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR4: '.$ex->getMessage());
-                    }
-
-                    try {
-
-                        if ($node->filter('.cs-col-exp-1')->count() > 0) {
-                            $desc = $node->filter('.cs-col-exp-1')->html();
-                            $data['desc'] = trim($desc);
-                        }
-
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR6: '.$ex->getMessage());
-                    }
-
-                    if (!empty($data)) {
-                        $data['name'] = 'tiki';
-                        $data['type'] = 1; //coupon
-
-                        Code::create($data);
-                    }
-                }
-            }
-        });
 
         $this->line('END: ' . Carbon::now());
     }
