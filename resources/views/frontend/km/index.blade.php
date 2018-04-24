@@ -296,8 +296,7 @@
                         <section id="text-41" class="widget widget_text">
                             <div class="widget-wrap"><h4 class="widget-title widgettitle">Liên Hệ</h4>
                                 <div class="textwidget">
-                                    <div style="font-size: 15px;">Mọi vấn đề liên quan xin liên hệ tới địa chỉ Email:
-                                        taichinhsmart.vn@gmail.com<br>
+                                    <div style="font-size: 15px;">Mọi vấn đề liên quan xin liên hệ với Tài chính SMART
                                     </div>
                                 </div>
                             </div>

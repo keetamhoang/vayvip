@@ -32,7 +32,7 @@
                     <div class="header-thumb">
                         <div class="header-store-thumb">
                             <a rel="nofollow" target="_blank" title="Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng" href="#">
-                                <img width="200" height="105" src="/assets/image/khuyenmai.png" class="attachment-wpcoupon_small_thumb size-wpcoupon_small_thumb" alt="" >
+                                <img width="200" height="105" src="/assets/image/khuyenmai.png" class="attachment-wpcoupon_small_thumb size-wpcoupon_small_thumb" alt="Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng" >
                             </a>
                         </div>
 
