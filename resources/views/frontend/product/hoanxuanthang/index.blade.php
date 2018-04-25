@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="/product/hoanxuanthang/css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="/product/hoanxuanthang/css/stylea.css">
     <link rel="stylesheet" type="text/css" href="/product/hoanxuanthang/css/reset.css">
+    <link rel="stylesheet" href="/product/hoanxuanthang/css/font-awesome.min.css">
+
 
     <script type="text/javascript" src="/product/hoanxuanthang/js/sdk.js"></script>
     <script type="text/javascript" src="/product/hoanxuanthang/js/jquery-1.7.2.min.js"></script>
@@ -126,8 +128,8 @@
                                class="img-responsive"></a>
     </div>
     <div class="bg-ct2-uudai">
-        <div class="ct2-uudai">Ưu đãi khủng cho khách hàng: <span
-                    class="special"> &nbsp;Mua 4 tặng 1, Mua 2 free ship</span></div>
+        <div class="ct2-uudai">Ưu đãi khủng cho khách hàng:</div>
+        <p class="special">Mua 4 tặng 1, Mua 2 free ship</p>
     </div>
     <div class="bg-content">
         <div class="padd-content bg-content-one" id="goto_sanpham">
@@ -176,6 +178,7 @@
                             </ul>
                         </div>
                         <div class="col-xs-12 col-md-6 post-dieutri">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/LkgIoTS5PZQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -310,10 +313,9 @@
                     </div>
                     <div class="main-8">
                         <div class="main-8-40">
-                            <p><span class="bold">Tên sản phẩm: </span>Hoàn Xuân Thang</p>
-                            <p class="bold" style="float:left;">Thành phần:</p>
+                            <div><span class="bold">Tên sản phẩm:</span> <strong style="font-size: 30px">Hoàn Xuân Thang</strong></div>
+                            <p class="bold" style="float:left;">Thành phần (Hộp 500g):</p><br>
                             <ul>
-                                <li>(Hộp 500g)</li>
                                 <li>Hà Thủ Ô</li>
                                 <li>Hắc Chi ma</li>
                                 <li>Mật ong rừng</li>
@@ -323,15 +325,15 @@
                         </div>
                         <div class="main-8-60">
 
-                            <div><p class="bold">Công dụng: </p>
+                            <div><p class="bold">* Công dụng: </p>
                                 <p>Đen tóc, đẹp da, tăng cường sinh lý nam nữ bền vững, bồi bổ cơ thể: bổ tim thận; kích
                                     thích sinh huyết dịch; bền tinh khí, khoẻ gân cốt; Thải độc, nhuận tràng, gia tăng tuổi
                                     thọ, trẻ hoá cơ thể. Hỗ trợ điều trị tốt cho những trường hợp cao huyết áp, mạch máu bị
                                     xơ vữa</p>
                             </div>
-                            <div><p class="bold">Cách dùng: </p></div>
+                            <div><p class="bold">* Cách dùng: </p></div>
                             <div>Dùng trực tiếp hoặc pha với nước ấm, uống sau bữa ăn 30p, ngày 2-3 lần, mỗi lần 1-2 thìa
-                                cafe(10g)
+                                cafe (10g)
                             </div>
                             <div>Đối tượng sử dụng: Từ 5 tuổi trở lên, không dùng cho phụ nữ có thai hoặc cho con bú</div>
                         </div>
@@ -353,15 +355,14 @@
                                         <div class="post-khachhang" style="width: 600px;">
                                             <div class="content-slide">
                                                 <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh1.png" alt=""
+                                                    <img src="/product/hoanxuanthang/images/hoan-xuan-thang-ava6.png" alt=""
                                                          class="img-responsive">
                                                 </div>
                                                 <div class="main-khachhang col-xs-12 col-sm-8">
 
                                                     <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Nguyễn Thị Thúy ( Bắc Giang
-                                                            )
-                                                        </div>
+                                                        <div class="div2" style="height: 30px;">Nguyễn Hà My (Hà Nội)</div>
+                                                        <div class="checked"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
                                                     </div>
                                                     <div class="shortdes-khachhang">
                                                         <div class="div5" style="height: 66px;">
@@ -380,14 +381,15 @@
                                         <div class="post-khachhang" style="width: 600px;">
                                             <div class="content-slide">
                                                 <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh3.png" alt=""
+                                                    <img src="/product/hoanxuanthang/images/hoan-xuan-thang-ava8.png" alt=""
                                                          class="img-responsive">
                                                 </div>
                                                 <div class="main-khachhang col-xs-12 col-sm-8">
 
                                                     <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Anh Tuấn Anh ( Đồng Nai )
+                                                        <div class="div2" style="height: 30px;">Anh Tiến Hưng (Đồng Nai)
                                                         </div>
+                                                        <div class="checked"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
                                                     </div>
                                                     <div class="shortdes-khachhang">
                                                         <div class="div5" style="height: 66px;">
@@ -406,15 +408,15 @@
                                         <div class="post-khachhang" style="width: 600px;">
                                             <div class="content-slide">
                                                 <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh2.png" alt=""
+                                                    <img src="/product/hoanxuanthang/images/hoan-xuan-thang-ava3.png" alt=""
                                                          class="img-responsive">
                                                 </div>
                                                 <div class="main-khachhang col-xs-12 col-sm-8">
 
                                                     <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Nguyễn Minh Trí ( Sài Gòn
-                                                            )
+                                                        <div class="div2" style="height: 30px;">Anh Hoàng (Hải Phòng)
                                                         </div>
+                                                        <div class="checked"><i class="fa fa-check-circle-o"></i> Xác nhận đã mua hàng</div>
                                                     </div>
                                                     <div class="shortdes-khachhang">
                                                         <div class="div5" style="height: 66px;">
@@ -428,84 +430,7 @@
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
-                                        <div class="post-khachhang" style="width: 600px;">
-                                            <div class="content-slide">
-                                                <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh1.png" alt=""
-                                                         class="img-responsive">
-                                                </div>
-                                                <div class="main-khachhang col-xs-12 col-sm-8">
 
-                                                    <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Nguyễn Thị Thúy ( Bắc Giang
-                                                            )
-                                                        </div>
-                                                    </div>
-                                                    <div class="shortdes-khachhang">
-                                                        <div class="div5" style="height: 66px;">
-                                                            Năm nay tôi mới 23 tuổi mà tóc bị rụng, bạc nhiều, dù đã dùng
-                                                            nhiều loại thuốc nhưng không hiệu quả. Tình cờ tôi biết đến sản
-                                                            phẩm Hoàn Xuân Thang trên báo. Quyết định dùng thử, sau 2 tháng,
-                                                            tóc tôi cải thiện rất nhiều và không còn bị rụng tóc như trước
-                                                            nữa.
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                        <div class="post-khachhang" style="width: 600px;">
-                                            <div class="content-slide">
-                                                <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh3.png" alt=""
-                                                         class="img-responsive">
-                                                </div>
-                                                <div class="main-khachhang col-xs-12 col-sm-8">
-
-                                                    <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Anh Tuấn Anh ( Đồng Nai )
-                                                        </div>
-                                                    </div>
-                                                    <div class="shortdes-khachhang">
-                                                        <div class="div5" style="height: 66px;">
-                                                            Trước đây tôi có dùng nguyên Hà Thủ Ô, thấy tóc có sự chuyển
-                                                            biến nhưng không rõ rệt và rất chậm, đọc trên báo thấy có sản
-                                                            phẩm Hoàn Xuân Thang kết hợp thêm mật ong và mè đen nên quyết
-                                                            định dùng thử, từ khi dùng tới nay là 3 tháng, thấy hiệu quả cái
-                                                            thiện rõ rệt, sau 2 lần cắt tóc còn rất ít sợi tóc bạc.
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                        <div class="post-khachhang" style="width: 600px;">
-                                            <div class="content-slide">
-                                                <div class="img-khachhang col-xs-12 col-sm-4">
-                                                    <img src="/product/hoanxuanthang/images/ykkh2.png" alt=""
-                                                         class="img-responsive">
-                                                </div>
-                                                <div class="main-khachhang col-xs-12 col-sm-8">
-
-                                                    <div class="name-khachhang">
-                                                        <div class="div2" style="height: 30px;">Nguyễn Minh Trí ( Sài Gòn
-                                                            )
-                                                        </div>
-                                                    </div>
-                                                    <div class="shortdes-khachhang">
-                                                        <div class="div5" style="height: 66px;">
-                                                            So với các loại thuốc nam khác, Hoàn Xuân Thang rất dễ dùng, mùi
-                                                            vị thơm ngon, không đắng, không cần chế biến cầu kỳ. Tôi thường
-                                                            xuyên mang theo khi đi công tác, rất tiện lợi.
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
                                     </ul>
                                 </div>
                                 <div class="nbs-flexisel-nav-left" style="visibility: visible; top: 98.5px;"></div>
@@ -544,7 +469,7 @@
         </div>
         <div class="b-content-dangky">
             <div class="favor-ft">
-                <div class="ft-favor">Ưu đãi khủng cho khách hàng: Mua 4 tặng 1, Mua 2 free ship</div>
+                <div class="ft-favor">Ưu đãi khủng cho khách hàng: <br><strong>Mua 4 tặng 1, Mua 2 free ship</strong></div>
             </div>
             <div class="container">
                 <div class="row">
@@ -554,10 +479,12 @@
                     <div class="col-sm-4 col-xs-12" id="frmres" style="margin: 80px 0;">
                         <span>Gửi thông tin liên hệ đặt hàng</span>
                         <form class="form-group" style="  margin-top: 22px;" id="myform" name="contactForm" method="post"
-                              action="dang-ky">
+                              action="{{ url('san-pham/dang-ky') }}">
+                            {{ csrf_field() }}
+                            <input name="sp" type="hidden" value="hoanxuanthang">
                             <input class="form-control" name="name" id="name" type="text" placeholder="Họ và tên"
                                    required="">
-                            <input class="form-control" name="mobile" id="mobile" type="text" placeholder="Số điện thoại"
+                            <input class="form-control" name="mobile" id="phone" type="text" placeholder="Số điện thoại"
                                    required="">
                             <input class="form-control" name="email" id="email" type="email" placeholder="Địa chỉ Email"
                                    required="">
@@ -583,7 +510,7 @@
                         </form>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div style="text-align:center;margin-top:80px;"><img src="/product/hoanxuanthang/images/giaychungnhan.png"
+                        <div style="text-align:center;margin-top:32px;"><img src="/product/hoanxuanthang/images/giaychungnhan.png"
                                                                              alt="" style="margin:auto;"
                                                                              class="img-responsive"></div>
                     </div>
@@ -632,4 +559,47 @@
             });
         </script>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#myform').submit(function (e) {
+                e.preventDefault();
+
+                $('.btnsubmit').hide();
+                $('.loading-gif').show();
+
+                if ($('#name').val().trim() != '' && $('#phone').val().trim() != '' && $('#email').val().trim() != '') {
+                    var form = $(this).serialize();
+                    var url = $(this).attr('action');
+
+                    $.ajax({
+                        url: url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: form,
+                        success: function (response) {
+                            if (response.status == 1) {
+                                window.location.replace(response.link);
+                            } else {
+                                BootstrapDialog.alert({
+                                    title: 'Đặt hàng không thành công!',
+                                    message: response.message,
+                                    type: BootstrapDialog.TYPE_WARNING,
+                                    size: BootstrapDialog.SIZE_LARGE,
+                                    closable: true,
+                                    buttonLabel: 'Đóng'
+                                });
+
+                                $('.btnsubmit').show();
+                                $('.loading-gif').hide();
+                            }
+                        }
+                    });
+                } else {
+                    $('.btnsubmit').show();
+                    $('.loading-gif').hide();
+                }
+            });
+        })
+    </script>
 @endsection

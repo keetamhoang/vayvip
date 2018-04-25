@@ -36,19 +36,34 @@ class ProductController extends Controller
 
             $spreadsheetId = '1f1tgOTIV1K6LqqbeQ5gTvRYETDSp1YdfzJRWiSOFkw8';
 
-            Unit::addRowToSpreadsheet($sheets, $spreadsheetId, [$data['name'], $data['mobile'], $data['address'], Carbon::now()->toDateTimeString()]);
+            $sheetRange = $data['sp'];
+
+            if ($sheetRange == 'toiden_blaga') {
+                $exe = Unit::addRowToSpreadsheet2($sheets, $spreadsheetId, $sheetRange, [$data['name'], $data['mobile'], $data['address'], Carbon::now()->toDateTimeString()]);
+                $link = 'https://taichinhsmart.vn/san-pham/san-pham-toi-den-1-nhanh-blaga/success';
+            } else {
+                $exe = Unit::addRowToSpreadsheet2($sheets, $spreadsheetId, $sheetRange, [$data['name'], $data['mobile'], $data['email'], Carbon::now()->toDateTimeString()]);
+                $link = 'https://taichinhsmart.vn/san-pham/san-pham-hoan-xuan-thang';
+            }
         } catch (\Exception $exception) {
             return response([
                 'status' => 0,
-                'message' => 'Có chút lỗi ,ảy ra, bạn vui lòng thử lại sau.',
+                'message' => 'Có chút lỗi xảy ra, bạn vui lòng thử lại sau.',
                 'error' => $exception->getMessage()
+            ]);
+        }
+
+        if (!$exe) {
+            return response([
+                'status' => 0,
+                'message' => 'Có chút lỗi xảy ra, bạn vui lòng thử lại sau.',
             ]);
         }
 
         return response([
             'status' => 1,
             'message' => 'Thành công',
-            'link' => 'https://taichinhsmart.vn/san-pham/san-pham-toi-den-1-nhanh-blaga/success'
+            'link' => $link
         ]);
     }
 

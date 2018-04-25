@@ -139,6 +139,7 @@ li{
 }
 #header img{
 	margin: auto;
+	padding: 0px 10px;
 }
 .slide img{
 	width: 100%;
@@ -629,14 +630,20 @@ span.span_doitac{
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 24px;
-	text-shadow: 2px 2px #5a0502;
+	/*text-shadow: 2px 2px #5a0502;*/
 	line-height: 30px;
+	margin-bottom: 29px;
 }
-.ct2-uudai span.special{
+.special{
 	color: #ff0000;
+	font-weight: bold;
 	font-size: 36px;
 	/*text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0px 0px #fff, 0px 0px 0 #fff, 0px 0px 0 #fff, 0px 0px 0 #fff;*/
-	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+	/*text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;*/
+	padding: 18px 22px;
+	text-align: center;
+	background: yellow;
+	display: inline-block;
 }
 .title-ct2{
 	text-align: center;
@@ -1048,6 +1055,7 @@ span.span_doitac{
 	background: #fff;
 	margin: 15px;
 	padding: 20px 5px;
+	height: 264px;
 	border-radius: 8px;
 }
 .name-khachhang{
@@ -1055,7 +1063,7 @@ span.span_doitac{
 	font-size: 24px;
 	line-height: 30px;
 	font-family: Roboto;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	/* color: #fff; */
 	margin-bottom: 15px;
 }
@@ -1074,12 +1082,19 @@ span.span_doitac{
     text-align: center;
     /* padding-bottom: 50px; */
     text-transform: uppercase;
-    color: #f95800;
+    /*color: #f95800;*/
     font-size: 24px;
     font-family: Roboto;
-    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+    /*text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;*/
 }
-.ft-favor{}
+.ft-favor{
+	display: inline-block;
+	color: #fff;
+	background: #c20003;
+	padding: 15px 20px;
+	border-radius: 8px;
+	line-height: 33px;
+}
 
 .main-ct4-all{padding-top: 50px;}
 .title-ct9 {
@@ -1088,9 +1103,9 @@ span.span_doitac{
     line-height: 30px;
     font-family: Roboto;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
     padding-bottom: 30px;
-    text-shadow: 1px 0 0 #dbaf00, -1px 0 0 #dbaf00, 0 1px 0 #dbaf00, 0 -1px 0 #dbaf00, 0px 0px #dbaf00, 0px 0px 0 #dbaf00, 0px 0px 0 #dbaf00, 0px 0px 0 #dbaf00;
+    /*text-shadow: 1px 0 0 #dbaf00, -1px 0 0 #dbaf00, 0 1px 0 #dbaf00, 0 -1px 0 #dbaf00, 0px 0px #dbaf00, 0px 0px 0 #dbaf00, 0px 0px 0 #dbaf00, 0px 0px 0 #dbaf00;*/
 }
 /*.shortdes-khachhang { overflow: hidden; }*/
 
@@ -1114,6 +1129,10 @@ span.span_doitac{
 	}
 	.div-ct4-phai {padding-left: 0px;}
 	.div-ct4-trai {padding-right: 0px;}
+}
+.checked {
+	color: #1fbb0c;
+	font-size: 18px;
 }
 @media (max-width: 767px) {
     .title-slg {font-size: 15px!important;}
@@ -1153,6 +1172,41 @@ span.span_doitac{
 	.max-w-tablet{
 		max-width: 100%;
 		width: auto!important;
+	}
+	.special {
+		font-size: 20px;
+	}
+
+	.title-ct4 {
+		font-size: 23px;
+	}
+
+	.img-khachhang {
+		width: 100px;
+		margin: 0px auto;
+		float: none;
+	}
+
+	.img-khachhang img {
+		width: 100%;
+	}
+	.name-khachhang {
+		text-align: center;
+	}
+
+	.content-slide {
+		height: 350px;
+	}
+	.title-ct9 {
+		font-size: 22px;
+	}
+
+	.ct2-uudai {
+		ont-size: 19px;
+	}
+
+	.name-khachhang .div2 {
+		font-size: 17px;
 	}
 }
 @media (max-width: 480px) {

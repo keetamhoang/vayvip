@@ -55,6 +55,7 @@ class Unit {
     public static function addRowToSpreadsheet($sheet_service, $spreadsheetId, $ary_values = array()) {
         // Set the sheet ID
         $fileId = $spreadsheetId; // Copy & paste from a spreadsheet URL
+        $range = 'toiden_blaga!A2:D';
         // Build the CellData array
         $values = array();
         foreach( $ary_values AS $d ) {
@@ -96,5 +97,29 @@ class Unit {
         }
 
         return false;
+    }
+
+    public static function addRowToSpreadsheet2($sheet_service, $spreadsheetId, $sSpreadsheetRange, $ary_values = array()) {
+        try {
+            $sSpreadsheetID = $spreadsheetId; // change me
+            $sSpreadsheetRange = $sSpreadsheetRange . '!A2:D';
+
+            $asSpreadsheetRows = array(
+                $ary_values
+            );
+            $body = new \Google_Service_Sheets_ValueRange(array(
+                'values' => $asSpreadsheetRows
+            ));
+            $params = array(
+                'valueInputOption' => 'USER_ENTERED'
+            );
+
+            $result = $sheet_service->spreadsheets_values->append($sSpreadsheetID, $sSpreadsheetRange, $body, $params);
+
+        } catch (\Exception $ex) {
+            return false;
+        }
+
+        return true;
     }
 }
