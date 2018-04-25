@@ -145,7 +145,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-4">
                         <div class="box6-left">
-                            <img src="/product/toiden/image/toi-den-blaga-5.jpg" alt="GIẢI PHÁP AN TOÀN VÀ HIỆU QUẢ CHO
+                            <img src="/product/toiden/image/toi-den-blaga-5.png" alt="GIẢI PHÁP AN TOÀN VÀ HIỆU QUẢ CHO
                                 NGƯỜI BỆNH TIỂU ĐƯỜNG!">
                         </div>
                     </div>
