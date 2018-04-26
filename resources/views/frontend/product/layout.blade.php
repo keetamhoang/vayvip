@@ -25,7 +25,15 @@
     /></noscript>
 <!-- End Facebook Pixel Code -->
 @yield('body')
+<script>
+    $(document).ready(function () {
+        setTimeout(showPopup, 9000);
 
+        function showPopup() {
+            $('#myModal').modal('show');
+        }
+    })
+</script>
 <script>
     $.ajaxSetup({
         headers: {

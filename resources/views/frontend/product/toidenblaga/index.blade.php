@@ -1,7 +1,7 @@
 @extends('frontend.product.layout')
 
 @section('head')
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" xmlns="http://www.w3.org/1999/html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="tỏi đen, tỏi đen blaga, toi den, cach lam toi den, tỏi đen có tác dung gì, máy làm tỏi đen, nồi làm tỏi đen, tac dung cua toi den">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/product/toiden/css/hover-min.css">
     <link rel="stylesheet" href="/product/toiden/css/font-awesome.min.css">
     <link rel="stylesheet" href="/product/toiden/css/style.css">
+    <link rel="stylesheet" href="/css/popup_sp.css">
 
     <!-- <script src="https://code.jquery.com/jquery-1.9.1.js" integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=" crossorigin="anonymous"></script> -->
     <script src="/product/toiden/js/jquery-3.1.1.min.js"></script>
@@ -861,6 +862,55 @@
             </div>
         </div>
 
+        <div id="myModal" class="popup_show_ct modal fade in toiden" role="dialog"
+             style="display: none; padding-right: 17px;">
+            <div class="popup-child"><a href="javascript:void(0);" class="btn_close" data-dismiss="modal"
+                                        aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                <div class="title">ĐĂNG KÝ MUA HÀNG NGAY</div>
+                <form id="frmTVMP" name="frmTVMP" class="submit_form has-validation-callback" method="POST"
+                      action="{{ url('san-pham/dang-ky') }}">
+                    {{ csrf_field() }}
+                    <input name="sp" type="hidden" value="toiden_blaga">
+                    <div class="content_form">
+                        <div class="form-group">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-user"
+                                                                                        aria-hidden="true"></i></span><input
+                                        type="text" id="txtName" name="name" placeholder="Nhập họ và tên"
+                                        class="form-control" data-validation="required"
+                                        data-validation-error-msg="Vui lòng nhập họ tên"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-phone"
+                                                                                        aria-hidden="true"></i></span><input
+                                        type="text" id="txtSdt" name="mobile" placeholder="Nhập số điện thoại"
+                                        class="form-control" data-validation="custom"
+                                        data-validation-regexp="^(\+84|0)\d{9,10}$"
+                                        data-validation-error-msg="Vui lòng nhập số điện thoại hợp lệ"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-home"
+                                                                                        aria-hidden="true"></i></span><input
+                                        type="text" id="txtAddress" name="address" placeholder="Nhập địa chỉ"
+                                        class="form-control" data-validation="custom"
+                                        data-validation-error-msg="Vui lòng nhập địa chỉ"></div>
+                        </div>
+                    </div>
+                    <div class="btn_dktv">
+                        <div class="loading-gif" style="">
+                            <img src="/product/toiden/image/toi-den-blaga-loading.gif" alt="Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!">
+                        </div>
+                        <button type="submit" id="btnSend" class="btn btn-lg">ĐĂNG KÝ</button>
+                    </div>
+                    <div class="info_list">
+                        <div class="info_item"><i class="fa fa-gift" aria-hidden="true"></i>Tỏi đen 1 nhánh <span
+                                    class="hot_line">Blaga</span>
+                        </div>
+                        <div class="info_item"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giảm sốc tới <span class="hot_line">40%</span> giá chỉ <span class="hot_line">680.000Đ/500gr</span></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <script>
             function forceNumber(event){
                 var value = document.getElementById('phone').value;
@@ -998,6 +1048,57 @@
                     });
                 } else {
                     $('.btnsubmit').show();
+                    $('.loading-gif').hide();
+                }
+            });
+
+            $('#frmTVMP').submit(function (e) {
+                e.preventDefault();
+
+                $('#btnSend').hide();
+                $('.loading-gif').show();
+
+                if ($('#txtName').val().trim() != '' && $('#txtSdt').val().trim() != '' && $('#txtAddress').val().trim() != '') {
+                    var form = $(this).serialize();
+                    var url = $(this).attr('action');
+
+                    $.ajax({
+                        url: url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: form,
+                        success: function (response) {
+                            if (response.status == 1) {
+//                                BootstrapDialog.alert({
+//                                    title: 'Đặt hàng thành công!',
+//                                    message: 'Cảm ơn bạn đã đặt hàng Tỏi đen 1 nhánh Blaga. Chúng tôi sẽ liên hệ sớm nhất với bạn sau khi nhận được đơn hàng này.',
+//                                    type: BootstrapDialog.TYPE_SUCCESS,
+//                                    size: BootstrapDialog.SIZE_LARGE,
+//                                    closable: true,
+//                                    buttonLabel: 'Đóng'
+//                                });
+//
+//                                $('#name').val('');
+//                                $('#phone').val('');
+//                                $('#address').val('');
+                                window.location.replace(response.link);
+                            } else {
+                                BootstrapDialog.alert({
+                                    title: 'Đặt hàng không thành công!',
+                                    message: response.message,
+                                    type: BootstrapDialog.TYPE_WARNING,
+                                    size: BootstrapDialog.SIZE_LARGE,
+                                    closable: true,
+                                    buttonLabel: 'Đóng'
+                                });
+
+                                $('.btnsubmit').show();
+                                $('.loading-gif').hide();
+                            }
+                        }
+                    });
+                } else {
+                    $('#btnSend').show();
                     $('.loading-gif').hide();
                 }
             });

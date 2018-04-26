@@ -1,0 +1,157 @@
+.popup-child {
+    position: relative;
+    color: #242424;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    max-width: 470px;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 5%;
+    background: #f0f0f0;
+    padding: 0;
+    text-align: left;
+}
+
+a:focus, a {
+    color: inherit;
+}
+
+.popup-child .btn_close i {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding-right: 0;
+    font-size: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+a[href]:after {
+    content: ""!important;
+}
+
+.popup-child .title {
+    font-size: 30px;
+    line-height: 60px;
+    background: #242424;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.toiden .popup-child .title {
+    background: #f44336;
+    color: #fff;
+}
+
+.popup-child .title:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -12px;
+    left: 35px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 12px solid #f44336;
+}
+
+.toiden .popup-child .title:after {
+
+}
+
+.popup-child form {
+    padding: 30px 25px 15px;
+}
+
+.popup-child input {
+    padding: 22px 10px;
+    border: 1px solid #c7c6c6;
+    border-radius: 0;
+}
+
+.popup-child .content_form .form-group .input-group-addon {
+    padding: 10px 16px;
+    border-radius: 0;
+}
+
+.popup-child .input-group-addon i {
+    font-size: 22px;
+    width: 15px;
+    color: #242424;
+}
+
+.popup-child .input-group-addon i {
+    color: #f44336
+}
+
+.help-block {
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.popup-child .content_form .form-group .input-group-addon {
+    padding: 10px 16px;
+    border-radius: 0;
+}
+
+.popup-child .btn_dktv {
+    text-align: center;
+    margin: 25px 0 20px;
+}
+
+.popup-child .btn_dktv button {
+    padding: 22px;
+    background: #242424;
+    border-radius: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 0;
+}
+
+.toiden .popup-child .btn_dktv button {
+    background: #f44336;
+}
+
+.popup-child .btn_dktv button:hover {
+    background: #fed700;
+    color: #242424;
+}
+
+.popup-child .info_list {
+    font-size: 19px;
+}
+
+.popup-child .info_list .info_item i {
+    width: 30px;
+    text-align: center;
+}
+
+.toiden .popup-child .info_list .info_item i {
+    color: #f44336;
+}
+
+.popup-child .info_list .info_item .hot_line {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.toiden .popup-child .info_list .info_item .hot_line {
+    color: #f44336;
+}
+
+.popup-child .info_list .info_item .free {
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    #myModal {
+        margin-top: 45px;
+    }
+
+    .popup-child .title {
+        font-size: 25px;
+    }
+}

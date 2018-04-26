@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/product/hoanxuanthang/css/stylea.css">
     <link rel="stylesheet" type="text/css" href="/product/hoanxuanthang/css/reset.css">
     <link rel="stylesheet" href="/product/hoanxuanthang/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/popup_sp.css">
 
 
     <script type="text/javascript" src="/product/hoanxuanthang/js/sdk.js"></script>
@@ -560,6 +561,55 @@
         </script>
     </div>
 
+    <div id="myModal" class="popup_show_ct modal fade in toiden" role="dialog"
+         style="display: none; padding-right: 17px;">
+        <div class="popup-child"><a href="javascript:void(0);" class="btn_close" data-dismiss="modal"
+                                    aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <div class="title">ĐĂNG KÝ MUA HÀNG NGAY</div>
+            <form id="frmTVMP" name="frmTVMP" class="submit_form has-validation-callback" method="POST"
+                  action="{{ url('san-pham/dang-ky') }}">
+                {{ csrf_field() }}
+                <input name="sp" type="hidden" value="hoanxuanthang">
+                <div class="content_form">
+                    <div class="form-group">
+                        <div class="input-group"><span class="input-group-addon"><i class="fa fa-user"
+                                                                                    aria-hidden="true"></i></span><input
+                                    type="text" id="txtName" name="name" placeholder="Nhập họ và tên"
+                                    class="form-control" data-validation="required"
+                                    data-validation-error-msg="Vui lòng nhập họ tên"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group"><span class="input-group-addon"><i class="fa fa-phone"
+                                                                                    aria-hidden="true"></i></span><input
+                                    type="text" id="txtSdt" name="mobile" placeholder="Nhập số điện thoại"
+                                    class="form-control" data-validation="custom"
+                                    data-validation-regexp="^(\+84|0)\d{9,10}$"
+                                    data-validation-error-msg="Vui lòng nhập số điện thoại hợp lệ"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"
+                                                                                    aria-hidden="true"></i></span><input
+                                    type="text" id="txtAddress" name="email" placeholder="Nhập email"
+                                    class="form-control" data-validation="custom"
+                                    data-validation-error-msg="Vui lòng nhập email"></div>
+                    </div>
+                </div>
+                <div class="btn_dktv">
+                    <div class="loading-gif" style="display: none;">
+                        <img src="/product/toiden/image/toi-den-blaga-loading.gif" alt="Đầu tư cho sức khỏe của bản thân là sự đầu tư có ích nhất!">
+                    </div>
+                    <button type="submit" id="btnSend" class="btn btn-lg">ĐĂNG KÝ</button>
+                </div>
+                <div class="info_list">
+                    <div class="info_item"><i class="fa fa-gift" aria-hidden="true"></i>Sản phẩm <span
+                                class="hot_line">Hoàn Xuân Thang</span>
+                    </div>
+                    <div class="info_item"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua 4 tặng 1, mua 2 free ship, giá chỉ <span class="hot_line">450.000Đ/lọ 500gr</span></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function () {
             $('#myform').submit(function (e) {
@@ -597,6 +647,45 @@
                     });
                 } else {
                     $('.btnsubmit').show();
+                    $('.loading-gif').hide();
+                }
+            });
+
+            $('#frmTVMP').submit(function (e) {
+                e.preventDefault();
+
+                $('#btnSend').hide();
+                $('.loading-gif').show();
+
+                if ($('#txtName').val().trim() != '' && $('#txtSdt').val().trim() != '' && $('#txtAddress').val().trim() != '') {
+                    var form = $(this).serialize();
+                    var url = $(this).attr('action');
+
+                    $.ajax({
+                        url: url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: form,
+                        success: function (response) {
+                            if (response.status == 1) {
+                                window.location.replace(response.link);
+                            } else {
+                                BootstrapDialog.alert({
+                                    title: 'Đặt hàng không thành công!',
+                                    message: response.message,
+                                    type: BootstrapDialog.TYPE_WARNING,
+                                    size: BootstrapDialog.SIZE_LARGE,
+                                    closable: true,
+                                    buttonLabel: 'Đóng'
+                                });
+
+                                $('.btnsubmit').show();
+                                $('.loading-gif').hide();
+                            }
+                        }
+                    });
+                } else {
+                    $('#btnSend').show();
                     $('.loading-gif').hide();
                 }
             });
