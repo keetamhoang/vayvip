@@ -140,51 +140,99 @@ class SaleController extends Controller
     }
 
     public function congNghe() {
-        return view('frontend.km.cong_nghe');
+        $lazada = Partner::where('name', 'congnghe')->first();
+
+        $coupons = Code::where('name', 'congnghe')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.cong_nghe', compact('lazada', 'coupons'));
     }
 
     public function giaDung() {
-        return view('frontend.km.gia_dung');
+        $lazada = Partner::where('name', 'giadung')->first();
+
+        $coupons = Code::where('name', 'giadung')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.gia_dung', compact('lazada', 'coupons'));
     }
 
     public function meBe() {
-        return view('frontend.km.me_be');
+        $lazada = Partner::where('name', 'mebe')->first();
+
+        $coupons = Code::where('name', 'mebe')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.me_be', compact('lazada', 'coupons'));
     }
 
     public function lamDep() {
-        return view('frontend.km.lam_dep');
+        $lazada = Partner::where('name', 'lamdep')->first();
+
+        $coupons = Code::where('name', 'lamdep')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.lam_dep', compact('lazada', 'coupons'));
     }
 
     public function duLich2() {
-        return view('frontend.km.du_lich_2');
+        $lazada = Partner::where('name', 'dulich2')->first();
+
+        $coupons = Code::where('name', 'dulich2')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.du_lich_2', compact('lazada', 'coupons'));
     }
 
     public function thoiTrang() {
-        return view('frontend.km.thoi_trang');
+        $lazada = Partner::where('name', 'thoitrang')->first();
+
+        $coupons = Code::where('name', 'thoitrang')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.thoi_trang', compact('lazada', 'coupons'));
     }
 
     public function doiSong() {
-        return view('frontend.km.doi_song');
+        $lazada = Partner::where('name', 'doisong')->first();
+
+        $coupons = Code::where('name', 'doisong')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.doi_song', compact('lazada', 'coupons'));
     }
 
     public function dichVuGiamGia() {
-        return view('frontend.km.dich_vu_giam_gia');
+        $lazada = Partner::where('name', 'dichvugiamgia')->first();
+
+        $coupons = Code::where('name', 'dichvugiamgia')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.dich_vu_giam_gia', compact('lazada', 'coupons'));
     }
 
     public function bachHoa() {
-        return view('frontend.km.bach_hoa');
+        $lazada = Partner::where('name', 'bachhoa')->first();
+
+        $coupons = Code::where('name', 'bachhoa')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.bach_hoa', compact('lazada', 'coupons'));
     }
 
     public function Sach() {
-        return view('frontend.km.sach');
+        $lazada = Partner::where('name', 'sach')->first();
+
+        $coupons = Code::where('name', 'sach')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.sach', compact('lazada', 'coupons'));
     }
 
     public function Xe() {
-        return view('frontend.km.xe');
+        $lazada = Partner::where('name', 'xe')->first();
+
+        $coupons = Code::where('name', 'xe')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.xe', compact('lazada', 'coupons'));
     }
 
     public function nganHang() {
-        return view('frontend.km.ngan_hang');
+        $lazada = Partner::where('name', 'nganhang')->first();
+
+        $coupons = Code::where('name', 'nganhang')->where('status', 0)->orderBy('priority', 'desc')->orderBy('id', 'desc')->limit(20)->get();
+
+        return view('frontend.km.ngan_hang', compact('lazada', 'coupons'));
     }
 
     public function saveCoupon(Request $request) {
