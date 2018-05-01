@@ -202,3 +202,14 @@ Route::group(['prefix' => 'san-pham'], function () {
     Route::get('san-pham-hoan-xuan-thang', 'Frontend\ProductController@hoanxuanthang');
     Route::get('san-pham-hoan-xuan-thang/success', 'Frontend\ProductController@hoanxuanthangSuccess');
 });
+
+Route::group(['prefix' => 'v2'], function () {
+    Route::get('/', 'Frontend\V2\HomeController@index');
+    Route::post('dang-ky', 'Frontend\ProductController@register');
+
+    Route::get('san-pham-toi-den-1-nhanh-blaga', 'Frontend\ProductController@toidenBlaga');
+    Route::get('san-pham-toi-den-1-nhanh-blaga/success', 'Frontend\ProductController@toidenBlagaSuccess');
+
+    Route::get('san-pham-hoan-xuan-thang', 'Frontend\ProductController@hoanxuanthang');
+    Route::get('san-pham-hoan-xuan-thang/success', 'Frontend\ProductController@hoanxuanthangSuccess');
+});

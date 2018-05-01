@@ -1,0 +1,42 @@
+body {
+    padding-top: 115px;
+}
+
+.header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lead, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header .top-nav {
+    padding: 0px;
+}
+
+.header .top-nav .topbar-left .logo {
+    width: 87%;
+    margin-top: 5px;
+}
+
+.header .top-nav .topbar-left .logo img {
+    min-width: 90px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 65px;
+    }
+
+    .header .top-nav .topbar-left .logo {
+        margin-top: 12px;
+    }
+
+    .header .top-nav .topbar-left .logo img {
+        min-width: 120px;
+    }
+
+    .slide-wrap {
+        margin-top: 10px;
+    }
+}
