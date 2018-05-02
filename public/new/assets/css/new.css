@@ -23,6 +23,79 @@ body {
     min-width: 90px;
 }
 
+.nav.nav-tabs > li > a i {
+    line-height: 15px;
+}
+
+.deal .large {
+    color: #34b86d !important;
+}
+
+.deal .btn-code span.btn-hover {
+    border-color: #34b86d !important;
+    color: #34b86d;
+}
+
+.deal .btn-code span.btn-hover:hover {
+    color: #fff;
+    background: #34b86d;
+}
+
+.sidebar-nav li a:hover {
+    color: #f30;
+}
+
+.sidebar-nav li i {
+    color: #f30;
+}
+
+.header .top-nav .nav > li > a:hover {
+    background: #000000 !important;
+}
+
+.media-body > p {
+    height: 20px;
+    margin: 0px;
+}
+
+.media-heading a {
+    color: #000;
+}
+
+.media-heading a:hover {
+    color: #f30;
+}
+
+.a-image {
+    width: 74px;
+    height: 64px;
+    float: left;
+}
+
+.a-image a {
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    height: 64px;
+    width: 100%;
+    display: inline-block;
+}
+
+.btn-div {
+    text-align: center;
+}
+
+#footer .btmFooter {
+    background: #25282e;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+#footer strong, #footer p {
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;

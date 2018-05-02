@@ -28,12 +28,13 @@ $(document).ready(function () {
         , // Carousel
         $(".main-slider").owlCarousel({
             items: 1
-            , loop: !1
+            , loop: 1
             , center: !0
             , margin: 10
             , autoplayHoverPause: !0
             , dots: !1
             , nav: !1
+            , autoplay: 1
         })
         , // Tooltips
         $('[data-toggle="tooltip"]').tooltip(), $().button("toggle")

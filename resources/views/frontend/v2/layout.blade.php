@@ -47,35 +47,35 @@
             <div class="container">
                 <div class="row explain_group">
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="#">
-                            <div class="box-icon"> <i class="bg-danger ti-search"></i> </div>
+                        <a class="item" rel="nofollow" href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                            <div class="box-icon"> <i class="bg-danger ti-shopping-cart"></i> </div>
                             <div class="box-info">
-                                <h3>Search coupons</h3>
-                                <h4>Find best money-saving coupons.</h4>
-                                <div class="point"><i class="ti-check"></i><span>Find fresh coupons</span> </div>
-                                <div class="point"><i class="ti-check"></i><span>Top Coupons & Offers</span> </div>
+                                <h3>Cùng săn mã giảm giá</h3>
+                                <h4>Sale off tới 50% cùng nhiều ưu đãi</h4>
+                                <div class="point"><i class="ti-check"></i><span>Cập nhật nhanh nhất</span> </div>
+                                <div class="point"><i class="ti-check"></i><span>Các mã có độ chính xác cao</span> </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="#">
-                            <div class="box-icon"> <i class="bg-info ti-shopping-cart-full"></i> </div>
+                        <a class="item" rel="nofollow" href="{{ url('vay-von-tin-dung') }}">
+                            <div class="box-icon"> <i class="bg-info ti-wallet"></i> </div>
                             <div class="box-info">
-                                <h3>Save your money</h3>
-                                <h4>Find best money-saving coupons.</h4>
-                                <div class="point"><i class="ti-check"></i><span>Find fresh coupons</span> </div>
-                                <div class="point"><i class="ti-check"></i><span>Top Coupons & Offers</span> </div>
+                                <h3>Vay vốn tín dụng</h3>
+                                <h4>Có thể vay tới 100 triệu</h4>
+                                <div class="point"><i class="ti-check"></i><span>Thủ tục nhanh chóng, tiện lợi</span> </div>
+                                <div class="point"><i class="ti-check"></i><span>Nhiều ưu đãi hấp dẫn về lãi suất</span> </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="#">
-                            <div class="box-icon"> <i class="bg-purple ti-gift"></i> </div>
+                        <a class="item" rel="nofollow" href="{{ url('tin-tuc/the-tin-dung-la-gi-12') }}">
+                            <div class="box-icon"> <i class="bg-purple ti-ticket"></i> </div>
                             <div class="box-info">
-                                <h3>Earn your gifts</h3>
-                                <h4>Find best money-saving coupons.</h4>
-                                <div class="point"><i class="ti-check"></i><span>Find fresh coupons</span> </div>
-                                <div class="point"><i class="ti-check"></i><span>Top Coupons & Offers</span> </div>
+                                <h3>Làm thẻ tín dụng</h3>
+                                <h4>Từ các ngân hàng lớn, uy tín</h4>
+                                <div class="point"><i class="ti-check"></i><span>Miễn phí hoàn toàn phí mở thẻ</span> </div>
+                                <div class="point"><i class="ti-check"></i><span>Thủ tục nhanh chóng, tiện lợi</span> </div>
                             </div>
                         </a>
                     </div>
@@ -86,15 +86,15 @@
             <div class="container text-center">
                 <div class="col-sm-12">
                     <div class="newsletter-form">
-                        <h4><i class="ti-email"></i>Sign up for our weekly email newsletter with the best money-saving coupons.</h4>
+                        <h4><i class="ti-email"></i>Đăng ký để nhận mã giảm giá, các chương trình khuyến mại mới nhất, tốt nhất</h4>
                         <div class="input-group">
                             <input type="text" class="form-control input-lg" placeholder="Email"> <span class="input-group-btn">
                            <button class="btn btn-danger btn-lg" type="button">
-                           Subscribe
+                           Đăng ký
                            </button>
                            </span>
                         </div>
-                        <p><small>We’ll never share your email address with a third-party.</small> </p>
+                        <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
                     </div>
                 </div>
             </div>

@@ -2,46 +2,19 @@
     <div class="btmFooter">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1 text-center">
-                    <ul class="list-inline list-unstyled">
-                        <li><a href="#">Australia</a> </li>
-                        <li><a href="#">North America</a> </li>
-                        <li><a href="#">South America</a> </li>
-                        <li><a href="#">India</a> </li>
-                        <li><a href="#">Africa</a> </li>
-                    </ul>
+                <div class="col-sm-2 col-sm-offset-5 text-center">
+                    <img src="/assets/image/logo.png" alt="Tài chính SMART - Tài chính thông minh trong tầm tay của bạn" style="width: 100%">
                 </div>
             </div>
             <div class="col-sm-12 text-center m-t-20">
                 <p> <strong>
-                        Copyright 2016
-                    </strong> KuponHub - Coupons template made with <i class="ti-heart">
-                    </i> <strong>
-                        by Codenpixel
-                    </strong>
+                        Copyright {{ \Carbon\Carbon::now()->year }}
+                    </strong> TaichinhSMART.vn - Tài chính thông minh trong tầm tay của bạn <i class="ti-heart">
+                    </i>
                 </p>
             </div>
             <div class="col-sm-12 text-center m-t-30">
-                <ul class="pay-opt list-inline list-unstyled">
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/amz-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/ax-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/mb-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/mst-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/mstr-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#"> <img src="/new/assets/images/payment/paypal-icon.png" class="img-responsive" alt=""> </a>
-                    </li>
-                </ul>
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=cbbbe477-75c1-4557-b698-c3cae93325da" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=cbbbe477-75c1-4557-b698-c3cae93325da" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
             </div>
         </div>
     </div>

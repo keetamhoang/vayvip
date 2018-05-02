@@ -1,41 +1,55 @@
 @extends('frontend.v2.layout')
 
+@section('title')
+    <title>Tài chính thông minh trong tầm tay của bạn</title>
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-sm-12">
             <!-- Main component for a primary marketing message or call to action -->
             <div class="slide-wrap shadow">
                 <div class="main-slider">
-                    <a href="#" class="item" data-hash="one"> <img src="http://placehold.it/1500x500" alt=""> </a>
-                    <div class="item" data-hash="two"> <img src="http://placehold.it/1500x500" alt=""> </div>
-                    <div class="item" data-hash="three"> <img src="http://placehold.it/1500x500" alt=""> </div>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="one"> <img src="/new/assets/images/ma-giam-gia-banner-2.png" alt="Mã giảm giá HOT nhất"> </a>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="two"> <img src="/new/assets/images/ma-giam-gia-banner-1.png" alt="Mã giảm giá khuyến mại HOT nhất"> </a>
+                    <a href="{{ url('vay-von/dang-ky') }}" class="item" data-hash="three"> <img src="/new/assets/images/vay-von-tin-dung-banner-2.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
+                    <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
                 </div>
                 <!-- /.carosuel -->
                 <div class="carousel-tabs clearfix">
-                    <a class="col-sm-4 tab url" href="#one">
+                    <a class="col-sm-3 tab url" href="#three">
                         <div class="media">
-                            <div class="media-left media-middle"> <img src="http://placehold.it/120x50" alt=""> </div>
+                            <div class="media-left media-middle"> <img src="/new/assets/images/ma-giam-gia-banner-2-small.png" alt="Mã giảm giá HOT nhất"> </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Upto 30% Rewards</h4>
-                                <p>Up to 70% off on Clothing ...</p>
+                                <h4 class="media-heading">Mua sắm thả ga</h4>
+                                <p>Tự tin không lo về giá ...</p>
                             </div>
                         </div>
                     </a>
-                    <a class="col-sm-4 tab url" href="#two">
+                    <a class="col-sm-3 tab url" href="#four">
                         <div class="media">
-                            <div class="media-left media-middle"> <img src="http://placehold.it/120x50" alt=""> </div>
+                            <div class="media-left media-middle"> <img src="/new/assets/images/ma-giam-gia-banner-1-small.png" alt="Mã giảm giá khuyến mại HOT nhất"> </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Upto 70% Rewards</h4>
-                                <p>Up to 70% off on Clothing ...</p>
+                                <h4 class="media-heading">Săn deal khủng</h4>
+                                <p>Các mã giảm giá đến 50% ...</p>
                             </div>
                         </div>
                     </a>
-                    <a class="col-sm-4 tab url" href="#three">
+                    <a class="col-sm-3 tab url" href="#one">
                         <div class="media">
-                            <div class="media-left media-middle"> <img src="http://placehold.it/120x50" alt=""> </div>
+                            <div class="media-left media-middle"> <img src="/new/assets/images/vay-von-tin-dung-banner-2-small.png" alt=""> </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Upto 50% Rewards</h4>
-                                <p>Up to 70% off on Clothing ...</p>
+                                <h4 class="media-heading">Vay vốn tín dụng</h4>
+                                <p>Vay tới 100 triệu đồng ...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-sm-3 tab url" href="#two">
+                        <div class="media">
+                            <div class="media-left media-middle"> <img src="/new/assets/images/the-tin-dung-banner-1-small.png" alt="Đăng ký vay vốn tín dụng NHANH"> </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Làm thẻ tín dụng</h4>
+                                <p>Hoàn toàn miễn phí ...</p>
                             </div>
                         </div>
                     </a>
@@ -48,740 +62,319 @@
     <div class="row">
         <div class="col-lg-8">
             <ul class="nav nav-tabs responsive-tabs" id="myTab">
-                <li class="active"><a data-toggle="tab" href="#popular"><i class="ti-bar-chart"></i>Popular </a> </li>
-                <li class=""><a data-toggle="tab" href="#ending"><i class="ti-timer"></i> Ending soon</a> </li>
-                <li class=""><a data-toggle="tab" href="#online"><i class="ti-link"></i>Online</a> </li>
-                <li class=""><a data-toggle="tab" href="#atStore"><i class="ti-receipt"></i>In-store</a> </li>
+                <li class="active"><a data-toggle="tab" href="#popular"><i class="ti-crown"></i>Dùng nhiều </a> </li>
+                <li class=""><a data-toggle="tab" href="#online"><i class="ti-stats-up"></i>Mã giảm giá KHỦNG</a> </li>
+                <li class=""><a data-toggle="tab" href="#atStore"><i class="ti-shopping-cart"></i>Deal HOT</a> </li>
+                <li class=""><a data-toggle="tab" href="#ending"><i class="ti-timer"></i> Sắp hết hạn</a> </li>
             </ul>
             <div class="tab-content clearfix" id="myTabContent">
                 <div id="popular" class="tab-pane counties-pane active animated fadeIn">
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">72%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Deal</div>
+                    @foreach($mosts as $key => $most)
+                        @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
+                        @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+                        @if ($most->is_coupon == 1)
+                            @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
+                            <div class="coupon-wrapper row">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">{{ $coupon->coupon_save }}</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Coupon</div>
+                                        </div>
+                                    </div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-pink">Mã giảm giá</li>
+                                        <li class="label label-info">{{ $coupon->coupon_save }}</li>
+                                        <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                    {{--<ul class="coupon-details list-inline">--}}
+                                        {{--<li class="list-inline-item">--}}
+                                            {{--<div class="btn-group" role="group" aria-label="...">--}}
+                                                {{--<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>--}}
+                                                {{--<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>--}}
+                                            {{--</div>--}}
+                                            {{--<!-- end:Btn group -->--}}
+                                        {{--</li>--}}
+                                        {{--<li class="list-inline-item">30% of 54 recommend</li>--}}
+                                        {{--<li class="list-inline-item"><a href="#">Share</a> </li>--}}
+                                    {{--</ul>--}}
+                                    <!-- end:Coupon details -->
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                                    {{--<div class="btn-group" role="group" aria-label="...">--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="label label-info">In store</li>
-                                <li><span class="used-count">27 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Extra 10% Off Select Luggage + Up To $150 Back In Points For Members + Free Shipping</a></h4>
-                            <p data-toggle="collapse" data-target="#1">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="1" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
+                        @else
+                            <div class="coupon-wrapper row featured deal">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">KM</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Deal</div>
+                                        </div>
                                     </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row featured">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">25%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-primary">Deal khuyến mãi</li>
+                                        <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                    {{--<ul class="coupon-details list-inline">--}}
+                                        {{--<li class="list-inline-item">--}}
+                                            {{--<div class="btn-group" role="group" aria-label="...">--}}
+                                                {{--<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>--}}
+                                                {{--<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>--}}
+                                            {{--</div>--}}
+                                            {{--<!-- end:Btn group -->--}}
+                                        {{--</li>--}}
+                                        {{--<li class="list-inline-item">30% of 54 recommend</li>--}}
+                                        {{--<li class="list-inline-item"><a href="#">Share</a> </li>--}}
+                                    {{--</ul>--}}
+                                    <!-- end:Coupon details -->
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                                    {{--<div class="btn-group" role="group" aria-label="...">--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
+                                        {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="popular label label-success">100% success</li>
-                                <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                <li><span class="used-count">78 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Up To 70% Off | Shopname Promo Codes &amp; Coupons</a></h4>
-                            <p data-toggle="collapse" data-target="#more">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="more" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">15%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">20% Off With In-Store Pick-Up</a></h4>
-                            <p data-toggle="collapse" data-target="#more1">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="more1" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">72%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Deal</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="label label-info">In store</li>
-                                <li><span class="used-count">27 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Extra 10% Off Select Luggage + Up To $150 Back In Points For Members + Free Shipping</a></h4>
-                            <p data-toggle="collapse" data-target="#more-1">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="more-1" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
+                        @endif
+
+                    @endforeach
+
                 </div>
                 <div id="ending" class="tab-pane counties-pane animated fadeIn">
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">45%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                    @foreach($exps as $key => $most)
+                        @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
+                        @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+                        @if ($most->is_coupon == 1)
+                            @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
+                            <div class="coupon-wrapper row">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">{{ $coupon->coupon_save }}</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Coupon</div>
+                                        </div>
+                                    </div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-pink">Mã giảm giá</li>
+                                        <li class="label label-info">{{ $coupon->coupon_save }}</li>
+                                        <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="popular label label-success">100% success</li>
-                                <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                <li><span class="used-count">245 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Clearance up to 50% off</a></h4>
-                            <p data-toggle="collapse" data-target="#more2">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="more2" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
+                        @else
+                            <div class="coupon-wrapper row featured deal">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">KM</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Deal</div>
+                                        </div>
                                     </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">50%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-primary">Deal khuyến mãi</li>
+                                        <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Jack Black Men's Pit Boss Antiperspirant & Deodorant</a></h4>
-                            <p data-toggle="collapse" data-target="#2">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="2" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">72%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Deal</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li><span class="used-count">27 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Extra 10% Off Select Luggage + Up To $150 Back In Points For Members + Free Shipping</a></h4>
-                            <p data-toggle="collapse" data-target="#more3">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="more3" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">50%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Jack Black Men's Pit Boss Antiperspirant & Deodorant</a></h4>
-                            <p data-toggle="collapse" data-target="#more-2">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="more-2" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
+                        @endif
+
+                    @endforeach
                 </div>
                 <div id="online" class="tab-pane counties-pane animated fadeIn">
-                    <div class="coupon-wrapper row featured">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">25%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                    @foreach($coupons as $key => $most)
+                        @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
+                        @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+                        @if ($most->is_coupon == 1)
+                            @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
+                            <div class="coupon-wrapper row">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">{{ $coupon->coupon_save }}</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Coupon</div>
+                                        </div>
+                                    </div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-pink">Mã giảm giá</li>
+                                        <li class="label label-info">{{ $coupon->coupon_save }}</li>
+                                        <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="popular label label-success">100% success</li>
-                                <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                <li><span class="used-count">78 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Up To 70% Off | Shopname Promo Codes &amp; Coupons</a></h4>
-                            <p data-toggle="collapse" data-target="3">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="3" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
+                        @else
+                            <div class="coupon-wrapper row featured deal">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">KM</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Deal</div>
+                                        </div>
                                     </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">15%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-primary">Deal khuyến mãi</li>
+                                        <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">20% Off With In-Store Pick-Up</a></h4>
-                            <p data-toggle="collapse" data-target="4">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="4" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">72%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Deal</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li><span class="used-count">27 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Extra 10% Off Select Luggage + Up To $150 Back In Points For Members + Free Shipping</a></h4>
-                            <p data-toggle="collapse" data-target="5">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="5" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">50%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Jack Black Men's Pit Boss Antiperspirant & Deodorant</a></h4>
-                            <p data-toggle="collapse" data-target="#more-3">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="more-3" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
+                        @endif
+
+                    @endforeach
+
                 </div>
                 <div id="atStore" class="tab-pane counties-pane animated fadeIn">
-                    <div class="coupon-wrapper row featured">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">25%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                    @foreach($deals as $key => $most)
+                        @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
+                        @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+                        @if ($most->is_coupon == 1)
+                            @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
+                            <div class="coupon-wrapper row">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">{{ $coupon->coupon_save }}</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Coupon</div>
+                                        </div>
+                                    </div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-pink">Mã giảm giá</li>
+                                        <li class="label label-info">{{ $coupon->coupon_save }}</li>
+                                        <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li class="popular label label-success">100% success</li>
-                                <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                <li><span class="used-count">78 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Up To 70% Off | Shopname Promo Codes &amp; Coupons</a></h4>
-                            <p data-toggle="collapse" data-target="6">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="6" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
+                        @else
+                            <div class="coupon-wrapper row featured deal">
+                                <div class="coupon-data col-sm-2 text-center">
+                                    <div class="savings text-center">
+                                        <div>
+                                            <div class="large">KM</div>
+                                            <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                            <div class="type">Deal</div>
+                                        </div>
                                     </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">15%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
+                                    <!-- end:Savings -->
+                                </div>
+                                <!-- end:Coupon data -->
+                                <div class="coupon-contain col-sm-7">
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="sale label label-primary">Deal khuyến mãi</li>
+                                        <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
+                                        <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                                    </ul>
+                                    <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                                    <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
+                                    <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                                </div>
+                                <!-- end:Coupon cont -->
+                                <div class="button-contain col-sm-3 text-center">
+                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">20% Off With In-Store Pick-Up</a></h4>
-                            <p data-toggle="collapse" data-target="#7">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="7" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">72%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Deal</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="sale label label-pink">Sale</li>
-                                <li><span class="used-count">27 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Extra 10% Off Select Luggage + Up To $150 Back In Points For Members + Free Shipping</a></h4>
-                            <p data-toggle="collapse" data-target="#8">Shop these Shopname deals of the day to save as much...</p>
-                            <p id="8" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
-                    <div class="coupon-wrapper row">
-                        <div class="coupon-data col-sm-2 text-center">
-                            <div class="savings text-center">
-                                <div>
-                                    <div class="large">50%</div>
-                                    <div class="small">off</div>
-                                    <div class="type">Coupon</div>
-                                </div>
-                            </div>
-                            <!-- end:Savings -->
-                        </div>
-                        <!-- end:Coupon data -->
-                        <div class="coupon-contain col-sm-7">
-                            <ul class="list-inline list-unstyled">
-                                <li class="promo label label-pink">Promo code</li>
-                                <li class="sale label label-warning">Ending</li>
-                                <li><span class="used-count">51 used</span> </li>
-                            </ul>
-                            <h4 class="coupon-title"><a href="#">Jack Black Men's Pit Boss Antiperspirant & Deodorant</a></h4>
-                            <p data-toggle="collapse" data-target="#more-4">Buy online and pick-up in-store to save 15% or 20%...</p>
-                            <p id="more-4" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                            <ul class="coupon-details list-inline">
-                                <li class="list-inline-item">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                    </div>
-                                    <!-- end:Btn group -->
-                                </li>
-                                <li class="list-inline-item">30% of 54 recommend</li>
-                                <li class="list-inline-item"><a href="#">Share</a> </li>
-                            </ul>
-                            <!-- end:Coupon details -->
-                        </div>
-                        <!-- end:Coupon cont -->
-                        <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: coupon wrap -->
+                        @endif
+
+                    @endforeach
                 </div>
             </div>
             <!-- end: Tab content -->
@@ -790,231 +383,148 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Top các đơn vị khuyến mãi
+                        TOP đơn vị khuyến mãi
                     </h3>
-                    <div class="widget-widgets"> <a href="#">Xem tất cả <span class="ti-angle-right"></span></a> </div>
+                    <div class="widget-widgets"> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">Xem tất cả <span class="ti-angle-right"></span></a> </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}"> <img class="img-responsive" src="/new/assets/images/lazada-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Wallshop</h5>
+                                <h5>Lazada</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-tiki') }}"> <img class="img-responsive" src="/new/assets/images/tiki-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Shopers</h5>
+                                <h5>Tiki</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-adayroi') }}"> <img class="img-responsive" src="/new/assets/images/adayroi-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Shoplogo</h5>
+                                <h5>Adayroi</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-grab') }}"> <img class="img-responsive" src="/new/assets/images/grab-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Affiliate</h5>
+                                <h5>Grab</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-du-lich') }}"> <img class="img-responsive" src="/new/assets/images/mytour-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Coupons</h5>
+                                <h5>MyTour</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">
                             <div class="thumb-inside">
-                                <a class="thumbnail" href="#"> <img class="img-responsive" src="http://placehold.it/240x240" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                                <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lotte') }}"> <img class="img-responsive" src="/new/assets/images/lotte-240x240.png" alt=""> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                             </div>
                             <div class="store_name text-center">
-                                <h5>Discounts</h5>
+                                <h5>Lotte</h5>
                             </div>
                         </div>
                         <!-- /thumb -->
                     </div>
                 </div>
             </div>
-            <ul class="nav nav-tabs" id="multitabs">
-                <li class="active"><a data-toggle="tab" href="#tab1">Popular stores</a> </li>
-                <li class=""><a data-toggle="tab" href="#tab2">Popular Categories</a> </li>
-            </ul>
-            <div class="tab-content clearfix" id="multitabsContent">
-                <div id="tab1" class="tab-pane counties-pane active">
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">London</a>
-                                <br> <a href="#">Shopname</a>
-                                <br> <a href="#">Ebay</a>
-                                <br> <a href="#">Fashion store</a>
-                                <br> <a href="#">Flexstore</a>
-                                <br> <a href="#">Fashion store</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Liverpool</a>
-                                <br> <a href="#">Hostgator</a>
-                                <br> <a href="#">Shopname</a>
-                                <br> <a href="#">Envato</a>
-                                <br> <a href="#">Noname</a>
-                                <br> <a href="#">SomeStore</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">London</a>
-                                <br> <a href="#">Shopname</a>
-                                <br> <a href="#">Ebay</a>
-                                <br> <a href="#">Fashion store</a>
-                                <br> <a href="#">Flexstore</a>
-                                <br> <a href="#">Fashion store</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Liverpool</a>
-                                <br> <a href="#">Hostgator</a>
-                                <br> <a href="#">Shopname</a>
-                                <br> <a href="#">Envato</a>
-                                <br> <a href="#">Noname</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
+            <div class="clearfix"></div>
+            <div class="widget">
+                <!-- /widget heading -->
+                <div class="widget-heading">
+                    <h3 class="widget-title text-dark">
+                        Tại sao bạn cần Vay vốn tín dụng?
+                    </h3>
+                    <div class="clearfix"></div>
                 </div>
-                <div id="tab2" class="tab-pane">
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Avon</a>
-                                <br> <a href="#">Travel</a>
-                                <br> <a href="#">Gifts</a>
-                                <br> <a href="#">Tickets</a>
-                                <br> <a href="#">Phone</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Durham</a>
-                                <br> <a href="#">Recharge</a>
-                                <br> <a href="#">Toys</a>
-                                <br> <a href="#">Fashion</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Avon</a>
-                                <br> <a href="#">Travel</a>
-                                <br> <a href="#">Gifts</a>
-                                <br> <a href="#">Tickets</a>
-                                <br> <a href="#">Phone</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="row coupons-cat">
-                            <div> <a href="#">Durham</a>
-                                <br> <a href="#">Recharge</a>
-                                <br> <a href="#">Toys</a>
-                                <br> <a href="#">Fashion</a>
-                                <br>
-                            </div>
+                <div class="widget-body">
+                    <div class="">
+                        <p>Tài chính Smart là một kênh thông tin tổng hợp toàn diện về quản lý tài chính cá nhân, được lập ra với sứ mệnh giúp cho người Việt Nam có thể sử dụng những đồng tiền mình vất vả kiếm ra một cách thông minh nhất với vô vàn mã giảm giá cho tiêu dùng, các chương trình vay vốn đầu tư đa dạng, các kế hoạch tiết kiệm và bảo vệ tài chính hiệu quả.</p>
+                        <div class="btn-div">
+                            <a class="btn btn-danger" href="{{ url('vay-von/dang-ky') }}">Đăng ký ngay</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end: Tab content -->
+
+            <div class="clearfix"></div>
+            <div class="widget">
+                <!-- /widget heading -->
+                <div class="widget-heading">
+                    <h3 class="widget-title text-dark">
+                        Làm thẻ tín dụng tại các ngân hàng uy tín (Hoàn toàn miễn phí)
+                    </h3>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="widget-body">
+                    <div class="">
+                        <p>Tài chính Smart là một kênh thông tin tổng hợp toàn diện về quản lý tài chính cá nhân, được lập ra với sứ mệnh giúp cho người Việt Nam có thể sử dụng những đồng tiền mình vất vả kiếm ra một cách thông minh nhất với vô vàn mã giảm giá cho tiêu dùng, các chương trình vay vốn đầu tư đa dạng, các kế hoạch tiết kiệm và bảo vệ tài chính hiệu quả.</p>
+                        <div class="btn-div">
+                            <a class="btn btn-danger" href="{{ url('tin-dung/dang-ky') }}">Đăng ký ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-4">
             <div class="widget categories b-b-0">
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Popular categories
+                        Tiện ích nổi bật
                     </h3>
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
                     <!-- Sidebar navigation -->
                     <ul class="nav sidebar-nav">
-                        <li class="dropdown">
-                            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown"> <i class="ti-shine">
-                                </i> Travel <span class="sidebar-badge">
-                             12
-                             </span> <b class="caret">
-                                </b> </a>
-                            <ul class="dropdown-menu">
-                                <li> <a href="#" tabindex="-1">
-                                        Europe
-                                        <span class="sidebar-badge">
-                                   12
-                                   </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                         <li>
-                            <a href="#"> <i class="ti-gift">
-                                </i> Gifts <span class="sidebar-badge">
-                             3
+                            <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"> <i class="ti-gift">
+                                </i> Săn mã giảm giá HOT - Deal khủng <span class="sidebar-badge">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="ti-bag">
-                                </i> Vacations <span class="sidebar-badge">
-                             3
+                            <a href="{{ url('vay-von/dang-ky') }}"> <i class="ti-wallet">
+                                </i> Vay vốn tín dụng NHANH <span class="sidebar-badge">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="ti-ticket">
-                                </i> Tickets <span class="sidebar-badge badge-circle">
-                             12
+                            <a href="{{ url('tin-dung/dang-ky') }}"> <i class="ti-ticket">
+                                </i> Đăng ký làm thẻ tín dụng FREE <span class="sidebar-badge badge-circle">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="ti-pulse">
-                                </i> Health <span class="sidebar-badge badge-circle">
-                             45
+                            <a href="{{ url('tin-tuc-tai-chinh') }}"> <i class="ti-pulse">
+                                </i> Theo dõi tin tức về tài chính <span class="sidebar-badge badge-circle">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="ti-direction-alt">
-                                </i> Things To Do <span class="sidebar-badge badge-circle">
-                             117
-                             </span> </a>
-                        </li>
-                        <li>
-                            <a href="#"> <i class="ti-harddrives">
-                                </i> Electronics <span class="sidebar-badge badge-circle">
-                             117
+                            <a href="{{ url('mua-sam-hom-nay') }}"> <i class="ti-shopping-cart-full">
+                                </i> Mua sắm hôm nay có gì HOT? <span class="sidebar-badge badge-circle">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
                     </ul>
@@ -1025,52 +535,52 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Search your Favourite Stores
+                        Tìm kiếm Mã giảm giá, Khuyến mãi HOT
                     </h3>
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
                     <form class="form-horizontal select-search">
-                        <label class="control-label ">What you searching for?</label>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default"> <i class="ti-tag"></i>
-                                <input type="checkbox" checked>Coupons</label>
-                            <label class="btn btn-default"> <i class="ti-cut"></i>
-                                <input type="checkbox">Discounts</label>
-                            <label class="btn btn-default active"> <i class="ti-alarm-clock"></i>
-                                <input type="checkbox">Deals</label>
-                        </div>
+                        {{--<label class="control-label ">What you searching for?</label>--}}
+                        {{--<div class="btn-group" data-toggle="buttons">--}}
+                            {{--<label class="btn btn-default"> <i class="ti-tag"></i>--}}
+                                {{--<input type="checkbox" checked>Coupons</label>--}}
+                            {{--<label class="btn btn-default"> <i class="ti-cut"></i>--}}
+                                {{--<input type="checkbox">Discounts</label>--}}
+                            {{--<label class="btn btn-default active"> <i class="ti-alarm-clock"></i>--}}
+                                {{--<input type="checkbox">Deals</label>--}}
+                        {{--</div>--}}
                         <fieldset>
                             <div class="form-group">
-                                <label class="control-label ">Keyword</label>
-                                <input class="form-control" id="text" name="text" type="text" />
+                                {{--<label class="control-label ">Keyword</label>--}}
+                                <input class="form-control" id="text" name="text" type="text" placeholder="Vd: Lazada, tivi, sách,..."/>
                             </div>
-                            <div class="row">
-                                <!-- Select Basic -->
-                                <div class="form-group col-sm-6 col-xs-12">
-                                    <label class="control-label " for="category">Select category</label>
-                                    <select class="select form-control" id="category" name="category">
-                                        <option value="Electronics">Electronics</option>
-                                        <option value="Fashion">Fashion</option>
-                                        <option value="Kids">Kids</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-6 col-xs-12">
-                                    <label class="control-label " for="store">Select a store</label>
-                                    <select class="select form-control" id="store" name="store">
-                                        <option value="Shopname">Shopname</option>
-                                        <option value="Ebay">Ebay</option>
-                                        <option value="Ebay">Shopname</option>
-                                        <option value="Ebay">Hostgator</option>
-                                        <option value="Ebay">Ebay</option>
-                                        <option value="Bangdoo">Bangdoo</option>
-                                    </select>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<!-- Select Basic -->--}}
+                                {{--<div class="form-group col-sm-6 col-xs-12">--}}
+                                    {{--<label class="control-label " for="category">Select category</label>--}}
+                                    {{--<select class="select form-control" id="category" name="category">--}}
+                                        {{--<option value="Electronics">Electronics</option>--}}
+                                        {{--<option value="Fashion">Fashion</option>--}}
+                                        {{--<option value="Kids">Kids</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-group col-sm-6 col-xs-12">--}}
+                                    {{--<label class="control-label " for="store">Select a store</label>--}}
+                                    {{--<select class="select form-control" id="store" name="store">--}}
+                                        {{--<option value="Shopname">Shopname</option>--}}
+                                        {{--<option value="Ebay">Ebay</option>--}}
+                                        {{--<option value="Ebay">Shopname</option>--}}
+                                        {{--<option value="Ebay">Hostgator</option>--}}
+                                        {{--<option value="Ebay">Ebay</option>--}}
+                                        {{--<option value="Bangdoo">Bangdoo</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <!-- //row -->
                             <!-- Button -->
                             <div class="form-group ">
-                                <button id="search_btn" name="search_btn" class="btn btn-danger">Search coupons</button>
+                                <button id="search_btn" name="search_btn" class="btn btn-danger">Tìm kiếm</button>
                             </div>
                         </fieldset>
                     </form>
@@ -1081,50 +591,46 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Popular tags
+                        Từ khóa nổi bật
                     </h3>
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
                     <ul class="tags">
-                        <li> <a href="#" class="tag">
-                                Coupons
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="tag">
+                                Mã giảm giá
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Discounts
+                        <li> <a href="{{ url('vay-von-tin-dung') }}" class="tag">
+                                Vay vốn tín dụng
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Deals
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-tiki') }}" class="tag">
+                                Tiki
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Shopname
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}" class="tag">
+                                Lazada
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Ebay
+                        <li> <a href="{{ url('tin-tuc/the-tin-dung-la-gi-12') }}" class="tag">
+                                Thẻ tín dụng
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Fashion
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-grab') }}" class="tag">
+                                Grab
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Shoes
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-adayroi') }}" class="tag">
+                                Adayroi
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Kids
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-du-lich') }}" class="tag">
+                                Du lịch
                             </a>
                         </li>
-                        <li> <a href="#" class="tag">
-                                Travel
-                            </a>
-                        </li>
-                        <li> <a href="#" class="tag">
-                                Hosting
+                        <li> <a href="{{ url('ma-giam-gia/ma-giam-gia-shopee') }}" class="tag">
+                                Shopee
                             </a>
                         </li>
                     </ul>
@@ -1135,34 +641,24 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Trending Coupons
+                        Khuyến mãi HOT nhất ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}
                     </h3>
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                    <div class="media">
-                        <div class="media-left media-middle"> <img src="http://placehold.it/64x64" alt=""> </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Upto 70% Rewards</h4>
-                            <p>Up to 70% off on Clothing ...</p>
+                    @php $randomKms = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(10)->get() @endphp
+
+                    @foreach($randomKms as $randomKm)
+                        <div class="media">
+                            {{--http://placehold.it/64x64--}}
+                            <div class="media-left media-middle a-image"> <a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}"
+                                                                             style="background: url({{ $randomKm->image }}) no-repeat center;"></a> </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}">{{ $randomKm->name }}</a></h4>
+                                <p>{{ $randomKm->content }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <!--/coupon media -->
-                    <div class="media">
-                        <div class="media-left media-middle"> <img src="http://placehold.it/64x64" alt=""> </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Upto 70% Rewards</h4>
-                            <p>Up to 70% off on Clothing ...</p>
-                        </div>
-                    </div>
-                    <!--/coupon media -->
-                    <div class="media">
-                        <div class="media-left media-middle"> <img src="http://placehold.it/64x64" alt=""> </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Up to 50% off Mens Summer Essentials at Clothing</h4>
-                            <p>Up to 70% off on Clothing ...</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <!-- // widget body -->
             </div>
