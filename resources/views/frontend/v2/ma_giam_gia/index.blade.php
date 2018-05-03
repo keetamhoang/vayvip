@@ -278,7 +278,11 @@
                                     <div class="coupon-value" content="">{{ number_format($product->price, 0, '.', '.') }} ₫</div>
                                     <div class="top-sp-bot">
                                         <span class="top-sp-price">12.800.000₫</span>
-                                        <span class="top-sp-percent">Giảm -18%</span>
+                                        @if ($product->discount != 0)
+                                            <span class="top-sp-percent">Giảm {{ round(($product->price - $product->discount) / $product->price * 100) }}%</span>
+                                        @else
+                                            {{--<span class="top-sp-percent">Giảm 0%</span>--}}
+                                        @endif
                                     </div>
                                     <h4 class="coupon-title"><a href="{{ $product->aff_link }}" class="top-sp-title">{{ $product->name }}</a></h4>
                                     <div class="action-block">
