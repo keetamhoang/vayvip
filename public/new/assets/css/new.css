@@ -96,6 +96,22 @@ body {
     color: #fff;
 }
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.i-left {
+    color: #f30;
+}
+
+.widget-vayvon .col-lg-6 {
+    margin: 6px 0;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;

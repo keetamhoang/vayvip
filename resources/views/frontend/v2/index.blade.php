@@ -1,7 +1,7 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Tài chính thông minh trong tầm tay của bạn</title>
+    <title>Tiết kiệm tiền của bạn với tài chính thông minh</title>
 @endsection
 
 @section('content')
@@ -112,7 +112,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                     {{--<div class="btn-group" role="group" aria-label="...">--}}
                                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
                                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
@@ -158,7 +158,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                     {{--<div class="btn-group" role="group" aria-label="...">--}}
                                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
                                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
@@ -203,7 +203,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
                         @else
@@ -232,7 +232,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
                         @endif
@@ -271,7 +271,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
                         @else
@@ -300,7 +300,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
                         @endif
@@ -340,7 +340,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
                                 </div>
                             </div>
                         @else
@@ -369,7 +369,7 @@
                                 </div>
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                                    <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
                                 </div>
                             </div>
                         @endif
@@ -452,13 +452,65 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Tại sao bạn cần Vay vốn tín dụng?
+                        Vay vốn tín dụng trên Tài chính SMART
                     </h3>
                     <div class="clearfix"></div>
                 </div>
-                <div class="widget-body">
+                <div class="widget-body widget-vayvon">
                     <div class="">
-                        <p>Tài chính Smart là một kênh thông tin tổng hợp toàn diện về quản lý tài chính cá nhân, được lập ra với sứ mệnh giúp cho người Việt Nam có thể sử dụng những đồng tiền mình vất vả kiếm ra một cách thông minh nhất với vô vàn mã giảm giá cho tiêu dùng, các chương trình vay vốn đầu tư đa dạng, các kế hoạch tiết kiệm và bảo vệ tài chính hiệu quả.</p>
+                        <h3 class="text-center" style="margin-top: 0;color: #f30;">Lợi ích</h3>
+                        <p>Sản phẩm thỏa mãn ngay các nhu cầu chi tiêu cá nhân đột xuất của bạn, dễ dàng trả khoản vay theo hình thức trả góp hàng tháng nhưng không cần thế chấp tài sản đảm bảo.</p>
+                        <div class="row" style="font-size: 17px;margin: 20px 0;">
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Đáp ứng nhanh chóng các nhu cầu chi tiêu đột xuất
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Lựa chọn được những ngân hàng cho vay uy tín, phù hợp với nhu cầu vay
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Không cần thế chấp tài sản đảm bảo
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Thủ tục hồ sơ giản lược, thời gian phê duyệt nhanh chóng
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Vay tối đa tới 100 triệu trong 48 tháng
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Nhiều ưu đãi hấp dẫn đến từ các ngân hàng
+                                </div>
+                            </div>
+                        </div>
+                        <p>Vay tiêu dùng thế chấp là sản phẩm tín dụng hỗ trợ vốn nhanh chóng cho các nhu cầu tiêu dùng một khoản lớn của Khách hàng như du lịch, cưới hỏi, mua sắm trang thiết bị nội thất, đồ gia dụng...</p>
                         <div class="btn-div">
                             <a class="btn btn-danger" href="{{ url('vay-von/dang-ky') }}">Đăng ký ngay</a>
                         </div>
@@ -471,13 +523,48 @@
                 <!-- /widget heading -->
                 <div class="widget-heading">
                     <h3 class="widget-title text-dark">
-                        Làm thẻ tín dụng tại các ngân hàng uy tín (Hoàn toàn miễn phí)
+                        Đăng ký làm thẻ tín dụng miễn phí tại các ngân hàng uy tín
                     </h3>
                     <div class="clearfix"></div>
                 </div>
-                <div class="widget-body">
+                <div class="widget-body widget-vayvon">
                     <div class="">
-                        <p>Tài chính Smart là một kênh thông tin tổng hợp toàn diện về quản lý tài chính cá nhân, được lập ra với sứ mệnh giúp cho người Việt Nam có thể sử dụng những đồng tiền mình vất vả kiếm ra một cách thông minh nhất với vô vàn mã giảm giá cho tiêu dùng, các chương trình vay vốn đầu tư đa dạng, các kế hoạch tiết kiệm và bảo vệ tài chính hiệu quả.</p>
+                        <h3 class="text-center" style="margin-top: 0;color: #f30;">Lợi ích làm thẻ tín dụng</h3>
+                        <p>Tài chính SMART là cầu nối giữa bạn và những ngân hàng lớn, uy tín trên cả nước với mục đích kết nối nhu cầu mở thẻ tín dụng của bạn tới những ngân hàng phù hợp.</p>
+                        <div class="row" style="font-size: 17px;margin: 20px 0;">
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Được ngân hàng ưu đãi lãi suất 0% trong 30-45 ngày đầu tiên
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Thanh toán linh hoạt, bạn có thể thanh toán hóa đơn, mua vé máy bay,… với giá ưu đãi
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Ưu đãi bất tận khi mua sắm tại các siêu thị, trung tâm thương mại, trang thương mại điện tử lớn
+                                </div>
+                            </div>
+                            <div class="col col-lg-6">
+                                <div class="col col-lg-1 i-left">
+                                    <i class="ti-check-box"></i>
+                                </div>
+                                <div class="col col-lg-11">
+                                    Thanh toán trong và ngoài nước với thẻ tín dụng quốc tế Mastercard/Visa, đi du lịch chỉ cần mang theo thẻ tín dụng thôi đấy
+                                </div>
+                            </div>
+                        </div>
                         <div class="btn-div">
                             <a class="btn btn-danger" href="{{ url('tin-dung/dang-ky') }}">Đăng ký ngay</a>
                         </div>
@@ -524,6 +611,18 @@
                         <li>
                             <a href="{{ url('mua-sam-hom-nay') }}"> <i class="ti-shopping-cart-full">
                                 </i> Mua sắm hôm nay có gì HOT? <span class="sidebar-badge badge-circle">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
+                             </span> </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('san-pham/san-pham-toi-den-1-nhanh-blaga') }}"> <i class="ti-crown">
+                                </i> Trị tiểu đường - Tỏi đen 1 nhánh Blaga <span class="sidebar-badge badge-circle">
+                             <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
+                             </span> </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('san-pham/san-pham-hoan-xuan-thang') }}"> <i class="ti-crown">
+                                </i> Trị tóc bạc, bổ thận - Hoàn Xuân Thang <span class="sidebar-badge badge-circle">
                              <i class="ti-arrow-right" style="margin: 0px;border: none;padding: 0px;"></i>
                              </span> </a>
                         </li>
@@ -637,6 +736,14 @@
                 </div>
             </div>
             <!-- /widget -->
+            <div class="widget">
+                <!-- /widget heading -->
+                <div class="ads-slider">
+                    <a href="{{ url('san-pham/san-pham-toi-den-1-nhanh-blaga') }}" target="_blank"><img src="/new/assets/images/toi-den-blaga-banner-1.png" alt="Tỏi đen 1 nhánh Blaga chữa bệnh tiểu đường"></a>
+                    <a href="{{ url('san-pham/san-pham-hoan-xuan-thang') }}" target="_blank"><img src="/new/assets/images/hoan-xuan-thang-tri-bac-toc-banner-1.png" alt="Tóc bạc sớm, sinh lý kém Hoàn xuân thang"></a>
+                </div>
+                <!-- // widget body -->
+            </div>
             <div class="widget trending-coupons">
                 <!-- /widget heading -->
                 <div class="widget-heading">
@@ -646,7 +753,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                    @php $randomKms = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(10)->get() @endphp
+                    @php $randomKms = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(7)->get() @endphp
 
                     @foreach($randomKms as $randomKm)
                         <div class="media">
@@ -663,8 +770,29 @@
                 <!-- // widget body -->
             </div>
             <!-- /widget -->
+
         </div>
         <!-- end col -->
     </div>
     <!-- End row -->
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function () {
+            $('.coupon-wrapper .btn-code').click(function (e) {
+                var id = $(this).attr('data-id');
+
+                $.ajax({
+                    type: 'get',
+                    data: {id: id},
+                    url: '{{ url('used') }}',
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log(response);
+                    }
+                });
+            });
+        })
+    </script>
 @endsection

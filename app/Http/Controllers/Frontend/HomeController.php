@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Components\Unit;
 use App\Models\Customer;
+use App\Models\Discount;
 use App\Models\Post;
 use App\Models\ShinhanBank;
 use Carbon\Carbon;
@@ -18,8 +19,12 @@ use Google;
 class HomeController extends Controller
 {
     public function index() {
-        return redirect(url('ma-giam-gia'));
-        return view('frontend.index');
+        $mosts = Discount::where('status', 0)->orderBy('count_view', 'desc')->limit(4)->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->orderBy('count_view', 'desc')->limit(4)->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', 0)->orderBy('count_view', 'desc')->limit(4)->get();
+        $exps = Discount::where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
+
+        return view('frontend.v2.index', compact('mosts', 'coupons', 'deals', 'exps'));
     }
 
     public function registerForm(Request $request) {
@@ -215,5 +220,29 @@ class HomeController extends Controller
 
     public function successVay() {
         return view('frontend.success_vay');
+    }
+
+    public function used(Request $request) {
+        $id = $request->input('id');
+
+        $discount = Discount::find($id);
+
+        if (empty($discount)) {
+            return response([
+                'status' => 0,
+                'message' => 'Không tìm thấy coupon'
+            ]);
+        }
+
+        $newView = $discount->count_view + 1;
+
+        $discount->update([
+            'count_view' => $newView
+        ]);
+
+        return response([
+            'status' => 1,
+            'message' => 'Thành công'
+        ]);
     }
 }

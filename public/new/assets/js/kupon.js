@@ -10,7 +10,7 @@
  */
 $(document).ready(function () {
     "use strict";
-    // Loading 
+    // Loading
     $(".animsition").animsition({
             inClass: "fade-in"
             , outClass: "fade-out"
@@ -36,6 +36,17 @@ $(document).ready(function () {
             , nav: !1
             , autoplay: 1
         })
+
+    $(".ads-slider").owlCarousel({
+        items: 1
+        , loop: 1
+        , center: !0
+        , margin: 10
+        , autoplayHoverPause: !0
+        , dots: !1
+        , nav: !1
+        , autoplay: 1
+    })
         , // Tooltips
         $('[data-toggle="tooltip"]').tooltip(), $().button("toggle")
         , // Add image via data attr
