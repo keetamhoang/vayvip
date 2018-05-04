@@ -222,7 +222,7 @@ Route::group(['prefix' => 'v2'], function () {
             ->where(['page' => '[0-9-]+']);
 
         Route::get('ma-giam-gia-online', 'Frontend\SaleController@online');
-        Route::get('ma-giam-gia-lazada', 'Frontend\SaleController@lazada');
+        Route::get('ma-giam-gia-lazada', 'Frontend\V2\SaleController@lazada');
         Route::get('ma-giam-gia-tiki', 'Frontend\SaleController@tiki');
         Route::get('ma-giam-gia-shopee', 'Frontend\SaleController@shopee');
         Route::get('ma-giam-gia-grab', 'Frontend\SaleController@grab');

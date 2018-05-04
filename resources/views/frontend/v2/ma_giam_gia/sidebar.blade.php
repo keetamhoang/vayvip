@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/lazada-240x240.png" alt="Khuyến mãi HOT nhất Lazada"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}"> <img class="img-responsive" src="/new/assets/images/lazada-240x240.png" alt="Khuyến mãi HOT nhất Lazada"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>Lazada</h5>
@@ -47,7 +47,7 @@
                 <!-- /thumb -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/tiki-240x240.png" alt="Khuyến mãi HOT nhất Tiki"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-tiki') }}"> <img class="img-responsive" src="/new/assets/images/tiki-240x240.png" alt="Khuyến mãi HOT nhất Tiki"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>Tiki</h5>
@@ -56,7 +56,7 @@
                 <!-- /thumb -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/adayroi-240x240.png" alt="Khuyến mãi HOT nhất Adayroi"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-adayroi') }}"> <img class="img-responsive" src="/new/assets/images/adayroi-240x240.png" alt="Khuyến mãi HOT nhất Adayroi"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>Adayroi</h5>
@@ -65,7 +65,7 @@
                 <!-- /thumb -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/grab-240x240.png" alt="Khuyến mãi HOT nhất Grab"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-grab') }}"> <img class="img-responsive" src="/new/assets/images/grab-240x240.png" alt="Khuyến mãi HOT nhất Grab"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>Grab</h5>
@@ -74,7 +74,7 @@
                 <!-- /thumb -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/mytour-240x240.png" alt="Khuyến mãi HOT nhất Du lịch"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-du-lich') }}"> <img class="img-responsive" src="/new/assets/images/mytour-240x240.png" alt="Khuyến mãi HOT nhất Du lịch"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>MyTour</h5>
@@ -83,7 +83,7 @@
                 <!-- /thumb -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                     <div class="thumb-inside">
-                        <a class="thumbnail" href="#"> <img class="img-responsive" src="/new/assets/images/lotte-240x240.png" alt="Khuyến mãi HOT nhất Lotte"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                        <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lotte') }}"> <img class="img-responsive" src="/new/assets/images/lotte-240x240.png" alt="Khuyến mãi HOT nhất Lotte"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                     </div>
                     <div class="store_name text-center">
                         <h5>Lotte</h5>

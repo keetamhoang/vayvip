@@ -39,6 +39,7 @@
 
     <!-- Navigation ends -->
     <div class="wrapper">
+        @yield('top')
         <div class="container">
             @yield('content')
         </div>

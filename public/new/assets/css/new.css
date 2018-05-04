@@ -284,6 +284,10 @@ body {
     max-width: 100%;
 }
 
+.dp-header .container {
+    width: 97%;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;
