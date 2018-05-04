@@ -10,4 +10,8 @@ class SaleController extends Controller
     public function index() {
         return view('frontend.v2.ma_giam_gia.index');
     }
+
+    public function hot() {
+
+    }
 }

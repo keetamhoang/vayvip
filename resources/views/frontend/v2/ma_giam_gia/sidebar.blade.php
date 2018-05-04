@@ -152,4 +152,30 @@
         </div>
     </div>
     <!-- // tags -->
+    <div class="widget">
+        <div class="widget-heading arrow_box">
+            <h3 class="widget-title text-white text-center" style="font-size: 24px;">
+                Đăng Ký Nhận Mã Giảm Giá Mới Mỗi Ngày
+            </h3>
+            <div class="clearfix"></div>
+        </div>
+        <div class="widget-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nameRegister" placeholder="Tên của bạn">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="emailRegister" placeholder="Email của bạn">
+                </div>
+                <button type="submit" class="btn btn-danger dangky">ĐĂNG KÝ</button>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+    <div class="widget">
+        <div class="ads-slider">
+            <a href="{{ url('san-pham/san-pham-toi-den-1-nhanh-blaga') }}" target="_blank"><img src="/new/assets/images/toi-den-blaga-banner-1.png" alt="Tỏi đen 1 nhánh Blaga chữa bệnh tiểu đường"></a>
+            <a href="{{ url('san-pham/san-pham-hoan-xuan-thang') }}" target="_blank"><img src="/new/assets/images/hoan-xuan-thang-tri-bac-toc-banner-1.png" alt="Tóc bạc sớm, sinh lý kém Hoàn xuân thang"></a>
+        </div>
+    </div>
 </div>

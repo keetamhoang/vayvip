@@ -195,6 +195,33 @@ body {
     font-size: 16px;
 }
 
+.arrow_box {
+    position: relative;
+    background: #33b86c;
+    padding: 20px 12px !important;
+}
+.arrow_box:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(51, 184, 108, 0);
+    border-top-color: #33b86c;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.dangky {
+    width: 100%;
+    font-size: 20px;
+    background: #33b86c !important;
+    border: 1px solid #33b86c !important;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;
