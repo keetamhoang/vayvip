@@ -280,6 +280,10 @@ body {
     color: #f1612f;
 }
 
+.detail-coupon img {
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;

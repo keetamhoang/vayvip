@@ -32,7 +32,7 @@
     <![endif]-->
 </head>
 <body>
-<div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+<div class="site-wrapper" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <!-- Navigation Bar-->
 
     @include('frontend.v2.header')

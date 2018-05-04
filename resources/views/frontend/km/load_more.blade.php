@@ -1,7 +1,6 @@
 @if (count($newests) > 0)
     @foreach($newests as $key => $code)
-        @php $desc1 = mb_substr($code->content, 0, 70); $desc1 .= ' ...' @endphp
-        @php $desc2 = mb_substr($code->content, 70); $desc2 = '... ' . $desc2 @endphp
+        @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
         <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
             <div class="row">
                 @if ($code->is_hot == 1)
@@ -31,8 +30,13 @@
                             <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
-                        <p id="most-{{$key}}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#most-{{$count + $key}}">{!! $desc1 !!}</p>
+                        <div id="most-{{ $count + $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $code->image }}">
+                            </div>
+                            <p>{{ $code->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -59,8 +63,13 @@
                                 <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                             </ul>
                             <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
-                            <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
-                            <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                            <p data-toggle="collapse" data-target="#most-{{$count + $key}}">{!! $desc1 !!}</p>
+                            <div id="most-{{ $count + $key }}" class="collapse">
+                                <div class="detail-coupon">
+                                    <img src="{{ $code->image }}">
+                                </div>
+                                <p>{{ $code->content }}</p>
+                            </div>
                         </div>
                         <!-- end:Coupon cont -->
                         <div class="button-contain col-sm-3 text-center">

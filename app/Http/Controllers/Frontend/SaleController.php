@@ -21,7 +21,7 @@ class SaleController extends Controller
 
         $newests = Discount::where('status', 0)->orderBy('is_hot', 'desc')->orderBy('updated_at', 'desc')->offset($count)->limit(15)->get();
 
-        return view('frontend.km.load_more', compact('newests'))->render();
+        return view('frontend.km.load_more', compact('newests', 'count'))->render();
     }
 
     public function loadMoreCoupon(Request $request) {

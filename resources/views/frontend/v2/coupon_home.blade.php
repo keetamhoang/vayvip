@@ -7,8 +7,7 @@
 <div class="tab-content clearfix" id="myTabContent">
     <div id="popular" class="tab-pane counties-pane active animated fadeIn">
         @foreach($mosts as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
-            @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -32,8 +31,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="most-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
                     {{--<div class="btn-group" role="group" aria-label="...">--}}
@@ -79,8 +83,13 @@
                         </ul>
                         <p class="coupon-title">
                             <a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="most-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
                     {{--<div class="btn-group" role="group" aria-label="...">--}}
@@ -111,8 +120,7 @@
     </div>
     <div id="ending" class="tab-pane counties-pane animated fadeIn">
         @foreach($exps as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
-            @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -136,8 +144,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="end-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -165,8 +178,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="end-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -179,8 +197,7 @@
     </div>
     <div id="online" class="tab-pane counties-pane animated fadeIn">
         @foreach($coupons as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
-            @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -204,8 +221,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="online-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -233,8 +255,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="online-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -248,8 +275,7 @@
     </div>
     <div id="atStore" class="tab-pane counties-pane animated fadeIn">
         @foreach($deals as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 60); $desc1 .= ' ...' @endphp
-            @php $desc2 = mb_substr($most->content, 60); $desc2 = '... ' . $desc2 @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -273,8 +299,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="atStore-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
@@ -302,8 +333,13 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
-                        <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
+                        <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
+                        <div id="atStore-{{ $key }}" class="collapse">
+                            <div class="detail-coupon">
+                                <img src="{{ $most->image }}">
+                            </div>
+                            <p>{{ $most->content }}</p>
+                        </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
