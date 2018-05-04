@@ -81,7 +81,7 @@
                                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                                             <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                         </ul>
-                                        <h4 class="coupon-title"><a href="javascript:;" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></h4>
+                                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
                                         <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
                                         <p id="most-{{$key}}" class="collapse">{{ $desc2 }}</p>
                                     </div>
@@ -109,7 +109,7 @@
                                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                                             <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                         </ul>
-                                        <h4 class="coupon-title"><a href="#">{{ $code->name }}</a></h4>
+                                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
                                         <p data-toggle="collapse" data-target="#most-{{ $key }}">{{ $desc1 }}</p>
                                         <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
                                     </div>
@@ -168,7 +168,7 @@
                                             {{--<span class="top-sp-percent">Giảm 0%</span>--}}
                                         @endif
                                     </div>
-                                    <h4 class="coupon-title"><a href="{{ $product->aff_link }}" class="top-sp-title">{{ $product->name }}</a></h4>
+                                    <p class="coupon-title"><a href="{{ $product->aff_link }}" class="top-sp-title">{{ $product->name }}</a></p>
                                     <div class="action-block">
                                         <p class="btn-code" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Xem chi tiết sản phẩm ở trang mở ra');window.open('{{ $product->aff_link }}','_blank')"> <span class="partial-code">Xem chi tiết</span> <span class="btn-hover">Xem chi tiết</span> </p>
                                     </div>

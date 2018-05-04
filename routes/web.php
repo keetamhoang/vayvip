@@ -153,7 +153,7 @@ Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::post('up', 'Frontend\SaleController@upCoupon');
     Route::post('down', 'Frontend\SaleController@downCoupon');
 
-    Route::get('ma-giam-gia-hot', 'Frontend\SaleController@hot');
+    Route::get('ma-giam-gia-hot', 'Frontend\V2\SaleController@hot');
     Route::get('ma-giam-gia-hot-trang-{page}', 'Frontend\SaleController@hot')
         ->where(['page' => '[0-9-]+']);
 

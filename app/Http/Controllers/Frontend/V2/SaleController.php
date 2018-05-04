@@ -12,6 +12,6 @@ class SaleController extends Controller
     }
 
     public function hot() {
-
+        return view('frontend.v2.ma_giam_gia.hot');
     }
 }

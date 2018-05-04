@@ -197,7 +197,7 @@ body {
 
 .arrow_box {
     position: relative;
-    background: #33b86c;
+    background: #cd2439;
     padding: 20px 12px !important;
 }
 .arrow_box:after {
@@ -210,7 +210,7 @@ body {
     position: absolute;
     pointer-events: none;
     border-color: rgba(51, 184, 108, 0);
-    border-top-color: #33b86c;
+    border-top-color: #cd2439;
     border-width: 10px;
     margin-left: -10px;
 }
@@ -218,8 +218,66 @@ body {
 .dangky {
     width: 100%;
     font-size: 20px;
-    background: #33b86c !important;
-    border: 1px solid #33b86c !important;
+    background: #cd2439 !important;
+    border: 1px solid #cd2439 !important;
+}
+
+.custom-page-header {
+    margin-top: 30px;
+}
+
+.featured-content .entry {
+    margin-bottom: 10px;
+}
+
+.home-bottom .featured-content .entry {
+    padding-bottom: 0px;
+}
+
+.magiamgiahot .widget .entry {
+    border-bottom: 1px solid #eee;
+    padding: 0px 10px;
+}
+
+.author-box:before, .clearfix:before, .entry-content:before, .entry:before, .featured-content:before, .footer-widgets:before, .nav-primary:before, .nav-secondary:before, .pagination:before, .site-container:before, .site-footer:before, .site-header:before, .site-inner:before, .wrap:before {
+    content: " ";
+    display: table;
+}
+
+.magiamgiahot .widget a {
+    background-color: inherit;
+    color: #222;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.magiamgiahot .widget img, .gallery img {
+    width: auto;
+}
+
+.entry-title {
+    font-size: 30px;
+    line-height: 1.5;
+    padding-top: 13px !important;
+    color: #015c71;
+}
+
+.magiamgiahot .widget img {
+    border: 1px solid #f1f1f1;
+}
+
+.magiamgiahot .widget .entry-title a {
+    font-size: 26px;
+}
+.author-box:after, .clearfix:after, .entry-content:after, .entry:after, .featured-content:after, .footer-widgets:after, .nav-primary:after, .nav-secondary:after, .pagination:after, .site-container:after, .site-footer:after, .site-header:after, .site-inner:after, .wrap:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+.magiamgiahot .widget a:hover {
+    color: #f1612f;
 }
 
 @media (max-width: 768px) {
@@ -237,5 +295,17 @@ body {
 
     .slide-wrap {
         margin-top: 10px;
+    }
+
+    .custom-page-header {
+        margin-top: 10px;
+    }
+
+    .entry-title {
+        font-size: 24px;
+    }
+
+    .magiamgiahot .left {
+        float: none;
     }
 }

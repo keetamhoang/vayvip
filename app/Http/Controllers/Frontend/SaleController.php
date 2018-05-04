@@ -19,8 +19,7 @@ class SaleController extends Controller
     public function loadMore(Request $request) {
         $count = $request->input('count', 0);
 
-        $newests = Discount::where('status', 0)->where('end_time', '>=', \Carbon\Carbon::now()->toDateString() . ' 00:00:00')
-            ->orderBy('start_time', 'desc')->offset($count)->limit(20)->get();
+        $newests = Discount::where('status', 0)->orderBy('is_hot', 'desc')->orderBy('updated_at', 'desc')->offset($count)->limit(15)->get();
 
         return view('frontend.km.load_more', compact('newests'))->render();
     }

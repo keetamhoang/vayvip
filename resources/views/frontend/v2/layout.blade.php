@@ -175,7 +175,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.coupon-wrapper .btn-code').click(function (e) {
+        $(document).on('click', '.coupon-wrapper .btn-code, .coupon-wrapper .coupon-title a', function (e) {
             var id = $(this).attr('data-id');
 
             $.ajax({
@@ -185,6 +185,22 @@
                 dataType: 'json',
                 success: function (response) {
                     console.log(response);
+                }
+            });
+        });
+
+        $('#load-more').click(function (e) {
+            var count = $('.magiamgiahot .coupon-single').length;
+
+            $.ajax({
+                url: '{{ url('ma-giam-gia/load-more') }}',
+                type: 'get',
+                dataType: 'html',
+                data: {
+                    count: count,
+                },
+                success: function (response) {
+                    $('#coupons').append(response);
                 }
             });
         });
