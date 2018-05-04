@@ -173,6 +173,24 @@
 <!-- Kupon js -->
 <script src="/new/assets/js/kupon.js"></script>
 
+<script>
+    $(document).ready(function () {
+        $('.coupon-wrapper .btn-code').click(function (e) {
+            var id = $(this).attr('data-id');
+
+            $.ajax({
+                type: 'get',
+                data: {id: id},
+                url: '{{ url('used') }}',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        });
+    })
+</script>
+
 @yield('script')
 
 

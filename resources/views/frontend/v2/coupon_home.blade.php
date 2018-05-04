@@ -31,7 +31,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <h4 class="coupon-title"><a href="#">{{ $most->name }}</a></h4>
+                        <h4 class="coupon-title"><a href="javascript:;" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></h4>
                         <p data-toggle="collapse" data-target="#most-{{$key}}">{{ $desc1 }}</p>
                         <p id="most-{{ $key }}" class="collapse">{{ $desc2 }}</p>
                     {{--<ul class="coupon-details list-inline">--}}

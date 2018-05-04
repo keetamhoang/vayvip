@@ -2247,7 +2247,7 @@ a.thumbnail:hover {
 
 .savings .small {
     font-weight: 700;
-    max-width: 60px;
+    /*max-width: 60px;*/
     margin: 14px auto auto;
     padding: 5px 0 10px;
 }

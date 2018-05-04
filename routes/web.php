@@ -144,7 +144,7 @@ Route::get('vay-von/success', 'Frontend\HomeController@successVay');
 Route::get('used', 'Frontend\HomeController@used');
 
 Route::group(['prefix' => 'ma-giam-gia'], function () {
-    Route::get('/', 'Frontend\SaleController@index');
+    Route::get('/', 'Frontend\V2\SaleController@index');
     Route::get('load-more', 'Frontend\SaleController@loadMore');
     Route::get('load-more-coupon', 'Frontend\SaleController@loadMoreCoupon');
     Route::post('save', 'Frontend\SaleController@saveCoupon');

@@ -177,6 +177,24 @@ body {
     margin-bottom: 10px;
 }
 
+.magiamgia .widget .widget-heading a {
+    color: #fffdfd;
+    padding: 0px 10px;
+    background: #f30;
+    border-radius: 3px;
+}
+
+.count-coupon {
+    /*background: #f30;*/
+    color: #f30;
+    /*padding: 2px 4px;*/
+    /*border-radius: 50%;*/
+}
+
+.coupon-title a {
+    font-size: 16px;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;
