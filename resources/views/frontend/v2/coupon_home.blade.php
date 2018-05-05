@@ -18,6 +18,9 @@
                                 <div class="large">{{ $coupon->coupon_save }}</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -37,7 +40,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
@@ -70,6 +73,9 @@
                                 <div class="large">KM</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -89,7 +95,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
@@ -131,6 +137,9 @@
                                 <div class="large">{{ $coupon->coupon_save }}</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -150,7 +159,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -166,6 +175,9 @@
                                 <div class="large">KM</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -184,7 +196,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -208,6 +220,9 @@
                                 <div class="large">{{ $coupon->coupon_save }}</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -227,7 +242,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -243,6 +258,9 @@
                                 <div class="large">KM</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -261,7 +279,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -286,6 +304,9 @@
                                 <div class="large">{{ $coupon->coupon_save }}</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -305,7 +326,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -321,6 +342,9 @@
                                 <div class="large">KM</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -339,7 +363,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
-                            <p>{{ $most->content }}</p>
+                            <p>{!!  $most->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->

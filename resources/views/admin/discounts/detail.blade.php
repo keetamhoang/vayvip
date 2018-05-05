@@ -43,9 +43,9 @@
                 <label class="col-md-2 control-label">Thời gian hiệu lực</label>
                 <div class="col-md-10">
                     <input type="text" name="start_time" class="form-control" placeholder="Điền ngày bắt đầu"
-                           value="{{ !empty($discount->start_time) ?  \Carbon\Carbon::parse($discount->start_time)->format('d/m/Y') : '' }}">
+                           value="{{ !empty($discount->start_time) ?  \Carbon\Carbon::parse($discount->start_time)->toDateString() : '' }}">
                     <input type="text" name="end_time" class="form-control" placeholder="Điền kết thúc"
-                           value="{{ !empty($discount->end_time) ? \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') : '' }}">
+                           value="{{ !empty($discount->end_time) ? \Carbon\Carbon::parse($discount->end_time)->toDateString() : '' }}">
                 </div>
             </div>
             <div class="form-group">

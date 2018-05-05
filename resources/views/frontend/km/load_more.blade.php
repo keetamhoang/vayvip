@@ -16,6 +16,9 @@
                                 <div class="large">{{ $coupon->coupon_save }}</div>
                                 <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                 <div class="type">Coupon</div>
+                                @if (auth('admin')->check())
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                @endif
                             </div>
                         </div>
                         <!-- end:Savings -->
@@ -35,7 +38,7 @@
                             <div class="detail-coupon">
                                 <img src="{{ $code->image }}">
                             </div>
-                            <p>{{ $code->content }}</p>
+                            <p>{!!  $code->content  !!}</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -50,6 +53,9 @@
                                     <div class="large">KM</div>
                                     <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                     <div class="type">Deal</div>
+                                    @if (auth('admin')->check())
+                                        <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                    @endif
                                 </div>
                             </div>
                             <!-- end:Savings -->
@@ -68,7 +74,7 @@
                                 <div class="detail-coupon">
                                     <img src="{{ $code->image }}">
                                 </div>
-                                <p>{{ $code->content }}</p>
+                                <p>{!!  $code->content  !!}</p>
                             </div>
                         </div>
                         <!-- end:Coupon cont -->

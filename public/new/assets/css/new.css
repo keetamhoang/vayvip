@@ -310,7 +310,7 @@ body {
     padding: 0;
 }
 
-.dph-info img {
+.dph-info img, .coupon-single .collapse img {
     position: inherit;
     max-width: 100%;
 }
@@ -320,6 +320,10 @@ body {
         width: 65%;
         margin-top: 8px;
     }
+}
+
+.coupon-contain ul li {
+    line-height: inherit;
 }
 
 @media (max-width: 986px) {

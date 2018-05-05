@@ -74,6 +74,9 @@
                                                     <div class="large">{{ $coupon->coupon_save }}</div>
                                                     <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                     <div class="type">Coupon</div>
+                                                    @if (auth('admin')->check())
+                                                        <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <!-- end:Savings -->
@@ -93,7 +96,7 @@
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{{ $code->content }}</p>
+                                                <p>{!!  $code->content  !!}</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -108,6 +111,9 @@
                                                         <div class="large">KM</div>
                                                         <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                         <div class="type">Deal</div>
+                                                        @if (auth('admin')->check())
+                                                            <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <!-- end:Savings -->
@@ -126,7 +132,7 @@
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{{ $code->content }}</p>
+                                                    <p>{!!  $code->content  !!}</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -160,6 +166,9 @@
                                                     <div class="large">{{ $coupon->coupon_save }}</div>
                                                     <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                     <div class="type">Coupon</div>
+                                                    @if (auth('admin')->check())
+                                                        <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <!-- end:Savings -->
@@ -179,7 +188,7 @@
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{{ $code->content }}</p>
+                                                <p>{!!  $code->content  !!}</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -194,6 +203,9 @@
                                                         <div class="large">KM</div>
                                                         <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                         <div class="type">Deal</div>
+                                                        @if (auth('admin')->check())
+                                                            <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <!-- end:Savings -->
@@ -212,7 +224,7 @@
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{{ $code->content }}</p>
+                                                    <p>{!!  $code->content  !!}</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -246,6 +258,9 @@
                                                     <div class="large">{{ $coupon->coupon_save }}</div>
                                                     <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                     <div class="type">Coupon</div>
+                                                    @if (auth('admin')->check())
+                                                        <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <!-- end:Savings -->
@@ -265,7 +280,7 @@
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{{ $code->content }}</p>
+                                                <p>{!!  $code->content  !!}</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -280,6 +295,9 @@
                                                         <div class="large">KM</div>
                                                         <div class="small"><a href="{{ $code->aff_link }}" target="_blank">{{ $code->merchant }}</a></div>
                                                         <div class="type">Deal</div>
+                                                        @if (auth('admin')->check())
+                                                            <div class="type"><a href="{{ url('admin/discounts/'.$code->id) }}" target="_blank">Sửa</a></div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <!-- end:Savings -->
@@ -298,7 +316,7 @@
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{{ $code->content }}</p>
+                                                    <p>{!!  $code->content  !!}</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -312,116 +330,6 @@
                                 <!-- //row -->
                             </div>
                         @endforeach
-                    </div>
-                    <!-- / tabpanel -->
-                    <div role="tabpanel" class="tab-pane single-coupon" id="inStore">
-                        <div class="alert alert-info">This coupons can be used only in-store.Plase print and save coupons. <a href="#" class="alert-link">Visit store for more info</a>.</div>
-                        <div class="coupon-wrapper coupon-single">
-                            <div class="row">
-                                <div class="ribbon-wrapper hidden-xs">
-                                    <div class="ribbon">Featured</div>
-                                </div>
-                                <div class="coupon-data col-sm-2 text-center">
-                                    <div class="savings text-center">
-                                        <div>
-                                            <div class="large">75%</div>
-                                            <div class="small">off</div>
-                                            <div class="type">Coupon</div>
-                                        </div>
-                                    </div>
-                                    <!-- end:Savings -->
-                                </div>
-                                <!-- end:Coupon data -->
-                                <div class="coupon-contain col-sm-7">
-                                    <ul class="list-inline list-unstyled">
-                                        <li class="sale label label-pink">Sale</li>
-                                        <li class="popular label label-success">98% success</li>
-                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                        <li><span class="used-count">78 used</span> </li>
-                                    </ul>
-                                    <h4 class="coupon-title"><a href="#">Receive $100 OFF Your $400+ Purchase, or $200 OFF Your $800+ Purchase</a></h4>
-                                    <p data-toggle="collapse" data-target="#more15">Shop these Store deals of the day to save as much...</p>
-                                    <p id="more15" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                                    <ul class="coupon-details list-inline">
-                                        <li class="list-inline-item">
-                                            <div class="btn-group" role="group" aria-label="...">
-                                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                            </div>
-                                            <!-- end:Btn group -->
-                                        </li>
-                                        <li class="list-inline-item">30% of 54 recommend</li>
-                                        <li class="list-inline-item"><a href="#">Share</a> </li>
-                                    </ul>
-                                    <!-- end:Coupon details -->
-                                </div>
-                                <!-- end:Coupon cont -->
-                                <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //row -->
-                        </div>
-                        <!--/COUPON-->
-                        <div class="coupon-wrapper coupon-single">
-                            <div class="row">
-                                <div class="ribbon-wrapper hidden-xs">
-                                    <div class="ribbon">Featured</div>
-                                </div>
-                                <div class="coupon-data col-sm-2 text-center">
-                                    <div class="savings text-center">
-                                        <div>
-                                            <div class="large">50%</div>
-                                            <div class="small">off</div>
-                                            <div class="type">Code</div>
-                                        </div>
-                                    </div>
-                                    <!-- end:Savings -->
-                                </div>
-                                <!-- end:Coupon data -->
-                                <div class="coupon-contain col-sm-7">
-                                    <ul class="list-inline list-unstyled">
-                                        <li class="sale label label-pink">Code</li>
-                                        <li class="popular label label-success">90% success</li>
-                                        <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                                        <li><span class="used-count">78 used</span> </li>
-                                    </ul>
-                                    <h4 class="coupon-title"><a href="#">
-                                            Free Shipping On All Orders</a>
-                                    </h4>
-                                    <p data-toggle="collapse" data-target="#more16">Shop these Store deals of the day to save as much...</p>
-                                    <p id="more16" class="collapse">Don't miss out on all the coupon savings.Get you coupon now and save big</p>
-                                    <ul class="coupon-details list-inline">
-                                        <li class="list-inline-item">
-                                            <div class="btn-group" role="group" aria-label="...">
-                                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="left" title="" data-original-title="It worked"><i class="ti-thumb-up"></i> </button>
-                                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-thumb-down"></i> </button>
-                                            </div>
-                                            <!-- end:Btn group -->
-                                        </li>
-                                        <li class="list-inline-item">30% of 54 recommend</li>
-                                        <li class="list-inline-item"><a href="#">Share</a> </li>
-                                    </ul>
-                                    <!-- end:Coupon details -->
-                                </div>
-                                <!-- end:Coupon cont -->
-                                <div class="button-contain col-sm-3 text-center">
-                                    <p class="btn-code" data-toggle="modal" data-target=".couponModal"> <span class="partial-code">BTSBAGS</span> <span class="btn-hover">Get Code</span> </p>
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>
-                                        <button type="button" class="btn btn-default btn-xs"><i class="ti-mobile"></i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //row -->
-                        </div>
-                        <!--/COUPON-->
                     </div>
                     <!-- / tabpanel -->
                 </div>
