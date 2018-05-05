@@ -75,6 +75,7 @@
 
 .custom-page-header .header-thumb img {
     max-width: 100%;
+    width: 200px;
 }
 
 .kk-star-ratings {
@@ -138,6 +139,18 @@
 }
 
 .custom-page-header h2 {
+    margin-bottom: 0px;
+    margin-top: 3px;
+    line-height: 1.6;
+    letter-spacing: -1px;
+    font-size: 24px !important;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0 !important;
+    color: #015c71;
+    font-weight: bold;
+}
+
+.custom-page-header h1 {
     margin-bottom: 0px;
     margin-top: 3px;
     line-height: 1.6;

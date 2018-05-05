@@ -73,6 +73,7 @@ Route::group(['prefix' => 'admin',
         Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
         Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');
         Route::get('discounts/delete/{id}', 'Backend\DiscountController@delete');
+        Route::post('discounts/update', 'Backend\DiscountController@update');
 
         Route::get('km-products', 'Backend\DiscountController@productIndex');
         Route::post('km-products/update', 'Backend\DiscountController@productUpdate');
@@ -158,8 +159,8 @@ Route::group(['prefix' => 'ma-giam-gia'], function () {
         ->where(['page' => '[0-9-]+']);
 
     Route::get('ma-giam-gia-online', 'Frontend\SaleController@online');
-    Route::get('ma-giam-gia-lazada', 'Frontend\SaleController@lazada');
-    Route::get('ma-giam-gia-tiki', 'Frontend\SaleController@tiki');
+    Route::get('ma-giam-gia-lazada', 'Frontend\V2\SaleController@lazada');
+    Route::get('ma-giam-gia-tiki', 'Frontend\V2\SaleController@tiki');
     Route::get('ma-giam-gia-shopee', 'Frontend\SaleController@shopee');
     Route::get('ma-giam-gia-grab', 'Frontend\SaleController@grab');
     Route::get('ma-giam-gia-yes24', 'Frontend\SaleController@yes24');
@@ -223,7 +224,7 @@ Route::group(['prefix' => 'v2'], function () {
 
         Route::get('ma-giam-gia-online', 'Frontend\SaleController@online');
         Route::get('ma-giam-gia-lazada', 'Frontend\V2\SaleController@lazada');
-        Route::get('ma-giam-gia-tiki', 'Frontend\SaleController@tiki');
+        Route::get('ma-giam-gia-tiki', 'Frontend\V2\SaleController@tiki');
         Route::get('ma-giam-gia-shopee', 'Frontend\SaleController@shopee');
         Route::get('ma-giam-gia-grab', 'Frontend\SaleController@grab');
         Route::get('ma-giam-gia-yes24', 'Frontend\SaleController@yes24');

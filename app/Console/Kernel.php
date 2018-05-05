@@ -10,6 +10,7 @@ use App\Console\Commands\GetDataFromSheetGG;
 use App\Console\Commands\GetDataShinhanBank;
 use App\Console\Commands\GetGGSheetResponse;
 use App\Console\Commands\GetKm;
+use App\Console\Commands\GetKmMasOffer;
 use App\Console\Commands\GetKmProduct;
 use App\Console\Commands\HoangCommand;
 use App\Console\Commands\UpdateExpireKm;
@@ -34,7 +35,8 @@ class Kernel extends ConsoleKernel
         DownloadImageLocal::class,
         HoangCommand::class,
         CrawlerChanhTuoi::class,
-        CrawlerMaGiamGia::class
+        CrawlerMaGiamGia::class,
+        GetKmMasOffer::class
     ];
 
     /**
@@ -48,6 +50,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('get:km-at')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 //            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
+
+        $schedule->command('km:mas-offer')
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 
         $schedule->command('get:km-product')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));

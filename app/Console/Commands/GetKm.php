@@ -96,7 +96,7 @@ class GetKm extends Command
                     $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                     if (!empty($checkDiscount)) {
-                        $checkDiscount->update($dataDiscount);
+//                        $checkDiscount->update($dataDiscount);
 
 //                        Coupon::where('discount_id', $checkDiscount->id)->delete();
 //                        KmCategory::where('discount_id', $checkDiscount->id)->delete();

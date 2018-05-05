@@ -1,13 +1,18 @@
 <header class="header">
+    {{--<div class="container">--}}
+        {{--<div class="up-nav">--}}
+            {{--@yield('h1_seo')--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="top-nav  navbar m-b-0 b-0">
         <div class="container">
             <div class="row">
                 <!-- LOGO -->
-                <div class="topbar-left col-sm-2 col-xs-4">
+                <div class="topbar-left col-lg-2 col-xs-3">
                     <a href="{{ url('/') }}" class="logo"> <img src="/assets/image/logo.png" alt="" class="img-responsive"> </a>
                 </div>
                 <!-- End Logo container-->
-                <div class="menu-extras col-sm-9 col-xs-8">
+                <div class="menu-extras col-lg-9 col-xs-9">
                     <ul class="nav navbar-nav navbar-right pull-right">
                         <li class="hidden-xs">
                             <a href="{{ url('ma-giam-gia') }}">MÃ GIẢM GIÁ MỚI</a>
@@ -26,64 +31,6 @@
                                 <a href="{{ url('admin') }}">ADMIN</a>
                             </li>
                         @endif
-                        {{--<li>--}}
-                            {{--<form role="search" class="app-search pull-left hidden-xs">--}}
-                                {{--<div class="input-group">--}}
-                                    {{--<input class="form-control" placeholder="Search coupons ..." aria-label="Text input with multiple buttons">--}}
-                                {{--</div>--}}
-                                {{--<a href=""><i class="ti-search"></i></a>--}}
-                            {{--</form>--}}
-                        {{--</li>--}}
-                        {{--<li class="dropdown hidden-xs">--}}
-                            {{--<a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> <i class="ti-shopping-cart"></i> <span class="badge badge-xs badge-danger">3</span> </a>--}}
-                            {{--<ul class="dropdown-menu dropdown-menu-lg">--}}
-                                {{--<li class="notifi-title">My Coupons</li>--}}
-                                {{--<li class="list-group">--}}
-                                    {{--<!-- list item-->--}}
-                                    {{--<a href="javascript:void(0);" class="list-group-item">--}}
-                                        {{--<div class="media">--}}
-                                            {{--<div class="media-left"> <img src="http://placehold.it/120x50" alt=""> </div>--}}
-                                            {{--<div class="media-body clearfix">--}}
-                                                {{--<div class="media-heading">Up to 30%</div>--}}
-                                                {{--<p class="m-0"> <small>Shopname coupon</small> </p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</a>--}}
-                                    {{--<!-- list item-->--}}
-                                    {{--<a href="javascript:void(0);" class="list-group-item">--}}
-                                        {{--<div class="media">--}}
-                                            {{--<div class="media-left"> <img src="http://placehold.it/120x50" alt=""> </div>--}}
-                                            {{--<div class="media-body clearfix">--}}
-                                                {{--<div class="media-heading">Up to 30%</div>--}}
-                                                {{--<p class="m-0"> <small>Shopname coupon</small> </p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</a>--}}
-                                    {{--<!-- list item-->--}}
-                                    {{--<a href="javascript:void(0);" class="list-group-item">--}}
-                                        {{--<div class="media">--}}
-                                            {{--<div class="media-left"> <img src="http://placehold.it/120x50" alt=""> </div>--}}
-                                            {{--<div class="media-body clearfix">--}}
-                                                {{--<div class="media-heading">Up to 30%</div>--}}
-                                                {{--<p class="m-0"> <small>Shopname coupon</small> </p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</a>--}}
-                                    {{--<!-- last list item -->--}}
-                                    {{--<a href="javascript:void(0);" class="list-group-item"> <small>Print all coupons</small> </a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</li>--}}
-                        {{--<li class="dropdown user-box">--}}
-                            {{--<a href="" class="dropdown-toggle profile btn btn-default" data-toggle="dropdown" aria-expanded="true">--}}
-                                {{--My account--}}
-                            {{--</a>--}}
-                            {{--<ul class="dropdown-menu" style="margin-top:16px">--}}
-                                {{--<li><a href="javascript:void(0)"> LogIn</a> </li>--}}
-                                {{--<li><a href="javascript:void(0)">Registration</a> </li>--}}
-                                {{--<li><a href="javascript:void(0)">Help Center </a> </li>--}}
-                            {{--</ul>--}}
-                        {{--</li>--}}
                     </ul>
                     <div class="menu-item">
                         <!-- Mobile menu toggle-->

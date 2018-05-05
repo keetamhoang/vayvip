@@ -1,8 +1,9 @@
 <ul class="nav nav-tabs responsive-tabs" id="myTab">
     <li class="active"><a data-toggle="tab" href="#popular"><i class="ti-crown"></i>Dùng nhiều </a> </li>
-    <li class=""><a data-toggle="tab" href="#online"><i class="ti-stats-up"></i>Mã giảm giá KHỦNG</a> </li>
-    <li class=""><a data-toggle="tab" href="#atStore"><i class="ti-shopping-cart"></i>Deal HOT</a> </li>
+    <li class=""><a data-toggle="tab" href="#online"><i class="ti-stats-up"></i>Mã giảm giá HOT</a> </li>
+    <li class=""><a data-toggle="tab" href="#atStore"><i class="ti-shopping-cart"></i>Deal KHỦNG</a> </li>
     <li class=""><a data-toggle="tab" href="#ending"><i class="ti-timer"></i> Sắp hết hạn</a> </li>
+    <li class=""><a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="ti-layout-grid2"></i> Xem tất cả</a> </li>
 </ul>
 <div class="tab-content clearfix" id="myTabContent">
     <div id="popular" class="tab-pane counties-pane active animated fadeIn">
@@ -34,7 +35,7 @@
                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                         <div id="most-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -86,7 +87,7 @@
                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                         <div id="most-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -147,7 +148,7 @@
                         <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
                         <div id="end-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -181,7 +182,7 @@
                         <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
                         <div id="end-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -224,7 +225,7 @@
                         <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
                         <div id="online-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -258,7 +259,7 @@
                         <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
                         <div id="online-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -302,7 +303,7 @@
                         <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
                         <div id="atStore-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>
@@ -336,7 +337,7 @@
                         <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
                         <div id="atStore-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
-                                <img src="{{ $most->image }}">
+                                <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
                             <p>{{ $most->content }}</p>
                         </div>

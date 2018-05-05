@@ -5,19 +5,17 @@
 @endsection
 
 @section('meta')
-    <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia">
+    <meta property="og:url" content="https://taichinhsmart.vn/ma-giam-gia/ma-giam-gia-hot">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
+          content="Mã giảm giá HOT nhất ngày {{ \Carbon\Carbon::now()->format('d/m') }} → Giảm 30% - 50% - Tìm là Có"/>
     <meta property="og:description"
           content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 
     <meta name="description"
           content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
-
-    <meta name="keywords"
-          content=""/>
+    <meta name="keywords" content=""/>
 @endsection
 
 @section('style')
@@ -25,7 +23,6 @@
 @endsection
 
 @section('h1_seo')
-    <h1 class="h1-seo">Tổng hợp mã giảm giá mới, khuyến mãi HOT trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
 @endsection
 
 @section('content')
@@ -36,7 +33,7 @@
                     <div class="header-thumb">
                         <div class="header-store-thumb">
                             <a rel="nofollow" target="_blank" title="Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng" href="#">
-                                <img width="200" height="105" src="/assets/image/khuyenmai.png" class="attachment-wpcoupon_small_thumb size-wpcoupon_small_thumb" alt="Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng">
+                                <img src="/assets/image/khuyenmai.png" class="attachment-wpcoupon_small_thumb size-wpcoupon_small_thumb" alt="Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng">
                             </a>
                         </div>
 
@@ -54,7 +51,7 @@
                     </div>
                     <div class="header-content">
 
-                        <h2>Tổng hợp mã khuyến mãi - mã giảm giá siêu hot trong tháng {{ \Carbon\Carbon::now()->month }} năm {{ \Carbon\Carbon::now()->year }}</h2>
+                        <h1>Cập nhật mã giảm giá 100k - 200k - 500k, mã giảm giá 20% - 50%  trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
                         <p>
                             Chia sẻ <strong>mã giảm giá</strong> hoàn toàn miễn phí của Lazada, voucher Lazada, mã giảm giá Tiki,  ma giam gia Shopee, mã khuyến mãi Grab, ma giam gia Adayroi, Lotte, <strong>mã giảm giá</strong> cho những bạn hay đi du lịch để chuyến đi thêm trọn vẹn...<br>
                             Những <strong>mã giảm giá</strong> được cập nhật hàng ngày, hàng giờ với các giá trị khuyến mãi không giới hạn từ 50k, 100k, 500k… có nhiều voucher giảm cực tốt lên đến 20%, 50% cho các đơn hàng. Hãy trở thành người tiêu dùng thông thái, tiết kiệm được nhiều khoản tiền với các <strong>MÃ GIẢM GIÁ HOT</strong>.
@@ -209,7 +206,7 @@
                                     <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                                     <div id="most-{{ $key }}" class="collapse">
                                         <div class="detail-coupon">
-                                            <img src="{{ $code->image }}">
+                                            <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                         </div>
                                         <p>{{ $code->content }}</p>
                                     </div>
@@ -242,7 +239,7 @@
                                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                                         <div id="most-{{ $key }}" class="collapse">
                                             <div class="detail-coupon">
-                                                <img src="{{ $code->image }}">
+                                                <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                             </div>
                                             <p>{{ $code->content }}</p>
                                         </div>

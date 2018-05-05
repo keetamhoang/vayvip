@@ -1,5 +1,5 @@
 body {
-    padding-top: 115px;
+    padding-top: 120px;
 }
 
 .header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
@@ -103,6 +103,12 @@ body {
 
 .btn-div {
     text-align: center;
+}
+
+.dph-info h1 {
+    font-size: 25px;
+    margin: 0 0 10px;
+    line-height: 35px;
 }
 
 #footer .btmFooter {
@@ -288,6 +294,40 @@ body {
     width: 97%;
 }
 
+.header .up-nav h1 {
+    font-size: 7px;
+    line-height: 8px;
+    margin: 0px;
+    background: #fff;
+}
+
+.dph-info div a {
+    padding: 0 10px;
+    width: auto;
+}
+
+.dph-info {
+    padding: 0;
+}
+
+.dph-info img {
+    position: inherit;
+    max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+    .header .top-nav .topbar-left .logo {
+        width: 65%;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 986px) {
+    .navbar-nav {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;
@@ -315,5 +355,18 @@ body {
 
     .magiamgiahot .left {
         float: none;
+    }
+
+    .header .up-nav {
+        display: none;
+    }
+
+    .dph-info .col-md-2 {
+        text-align: center;
+    }
+
+    .dph-info h1 {
+        margin-top: 10px;
+        text-align: center;
     }
 }

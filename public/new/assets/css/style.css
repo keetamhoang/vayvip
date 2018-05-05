@@ -1689,7 +1689,7 @@ header .header-top-links {
 }
 
 .header .top-nav .topbar-left {
-    float: left;
+    /*float: left;*/
 }
 
 @media (min-width: 987px) {
@@ -3112,7 +3112,7 @@ span.expiry_date {
     top: 0;
     left: 0;
     width: 140px;
-    height: 140px;
+    /*height: 140px;*/
 }
 
 .dph-info h4 {
@@ -3293,7 +3293,7 @@ button.list-group-item:hover {
         display: none;
     }
     .topbar-left {
-        width: 70px;
+        /*width: 70px;*/
     }
 }
 

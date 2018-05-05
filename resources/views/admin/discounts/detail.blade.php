@@ -22,27 +22,30 @@
     <a class="btn btn-danger" href="{{ url('admin/discounts/set-banner/' . $discount->id) }}">Chọn làm banner trang chủ</a>
     <h3>Chi tiết: <b>{{ $discount->name }}</b> ({{ $discount->status == 0 ? 'Còn hạn' : 'Hết hạn' }})</h3>
 
-    <div class="form-horizontal" >
+    <form action="{{ url('admin/discounts/update') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <input type="hidden" name="id" value="{{ $discount->id }}">
         <div class="form-body">
             <div class="form-group">
                 <label class="col-md-2 control-label">Id</label>
                 <div class="col-md-10">
-                    <input type="text" name="title" class="form-control" placeholder="Điền email" value="{{ $discount->root_id }}" disabled>
+                    <input type="text" name="root_id" class="form-control" placeholder="Điền email" value="{{ $discount->root_id }}" disabled>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-2 control-label">Tên</label>
                 <div class="col-md-10">
-                    <input type="text" name="title" class="form-control" placeholder="Điền email" value="{{ $discount->name }}" disabled>
+                    <input type="text" name="name" class="form-control" placeholder="Điền tên" value="{{ $discount->name }}" >
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-2 control-label">Thời gian hiệu lực</label>
                 <div class="col-md-10">
-                    <input type="text" name="title" class="form-control" placeholder="Điền email"
-                           value="{{ \Carbon\Carbon::parse($discount->start_time)->format('d/m/Y') }} - {{ \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') }} ({{ $discount->status == 0 ? 'Còn hạn' : 'Hết hạn' }})"
-                           disabled>
+                    <input type="text" name="start_time" class="form-control" placeholder="Điền ngày bắt đầu"
+                           value="{{ !empty($discount->start_time) ?  \Carbon\Carbon::parse($discount->start_time)->format('d/m/Y') : '' }}">
+                    <input type="text" name="end_time" class="form-control" placeholder="Điền kết thúc"
+                           value="{{ !empty($discount->end_time) ? \Carbon\Carbon::parse($discount->end_time)->format('d/m/Y') : '' }}">
                 </div>
             </div>
             <div class="form-group">
@@ -50,7 +53,7 @@
                 <div class="col-md-10">
                     @php $coupons = \App\Models\Coupon::where('discount_id', $discount->id)->get() @endphp
                     @foreach($coupons  as $coupon)
-                        <input type="text" name="title" class="form-control" placeholder="Điền email" value="{{ $coupon->coupon_code }} - {{ $coupon->coupon_desc }}" disabled>
+                        <input type="text" name="title" class="form-control" placeholder="Điền email" value="{{ $coupon->coupon_code }}">
                     @endforeach
                 </div>
             </div>
@@ -92,12 +95,19 @@
             <div class="form-group">
                 <label class="col-md-2 control-label">Mô tả</label>
                 <div class="col-md-10">
-                    <textarea class="form-control" placeholder="Điền mô tả ngắn " name="desc" disabled rows="8"> {{ $discount->content }} </textarea>
+                    <textarea class="form-control" placeholder="Điền mô tả ngắn " name="content" rows="8"> {{ $discount->content }} </textarea>
                 </div>
             </div>
-
         </div>
-    </div>
+        <div class="form-actions">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" class="btn green">Cập nhật</button>
+                    <a type="button" class="btn default" href="{{ url('admin/discounts') }}">Trở về</a>
+                </div>
+            </div>
+        </div>
+    </form>
 @endsection
 
 @section('scripts')

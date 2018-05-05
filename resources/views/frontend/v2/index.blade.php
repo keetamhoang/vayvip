@@ -5,7 +5,7 @@
 @endsection
 
 @section('meta')
-    <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia">
+    <meta property="og:url" content="https://taichinhsmart.vn">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
           content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>

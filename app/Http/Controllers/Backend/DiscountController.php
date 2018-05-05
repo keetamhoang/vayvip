@@ -286,4 +286,25 @@ class DiscountController extends AdminController
 
         return redirect('admin/don-vi-khuyen-mai/'. $category->id)->with('success', 'Cập nhật thành công');
     }
+
+    public function update(Request $request) {
+        $data = $request->all();
+
+        $category = Discount::find($data['id']);
+
+        if (empty($category)) {
+            return redirect()->back()->with('error', 'Không tồn tại');
+        }
+
+        try {
+            $startTime = Carbon::parse($data['start_time'])->toDateString();
+            $endTime = Carbon::parse($data['end_time'])->toDateString();
+        } catch (\Exception $ex) {
+
+        }
+
+        $category->update($data);
+
+        return redirect('admin/discounts/'. $category->id)->with('success', 'Cập nhật thành công');
+    }
 }

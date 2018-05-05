@@ -151,10 +151,11 @@
             </ul>
         </div>
     </div>
+
     <!-- // tags -->
     <div class="widget">
         <div class="widget-heading arrow_box">
-            <h3 class="widget-title text-white text-center" style="font-size: 24px;">
+            <h3 class="widget-title text-white text-center" style="font-size: 24px;line-height: 38px;">
                 Đăng Ký Nhận Mã Giảm Giá Mới Mỗi Ngày
             </h3>
             <div class="clearfix"></div>
@@ -172,10 +173,11 @@
             </form>
         </div>
     </div>
+
     <div class="widget">
         <div class="ads-slider">
-            <a href="{{ url('san-pham/san-pham-toi-den-1-nhanh-blaga') }}" target="_blank"><img src="/new/assets/images/toi-den-blaga-banner-1.png" alt="Tỏi đen 1 nhánh Blaga chữa bệnh tiểu đường"></a>
-            <a href="{{ url('san-pham/san-pham-hoan-xuan-thang') }}" target="_blank"><img src="/new/assets/images/hoan-xuan-thang-tri-bac-toc-banner-1.png" alt="Tóc bạc sớm, sinh lý kém Hoàn xuân thang"></a>
+            <a href="https://www.facebook.com/H%E1%BB%99i-Nh%E1%BB%AFng-Ng%C6%B0%E1%BB%9Di-Chuy%C3%AAn-S%C4%83n-Khuy%E1%BA%BFn-M%C3%A3i-1006117992869139/" target="_blank"><img src="/new/assets/images/banner-group.png" alt="Tham gia cùng chúng tôi trên Facebook"></a>
+            <a href="https://www.facebook.com/groups/166734627219703/" target="_blank"><img src="/new/assets/images/banner-group.png" alt="Tham gia cùng chúng tôi trên Facebook"></a>
         </div>
     </div>
 </div>

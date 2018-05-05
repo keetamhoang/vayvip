@@ -5,7 +5,7 @@
 @endsection
 
 @section('meta')
-    <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia">
+    <meta property="og:url" content="https://taichinhsmart.vn/ma-giam-gia">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
           content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
@@ -34,7 +34,7 @@
                     <div class="widget-heading widget-default b-b-0">
                         @php $countCoupon = \App\Models\Discount::where('status', 0)->count(); @endphp
                         <h2 class="widget-title text-dark">
-                            KHUYẾN MÃI - GIẢM GIÁ MỚI NHẤT <span class="count-coupon">({{ $countCoupon }})</span>
+                            KHUYẾN MÃI - GIẢM GIÁ MỚI NHẤT <span class="badge badge-danger">{{ $countCoupon }}</span>
                         </h2>
                         <div class="widget-widgets">
                             <div class="form-group sort">
@@ -84,7 +84,7 @@
                                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                                         <div id="most-{{ $key }}" class="collapse">
                                             <div class="detail-coupon">
-                                                <img src="{{ $code->image }}">
+                                                <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                             </div>
                                             <p>{{ $code->content }}</p>
                                         </div>
@@ -117,7 +117,7 @@
                                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                                         <div id="most-{{ $key }}" class="collapse">
                                             <div class="detail-coupon">
-                                                <img src="{{ $code->image }}">
+                                                <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                             </div>
                                             <p>{{ $code->content }}</p>
                                         </div>
@@ -138,7 +138,7 @@
                     <div class="widget-heading widget-default b-b-0">
                         @php $countProduct = \App\Models\KmProduct::where('status', 0)->count() @endphp
                         <h2 class="widget-title text-dark">
-                            TOP MÃ GIẢM GIÁ SẢN PHẨM BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->year }} <span class="count-coupon">({{ $countProduct }})</span>
+                            TOP MÃ GIẢM GIÁ SẢN PHẨM BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->year }} <span class="badge badge-danger">{{ $countProduct }}</span>
                         </h2>
                         <div class="widget-widgets">
                             <div class="form-group sort">
