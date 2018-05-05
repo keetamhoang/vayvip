@@ -52,7 +52,7 @@ class Kernel extends ConsoleKernel
 //            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 
         $schedule->command('km:mas-offer')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_MASOFFER_cron.log'));
 
         $schedule->command('get:km-product')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));

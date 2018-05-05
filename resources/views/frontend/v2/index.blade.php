@@ -344,7 +344,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                    <form class="form-horizontal select-search">
+                    <form class="form-horizontal select-search" action="{{ url('tim-kiem') }}" method="get">
                         {{--<label class="control-label ">What you searching for?</label>--}}
                         {{--<div class="btn-group" data-toggle="buttons">--}}
                             {{--<label class="btn btn-default"> <i class="ti-tag"></i>--}}
@@ -357,7 +357,7 @@
                         <fieldset>
                             <div class="form-group">
                                 {{--<label class="control-label ">Keyword</label>--}}
-                                <input class="form-control" id="text" name="text" type="text" placeholder="Vd: Lazada, tivi, sách,..."/>
+                                <input class="form-control" id="s" name="s" type="text" placeholder="Vd: Lazada, tivi, sách,..."/>
                             </div>
                             {{--<div class="row">--}}
                                 {{--<!-- Select Basic -->--}}
@@ -384,7 +384,7 @@
                             <!-- //row -->
                             <!-- Button -->
                             <div class="form-group ">
-                                <button id="search_btn" name="search_btn" class="btn btn-danger left">Tìm kiếm</button>
+                                <button id="search_btn" class="btn btn-danger left">Tìm kiếm</button>
                                 <div class="left" style="margin-top: 14px;">| Nhóm <a href="https://www.facebook.com/groups/166734627219703/" target="_blank"><i class="ti-facebook"></i> Sale Hunter</a></div>
                             </div>
                         </fieldset>

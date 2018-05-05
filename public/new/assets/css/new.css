@@ -256,6 +256,7 @@ body {
     font-weight: 400;
     text-decoration: none;
     padding: 10px 0;
+    display: inline-block;
 }
 
 .magiamgiahot .widget img, .gallery img {
@@ -308,11 +309,15 @@ body {
 
 .dph-info {
     padding: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .dph-info img, .coupon-single .collapse img {
     position: inherit;
     max-width: 100%;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1199px) {
@@ -324,6 +329,10 @@ body {
 
 .coupon-contain ul li {
     line-height: inherit;
+}
+
+.desc-bot img {
+    max-width: 100%;
 }
 
 @media (max-width: 986px) {
@@ -355,6 +364,8 @@ body {
 
     .entry-title {
         font-size: 24px;
+        padding-top: 0 !important;
+        margin-top: 0;
     }
 
     .magiamgiahot .left {
@@ -370,7 +381,33 @@ body {
     }
 
     .dph-info h1 {
-        margin-top: 10px;
         text-align: center;
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 0;
+    }
+
+    .m-t-30 {
+        margin-top: 10px !important;
+    }
+
+    .dp-header {
+        padding: 10px 0;
+    }
+
+    .desc-p, .desc-div {
+        text-align: center;
+    }
+
+    .desc-bot h2 {
+        line-height: 20px;
+    }
+
+    .magiamgiahot .widget .entry {
+        text-align: center;
+    }
+
+    .entry-header {
+        padding: 0;
     }
 }

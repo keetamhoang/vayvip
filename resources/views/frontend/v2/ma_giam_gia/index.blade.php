@@ -144,7 +144,7 @@
                     <div class="widget-heading widget-default b-b-0">
                         @php $countProduct = \App\Models\KmProduct::where('status', 0)->count() @endphp
                         <h2 class="widget-title text-dark">
-                            TOP MÃ GIẢM GIÁ SẢN PHẨM BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->year }} <span class="badge badge-danger">{{ $countProduct }}</span>
+                            TOP SẢN PHẨM GIAMR GIÁ BÁN CHẠY NHẤT {{ \Carbon\Carbon::now()->year }} <span class="badge badge-danger">{{ $countProduct }}</span>
                         </h2>
                         <div class="widget-widgets">
                             <div class="form-group sort">

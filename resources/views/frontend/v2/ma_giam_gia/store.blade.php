@@ -28,19 +28,21 @@
                         <div class="row">
                             <div class="col-md-12 dph-info">
                                 <div class="col-md-2">
-                                    <img src="{{ $image }}" class="profile-img" alt="">
+                                    <img src="{{ $image }}" class="profile-img" alt="{{ $name }}">
                                 </div>
                                 <div class="col-md-10">
                                     <h1>{{ $name }}</h1>
-                                    <p>{{ $desc }}
+                                    <p class="desc-p">{{ $desc }}
                                     </p>
-                                    <a href="javascript:;">{{ $store }}</a> <a href="javascript:;">Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</a>
+                                    <div class="desc-div">
+                                        <a href="javascript:;">{{ $store }}</a> <a href="javascript:;">Tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</a>
+                                    </div>
                                 </div>
                             </div>
-                            {{--<div class="col-md-4 dph-reviews">--}}
-                            {{--<p><span>9,2 &nbsp;<em>/ 10</em></span> 21 reviews</p>--}}
-                            {{--<p class="dph-rec"><i class="ti-cut"></i><span>78</span> Offers</p>--}}
-                            {{--</div>--}}
+
+                            <div class="col-md-12 desc-bot">
+                                {!! $partner->desc_up !!}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -334,6 +336,11 @@
                     <!-- / tabpanel -->
                 </div>
                 <!-- end: Tab content -->
+                <div class="widget desc-bot">
+                    <div class="widget-body">
+                    {!! $partner->desc_bot !!}
+                    </div>
+                </div>
                 <!-- Poplura stores -->
                 <div class="widget">
                     <!-- /widget heading -->

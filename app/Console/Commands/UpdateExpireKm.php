@@ -41,7 +41,7 @@ class UpdateExpireKm extends Command
     {
         $this->line('BEGIN: ' . Carbon::now());
 
-        Discount::where('end_time', '<', Carbon::now()->toDateString() . ' 00:00:00')->chunk(100, function ($discounts) {
+        Discount::whereNotNull('end_time')->where('end_time', '<', Carbon::now()->toDateString() . ' 00:00:00')->chunk(100, function ($discounts) {
             foreach ($discounts as $discount) {
                 if ($discount->status == 0) {
                     $discount->update([

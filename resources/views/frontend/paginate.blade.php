@@ -4,9 +4,9 @@ $link_limit = 7; // maximum number of links (a little bit inaccurate, but will b
 ?>
 
 @if ($paginator->lastPage() > 1)
-    <ul class="">
+    <ul class="pagination pagination-lg m-t-0">
         <li class="{{ ($paginator->currentPage() == 1) ? ' disabled' : '' }}">
-            <a href="{{ $paginator->previousPageUrl() }}">« Trang trước</a>
+            <a href="{{ $paginator->previousPageUrl() }}"> <i class="ti-arrow-left"></i> </a>
         </li>
         @for ($i = 1; $i <= $paginator->lastPage(); $i++)
             <?php
@@ -27,7 +27,7 @@ $link_limit = 7; // maximum number of links (a little bit inaccurate, but will b
             @endif
         @endfor
         <li class="{{ ($paginator->currentPage() == $paginator->lastPage()) ? ' disabled' : '' }}">
-            <a href="{{ $paginator->nextPageUrl() }}">Trang sau »</a>
+            <a href="{{ $paginator->nextPageUrl() }}"> <i class="ti-arrow-right"></i> </a>
         </li>
     </ul>
 @endif

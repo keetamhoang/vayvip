@@ -169,7 +169,7 @@
 
                 </div>
 
-                @php $codes = \App\Models\Discount::where('status', 0)->orderBy('is_hot', 'desc')->orderBy('updated_at', 'desc')->limit(15)->get() @endphp
+                @php $codes = \App\Models\Discount::where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get() @endphp
 
                 <div id="coupons">
                 @foreach($codes as $key => $code)
