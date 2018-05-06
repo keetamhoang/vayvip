@@ -335,6 +335,26 @@ body {
     max-width: 100%;
 }
 
+.kksr-fuel {
+    width: 110px;
+}
+
+.kksr-stars a {
+    display: block;
+}
+
+.or-group {
+    margin-top: 14px
+}
+
+.dk-h3 {
+    font-size: 24px;line-height: 38px;
+}
+
+footer img {
+    width: 100%;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
@@ -409,5 +429,9 @@ body {
 
     .entry-header {
         padding: 0;
+    }
+
+    footer img {
+        width: 58%;
     }
 }

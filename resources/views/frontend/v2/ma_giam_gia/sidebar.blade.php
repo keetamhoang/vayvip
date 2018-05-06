@@ -18,7 +18,7 @@
                     <!-- Button -->
                     <div class="form-group ">
                         <button id="search_btn" class="btn btn-danger left">Tìm kiếm</button>
-                        <div class="left" style="margin-top: 14px">| Nhóm <a href="https://www.facebook.com/groups/166734627219703/" target="_blank"><i class="ti-facebook"></i> Sale Hunter</a></div>
+                        <div class="left or-group">| Nhóm <a href="https://www.facebook.com/groups/166734627219703/" target="_blank"><i class="ti-facebook"></i> Sale Hunter</a></div>
                     </div>
                 </fieldset>
             </form>
@@ -155,7 +155,7 @@
     <!-- // tags -->
     <div class="widget">
         <div class="widget-heading arrow_box">
-            <h3 class="widget-title text-white text-center" style="font-size: 24px;line-height: 38px;">
+            <h3 class="widget-title text-white text-center dk-h3">
                 Đăng Ký Nhận Mã Giảm Giá Mới Mỗi Ngày
             </h3>
             <div class="clearfix"></div>

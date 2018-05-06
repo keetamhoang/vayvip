@@ -341,6 +341,9 @@
                     {!! $partner->desc_bot !!}
                     </div>
                 </div>
+                {{--<div class="coupon-single text-center">--}}
+                    {{--<button class="btn btn-danger" id="load-more"><i class="ti-hand-point-right"></i> Xem thêm, còn nhiều lắm <i class="ti-hand-point-left"></i></button>--}}
+                {{--</div>--}}
                 <!-- Poplura stores -->
                 <div class="widget">
                     <!-- /widget heading -->

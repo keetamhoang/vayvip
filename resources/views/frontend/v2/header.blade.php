@@ -9,7 +9,7 @@
             <div class="row">
                 <!-- LOGO -->
                 <div class="topbar-left col-lg-2 col-xs-3">
-                    <a href="{{ url('/') }}" class="logo"> <img src="/assets/image/logo.png" alt="" class="img-responsive"> </a>
+                    <a href="{{ url('/') }}" class="logo"> <img src="/assets/image/logo.png" alt="Mã giảm giá Lazada Tiki Adayroi Lotte Grab - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ" class="img-responsive"> </a>
                 </div>
                 <!-- End Logo container-->
                 <div class="menu-extras col-lg-9 col-xs-9">
