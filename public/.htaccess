@@ -4,15 +4,13 @@
     </IfModule>
 
     RewriteEngine On
-
     RewriteCond %{HTTP_HOST} ^www\.taichinhsmart\.vn [NC]
     RewriteRule (.*) http://taichinhsmart.vn/$1 [R=301,L]
 
-    <If "%{HTTP_HOST} != 'vayvip.local:81'">
-     RewriteEngine On
-     RewriteCond %{HTTPS} !=on
-     RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
-     </If>
+    <If "%{HTTP_HOST} != 'vayvip.local'">
+        RewriteCond %{HTTPS} !=on
+        RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+    </If>
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

@@ -69,11 +69,13 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('data:shinhanbank')
 //            ->everyTenMinutes()->withoutOverlapping()->appendOutputTo(storage_path('shinhanbank_cron.log'));
 
-        $schedule->command('crawl:km')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_km_cron.log'));
+//        tam bo
+//        $schedule->command('crawl:km')
+//            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_km_cron.log'));
 
-        $schedule->command('crawl:chanhtuoi')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_chanhtuoi_cron.log'));
+//        $schedule->command('crawl:chanhtuoi')
+//            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_chanhtuoi_cron.log'));
+//        ??
 
 //        $schedule->command('crawl:magiamgia')
 //            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('crawl_magiamgia_cron.log'));
