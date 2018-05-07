@@ -29,9 +29,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Lazada')->first();
 
@@ -48,9 +48,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Tiki')->first();
 
@@ -68,9 +68,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Shopee')->first();
 
@@ -88,9 +88,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Grab')->first();
 
@@ -108,9 +108,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Yes24')->first();
 
@@ -128,9 +128,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Adayroi')->first();
 
@@ -147,9 +147,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
 
-        $mosts = Discount::where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'MyTour')->first();
 
@@ -167,9 +167,9 @@ class SaleController extends Controller
         $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(15)->get();
+        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Lotte')->first();
 

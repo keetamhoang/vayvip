@@ -186,6 +186,10 @@
 
 <script>
     $(document).ready(function () {
+        @if (Request::input('coupon') == 1)
+            
+            $('.coupon_modal').modal('show');
+        @endif
         $(document).on('click', '.coupon-wrapper .btn-code, .coupon-wrapper .coupon-title a', function (e) {
             var id = $(this).attr('data-id');
 
