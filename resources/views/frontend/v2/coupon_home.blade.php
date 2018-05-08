@@ -34,7 +34,9 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title">
+                            <a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a>
+                        </p>
                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                         <div id="most-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -57,7 +59,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                         {{--<div class="btn-group" role="group" aria-label="...">--}}
                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
@@ -89,7 +91,7 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title">
-                            <a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                            <a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
                         <div id="most-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -112,7 +114,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         {{--<div class="btn-group" role="group" aria-label="...">--}}
                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-star"></i> </button>--}}
                         {{--<button type="button" class="btn btn-default btn-xs"><i class="ti-email"></i> </button>--}}
@@ -153,7 +155,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
                         <div id="end-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -164,7 +166,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                     </div>
                 </div>
             @else
@@ -190,7 +192,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#end-{{$key}}">{!! $desc1 !!}</p>
                         <div id="end-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -201,7 +203,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                     </div>
                 </div>
             @endif
@@ -236,7 +238,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
                         <div id="online-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -247,7 +249,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                     </div>
                 </div>
             @else
@@ -273,7 +275,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#online-{{$key}}">{!! $desc1 !!}</p>
                         <div id="online-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -284,7 +286,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                     </div>
                 </div>
             @endif
@@ -320,7 +322,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
                         <div id="atStore-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -331,7 +333,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                     </div>
                 </div>
             @else
@@ -357,7 +359,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <p data-toggle="collapse" data-target="#atStore-{{$key}}">{!! $desc1 !!}</p>
                         <div id="atStore-{{ $key }}" class="collapse">
                             <div class="detail-coupon">
@@ -368,7 +370,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $most->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $most->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                     </div>
                 </div>
             @endif

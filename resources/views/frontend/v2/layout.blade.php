@@ -21,6 +21,8 @@
 
     @yield('meta')
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="/assets/image/favicon.ico" type="image/x-icon">
     <link href="/new/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -125,24 +127,30 @@
 
                         <div class="row">
                             <div class="col-sm-10 col-sm-offset-1 text-center">
-                                <h2>Save 30% off New Domains Names</h2>
-                                <p>Not applicable to ICANN fees, taxes, transfers,or gift cards. Cannot be used in conjunction with any other offer, sale, discount or promotion. After the initial purchase term.</p>
+                                <h2 class="coupon-title"></h2>
+                                {{--<p class="coupon-desc"></p>--}}
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h5 class="text-center text-uppercase m-t-20 text-muted">Click below to get your coupon code</h5>
+                                    <h5 class="text-center text-uppercase m-t-20 text-muted">Copy mã bên dưới <a href="#" target="_blank" class="go-site">tới trang này</a> để sử dụng tại bước thanh toán</h5>
                                 </div>
 
-                                <div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3"> <a href="#" target="_blank" class="coupon_code alert alert-info"><span class="coupon_icon"><i class="ti-cut hidden-xs"></i></span>  DAZ50-8715
+                                <div class="col-sm-5 col-sm-offset-2 col-xs-6 col-xs-offset-3">
+                                    <a href="javascript:;" class="coupon_code alert alert-info"><span class="coupon_icon"></span>
+                                        <span id="coupon-code"></span>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="report">Did this coupon work? <span class="yes vote-link" data-src="#">Yes</span> <span class="no vote-link" data-src="#">No</span> </div>
+                                <div class="col-sm-2 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
+                                    <a class="btn btn-danger copy-btn" data-clipboard-action="copy" data-clipboard-target="#coupon-code" onclick="copy()">Sao chép</a>
+                                    <a class="btn btn-danger go-site-btn" target="_blank" href="">Vào trang này</a>
                                 </div>
                             </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-sm-12">--}}
+                                    {{--<div class="report">Did this coupon work? <span class="yes vote-link" data-src="#">Yes</span> <span class="no vote-link" data-src="#">No</span> </div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         </div>
                     </div>
                     <!-- end: Coupon modal content -->
@@ -150,24 +158,28 @@
 
 
 
-                <div class="newsletter-modal">
-                    <div class="newsletter-form">
-                        <h4><i class="ti-email"></i>Sign up for our weekly email newsletter with the best money-saving coupons.</h4>
+                <div class="newsletter-modal col-lg-12">
+                    <div class="newsletter-logo hidden-xs col col-lg-4">
+                        <img src="/new/assets/images/newsletter_homepage.png" alt="Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!">
+                    </div>
+                    <div class="newsletter-form col col-lg-8 col-lg-offset-2">
+                        <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                        <p class="dk-alert"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
                         <div class="input-group">
-                            <input class="form-control input-lg" placeholder="Email" type="text"> <span class="input-group-btn">
-                           <button class="btn btn-danger btn-lg" type="button">
-                           Subscribe
+                            <input class="form-control input-lg" placeholder="Email" type="text" id="dk-email"> <span class="input-group-btn">
+                           <button class="btn btn-danger btn-lg" id="dk-btn" type="button">
+                           Đăng ký
                            </button>
                            </span>
                         </div>
-                        <p><small>We’ll never share your email address with a third-party.</small> </p>
+                        <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
                     </div>
                 </div>
-                <ul class="nav nav-pills nav-justified">
-                    <li role="presentation" class="active"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="It worked"><i class="ti-check color-green"></i></a> </li>
-                    <li role="presentation"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="I love it"><i class="ti-heart color-primary"></i></a> </li>
-                    <li role="presentation"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-close"></i></a> </li>
-                </ul>
+                {{--<ul class="nav nav-pills nav-justified">--}}
+                    {{--<li role="presentation" class="active"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="It worked"><i class="ti-check color-green"></i></a> </li>--}}
+                    {{--<li role="presentation"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="I love it"><i class="ti-heart color-primary"></i></a> </li>--}}
+                    {{--<li role="presentation"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="It didn't work"><i class="ti-close"></i></a> </li>--}}
+                {{--</ul>--}}
 
 
             </div>
@@ -181,15 +193,53 @@
 <script src="/new/assets/js/bootstrap.min.js"></script>
 <script src="/new/assets/js/animsition.min.js"></script>
 <script src="/new/owl.carousel/owl.carousel.min.js"></script>
+<script src="/js/clipboard.min.js"></script>
 <!-- Kupon js -->
 <script src="/new/assets/js/kupon.js"></script>
 
 <script>
+    function copy() {
+        $('.copy-btn').html('Đã chép');
+    }
+
     $(document).ready(function () {
-        @if (Request::input('coupon') == 1)
+        new ClipboardJS('.copy-btn');
+
+        @if (Request::input('position') == 1)
+        var id = '{{ Request::input('id') }}';
+
+        $.ajax({
+            type: 'get',
+            data: {id: id},
+            url: '{{ url('get-detail') }}',
+            dataType: 'json',
+            success: function (response) {
+                if (response.status == 1) {
+                    var coupon = response.coupon;
+                    var discount = response.discount;
+
+                    $('.coupon_modal .coupon-title').html(discount.name);
+                    $('.coupon_modal .coupon-desc').html(discount.content);
+                    $('.coupon_modal .go-site').attr('href', discount.aff_link);
+                    if (coupon != null) {
+                        $('.go-site-btn').hide();
+                        $('.copy-btn').show();
+
+                        $('.coupon_modal #coupon-code').html(coupon.coupon_code);
+                    } else {
+                        $('.go-site-btn').show();
+                        $('.copy-btn').hide();
+                        $('.coupon_modal .go-site-btn').attr('href', discount.aff_link);
+
+                        $('.coupon_modal #coupon-code').html('Không yêu cầu mã coupon');
+                    }
+                }
+            }
+        });
             
-            $('.coupon_modal').modal('show');
+        $('.coupon_modal').modal('show');
         @endif
+
         $(document).on('click', '.coupon-wrapper .btn-code, .coupon-wrapper .coupon-title a', function (e) {
             var id = $(this).attr('data-id');
 
@@ -219,12 +269,40 @@
                 }
             });
         });
+
+        $('#dk-btn').click(function (e) {
+            var email = $('#dk-email').val();
+            $.ajax({
+                url: '{{ url('dang-ky/popup/voucher') }}',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    email: email,
+                },
+                success: function (response) {
+                    if (response.status == 1) {
+                        $('#dk-email').val('');
+                        $('.dk-alert small').html(response.message);
+                        $('.dk-alert').show();
+                    } else {
+                        $('.dk-alert small').html(response.message);
+                        $('.dk-alert').show();
+                    }
+                }
+            });
+        });
     })
 </script>
 
 @yield('script')
 
-
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 
 </body>
 </html>

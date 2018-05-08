@@ -85,7 +85,7 @@ class HomeController extends Controller
 
         return response([
             'status' => 1,
-            'message' => 'Chúc mừng bạn! Bạn đã đăng ký thành công!'
+            'message' => 'Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!'
         ]);
     }
 

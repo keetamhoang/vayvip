@@ -468,7 +468,9 @@
                                                                              style="background: url({{ $randomKm->image }}) no-repeat center;"></a> </div>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}">{{ $randomKm->name }}</a></h4>
-                                <p>{{ $randomKm->content }}</p>
+                                <div class="media-div">
+                                    <p>{!! $randomKm->content !!}</p>
+                                </div>
                             </div>
                         </div>
                     @endforeach

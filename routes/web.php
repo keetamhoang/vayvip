@@ -145,6 +145,7 @@ Route::get('vay-von/success', 'Frontend\HomeController@successVay');
 Route::get('tim-kiem', 'Frontend\V2\SaleController@search');
 
 Route::get('used', 'Frontend\HomeController@used');
+Route::get('get-detail', 'Frontend\V2\HomeController@getDetail');
 
 Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('/', 'Frontend\V2\SaleController@index');
