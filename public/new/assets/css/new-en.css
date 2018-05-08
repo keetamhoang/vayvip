@@ -6,7 +6,82 @@
     max-width: 270px;
 }
 
+.common-global-icons-sprite {
+    background-image: url('/new/assets/images/global-icons.png');
+    background-size: 32px 688px;
+}
 
+.i-automotive, .i-electronics {
+    width: 28px;
+    height: 28px;
+    background-position: 0 -598px;
+}
+
+.i-electronics {
+    background-position: 0 -482px;
+}
+
+.i-fashion, .i-health-beauty {
+    width: 28px;
+    height: 28px;
+    background-position: 0 -453px;
+}
+
+.i-sports-outdoor {
+    width: 28px;
+    height: 28px;
+    background-position: 0 -569px;
+}
+
+.i-home-living, .i-kids-toys {
+    width: 28px;
+    height: 28px;
+    background-position: 0 -511px;
+}
+
+.i-kids-toys {
+    background-position: 0 -540px;
+}
+
+.i-health-beauty {
+    background-position: 0 -627px;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.i-others {
+    width: 28px;
+    height: 28px;
+    background-position: 0 -656px;
+}
+
+.header .navigation-menu > li > a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #086a87;
+    color: #086a87;
+    filter: none;
+}
+
+.header .top-nav .nav > li > a:hover {
+    border-bottom: 3px solid #0d768f;
+}
+
+.header .top-nav .nav > li > a {
+    padding-bottom: 0px;
+    border-bottom: 3px solid transparent;
+}
+
+@media (min-width: 987px) {
+    .header .navigation-menu > li > a {
+        padding-top: 15px;
+        padding-bottom: 9px;
+        border-bottom: 2px solid transparent;
+    }
+}
 
 @media (max-width: 768px) {
 
