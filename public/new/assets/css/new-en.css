@@ -1,0 +1,13 @@
+.header .top-nav .topbar-left .logo {
+    margin-top: 3px;
+}
+
+.header .top-nav .topbar-left .logo img {
+    max-width: 270px;
+}
+
+
+
+@media (max-width: 768px) {
+
+}

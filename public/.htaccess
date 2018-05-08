@@ -6,10 +6,14 @@
     RewriteEngine On
     RewriteCond %{HTTP_HOST} ^www\.taichinhsmart\.vn [NC]
     RewriteRule (.*) http://taichinhsmart.vn/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www\.nowvoucher\.com [NC]
+    RewriteRule (.*) http://nowvoucher.com/$1 [R=301,L]
 
     <If "%{HTTP_HOST} != 'vayvip.local'">
+    <If "%{HTTP_HOST} != 'en.vayvip.local'">
         RewriteCond %{HTTPS} !=on
         RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+    </If>
     </If>
 
     # Handle Authorization Header

@@ -5,16 +5,16 @@
         {{--</div>--}}
     {{--</div>--}}
     <div class="top-nav  navbar m-b-0 b-0">
-        <div class="container vi">
+        <div class="container en">
             <div class="row">
                 <!-- LOGO -->
-                <div class="topbar-left col-lg-2 col-xs-6 col-sm-3">
+                <div class="topbar-left col-lg-3 col-xs-7 col-sm-3">
                     <a href="{{ url('/') }}" class="logo">
-                        <img src="/assets/image/logo.png" alt="Mã giảm giá Lazada Tiki Adayroi Lotte Grab - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ" class="img-responsive">
+                        <img src="/assets/image/nowvoucher-logo.png" alt="Mã giảm giá Lazada Tiki Adayroi Lotte Grab - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ" class="img-responsive">
                     </a>
                 </div>
                 <!-- End Logo container-->
-                <div class="menu-extras col-lg-10 col-xs-6 col-sm-9">
+                <div class="menu-extras col-lg-9 col-xs-5 col-sm-9">
                     <ul class="nav navbar-nav navbar-right pull-right">
                         <li class="hidden-xs">
                             <a href="{{ url('ma-giam-gia') }}">MÃ GIẢM GIÁ MỚI</a>

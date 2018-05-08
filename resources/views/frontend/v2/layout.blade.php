@@ -24,7 +24,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="/assets/image/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/image/{{ session()->get('web') == 'vi' ? 'favicon.ico' : 'nowvoucher-favicon.ico' }}" type="image/x-icon">
     <link href="/new/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/new/assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="/new/assets/css/animate.min.css" rel="stylesheet" type="text/css">
@@ -33,6 +33,10 @@
     <!-- Theme styles -->
     <link href="/new/assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="/new/assets/css/new.css" rel="stylesheet" type="text/css">
+
+    @if (session()->get('web') == 'en')
+        <link href="/new/assets/css/new-en.css" rel="stylesheet" type="text/css">
+    @endif
 
     @yield('style')
 
@@ -47,7 +51,11 @@
 <div class="site-wrapper" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <!-- Navigation Bar-->
 
-    @include('frontend.v2.header')
+    @if (session()->get('web') == 'vi')
+        @include('frontend.v2.header')
+    @else
+        @include('frontend.v2.en.header')
+    @endif
 
     <!-- Navigation ends -->
     <div class="wrapper">

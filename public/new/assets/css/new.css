@@ -3,7 +3,8 @@ body {
 }
 
 .header .top-nav {
-    background: linear-gradient(to right, #33cccc, #086a87);
+    background: linear-gradient(to left, #33cccc, #086a87);
+    /*background: linear-gradient(to right, #29ABE2 , #54BCE8 , #7FCDEE , #A9DDF3);*/
 }
 
 .header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
@@ -29,6 +30,7 @@ body {
 
 .header .top-nav .topbar-left .logo img {
     min-width: 90px;
+    max-width: 170px;
 }
 
 .nav.nav-tabs > li > a i {
@@ -58,7 +60,7 @@ body {
 }
 
 .header .top-nav .nav > li > a:hover {
-    background: #000000 !important;
+    background: #23a7b2 !important;
 }
 
 .media-body > p {
@@ -416,6 +418,12 @@ footer img {
     }
 }
 
+@media (max-width: 1075px) {
+    .navbar-custom .container {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 65px;
@@ -427,6 +435,7 @@ footer img {
 
     .header .top-nav .topbar-left .logo img {
         min-width: 120px;
+        max-width: 120px;
     }
 
     .slide-wrap {
