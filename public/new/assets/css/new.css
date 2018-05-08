@@ -2,6 +2,10 @@ body {
     padding-top: 120px;
 }
 
+.header .top-nav {
+    background: linear-gradient(to right, #33cccc, #086a87);
+}
+
 .header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
     font-family: 'Open Sans', sans-serif;
 }
@@ -112,9 +116,10 @@ body {
 }
 
 #footer .btmFooter {
-    background: #25282e;
+    /*background: #25282e;*/
     padding-bottom: 15px;
     padding-top: 25px;
+    background: linear-gradient(to right, #33cccc, #086a87);
 }
 
 #footer strong, #footer p {
@@ -335,7 +340,8 @@ body {
 }
 
 .newsletter-modal {
-    background: #3cc;
+    /*background: #3cc;*/
+    background: linear-gradient(to right, #33cccc, #086a87);
 }
 
 @media (max-width: 1199px) {
@@ -390,7 +396,7 @@ footer img {
     color: #6e8e9e;
 }
 
-.newsletter-form h4, .newsletter-form small {
+.coupon_modal .newsletter-form h4, .coupon_modal .newsletter-form small {
     color: #fff;
 }
 
@@ -402,7 +408,7 @@ footer img {
     max-width: 238px;
 }
 
-.dk-alert { display: none}
+.dk-alert, .dk-alert-footer { display: none}
 
 @media (max-width: 986px) {
     .navbar-nav {

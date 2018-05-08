@@ -99,10 +99,11 @@
             <div class="container text-center">
                 <div class="col-sm-12">
                     <div class="newsletter-form">
-                        <h4><i class="ti-email"></i>Đăng ký để nhận mã giảm giá, các chương trình khuyến mại mới nhất, tốt nhất</h4>
+                        <h4><i class="ti-email"></i>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                        <p class="dk-alert-footer"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
                         <div class="input-group">
-                            <input type="text" class="form-control input-lg" placeholder="Email"> <span class="input-group-btn">
-                           <button class="btn btn-danger btn-lg" type="button">
+                            <input type="text" class="form-control input-lg" placeholder="Email" id="dk-email-footer"> <span class="input-group-btn">
+                           <button class="btn btn-danger btn-lg" id="dk-btn-footer" type="button">
                            Đăng ký
                            </button>
                            </span>
@@ -287,6 +288,28 @@
                     } else {
                         $('.dk-alert small').html(response.message);
                         $('.dk-alert').show();
+                    }
+                }
+            });
+        });
+
+        $('#dk-btn-footer').click(function (e) {
+            var email = $('#dk-email-footer').val();
+            $.ajax({
+                url: '{{ url('dang-ky/popup/voucher') }}',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    email: email,
+                },
+                success: function (response) {
+                    if (response.status == 1) {
+                        $('#dk-email-footer').val('');
+                        $('.dk-alert-footer small').html(response.message);
+                        $('.dk-alert-footer').show();
+                    } else {
+                        $('.dk-alert-footer small').html(response.message);
+                        $('.dk-alert-footer').show();
                     }
                 }
             });
