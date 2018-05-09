@@ -68,7 +68,7 @@
             <div class="container">
                 <div class="row explain_group">
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                        <a class="item" href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
                             <div class="box-icon"> <i class="bg-danger ti-shopping-cart"></i> </div>
                             <div class="box-info">
                                 <h3>Cùng săn mã giảm giá</h3>
@@ -79,7 +79,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="{{ url('vay-von-tin-dung') }}">
+                        <a class="item" href="{{ url('vay-von-tin-dung') }}">
                             <div class="box-icon"> <i class="bg-info ti-wallet"></i> </div>
                             <div class="box-info">
                                 <h3>Vay vốn tín dụng</h3>
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="item" rel="nofollow" href="{{ url('tin-tuc/the-tin-dung-la-gi-12') }}">
+                        <a class="item" href="{{ url('tin-tuc/the-tin-dung-la-gi-12') }}">
                             <div class="box-icon"> <i class="bg-purple ti-ticket"></i> </div>
                             <div class="box-info">
                                 <h3>Làm thẻ tín dụng</h3>

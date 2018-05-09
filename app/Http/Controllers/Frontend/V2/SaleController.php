@@ -25,13 +25,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Lazada tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/lazada1.png';
 
-        $countMost = Discount::where('status', 0)->where('merchant', 'lazada')->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Lazada')->first();
 
@@ -44,13 +44,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Tiki tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/tiki1.png';
 
-        $countMost = Discount::where('status', 0)->where('merchant', 'tikivn')->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', 'tikivn')->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'tikivn')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Tiki')->first();
 
@@ -64,13 +64,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Shopee tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/shopee1.jpg';
 
-        $countMost = Discount::where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Shopee')->first();
 
@@ -84,13 +84,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức đi lại với những mã giảm giá, chương trình khuyến mại Grab tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/grab1.jpg';
 
-        $countMost = Discount::where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Grab')->first();
 
@@ -104,13 +104,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Yes24 tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/yes241.jpg';
 
-        $countMost = Discount::where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Yes24')->first();
 
@@ -124,13 +124,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Adayroi tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/adayroi1.jpg';
 
-        $countMost = Discount::where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Adayroi')->first();
 
@@ -143,13 +143,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức chu du, nghỉ dưỡng với những mã giảm giá, chương trình khuyến mại Du lịch tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/mytour1.jpg';
 
-        $countMost = Discount::where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
+        $countMost = Discount::VN()->where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->count();
 
-        $mosts = Discount::where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'MyTour')->first();
 
@@ -163,13 +163,13 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mại Lotte tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/lotte1.jpg';
 
-        $countMost = Discount::where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
 
         $partner = Partner::where('name', 'Lotte')->first();
 
@@ -188,7 +188,7 @@ class SaleController extends Controller
         $s = trim($s);
 
         if (!empty($s)) {
-            $results = Discount::where('name', 'like', '%'.$s.'%')->where('status', 0)->orderBy('count_view', 'desc')->orderBy('start_time', 'desc');
+            $results = Discount::VN()->where('name', 'like', '%'.$s.'%')->where('status', 0)->orderBy('count_view', 'desc')->orderBy('start_time', 'desc');
             $count = $results->count();
             $results = $results->paginate(15);
         } else {

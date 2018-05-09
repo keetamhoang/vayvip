@@ -8,7 +8,7 @@ class Discount extends Model
 {
     protected $fillable = [
         'aff_link', 'content', 'domain', 'end_time', 'root_id', 'image', 'link', 'merchant', 'name', 'start_time', 'status', 'type', 'merchant_id',
-        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot'
+        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot', 'local'
     ];
 
     protected $dates = [
@@ -38,5 +38,15 @@ class Discount extends Model
 
     public function coupon() {
         return $this->hasMany('App\Models\Coupon', 'id', 'discount_id');
+    }
+
+    public function scopeVN($query)
+    {
+        $query->where('local', 'vn');
+    }
+
+    public function scopeEN($query)
+    {
+        $query->where('local', 'en');
     }
 }
