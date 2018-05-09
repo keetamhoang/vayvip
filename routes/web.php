@@ -51,7 +51,12 @@ Route::group(['prefix' => 'admin',
         Route::post('categories/update', 'Backend\CategoryController@update');
         Route::get('categoryAttribute.data', 'Backend\CategoryController@categoryAttribute');
 
-
+        Route::get('merchants', 'Backend\MerchantController@index');
+        Route::get('merchants/add', 'Backend\MerchantController@create');
+        Route::get('merchants/{id}', 'Backend\MerchantController@edit');
+        Route::post('merchants/store', 'Backend\MerchantController@store');
+        Route::post('merchants/update', 'Backend\MerchantController@update');
+        Route::get('merchantAttribute.data', 'Backend\MerchantController@merchantAttribute');
 
         Route::get('users', 'Backend\UserController@index');
         Route::get('users/add', 'Backend\UserController@create');
@@ -104,7 +109,7 @@ Route::get('logout', 'Backend\AuthController@logout');
 Route::get('uploadPhoto', ['as' => 'uploadPhoto', 'uses' => 'Frontend\HomeController@guiLienHe']);
 
 // frontend
-Route::get('/', 'Frontend\HomeController@index');
+Route::get('/', 'Frontend\V2\HomeController@index');
 Route::get('vay-von-tin-dung', 'Frontend\VayVonController@index');
 Route::get('mua-sam-hom-nay', 'Frontend\NewsController@indexMuaSam');
 Route::get('ma-giam-gia', 'Frontend\KmController@index');

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Merchant extends Model
 {
     protected $fillable = [
-        'name', 'slug', 'status', 'type'
+        'name', 'slug', 'status', 'type', 'image'
     ];
 }

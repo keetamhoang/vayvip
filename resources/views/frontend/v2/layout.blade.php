@@ -64,6 +64,7 @@
             @yield('content')
         </div>
 
+        @if (session()->get('web') == 'vi')
         <section class="call-to-action">
             <div class="container">
                 <div class="row explain_group">
@@ -103,6 +104,7 @@
                 </div>
             </div>
         </section>
+        @endif
         <section class="newsletter-alert">
             <div class="container text-center">
                 <div class="col-sm-12">
