@@ -93,7 +93,10 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                 <div class="thumb-inside">
-                    <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}"> <img class="img-responsive" src="/new/assets/images/lazada-240x240.png" alt="Khuyến mãi HOT nhất Lazada"> </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
+                    <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}">
+
+                        <img class="img-responsive" src="/assets/image/logo/Myanmar/lazada_my.png" alt="HOT voucher coupons deal offer Lazada">
+                    </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
                 </div>
                 <div class="store_name text-center">
                     <h5>Lazada</h5>

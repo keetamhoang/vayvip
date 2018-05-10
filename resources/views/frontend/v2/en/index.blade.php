@@ -89,9 +89,16 @@
                                 <img src="/assets/image/coupon-header.png" class="profile-img" alt="Exclusive Sales, Promotions & Vouchers in Singapore {{\Carbon\Carbon::now()->year}}">
                             </div>
                             <div class="col-md-10">
-                                <h1>Exclusive Sales, Promotions & Vouchers in Singapore {{ \Carbon\Carbon::now()->year }}</h1>
-                                <p class="desc-p">Get all top coupon codes & offers
-                                </p>
+                                @if (session()->get('web') == 'my')
+                                    <h1>Exclusive Sales, Promotions & Vouchers in Malaysia {{ \Carbon\Carbon::now()->year }}</h1>
+                                    <p class="desc-p">Get the latest promo and discount codes from all online stores</p>
+                                @elseif (session()->get('web') == 'ph')
+                                    <h1>Exclusive Sales, Promotions & Vouchers in Philippines {{ \Carbon\Carbon::now()->year }}</h1>
+                                    <p class="desc-p">Get all top coupon codes & offers</p>
+                                @elseif (session()->get('web') == 'id')
+                                        <h1>Exclusive Sales, Promotions & Vouchers in Indonesia {{ \Carbon\Carbon::now()->year }}</h1>
+                                        <p class="desc-p">Get all top coupon codes & offers</p>
+                                @endif
                                 <div class="desc-div hidden-xs">
                                     <a href="javascript:;">Popular Online Stores</a> <a href="javascript:;">Exclusive Deals</a> <a href="javascript:;">{{ \Carbon\Carbon::now()->format('m/Y') }}</a>
                                 </div>
@@ -107,7 +114,12 @@
             <div class="clearfix"></div>
             <div class="widget">
                 <div class="widget-body">
-                    @include('frontend.v2.en.coupon.about');
+                    @if (session()->get('web') == 'my')
+                        @php $desc = \App\Models\Partner::where('name', 'my.nowvoucher.com')->first(); @endphp
+
+                        {!! $desc->desc_bot !!}
+                    {{--@include('frontend.v2.en.coupon.about')--}}
+                    @endif
                 </div>
             </div>
             <div class="clearfix"></div>

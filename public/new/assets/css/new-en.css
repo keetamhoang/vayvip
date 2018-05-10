@@ -74,6 +74,10 @@
     background-position: 0 -656px;
 }
 
+.dph-info h1 {
+    font-size: 23px;
+}
+
 .header .navigation-menu > li > a:hover {
     text-decoration: none;
     border-bottom: 2px solid #086a87;
