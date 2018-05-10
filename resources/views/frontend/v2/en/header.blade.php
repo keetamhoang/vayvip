@@ -5,7 +5,7 @@
         {{--</div>--}}
     {{--</div>--}}
     <div class="top-nav  navbar m-b-0 b-0">
-        <div class="container en">
+        <div class="container en {{ session()->get('web') == 'my' ? 'my' : (session()->get('web') == 'ph' ? 'ph' : (session()->get('web') == 'id' ? 'id' : '')) }}">
             <div class="row">
                 <!-- LOGO -->
                 <div class="topbar-left col-lg-3 col-xs-7 col-sm-3">

@@ -1,3 +1,18 @@
+.header .top-nav .my {
+    background: url('/assets/image/my-bg.png') left no-repeat;
+    background-size: auto 100%;
+}
+
+.header .top-nav .ph {
+    background: url('/assets/image/ph-bg.png') left no-repeat;
+    background-size: auto 100%;
+}
+
+.header .top-nav .id {
+    background: url('/assets/image/id-bg.png') left no-repeat;
+    background-size: auto 100%;
+}
+
 .header .top-nav .topbar-left .logo {
     margin-top: 3px;
 }
