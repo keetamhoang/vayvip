@@ -12,22 +12,54 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index() {
+        $mosts = Discount::where('status', 0);
+        $coupons = Discount::where('status', 0);
+        $deals = Discount::where('status', 0);
+        $exps = Discount::where('status', 0);
+
         if (session()->get('web') == 'vi') {
-            $mosts = Discount::VN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-            $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-            $deals = Discount::VN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-            $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
-        } else {
-            $mosts = Discount::EN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(8)->get();
-            $coupons = Discount::EN()->where('status', 0)->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(8)->get();
-            $deals = Discount::EN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(8)->get();
-            $exps = Discount::EN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(8)->get();
+            $mosts = $mosts->VN();
+            $coupons = $coupons->VN();
+            $deals = $deals->VN();
+            $exps = $exps->VN();
+        } else if (session()->get('web') == 'sg') {
+            $mosts = $mosts->SG();
+            $coupons = $coupons->SG();
+            $deals = $deals->SG();
+            $exps = $exps->SG();
+        } elseif (session()->get('web') == 'my') {
+            $mosts = $mosts->MY();
+            $coupons = $coupons->MY();
+            $deals = $deals->MY();
+            $exps = $exps->MY();
+        } elseif (session()->get('web') == 'ph') {
+            $mosts = $mosts->PH();
+            $coupons = $coupons->PH();
+            $deals = $deals->PH();
+            $exps = $exps->PH();
+        } elseif (session()->get('web') == 'id') {
+            $mosts = $mosts->ID();
+            $coupons = $coupons->ID();
+            $deals = $deals->ID();
+            $exps = $exps->ID();
+        } elseif (session()->get('web') == 'th') {
+            $mosts = $mosts->TH();
+            $coupons = $coupons->TH();
+            $deals = $deals->TH();
+            $exps = $exps->TH();
         }
+
+        $mosts = $mosts->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $coupons = $coupons->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $deals = $deals->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $exps = $exps->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
 
         if (session()->get('web') == 'vi') {
             return view('frontend.v2.index', compact('mosts', 'coupons', 'deals', 'exps'));
-        } else if (session()->get('web') == 'en') {
+        } else if (in_array(session()->get('web'), ['sg', 'my', 'ph'])) {
             return view('frontend.v2.en.index', compact('mosts', 'coupons', 'deals', 'exps'));
+        } else if (session()->get('web') == 'id') {
+            return view('frontend.v2.id.index', compact('mosts', 'coupons', 'deals', 'exps'));
         }
     }
 
@@ -52,5 +84,14 @@ class HomeController extends Controller
             'coupon' => !empty($coupon) ? $coupon : null,
             'discount' => $discount
         ]);
+    }
+
+    public function coupons() {
+        $mosts = Discount::VN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
+
+        return view('frontend.v2.en.index', compact('mosts', 'coupons', 'deals', 'exps'));
     }
 }

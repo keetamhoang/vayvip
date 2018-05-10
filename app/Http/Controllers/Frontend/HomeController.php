@@ -24,11 +24,7 @@ class HomeController extends Controller
         $deals = Discount::VN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
         $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
 
-        if (session()->get('web') == 'vi') {
-            return view('frontend.v2.index', compact('mosts', 'coupons', 'deals', 'exps'));
-        } else if (session()->get('web') == 'en') {
-            return view('frontend.v2.en.index', compact('mosts', 'coupons', 'deals', 'exps'));
-        }
+        return view('frontend.v2.index', compact('mosts', 'coupons', 'deals', 'exps'));
     }
 
     public function registerForm(Request $request) {

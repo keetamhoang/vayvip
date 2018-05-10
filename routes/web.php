@@ -259,3 +259,5 @@ Route::group(['prefix' => 'v2'], function () {
         Route::get('nhan-ma-giam-gia-cap-nhat', 'Frontend\SaleController@nganHang');
     });
 });
+
+Route::get('coupons', 'Frontend\V2\HomeController@index');

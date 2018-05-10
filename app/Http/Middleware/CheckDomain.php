@@ -21,7 +21,15 @@ class CheckDomain
         if ($domain == 'taichinhsmart.vn' || $domain == 'vayvip.local') {
             session()->put('web', 'vi');
         } else if ($domain == 'nowvoucher.com' || $domain == 'en.vayvip.local') {
-            session()->put('web', 'en');
+            session()->put('web', 'sg');
+        } else if ($domain == 'my.nowvoucher.com') {
+            session()->put('web', 'my');
+        } else if ($domain == 'ph.nowvoucher.com') {
+            session()->put('web', 'ph');
+        } else if ($domain == 'id.nowvoucher.com') {
+            session()->put('web', 'id');
+        } else if ($domain == 'th.nowvoucher.com') {
+            session()->put('web', 'th');
         }
 
         return $next($request);

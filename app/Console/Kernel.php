@@ -13,6 +13,7 @@ use App\Console\Commands\GetKm;
 use App\Console\Commands\GetKmMasOffer;
 use App\Console\Commands\GetKmProduct;
 use App\Console\Commands\HoangCommand;
+use App\Console\Commands\LazadaEco;
 use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -36,7 +37,8 @@ class Kernel extends ConsoleKernel
         HoangCommand::class,
         CrawlerChanhTuoi::class,
         CrawlerMaGiamGia::class,
-        GetKmMasOffer::class
+        GetKmMasOffer::class,
+        LazadaEco::class
     ];
 
     /**
@@ -48,17 +50,20 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('get:km-at')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
+            ->at('10:00')->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 //            ->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('get_km_AT_cron.log'));
 
         $schedule->command('km:mas-offer')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_MASOFFER_cron.log'));
+            ->at('10:00')->withoutOverlapping()->appendOutputTo(storage_path('get_km_MASOFFER_cron.log'));
+
+        $schedule->command('lazada:eco')
+            ->at('10:00')->withoutOverlapping()->appendOutputTo(storage_path('get_km_MASOFFER_cron.log'));
 
         $schedule->command('get:km-product')
-            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));
+            ->at('10:00')->withoutOverlapping()->appendOutputTo(storage_path('get_km_product_AT_cron.log'));
 
         $schedule->command('download:image')
-            ->everyThirtyMinutes()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
+            ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
 
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));

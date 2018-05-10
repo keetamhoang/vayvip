@@ -8,7 +8,7 @@ class Discount extends Model
 {
     protected $fillable = [
         'aff_link', 'content', 'domain', 'end_time', 'root_id', 'image', 'link', 'merchant', 'name', 'start_time', 'status', 'type', 'merchant_id',
-        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot', 'local'
+        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot', 'local', 'end_time_text'
     ];
 
     protected $dates = [
@@ -50,8 +50,27 @@ class Discount extends Model
         $query->where('local', 'vn');
     }
 
-    public function scopeEN($query)
+    public function scopeSG($query)
     {
-        $query->where('local', 'en');
+        $query->where('local', 'sg');
+    }
+
+    public function scopeMY($query)
+    {
+        $query->where('local', 'my');
+    }
+
+    public function scopePH($query)
+    {
+        $query->where('local', 'ph');
+    }
+    public function scopeID($query)
+    {
+        $query->where('local', 'id');
+    }
+
+    public function scopeTH($query)
+    {
+        $query->where('local', 'th');
     }
 }

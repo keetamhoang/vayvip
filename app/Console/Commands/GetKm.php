@@ -64,24 +64,6 @@ class GetKm extends Command
 
             foreach ($output['data'] as $each) {
                 try {
-                    $dataDiscount = [
-                        'aff_link' => $each['aff_link'],
-                        'content' => $each['content'],
-                        'domain' => $each['domain'],
-                        'image' => $each['image'],
-                        'link' => $each['link'],
-                        'name' => $each['name'],
-                        'root_id' => $each['id'],
-                        'merchant' => $each['merchant'],
-                        'end_time' => Carbon::parse($each['end_time'])->toDateTimeString(),
-                        'start_time' => Carbon::parse($each['start_time'])->toDateTimeString(),
-                        'slug' => Unit::create_slug($each['name'])
-                    ];
-
-                    if (count($each['coupons']) > 0) {
-                        $dataDiscount['is_coupon'] = 1;
-                    }
-
                     $merchant = Merchant::where('name', $each['merchant'])->first();
 
                     if (empty($merchant)) {
@@ -91,7 +73,24 @@ class GetKm extends Command
                         ]);
                     }
 
-                    $dataDiscount['merchant_id'] = $merchant->id;
+                    $dataDiscount = [
+                        'aff_link' => $each['aff_link'],
+                        'content' => $each['content'],
+                        'domain' => $each['domain'],
+                        'image' => $each['image'],
+                        'link' => $each['link'],
+                        'name' => $each['name'],
+                        'root_id' => $each['id'],
+                        'merchant' => $each['merchant'],
+                        'merchant_id' => $merchant->id,
+                        'end_time' => Carbon::parse($each['end_time'])->toDateTimeString(),
+                        'start_time' => Carbon::parse($each['start_time'])->toDateTimeString(),
+                        'slug' => Unit::create_slug($each['name'])
+                    ];
+
+                    if (count($each['coupons']) > 0) {
+                        $dataDiscount['is_coupon'] = 1;
+                    }
 
                     $checkDiscount = Discount::where('root_id', $each['id'])->first();
 

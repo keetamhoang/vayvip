@@ -34,7 +34,7 @@
     <link href="/new/assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="/new/assets/css/new.css" rel="stylesheet" type="text/css">
 
-    @if (session()->get('web') == 'en')
+    @if (in_array(session()->get('web'), ['sg', 'my', 'ph']))
         <link href="/new/assets/css/new-en.css" rel="stylesheet" type="text/css">
     @endif
 
