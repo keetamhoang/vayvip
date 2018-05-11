@@ -1,5 +1,16 @@
 <html>
 <head lang="en">
+    <!-- Hotjar Tracking Code for https://taichinhsmart.vn/san-pham/com-vi-sinh-bao- -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:877617,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <meta charset="UTF-8">
     <title class="title-site" lp-id="5ad398dcf57536bd5296affc">Mua Nutri Baby ưu đãi 50%</title>
     <meta http-equiv="Cache-control" content="no-cache">

@@ -2,6 +2,17 @@
 
 @section('title')
     <title>Chuyên trang chăm sóc sức khỏe cả gia đình</title>
+    <!-- Hotjar Tracking Code for https://taichinhsmart.vn/san-pham/com-vi-sinh-bao- -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:877617,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 @endsection
 
 @section('meta')
@@ -67,10 +78,6 @@
                                         <div class="detail-content">
                                             {{--content--}}
                                             {!! $post->content !!}
-                                            <p class="p-author">
-                                                <strong class="detail-author">
-                                                    {{ $post->account->name }}</strong>
-                                            </p>
                                         </div>
                                         <div data-check-position="body_end"></div>
                                     </div>
@@ -82,7 +89,7 @@
                             <div class="banner">
                                 <img src="/assets/image/sanpham.png">
                             </div>
-                            <div style="text-align: center;">
+                            <div style="text-align: center;" class="hidden-xs">
                                 <a class="btn3 scrollto pre-link" href="{{ url('/san-pham/landing/com-vi-sinh-bao-ve-suc-khoe-nutribaby') }}" style="text-decoration: none;">
                                     Đặt hàng ngay!
                                 </a>
