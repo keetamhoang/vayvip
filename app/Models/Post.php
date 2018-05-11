@@ -13,7 +13,7 @@ class Post extends Model
 
     public function getSlugAttribute()
     {
-        return $this->attributes['slug'].'-'.$this->attributes['id'];
+        return 'tin-tuc/' . $this->attributes['slug'].'-'.$this->attributes['id'];
     }
 
     public function account()

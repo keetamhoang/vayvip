@@ -212,6 +212,9 @@ Route::group(['prefix' => 'san-pham'], function () {
 
     Route::get('san-pham-hoan-xuan-thang', 'Frontend\ProductController@hoanxuanthang');
     Route::get('san-pham-hoan-xuan-thang/success', 'Frontend\ProductController@hoanxuanthangSuccess');
+
+    Route::get('com-vi-sinh-bao-ve-suc-khoe-nutribaby', 'Frontend\ProductController@nutribaby');
+    Route::get('landing/com-vi-sinh-bao-ve-suc-khoe-nutribaby', 'Frontend\ProductController@nutribabyLanding');
 });
 
 Route::group(['prefix' => 'v2'], function () {

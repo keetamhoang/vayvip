@@ -9,19 +9,15 @@ use App\Http\Controllers\Controller;
 class NewsController extends Controller
 {
     public function indexTinTuc() {
-        $bigPosts = Post::where('is_highlight', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(3)->get();
+        $posts = Post::where('status', 1)->where('category_id', 1)->orderBy('created_at', 'desc')->get();
 
-        $otherPosts = Post::where('category_id', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(21)->get();
-
-        return view('frontend.news.index')->with(compact('bigPosts', 'otherPosts'));
+        return view('frontend.news.index')->with(compact('posts'));
     }
 
     public function indexMuaSam() {
-        $bigPosts = Post::where('is_highlight', 1)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(3)->get();
+        $posts = Post::where('status', 1)->where('category_id', 2)->orderBy('created_at', 'desc')->get();
 
-        $otherPosts = Post::where('category_id', 2)->orderBy('updated_at', 'desc')->where('status', config('const.ACTIVE'))->limit(21)->get();
-
-        return view('frontend.news.index')->with(compact('bigPosts', 'otherPosts'));
+        return view('frontend.news.index')->with(compact('posts'));
     }
 
     public function detail($slug, $id) {

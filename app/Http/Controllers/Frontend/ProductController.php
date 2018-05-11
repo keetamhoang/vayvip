@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Components\Unit;
+use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -24,6 +25,15 @@ class ProductController extends Controller
     public function register(Request $request) {
         $data = $request->all();
 
+        if ($data['sp'] == 'nutribaby') {
+            if (empty($data['name']) || empty($data['phone']) || empty($data['content'])) {
+                return response([
+                    'status' => 0,
+                    'message' => 'Bạn hãy điền đủ thông tin để đặt hàng nhé',
+                ]);
+            }
+        }
+
         try {
             $client = new \Google_Client();
             $client->setApplicationName('vayvip');
@@ -41,8 +51,11 @@ class ProductController extends Controller
             if ($sheetRange == 'toiden_blaga') {
                 $exe = Unit::addRowToSpreadsheet2($sheets, $spreadsheetId, $sheetRange, [$data['name'], $data['mobile'], $data['address'], Carbon::now()->toDateTimeString()]);
                 $link = 'https://taichinhsmart.vn/san-pham/san-pham-toi-den-1-nhanh-blaga/success';
-            } else {
+            } elseif ($sheetRange == 'hoanxuanthang') {
                 $exe = Unit::addRowToSpreadsheet2($sheets, $spreadsheetId, $sheetRange, [$data['name'], $data['mobile'], $data['email'], Carbon::now()->toDateTimeString()]);
+                $link = 'https://taichinhsmart.vn/san-pham/san-pham-hoan-xuan-thang';
+            } elseif ($sheetRange == 'nutribaby') {
+                $exe = Unit::addRowToSpreadsheet2($sheets, $spreadsheetId, $sheetRange, [$data['name'], $data['phone'], $data['content'], Carbon::now()->toDateTimeString()]);
                 $link = 'https://taichinhsmart.vn/san-pham/san-pham-hoan-xuan-thang';
             }
         } catch (\Exception $exception) {
@@ -73,5 +86,18 @@ class ProductController extends Controller
 
     public function hoanxuanthangSuccess() {
         return view('frontend.product.hoanxuanthang.success');
+    }
+
+    public function nutribaby() {
+        $post = Post::where('id', 14)->first();
+        $landing = 1;
+
+        return view('frontend.product.nutribaby', compact('post', 'landing'));
+    }
+
+    public function nutribabyLanding() {
+        $landing = 'NUTRI BABY';
+
+        return view('frontend.product.nutribaby-landing', compact('landing'));
     }
 }

@@ -51,10 +51,12 @@
 <div class="site-wrapper" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <!-- Navigation Bar-->
 
+    @if (empty($landing))
     @if (session()->get('web') == 'vi')
         @include('frontend.v2.header')
     @else
         @include('frontend.v2.en.header')
+    @endif
     @endif
 
     <!-- Navigation ends -->
@@ -64,6 +66,7 @@
             @yield('content')
         </div>
 
+        @if (empty($landing))
         @if (session()->get('web') == 'vi')
         <section class="call-to-action">
             <div class="container">
@@ -125,6 +128,7 @@
         </section>
         <!-- end:Newsletter signup -->
         <!-- Footer -->
+        @endif
 
         @include('frontend.v2.footer')
 
