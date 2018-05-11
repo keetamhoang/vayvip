@@ -314,7 +314,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 .newscontent .content a {
-    color: blue;
+    color: #f15922;
 }
 
 .timeandcatdetail .cat a {
@@ -646,6 +646,18 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     float: left;
     padding: 47px;
     margin-right: 10px;
+}
+
+.name::before {
+    content: "PV An An: ";
+    color: rgb(7, 29, 197);
+    font-weight: bold;
+}
+
+.int::before {
+    content: "Diễn Viên Việt Anh: ";
+    color: rgb(7, 29, 197);
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

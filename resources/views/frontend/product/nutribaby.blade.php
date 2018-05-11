@@ -1,15 +1,15 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Cốm vi sinh bảo vệ sức khỏe cho bé Nutri Baby</title>
+    <title>Chuyên trang chăm sóc sức khỏe cả gia đình</title>
 @endsection
 
 @section('meta')
     <meta property="og:url" content="http://taichinhsmart.vn/{{ $post->slug }}">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Cốm vi sinh bảo vệ sức khỏe cho bé Nutri Baby"/>
+    <meta property="og:title" content="Chuyên trang chăm sóc sức khỏe cả gia đình"/>
     <meta property="og:description"
-          content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Tài chính thông minh trong tầm tay của bạn.'  !!}"/>
+          content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Chuyên trang chăm sóc sức khỏe cả gia đình.'  !!}"/>
     <meta property="og:image" content="http://taichinhsmart.vn{{ $post->image }}"/>
 @endsection
 
@@ -73,21 +73,6 @@
                                             </p>
                                         </div>
                                         <div data-check-position="body_end"></div>
-                                        @php
-                                            $nextPost = \App\Models\Post::where('id', '>', $post->id)->first();
-                                            if (empty($nextPost)) {
-                                                $nextPost = \App\Models\Post::where('id', '<', $post->id)->first();
-                                            }
-                                        @endphp
-
-                                        @if (!empty($nextPost))
-                                            <div class="VCSortableInPreviewMode link-content-footer IMSCurrentEditorEditObject"
-                                                 type="link">
-                                                <a href="{{ $nextPost->slug }}" title="{{ $nextPost->title }}"
-                                                   style="font-size: 22px; font-weight: bold;">{{ $nextPost->title }}</a>
-                                            </div>
-                                        @endif
-
                                     </div>
                                 </div>
 

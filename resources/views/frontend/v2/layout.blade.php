@@ -130,7 +130,9 @@
         <!-- Footer -->
         @endif
 
+        @if(empty($landing))
         @include('frontend.v2.footer')
+        @endif
 
         <!-- start modal -->
         <!-- Large modal -->
