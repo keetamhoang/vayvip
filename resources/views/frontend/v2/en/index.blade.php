@@ -119,6 +119,10 @@
 
                         {!! $desc->desc_bot !!}
                     {{--@include('frontend.v2.en.coupon.about')--}}
+                    @elseif (session()->get('web') == 'ph')
+                        @php $desc = \App\Models\Partner::where('name', 'ph.nowvoucher.com')->first(); @endphp
+
+                        {!! $desc->desc_bot !!}
                     @endif
                 </div>
             </div>

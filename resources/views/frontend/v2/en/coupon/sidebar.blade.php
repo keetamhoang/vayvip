@@ -93,7 +93,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
                 <div class="thumb-inside">
-                    <a class="thumbnail" href="{{ url('ma-giam-gia/ma-giam-gia-lazada') }}">
+                    <a class="thumbnail" href="#">
 
                         <img class="img-responsive" src="/assets/image/logo/Myanmar/lazada_my.png" alt="HOT voucher coupons deal offer Lazada">
                     </a> <span class="favorite"><a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Save store"><i class="ti-heart"></i></a></span>
