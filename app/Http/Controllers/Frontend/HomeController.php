@@ -63,7 +63,7 @@ class HomeController extends Controller
         if (empty($email)) {
             return response([
                 'status' => 0,
-                'message' => 'Không được để trống Email của bạn'
+                'message' => session()->get('web') == 'vi' ? 'Không được để trống Email của bạn' : 'The Email field is required'
             ]);
         }
 

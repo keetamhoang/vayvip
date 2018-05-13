@@ -112,16 +112,33 @@
             <div class="container text-center">
                 <div class="col-sm-12">
                     <div class="newsletter-form">
-                        <h4><i class="ti-email"></i>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
-                        <p class="dk-alert-footer"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
+                        @if (session()->get('web') == 'vi')
+                            <h4><i class="ti-email"></i>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                        @else
+                            <h4><i class="ti-email"></i>Get the latest deals and coupons at your personal mailbox!</h4>
+                        @endif
+
+                        @if (session()->get('web') == 'vi')
+                            <p class="dk-alert-footer"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
+                        @else
+                            <p class="dk-alert-footer"><small>Thank you for signing up, you will receive the latest discount and promotion information!</small></p>
+                        @endif
                         <div class="input-group">
                             <input type="text" class="form-control input-lg" placeholder="Email" id="dk-email-footer"> <span class="input-group-btn">
                            <button class="btn btn-danger btn-lg" id="dk-btn-footer" type="button">
-                           Đăng ký
+                           @if (session()->get('web') == 'vi')
+                                   Đăng ký
+                               @else
+                               Submit
+                               @endif
                            </button>
                            </span>
                         </div>
+                            @if (session()->get('web') == 'vi')
                         <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
+                                @else
+                                <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -150,7 +167,11 @@
 
                             <div class="row">
                                 <div class="col-sm-12">
+                                    @if (session()->get('web') == 'vi')
                                     <h5 class="text-center text-uppercase m-t-20 text-muted">Copy mã bên dưới <a href="#" target="_blank" class="go-site">tới trang này</a> để sử dụng tại bước thanh toán</h5>
+                                        @else
+                                        <h5 class="text-center text-uppercase m-t-20 text-muted">Copy the code below and visit <a href="#" target="_blank" class="go-site">this page</a> to use it at checkout</h5>
+                                        @endif
                                 </div>
 
                                 <div class="col-sm-5 col-sm-offset-2 col-xs-6 col-xs-offset-3">
@@ -159,8 +180,13 @@
                                     </a>
                                 </div>
                                 <div class="col-sm-2 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
-                                    <a class="btn btn-danger copy-btn" data-clipboard-action="copy" data-clipboard-target="#coupon-code" onclick="copy()">Sao chép</a>
-                                    <a class="btn btn-danger go-site-btn" target="_blank" href="">Vào trang này</a>
+                                    @if (session()->get('web') == 'vi')
+                                        <a class="btn btn-danger copy-btn" data-clipboard-action="copy" data-clipboard-target="#coupon-code" onclick="copy()">Sao chép</a>
+                                        <a class="btn btn-danger go-site-btn" target="_blank" href="">Vào trang này</a>
+                                    @else
+                                        <a class="btn btn-danger copy-btn" data-clipboard-action="copy" data-clipboard-target="#coupon-code" onclick="copy()">Copy Code</a>
+                                        <a class="btn btn-danger go-site-btn" target="_blank" href="">Go to Store</a>
+                                    @endif
                                 </div>
                             </div>
                             {{--<div class="row">--}}
@@ -182,26 +208,27 @@
                     <div class="newsletter-form col col-lg-8 col-lg-offset-2">
                         @if (session()->get('web') == 'vi')
                             <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
-                        @else
-                            <h4>Get the latest deals and coupons at your personal mailbox!</h4>
-                        @endif
                         <p class="dk-alert"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
                         <div class="input-group">
                             <input class="form-control input-lg" placeholder="Email" type="text" id="dk-email"> <span class="input-group-btn">
                            <button class="btn btn-danger btn-lg" id="dk-btn" type="button">
-                               @if (session()->get('web') == 'vi')
-                           Đăng ký
-                               @else
-                                   Submit
-                               @endif
+                            Đăng ký
                            </button>
                            </span>
                         </div>
-                            @if (session()->get('web') == 'vi')
-                        <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
-                            @else
-                        <p><small>Your information is secured.</small> </p>
-                            @endif
+                            <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
+                        @else
+                            <h4>Get the latest deals and coupons at your personal mailbox!</h4>
+                            <p class="dk-alert"><small>Thank you for signing up, you will receive the latest discount and promotion information!</small></p>
+                            <div class="input-group">
+                                <input class="form-control input-lg" placeholder="Email" type="text" id="dk-email"> <span class="input-group-btn">
+                           <button class="btn btn-danger btn-lg" id="dk-btn" type="button">
+                           Submit
+                           </button>
+                           </span>
+                            </div>
+                            <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                        @endif
                     </div>
                 </div>
                 {{--<ul class="nav nav-pills nav-justified">--}}
@@ -228,7 +255,11 @@
 
 <script>
     function copy() {
-        $('.copy-btn').html('Đã chép');
+        @if (session()->get('web') == 'vi')
+            $('.copy-btn').html('Đã chép');
+        @else
+            $('.copy-btn').html('Copied');
+        @endif
     }
 
     $(document).ready(function () {
@@ -260,7 +291,11 @@
                         $('.copy-btn').hide();
                         $('.coupon_modal .go-site-btn').attr('href', discount.aff_link);
 
-                        $('.coupon_modal #coupon-code').html('Không yêu cầu mã coupon');
+                        @if (session()->get('web') == 'vi')
+                            $('.coupon_modal #coupon-code').html('Không yêu cầu mã coupon');
+                        @else
+                            $('.coupon_modal #coupon-code').html('No code required');
+                        @endif
                     }
                 }
             }
