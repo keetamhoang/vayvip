@@ -19,12 +19,12 @@
                         <li class="hidden-xs">
                             <a href="{{ url('coupons') }}"><i class="ti-gift"></i> COUPONS %</a>
                         </li>
-                        <li class="hidden-xs">
-                            <a href="{{ url('products') }}"><i class="ti-bag"></i> PRODUCTS</a>
-                        </li>
-                        <li class="hidden-xs">
-                            <a href="{{ url('trends') }}"><i class="ti-stats-up"></i> TRENDS #</a>
-                        </li>
+                        {{--<li class="hidden-xs">--}}
+                            {{--<a href="{{ url('products') }}"><i class="ti-bag"></i> PRODUCTS</a>--}}
+                        {{--</li>--}}
+                        {{--<li class="hidden-xs">--}}
+                            {{--<a href="{{ url('trends') }}"><i class="ti-stats-up"></i> TRENDS #</a>--}}
+                        {{--</li>--}}
                         @if (auth('admin')->check())
                             <li class="hidden-xs">
                                 <a href="{{ url('admin') }}">ADMIN</a>
@@ -47,13 +47,13 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" ><i class="i-electronics common-global-icons-sprite"></i> <span>  Electronics  </span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-fashion common-global-icons-sprite"></i> <span>   Fashion   </span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-sports-outdoor common-global-icons-sprite"></i> <span>  Sports & Outdoors </span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-home-living common-global-icons-sprite"></i> <span>  Home & Living</span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-kids-toys common-global-icons-sprite"></i> <span>  Kids & Toys </span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-health-beauty common-global-icons-sprite"></i> <span>  Automotive </span> </a> </li>
-                    <li class=""> <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="i-others common-global-icons-sprite icon"></i> <span>  See More </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}" ><i class="i-electronics common-global-icons-sprite"></i> <span>  Electronics  </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-fashion common-global-icons-sprite"></i> <span>   Fashion   </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-sports-outdoor common-global-icons-sprite"></i> <span>  Sports & Outdoors </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-home-living common-global-icons-sprite"></i> <span>  Home & Living</span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-kids-toys common-global-icons-sprite"></i> <span>  Kids & Toys </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-health-beauty common-global-icons-sprite"></i> <span>  Automotive </span> </a> </li>
+                    <li class=""> <a href="{{ url('#') }}"><i class="i-others common-global-icons-sprite icon"></i> <span>  See More </span> </a> </li>
                     {{--<li class="has-submenu">--}}
                         {{--<a href="#"><i class="ti-gift"></i> <span> Mã giảm giá theo đơn vị </span> </a>--}}
                         {{--<ul class="submenu">--}}

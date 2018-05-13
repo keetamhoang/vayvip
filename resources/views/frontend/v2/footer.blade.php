@@ -9,8 +9,11 @@
             <div class="col-sm-12 text-center m-t-20" itemscope itemtype="http://schema.org/Person">
                 <p itemprop="name"> <strong>
                         Copyright {{ \Carbon\Carbon::now()->year }}
-                    </strong> TaichinhSMART.vn - Tiết kiệm tiền của bạn với Tài chính thông minh <i class="ti-heart">
-                    </i>
+                        @if (session()->get('web') == 'vi')
+                    </strong> TaichinhSMART.vn - Tiết kiệm tiền của bạn với Tài chính thông minh <i class="ti-heart"></i>
+                        @else
+                    </strong> NowVoucher.com <i class="ti-heart"></i>
+                        @endif
                 </p>
             </div>
         </div>

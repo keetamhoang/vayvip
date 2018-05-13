@@ -180,16 +180,28 @@
                         <img src="/new/assets/images/newsletter_homepage.png" alt="Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!">
                     </div>
                     <div class="newsletter-form col col-lg-8 col-lg-offset-2">
-                        <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                        @if (session()->get('web') == 'vi')
+                            <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                        @else
+                            <h4>Get the latest deals and coupons at your personal mailbox!</h4>
+                        @endif
                         <p class="dk-alert"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
                         <div class="input-group">
                             <input class="form-control input-lg" placeholder="Email" type="text" id="dk-email"> <span class="input-group-btn">
                            <button class="btn btn-danger btn-lg" id="dk-btn" type="button">
+                               @if (session()->get('web') == 'vi')
                            Đăng ký
+                               @else
+                                   Submit
+                               @endif
                            </button>
                            </span>
                         </div>
+                            @if (session()->get('web') == 'vi')
                         <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
+                            @else
+                        <p><small>Your information is secured.</small> </p>
+                            @endif
                     </div>
                 </div>
                 {{--<ul class="nav nav-pills nav-justified">--}}
