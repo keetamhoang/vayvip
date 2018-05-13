@@ -137,7 +137,7 @@
                             @if (session()->get('web') == 'vi')
                         <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
                                 @else
-                                <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                                <p><small>We are committed to protecting your private information.</small> </p>
                         @endif
                     </div>
                 </div>
@@ -227,7 +227,7 @@
                            </button>
                            </span>
                             </div>
-                            <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                            <p><small>We are committed to protecting your private information.</small> </p>
                         @endif
                     </div>
                 </div>
