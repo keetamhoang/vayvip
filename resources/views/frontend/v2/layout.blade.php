@@ -12,6 +12,7 @@
     </script>
 
     <meta charset="utf-8" />
+    <meta name="robots" content="index, follow, noodp">
 
     @yield('title')
 
@@ -378,9 +379,22 @@
             });
         });
 
-        $('.view-detail').click(function (e) {
-            e.preventDefault();
-        });
+    });
+
+    $(document).on('click', '.show-more', function (e) {
+        $(this).parent().css('overflow', 'visible');
+        $(this).parent().css('height', 'auto');
+        $(this).css('position', 'unset');
+        $(this).html('Thu gọn');
+        $(this).addClass('show-less');
+    });
+
+    $(document).on('click', '.show-less', function (e) {
+        $(this).parent().css('overflow', 'hidden');
+        $(this).parent().css('height', '20px');
+        $(this).css('position', 'absolute');
+        $(this).html('...Xem chi tiết');
+        $(this).removeClass('show-less');
     })
 </script>
 

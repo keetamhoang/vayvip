@@ -412,15 +412,54 @@ footer img {
 
 .dk-alert, .dk-alert-footer { display: none}
 
+.see-more button {
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.view-detail {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    text-align: right;
+    color: #00b8f1;
+}
+
+.view-detail:hover {
+    cursor: pointer;
+    color: #f03;
+}
+
+.detail-coupon {
+    margin-top: 10px;
+}
+
+.short-desc-p {
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 }
 
 @media (max-width: 1075px) {
     .navbar-custom .container {
         width: 100%;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 }
 
@@ -436,6 +475,10 @@ footer img {
     .header .top-nav .topbar-left .logo img {
         min-width: 120px;
         max-width: 120px;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 
     .slide-wrap {

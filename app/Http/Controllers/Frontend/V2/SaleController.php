@@ -29,9 +29,9 @@ class SaleController extends Controller
         $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
         $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
 
-        $mosts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(50)->get();
-        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(50)->get();
-        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(50)->get();
+        $mosts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
 
         $partner = Partner::where('name', 'Lazada')->first();
 

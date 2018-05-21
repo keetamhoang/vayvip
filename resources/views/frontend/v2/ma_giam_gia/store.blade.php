@@ -60,7 +60,6 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane single-coupon active" id="popular">
                         @foreach($mosts as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#most-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)
@@ -93,12 +92,12 @@
                                                 <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                             </ul>
                                             <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                            <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
-                                            <div id="most-{{ $key }}" class="collapse">
+                                            <div class="short-desc-p">
+                                                {!! $code->content !!}
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{!!  $code->content  !!}</p>
+                                                <p class="view-detail show-more">...Xem chi tiết</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -129,12 +128,12 @@
                                                     <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                                 </ul>
                                                 <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                                <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
-                                                <div id="most-{{ $key }}" class="collapse">
+                                                <div class="short-desc-p">
+                                                    {!! $code->content !!}
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{!!  $code->content  !!}</p>
+                                                    <p class="view-detail show-more">...Xem chi tiết</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -152,7 +151,6 @@
                     <!-- / tabpanel -->
                     <div role="tabpanel" class="tab-pane single-coupon" id="coupons">
                         @foreach($coupons as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#coupon-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)
@@ -185,12 +183,12 @@
                                                 <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                             </ul>
                                             <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                            <p data-toggle="collapse" data-target="#coupon-{{$key}}">{!! $desc1 !!}</p>
-                                            <div id="coupon-{{ $key }}" class="collapse">
+                                            <div class="short-desc-p">
+                                                {!! $code->content !!}
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{!!  $code->content  !!}</p>
+                                                <p class="view-detail show-more">...Xem chi tiết</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -221,12 +219,12 @@
                                                     <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                                 </ul>
                                                 <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                                <p data-toggle="collapse" data-target="#coupon-{{$key}}">{!! $desc1 !!}</p>
-                                                <div id="coupon-{{ $key }}" class="collapse">
+                                                <div class="short-desc-p">
+                                                    {!! $code->content !!}
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{!!  $code->content  !!}</p>
+                                                    <p class="view-detail show-more">...Xem chi tiết</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -244,7 +242,6 @@
                     <!-- / tabpanel -->
                     <div role="tabpanel" class="tab-pane single-coupon" id="deals">
                         @foreach($deals as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#deal-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)
@@ -277,12 +274,12 @@
                                                 <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                             </ul>
                                             <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                            <p data-toggle="collapse" data-target="#deal-{{$key}}">{!! $desc1 !!}</p>
-                                            <div id="deal-{{ $key }}" class="collapse">
+                                            <div class="short-desc-p">
+                                                {!! $code->content !!}
                                                 <div class="detail-coupon">
                                                     <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                 </div>
-                                                <p>{!!  $code->content  !!}</p>
+                                                <p class="view-detail show-more">...Xem chi tiết</p>
                                             </div>
                                         </div>
                                         <!-- end:Coupon cont -->
@@ -315,12 +312,12 @@
                                                 <p class="coupon-title">
                                                     <a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a>
                                                 </p>
-                                                <p data-toggle="collapse" data-target="#deal-{{$key}}">{!! $desc1 !!}</p>
-                                                <div id="deal-{{ $key }}" class="collapse">
+                                                <div class="short-desc-p">
+                                                    {!! $code->content !!}
                                                     <div class="detail-coupon">
                                                         <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                                     </div>
-                                                    <p>{!!  $code->content  !!}</p>
+                                                    <p class="view-detail show-more">...Xem chi tiết</p>
                                                 </div>
                                             </div>
                                             <!-- end:Coupon cont -->
@@ -337,15 +334,16 @@
                     </div>
                     <!-- / tabpanel -->
                 </div>
+                {{--<div class="coupon-single text-center see-more">--}}
+                    {{--<button class="btn btn-danger" id="load-more">Xem thêm, còn nhiều lắm</button>--}}
+                {{--</div>--}}
                 <!-- end: Tab content -->
                 <div class="widget desc-bot">
                     <div class="widget-body">
                     {!! $partner->desc_bot !!}
                     </div>
                 </div>
-                {{--<div class="coupon-single text-center">--}}
-                    {{--<button class="btn btn-danger" id="load-more"><i class="ti-hand-point-right"></i> Xem thêm, còn nhiều lắm <i class="ti-hand-point-left"></i></button>--}}
-                {{--</div>--}}
+
                 <!-- Poplura stores -->
                 <div class="widget">
                     <!-- /widget heading -->

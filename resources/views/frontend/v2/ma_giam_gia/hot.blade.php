@@ -206,12 +206,12 @@
                                         <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                     </ul>
                                     <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                    <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
-                                    <div id="most-{{ $key }}" class="collapse">
+                                    <div class="short-desc-p">
+                                        {!! $code->content !!}
                                         <div class="detail-coupon">
                                             <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                         </div>
-                                        <p>{!!  $code->content  !!}</p>
+                                        <p class="view-detail show-more">...Xem chi tiết</p>
                                     </div>
                                 </div>
                                 <!-- end:Coupon cont -->
@@ -242,12 +242,12 @@
                                             <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                                         </ul>
                                         <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
-                                        <p data-toggle="collapse" data-target="#most-{{$key}}">{!! $desc1 !!}</p>
-                                        <div id="most-{{ $key }}" class="collapse">
+                                        <div class="short-desc-p">
+                                            {!! $code->content !!}
                                             <div class="detail-coupon">
                                                 <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                             </div>
-                                            <p>{!!  $code->content  !!}</p>
+                                            <p class="view-detail show-more">...Xem chi tiết</p>
                                         </div>
                                     </div>
                                     <!-- end:Coupon cont -->
