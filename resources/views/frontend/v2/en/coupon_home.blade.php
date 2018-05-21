@@ -2,8 +2,8 @@
     <li class="active"><a data-toggle="tab" href="#popular"><i class="ti-crown"></i>Most used </a> </li>
     <li class=""><a data-toggle="tab" href="#online"><i class="ti-stats-up"></i>Top coupon codes & offers</a> </li>
     <li class=""><a data-toggle="tab" href="#atStore"><i class="ti-shopping-cart"></i>Big promotions</a> </li>
-    <li class=""><a data-toggle="tab" href="#ending"><i class="ti-timer"></i> Expiring soon</a> </li>
-    <li class=""><a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"><i class="ti-layout-grid2"></i> See all</a> </li>
+    {{--<li class=""><a data-toggle="tab" href="#ending"><i class="ti-timer"></i> Expiring soon</a> </li>--}}
+    <li class=""><a href="#"><i class="ti-layout-grid2"></i> See all</a> </li>
 </ul>
 <div class="tab-content clearfix" id="myTabContent">
     <div id="popular" class="tab-pane counties-pane active animated fadeIn">
@@ -38,7 +38,7 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Coupon</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -70,7 +70,7 @@
                                 @endif
                             </div>
                             <div class="mobile">
-                                <div class="large">KM</div>
+                                <div class="large">SALE</div>
                                 <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
@@ -84,7 +84,7 @@
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-primary">Deal</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="popular label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -140,7 +140,7 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Coupon</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -186,7 +186,7 @@
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-primary">Deal</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="popular label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -241,7 +241,7 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Coupon</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -287,7 +287,7 @@
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-primary">Deal</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="popular label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -343,7 +343,7 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Coupon</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
@@ -389,7 +389,7 @@
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-primary">Deal</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="popular label label-success">EXP: {{ !empty($most->end_time) ? \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') : $most->end_time_text }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>

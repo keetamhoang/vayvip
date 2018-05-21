@@ -1,14 +1,14 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
+    <title>Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('d/m') }} - promotions update real time - Let's shopping</title>
 @endsection
 
 @section('meta')
-    <meta property="og:url" content="https://taichinhsmart.vn">
+    <meta property="og:url" content="https://my.nowvoucher.com">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
+          content="Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('d/m') }} - promotions update real time - Let's shopping"/>
     <meta property="og:description"
           content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>

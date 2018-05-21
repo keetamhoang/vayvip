@@ -137,7 +137,7 @@
                             @if (session()->get('web') == 'vi')
                         <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
                                 @else
-                                <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                                <p><small>We are committed to protecting your private information.</small> </p>
                         @endif
                     </div>
                 </div>
@@ -207,16 +207,16 @@
                     </div>
                     <div class="newsletter-form col col-lg-8 col-lg-offset-2">
                         @if (session()->get('web') == 'vi')
-                        <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
+                            <h4>Nhận ưu đãi và coupon mới nhất ngay tại hộp thư cá nhân!</h4>
                         <p class="dk-alert"><small>Cảm ơn bạn đã đăng ký, bạn sẽ nhận được tin giảm giá và khuyến mãi sớm nhất!</small></p>
                         <div class="input-group">
                             <input class="form-control input-lg" placeholder="Email" type="text" id="dk-email"> <span class="input-group-btn">
                            <button class="btn btn-danger btn-lg" id="dk-btn" type="button">
-                           Đăng ký
+                            Đăng ký
                            </button>
                            </span>
                         </div>
-                        <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
+                            <p><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small> </p>
                         @else
                             <h4>Get the latest deals and coupons at your personal mailbox!</h4>
                             <p class="dk-alert"><small>Thank you for signing up, you will receive the latest discount and promotion information!</small></p>
@@ -227,7 +227,7 @@
                            </button>
                            </span>
                             </div>
-                            <p><small>We are committed to protecting your private ìnormation.</small> </p>
+                            <p><small>We are committed to protecting your private information.</small> </p>
                         @endif
                     </div>
                 </div>

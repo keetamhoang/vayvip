@@ -18,10 +18,10 @@ class HomeController extends Controller
         $exps = Discount::where('status', 0);
 
         if (session()->get('web') == 'vi') {
-            $mosts = $mosts->VN();
-            $coupons = $coupons->VN();
-            $deals = $deals->VN();
-            $exps = $exps->VN();
+            $mosts = $mosts->VN()->limit(4);
+            $coupons = $coupons->VN()->limit(4);
+            $deals = $deals->VN()->limit(4);
+            $exps = $exps->VN()->limit(4);
         } else if (session()->get('web') == 'sg') {
             $mosts = $mosts->SG();
             $coupons = $coupons->SG();
@@ -49,10 +49,10 @@ class HomeController extends Controller
             $exps = $exps->TH();
         }
 
-        $mosts = $mosts->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $coupons = $coupons->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $deals = $deals->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $exps = $exps->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $mosts = $mosts->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = $coupons->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = $deals->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $exps = $exps->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->get();
 
         if (session()->get('web') == 'vi') {
             return view('frontend.v2.index', compact('mosts', 'coupons', 'deals', 'exps'));
@@ -87,10 +87,10 @@ class HomeController extends Controller
     }
 
     public function coupons() {
-        $mosts = Discount::VN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $deals = Discount::VN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(4)->get();
-        $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->limit(4)->get();
+        $mosts = Discount::VN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $deals = Discount::VN()->where('status', 0)->where('is_coupon', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->get();
 
         return view('frontend.v2.en.index', compact('mosts', 'coupons', 'deals', 'exps'));
     }

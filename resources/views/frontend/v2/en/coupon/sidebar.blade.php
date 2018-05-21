@@ -10,7 +10,7 @@
         <!-- Sidebar navigation -->
         <ul class="nav sidebar-nav">
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}"> 
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/weekly-exclusives.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -19,7 +19,7 @@
             </li>
 
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/electronics.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/beauty-health.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/food-grocery.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/travel-hotels') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/travel-hotels.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/fashion.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/sports-outdoors.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}">
+                <a href="{{ url('#') }}">
                     <span class="logo table-cell">
                         <img src="/assets/image/home-living.jpg" alt="Weekly Exclusives Coupons Offers Deals Promotions">
                     </span>
