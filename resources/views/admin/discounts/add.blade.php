@@ -17,49 +17,108 @@
         </div>
     @endif
 
-    <h3>Thêm thành viên mới</h3>
+    <h3>Thêm khuyến mãi mới</h3>
 
-    <form action="{{url('admin/users/store')}}" class="form-horizontal" method="post" >
+    <form action="{{url('admin/discounts/store')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
         <div class="form-body">
             {{ csrf_field() }}
+
             <div class="form-group">
-                <label class="col-md-1 control-label">Email</label>
+                <label class="col-md-2 control-label">Aff Link</label>
                 <div class="col-md-9">
-                    <input type="text" name="title" class="form-control" placeholder="Điền email" value="{{old('title')}}">
+                    <input type="text" name="aff_link" class="form-control" placeholder="Điền aff link" value="{{old('aff_link')}}">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-1 control-label">Mô tả ngắn</label>
+                <label class="col-md-2 control-label">Tên</label>
                 <div class="col-md-9">
-                    <textarea class="form-control" placeholder="Điền mô tả ngắn " name="desc"> {{old('desc')}} </textarea>
+                    <input type="text" name="name" class="form-control" placeholder="Điền tên" value="{{old('name')}}">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-1 control-label">Nội dung</label>
+                <label class="col-md-2 control-label">Mô tả</label>
                 <div class="col-md-9">
-                    <textarea class="form-control ckeditor" placeholder="Điền miêu tả" name="content">{{old('content')}} </textarea>
+                    <textarea class="form-control" placeholder="Điền mô tả ngắn " name="content">{{old('content')}}</textarea>
                 </div>
             </div>
-            <div class="form-group clearfix">
-                <label class="col-md-1 control-label">Ảnh đại diện</label>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Thời gian kết thúc</label>
                 <div class="col-md-9">
-                    <input type="file" class="post-image form-control" name="image"
-                           rel="post_status_images">
+                    <input type="text" name="end_time" class="form-control" placeholder="Điền ngày kết thúc" value="{{old('end_time')}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Ảnh đại diện</label>
+                <div class="col-md-9">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 400px; max-height: 500px;"> </div>
+                        <div>
+                                                                <span class="btn default btn-file">
+                                                                    <span class="fileinput-new"> Chọn ảnh </span>
+                                                                    <span class="fileinput-exists"> Thay đổi </span>
+                                                                    <input type="file" name="image_local"> </span>
+                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Xóa </a>
+                        </div>
+                    </div>
+                    <div class="clearfix margin-top-10"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Merchant</label>
+                @php $names = \App\Models\Merchant::all(); @endphp
+                <div class="col-md-9">
+                    <select class="form-control" name="merchant">
+                        <option>--- Chọn đơn vị ---</option>
+                        @foreach($names as $name)
+                            <option value="{{ strtolower($name->name) }}">{{ $name->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-1 control-label">Trạng thái</label>
+                <label class="col-md-2 control-label">Có coupon?</label>
                 <div class="col-md-9">
                     <div class="mt-checkbox-inline">
                         <label class="mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="status" value="0">
+                            <input type="checkbox" name="is_coupon" value="1">
                             <span></span>
                         </label>
                     </div>
                 </div>
             </div>
 
+            <div class="form-group">
+                <label class="col-md-2 control-label">Coupon CODE</label>
+                <div class="col-md-9">
+                    <input type="text" name="coupon_code" class="form-control" placeholder="Điền CODE" value="{{old('coupon_code')}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Coupon DESC</label>
+                <div class="col-md-9">
+                    <input type="text" name="coupon_desc" class="form-control" placeholder="Điền mô tả coupon" value="{{old('coupon_desc')}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Coupon SAVE</label>
+                <div class="col-md-9">
+                    <input type="text" name="coupon_save" class="form-control" placeholder="Điền con số giảm" value="{{old('coupon_save')}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">HOT?</label>
+                <div class="col-md-9">
+                    <div class="mt-checkbox-inline">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="is_hot" value="1">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="form-actions">
             <div class="row">

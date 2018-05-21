@@ -8,7 +8,7 @@
 <div class="tab-content clearfix" id="myTabContent">
     <div id="popular" class="tab-pane counties-pane active animated fadeIn">
         @foreach($mosts as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#most-'.$key.'">Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -129,7 +129,7 @@
     </div>
     <div id="ending" class="tab-pane counties-pane animated fadeIn">
         @foreach($exps as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#end-'.$key.'">Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -212,7 +212,7 @@
     </div>
     <div id="online" class="tab-pane counties-pane animated fadeIn">
         @foreach($coupons as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#online-'.$key.'">Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">
@@ -296,7 +296,7 @@
     </div>
     <div id="atStore" class="tab-pane counties-pane animated fadeIn">
         @foreach($deals as $key => $most)
-            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+            @php $desc1 = mb_substr($most->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#atStore-'.$key.'">Xem chi tiết</a>' @endphp
             @if ($most->is_coupon == 1)
                 @php $coupon = \App\Models\Coupon::where('discount_id', $most->id)->first(); @endphp
                 <div class="coupon-wrapper row">

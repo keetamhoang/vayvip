@@ -377,6 +377,10 @@
                 }
             });
         });
+
+        $('.view-detail').click(function (e) {
+            e.preventDefault();
+        });
     })
 </script>
 

@@ -60,7 +60,7 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane single-coupon active" id="popular">
                         @foreach($mosts as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#most-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)
@@ -152,7 +152,7 @@
                     <!-- / tabpanel -->
                     <div role="tabpanel" class="tab-pane single-coupon" id="coupons">
                         @foreach($coupons as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#coupon-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)
@@ -244,7 +244,7 @@
                     <!-- / tabpanel -->
                     <div role="tabpanel" class="tab-pane single-coupon" id="deals">
                         @foreach($deals as $key => $code)
-                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+                            @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#deal-'.$key.'">Xem chi tiết</a>' @endphp
                             <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                                 <div class="row">
                                     @if ($code->is_hot == 1)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Coupon;
 use App\Models\Discount;
 use App\Models\KmProduct;
 use App\Models\Partner;
@@ -31,7 +32,7 @@ class DiscountController extends AdminController
     {
         return DataTables::of($discounts)
             ->editColumn('image', function ($discount) {
-                $text = '<div style="width: 400px"><img style="width: 100%" src="'.$discount->image.'"></div>';
+                $text = '<div style="width: 150px"><img style="width: 100%" src="'.$discount->image.'"></div>';
 
                 return $text;
             })
@@ -67,6 +68,10 @@ class DiscountController extends AdminController
             })
             ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time'])
             ->make(true);
+    }
+
+    public function createView() {
+        return view('admin.discounts.add');
     }
 
     public function detail($id) {
@@ -105,6 +110,27 @@ class DiscountController extends AdminController
         }
 
         return redirect()->back()->with('success', 'Xóa thành công!');
+    }
+
+    public function store(Request $request) {
+        $data = $request->all();
+
+        try {
+            $data['end_time'] = Carbon::parse($data['end_time'])->toDateString();
+            $data['image_local'] = ($request->file('image_local') && $request->file('image_local')->isValid()) ? $this->saveImage($request->file('image_local')) : '';
+            $data['root_id'] = md5(time().$data['end_time']);
+            dd($data);
+
+            $discount = Discount::create($data);
+
+            $data['discount_id'] = $discount->id;
+
+            Coupon::create($data);
+        } catch (\Exception $ex) {
+            return redirect()->back()->with('error', 'Thêm không thành công!|'.$ex->getMessage());
+        }
+
+        return redirect()->back()->with('success', 'Thêm thành công!');
     }
 
 //    product KM
@@ -227,6 +253,11 @@ class DiscountController extends AdminController
                 $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_up.'</p></div>';
 
                 return $html;
+            })
+            ->editColumn('name', function ($brand) {
+                $html = '<a href="/admin/don-vi-khuyen-mai/'.$brand->id.'">'.$brand->name.'</a>';
+
+                return $html;
             })->editColumn('desc_bot', function ($brand) {
                 $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_bot.'</p></div>';
 
@@ -238,7 +269,7 @@ class DiscountController extends AdminController
 
                 return $url;
             })
-            ->rawColumns(['action', 'desc_up', 'desc_bot'])
+            ->rawColumns(['action', 'desc_up', 'desc_bot', 'name'])
             ->make(true);
     }
 

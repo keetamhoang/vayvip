@@ -74,6 +74,8 @@ Route::group(['prefix' => 'admin',
         Route::get('chatfuel-customers/delete/{id}', 'Backend\CustomerController@chatfuelDelete');
 
         Route::get('discounts', 'Backend\DiscountController@index');
+        Route::get('discounts/add', 'Backend\DiscountController@createView');
+        Route::post('discounts/store', 'Backend\DiscountController@store');
         Route::get('discounts/{id}', 'Backend\DiscountController@detail');
         Route::get('discounts/set-banner/{id}', 'Backend\DiscountController@setBanner');
         Route::get('discountAttribute.data', 'Backend\DiscountController@discountAttribute');

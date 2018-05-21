@@ -173,7 +173,7 @@
 
                 <div id="coupons">
                 @foreach($codes as $key => $code)
-                        @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
+                        @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#most-'.$key.'">Xem chi tiết</a>' @endphp
                     <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                         <div class="row">
                             @if ($code->is_hot == 1)
