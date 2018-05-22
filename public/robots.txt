@@ -3,3 +3,4 @@ Disallow: /admin*
 Disallow: ?s=*
 Disallow: ?id=*
 Disallow: ?position=*
+Disallow: /index.php*
