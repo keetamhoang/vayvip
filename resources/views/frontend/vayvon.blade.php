@@ -76,7 +76,7 @@
                     <img src="/assets/image/vay-vip-logo.png">
                     <div class="vay-vip-col ">
                         <div class="col-md-4 phe-duyet vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Không cần thế chấp bất cứ tài sản gì</div>
-                        <div class="col-md-4 col-4-width vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Nhận tiên về ngay trong 24h</div>
+                        <div class="col-md-4 col-4-width vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Nhận tiền về ngay trong 24h</div>
                         <div class="col-md-4 col-4-width  vay-vip-content khong-tham-dinh"><img class="ul-icon"
                                                                                                   src="/assets/image/ul-icon.png"> Hồ sơ đơn giản chỉ cần CMND</div>
 
@@ -139,72 +139,72 @@
     </div>
     <!-- HOME SLIDER -->
     <!-- about  area -->
-    <div class="about_area" id="khoan-vay" style="padding-bottom:0px">
-        <div class="container">
+    <div class="about_area" id="khoan-vay" style="padding:0px;">
+        {{--<div class="container">--}}
 
-            <div class="row">
-                <!--section title-->
-                <div class="col-md-12">
-                    <div class="section_title">
-                        <h2 class="title">Bạn muốn vay bao nhiêu?</h2>
-                        <!--span class="title-border"></span-->
-                        <div class="title-border-img"><img src="/assets/image/title-border.png"></div>
+            {{--<div class="row">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-12">--}}
+                    {{--<div class="section_title">--}}
+                        {{--<h2 class="title">Bạn muốn vay bao nhiêu?</h2>--}}
+                        {{--<!--span class="title-border"></span-->--}}
+                        {{--<div class="title-border-img"><img src="/assets/image/title-border.png"></div>--}}
 
-                    </div>
-                </div>
-                <!--end section title-->
-            </div>
-            <div class="text-center">Dùng chuột để chọn khoản vay và thời hạn vay</div>
-            <div class="row main_slider">
-                <!--section title-->
-                <div class="col-md-2 col-md-offset-1">
-                    <label>SỐ TIỀN VAY</label>
-
-
-                </div>
-                <div class="col-md-8">
-                    <input class="loan_slider" id="so_tien_vay" type="text" name="so_tien_vay" data-provide="slider"
-                           data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="20"
-                           data-slider-tooltip="hide" style="display: none;" data-value="20" value="20">
-                </div>
-
-            </div>
-            <div class="row main_slider">
-                <!--section title-->
-                <div class="col-md-2 col-md-offset-1">
-                    <label>KỲ HẠN VAY</label>
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!--end section title-->--}}
+            {{--</div>--}}
+            {{--<div class="text-center">Dùng chuột để chọn khoản vay và thời hạn vay</div>--}}
+            {{--<div class="row main_slider">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-2 col-md-offset-1">--}}
+                    {{--<label>SỐ TIỀN VAY</label>--}}
 
 
-                </div>
-                <div class="col-md-8">
-                    <input class="loan_slider" id="ky_han_vay" type="text" name="ky_han_vay" data-provide="slider"
-                           data-slider-min="1" data-slider-max="36" data-slider-step="1" data-slider-value="6"
-                           data-slider-tooltip="hide" style="display: none;" data-value="6" value="6">
-                </div>
+                {{--</div>--}}
+                {{--<div class="col-md-8">--}}
+                    {{--<input class="loan_slider" id="so_tien_vay" type="text" name="so_tien_vay" data-provide="slider"--}}
+                           {{--data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="20"--}}
+                           {{--data-slider-tooltip="hide" style="display: none;" data-value="20" value="20">--}}
+                {{--</div>--}}
 
-            </div>
-            <div class="row main_slider so_tien">
-                <!--section title-->
-                <div class="col-md-4 col-md-offset-1">
-                    <label>SỐ TIỀN CẦN TRẢ HÀNG THÁNG</label>
-
-
-                </div>
-                <div class="col-md-3 so_tien_container">
-                    <label id="so_tien_hang_thang"> 3.490.606</label><span> đồng<sup><i>(*)</i></sup></span>
-                    <span class="tham_khao"> (*) Thông tin trên chỉ mang tính chất tham khảo</span>
-                </div>
-                <div class="col-md-3">
-                    <div class="sunmite_button">
-                        <a href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com"
-                           class="button">ĐĂNG KÝ VAY NGAY</a>
-                    </div>
-                </div>
-
-            </div>
+            {{--</div>--}}
+            {{--<div class="row main_slider">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-2 col-md-offset-1">--}}
+                    {{--<label>KỲ HẠN VAY</label>--}}
 
 
-        </div>
+                {{--</div>--}}
+                {{--<div class="col-md-8">--}}
+                    {{--<input class="loan_slider" id="ky_han_vay" type="text" name="ky_han_vay" data-provide="slider"--}}
+                           {{--data-slider-min="1" data-slider-max="36" data-slider-step="1" data-slider-value="6"--}}
+                           {{--data-slider-tooltip="hide" style="display: none;" data-value="6" value="6">--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
+            {{--<div class="row main_slider so_tien">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-4 col-md-offset-1">--}}
+                    {{--<label>SỐ TIỀN CẦN TRẢ HÀNG THÁNG</label>--}}
+
+
+                {{--</div>--}}
+                {{--<div class="col-md-3 so_tien_container">--}}
+                    {{--<label id="so_tien_hang_thang"> 3.490.606</label><span> đồng<sup><i>(*)</i></sup></span>--}}
+                    {{--<span class="tham_khao"> (*) Thông tin trên chỉ mang tính chất tham khảo</span>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-3">--}}
+                    {{--<div class="sunmite_button">--}}
+                        {{--<a href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com"--}}
+                           {{--class="button">ĐĂNG KÝ VAY NGAY</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
+
+
+        {{--</div>--}}
         <div class="features">
             <div class="container">
                 <div class="row">
