@@ -5,7 +5,7 @@
 @elseif ($store == 'Shopee')
     Mã giảm giá Shopee, Voucher Shopee khuyến mãi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Grab')
-    [MỚI] Mã khuyến mãi Grab hôm nay: GrabBike, GrabCar ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}
+    [CẬP NHẬT] Mã khuyến mãi GrabBike, GrabCar tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Yes24')
     Mã giảm giá Yes24 tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Yes24 khuyến mãi mới nhất
 @elseif ($store == 'Adayroi')
