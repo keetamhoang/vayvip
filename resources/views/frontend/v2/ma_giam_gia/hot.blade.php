@@ -216,6 +216,9 @@
                                 <!-- end:Coupon cont -->
                                 <div class="button-contain col-sm-3 text-center">
                                     <a class="btn-code" href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
+                                    <div class="brand-image">
+                                        <img src="{{ $code->merchantN->image }}" alt="{{ $code->name }}">
+                                    </div>
                                 </div>
                             @else
                                 <div class="deal">
@@ -252,6 +255,9 @@
                                     <!-- end:Coupon cont -->
                                     <div class="button-contain col-sm-3 text-center">
                                         <a class="btn-code" href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
+                                        <div class="brand-image">
+                                            <img src="{{ $code->merchantN->image }}" alt="{{ $code->name }}">
+                                        </div>
                                     </div>
                                 </div>
                             @endif

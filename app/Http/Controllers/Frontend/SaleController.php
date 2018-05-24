@@ -19,7 +19,7 @@ class SaleController extends Controller
     public function loadMore(Request $request) {
         $count = $request->input('count', 0);
 
-        $newests = Discount::where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->offset($count)->limit(15)->get();
+        $newests = Discount::VN()->where('status', 0)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->offset($count)->limit(15)->get();
 
         return view('frontend.km.load_more', compact('newests', 'count'))->render();
     }

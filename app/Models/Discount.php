@@ -33,7 +33,7 @@ class Discount extends Model
 
     public function merchantN()
     {
-        return $this->belongsTo('App\Models\Merchant', 'merchant_id', 'id');
+        return $this->belongsTo('App\Models\Merchant', 'merchant', 'name');
     }
 
     public function getSlugAttribute()

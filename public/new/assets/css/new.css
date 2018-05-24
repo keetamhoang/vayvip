@@ -443,6 +443,14 @@ footer img {
     width: 100%;
 }
 
+.brand-image {
+    padding: 3px 10px 0;
+}
+
+.brand-image img {
+    max-width: 72%;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
@@ -547,6 +555,10 @@ footer img {
     }
 
     .newsletter-logo {
+        display: none;
+    }
+
+    .brand-image {
         display: none;
     }
 }
