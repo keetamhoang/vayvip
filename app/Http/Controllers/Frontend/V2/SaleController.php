@@ -8,6 +8,7 @@ use App\Models\Partner;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class SaleController extends Controller
 {
@@ -29,11 +30,21 @@ class SaleController extends Controller
         $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
         $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
 
-        $mosts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
-        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
-        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        $mosts = Cache::remember('mostsLazada', 5, function () {
+            return Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        });
 
-        $partner = Partner::where('name', 'Lazada')->first();
+        $coupons = Cache::remember('couponsLazada', 5, function () {
+            return Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        });
+
+        $deals = Cache::remember('dealsLazada', 5, function () {
+            return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+        });
+
+        $partner = Cache::remember('partnerLazada', 5, function () {
+            return Partner::where('name', 'Lazada')->first();
+        });
 
         return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
     }
@@ -88,11 +99,21 @@ class SaleController extends Controller
         $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
         $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
 
-        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        $mosts = Cache::remember('mostsGrab', 5, function () use ($merchant) {
+            return Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        });
 
-        $partner = Partner::where('name', 'Grab')->first();
+        $coupons = Cache::remember('couponsGrab', 5, function () use ($merchant) {
+            return Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        });
+
+        $deals = Cache::remember('dealsGrab', 5, function () use ($merchant) {
+            return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        });
+
+        $partner = Cache::remember('partnerGrab', 5, function () {
+            return Partner::where('name', 'Grab')->first();
+        });
 
         return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
     }

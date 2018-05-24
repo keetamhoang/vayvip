@@ -1,7 +1,7 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>{{ $post->title }} | TaichinhSMART.vn</title>
+    <title>{{ $post->title }}</title>
 @endsection
 
 @section('meta')
@@ -9,7 +9,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="{{ $post->title }} | TaichinhSMART.vn"/>
     <meta property="og:description"
-          content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Tài chính thông minh trong tầm tay của bạn.'  !!}"/>
+          content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
     <meta property="og:image" content="http://taichinhsmart.vn{{ $post->image }}"/>
 @endsection
 

@@ -1,14 +1,14 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
+    <title>Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
 @endsection
 
 @section('meta')
     <meta property="og:url" content="https://taichinhsmart.vn/ma-giam-gia">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
+          content="Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
     <meta property="og:description"
           content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>

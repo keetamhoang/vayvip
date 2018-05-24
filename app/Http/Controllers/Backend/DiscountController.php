@@ -119,7 +119,6 @@ class DiscountController extends AdminController
             $data['end_time'] = Carbon::parse($data['end_time'])->toDateString();
             $data['image_local'] = ($request->file('image_local') && $request->file('image_local')->isValid()) ? $this->saveImage($request->file('image_local')) : '';
             $data['root_id'] = md5(time().$data['end_time']);
-            dd($data);
 
             $discount = Discount::create($data);
 
