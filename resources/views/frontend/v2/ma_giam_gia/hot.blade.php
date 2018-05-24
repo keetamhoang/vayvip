@@ -173,7 +173,6 @@
 
                 <div id="coupons">
                 @foreach($codes as $key => $code)
-                        @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a class="view-detail" href="#most-'.$key.'">Xem chi tiết</a>' @endphp
                     <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
                         <div class="row">
                             @if ($code->is_hot == 1)
@@ -264,7 +263,7 @@
                 </div>
 
                 <div class="coupon-single text-center">
-                    <button class="btn btn-danger" id="load-more"><i class="ti-hand-point-right"></i> Xem thêm, còn nhiều lắm <i class="ti-hand-point-left"></i></button>
+                    <button class="btn btn-danger" id="load-more">Xem thêm, còn nhiều lắm</button>
                 </div>
             </div>
 

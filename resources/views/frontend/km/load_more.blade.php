@@ -1,6 +1,5 @@
 @if (count($newests) > 0)
     @foreach($newests as $key => $code)
-        @php $desc1 = mb_substr($code->content, 0, 50); $desc1 .= ' ...<a>Xem chi tiết</a>' @endphp
         <div class="coupon-wrapper coupon-single {{ $code->is_hot == 1 ? 'featured' : '' }}">
             <div class="row">
                 @if ($code->is_hot == 1)
@@ -32,18 +31,18 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
-                        <p data-toggle="collapse" data-target="#most-{{$count + $key}}">{!! $desc1 !!}</p>
-                        <div id="most-{{ $count + $key }}" class="collapse">
+                        <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
+                        <div class="short-desc-p">
+                            {!! $code->content !!}
                             <div class="detail-coupon">
-                                <img src="{{ $code->image }}">
+                                <img src="{{ $code->image }}" alt="{{ $code->name }}">
                             </div>
-                            <p>{!!  $code->content  !!}</p>
+                            <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <p class="btn-code" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', '{{ trim($coupon->coupon_code) }}');window.open('{{ $code->aff_link }}','_blank')"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </p>
+                        <a class="btn-code" href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                     </div>
                 @else
                     <div class="deal">
@@ -68,18 +67,18 @@
                                 <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                                 <li><span class="used-count">{{ $code->count_view }} người đã dùng</span> </li>
                             </ul>
-                            <p class="coupon-title"><a href="javascript:;" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $code->aff_link }}','_blank')">{{ $code->name }}</a></p>
-                            <p data-toggle="collapse" data-target="#most-{{$count + $key}}">{!! $desc1 !!}</p>
-                            <div id="most-{{ $count + $key }}" class="collapse">
+                            <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
+                            <div class="short-desc-p">
+                                {!! $code->content !!}
                                 <div class="detail-coupon">
-                                    <img src="{{ $code->image }}">
+                                    <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                 </div>
-                                <p>{!!  $code->content  !!}</p>
+                                <p class="view-detail show-more">...Xem chi tiết</p>
                             </div>
                         </div>
                         <!-- end:Coupon cont -->
                         <div class="button-contain col-sm-3 text-center">
-                            <p class="btn-code" data-id="{{ $code->id }}" onclick="var person = prompt('Copy mã bên dưới để sử dụng tại bước thanh toán:', 'Mã giảm giá xem ở trang mở ra');window.open('{{ $code->aff_link }}','_blank')"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </p>
+                            <a class="btn-code" href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         </div>
                     </div>
                 @endif
@@ -87,5 +86,5 @@
             </div>
             <!-- //row -->
         </div>
-        @endforeach
+    @endforeach
     @endif
