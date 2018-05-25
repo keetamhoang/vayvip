@@ -61,12 +61,17 @@ class DiscountController extends AdminController
 
                 return $text;
             })
+            ->editColumn('content', function ($discount) {
+                $text = '<div style="width: 400px;max-height: 200px;overflow: hidden">'.$discount->content.'</div>';
+
+                return $text;
+            })
             ->addColumn('action', function ($discount) {
                 $url = '<a type="button" class="btn blue btn-outline" href="/admin/discounts/'.$discount->id.'">Chi tiết</a><a href="/admin/discounts/delete/'.$discount->id.'" type="button" class="btn red btn-outline delete-btn">Xóa</a>';
 
                 return $url;
             })
-            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time'])
+            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time', 'content'])
             ->make(true);
     }
 
@@ -119,6 +124,9 @@ class DiscountController extends AdminController
             $data['end_time'] = Carbon::parse($data['end_time'])->toDateString();
             $data['image_local'] = ($request->file('image_local') && $request->file('image_local')->isValid()) ? $this->saveImage($request->file('image_local')) : '';
             $data['root_id'] = md5(time().$data['end_time']);
+            if (empty($data['aff_link'])) {
+                $data['aff_link'] = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+            }
 
             $discount = Discount::create($data);
 

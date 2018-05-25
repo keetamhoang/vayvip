@@ -66,7 +66,11 @@ class GetKmMasOffer extends Command
                 $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                 if (empty($checkDiscount)) {
-                    $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    if (empty($each['aff_url'])) {
+                        $affLink = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                    } else {
+                        $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    }
 
                     $child = [
                         'aff_link' => $affLink,
@@ -133,7 +137,11 @@ class GetKmMasOffer extends Command
                 $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                 if (empty($checkDiscount)) {
-                    $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    if (empty($each['aff_url'])) {
+                        $affLink = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                    } else {
+                        $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    }
 
                     $child = [
                         'aff_link' => $affLink,
@@ -199,7 +207,11 @@ class GetKmMasOffer extends Command
                 $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                 if (empty($checkDiscount)) {
-                    $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    if (empty($each['aff_url'])) {
+                        $affLink = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                    } else {
+                        $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    }
 
                     $child = [
                         'aff_link' => $affLink,
@@ -265,7 +277,11 @@ class GetKmMasOffer extends Command
                 $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                 if (empty($checkDiscount)) {
-                    $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    if (empty($each['aff_url'])) {
+                        $affLink = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                    } else {
+                        $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    }
 
                     $child = [
                         'aff_link' => $affLink,
@@ -331,7 +347,11 @@ class GetKmMasOffer extends Command
                 $checkDiscount = Discount::where('root_id', $each['id'])->first();
 
                 if (empty($checkDiscount)) {
-                    $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    if (empty($each['aff_url'])) {
+                        $affLink = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                    } else {
+                        $affLink = str_replace('{publisher_id}', 'hoangnangnam', $each['aff_url']);
+                    }
 
                     $child = [
                         'aff_link' => $affLink,

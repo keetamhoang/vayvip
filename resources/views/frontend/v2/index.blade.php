@@ -36,7 +36,7 @@
                     <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
                 </div>
                 <!-- /.carosuel -->
-                <div class="carousel-tabs clearfix">
+                <div class="carousel-tabs clearfix hidden-xs">
                     <a class="col-sm-3 tab url" href="#three">
                         <div class="media">
                             <div class="media-left media-middle"> <img src="/new/assets/images/ma-giam-gia-banner-2-small.png" alt="Mã giảm giá HOT nhất"> </div>

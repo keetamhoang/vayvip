@@ -42,9 +42,11 @@ class SaleController extends Controller
             return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
         });
 
-        $partner = Cache::remember('partnerLazada', 5, function () {
-            return Partner::where('name', 'Lazada')->first();
-        });
+//        $partner = Cache::remember('partnerLazada', 5, function () {
+//            return Partner::where('name', 'Lazada')->first();
+//        });
+
+        $partner = Partner::where('name', 'Lazada')->first();
 
         return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
     }
@@ -111,9 +113,11 @@ class SaleController extends Controller
             return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
         });
 
-        $partner = Cache::remember('partnerGrab', 5, function () {
-            return Partner::where('name', 'Grab')->first();
-        });
+//        $partner = Cache::remember('partnerGrab', 5, function () {
+//            return Partner::where('name', 'Grab')->first();
+//        });
+
+        $partner = Partner::where('name', 'Grab')->first();
 
         return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
     }
