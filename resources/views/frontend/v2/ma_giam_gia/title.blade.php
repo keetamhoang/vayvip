@@ -1,5 +1,5 @@
 @if ($store == 'Lazada')
-    Mã giảm giá Lazada, Voucher Lazada khuyến mãi HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
+    Mã giảm giá Lazada, khuyến mãi Lazada HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Tiki')
     Mã giảm giá Tiki tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Tiki khuyến mãi 200K
 @elseif ($store == 'Shopee')

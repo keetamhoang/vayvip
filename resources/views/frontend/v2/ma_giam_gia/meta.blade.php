@@ -2,13 +2,13 @@
     <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia/ma-giam-gia-lazada">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá Lazada, Voucher Lazada khuyến mãi HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"/>
+          content="Mã giảm giá Lazada, khuyến mãi Lazada HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}"/>
     <meta property="og:description"
-          content="Tổng hợp các mã giảm giá Lazada, voucher Lazada khuyến mãi mới nhất trong tháng. Các mã giảm giá Lazada app và web được chúng tôi cập nhật liên tục hàng ngày, hàng giờ. Hiện đang có các voucher Lazada 50K, 100K, mã Lazada 10%, 20% số lượng có hạn. Nhanh tay truy cập ngay để lấy mã sử dụng kẻo hết ..."/>
+          content="Tổng hợp mã giảm giá Lazada, voucher Lazada khuyến mãi mới nhất trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}. Các mã giảm giá Lazada app và web cho khách hàng mới, khách hàng cũ được cập nhật liên tục hàng ngày, hàng giờ. Hiện đang có các mã giảm giá Lazada 50K ,100K , voucher Lazada 10%, 20% , 30% số lượng có hạn"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 
     <meta name="description"
-          content="Tổng hợp các mã giảm giá Lazada, voucher Lazada khuyến mãi mới nhất trong tháng. Các mã giảm giá Lazada app và web được chúng tôi cập nhật liên tục hàng ngày, hàng giờ. Hiện đang có các voucher Lazada 50K, 100K, mã Lazada 10%, 20% số lượng có hạn. Nhanh tay truy cập ngay để lấy mã sử dụng kẻo hết ..."/>
+          content="Tổng hợp mã giảm giá Lazada, voucher Lazada khuyến mãi mới nhất trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}. Các mã giảm giá Lazada app và web cho khách hàng mới, khách hàng cũ được cập nhật liên tục hàng ngày, hàng giờ. Hiện đang có các mã giảm giá Lazada 50K ,100K , voucher Lazada 10%, 20% , 30% số lượng có hạn"/>
     <meta name="keywords" content="mã giảm giá lazada, ma giam gia lazada, mã giảm giá lazada, mã khuyến mãi lazada, voucher lazada, mã giảm giá lazada tháng"/>
 @elseif ($store == 'Tiki')
     <meta property="og:url" content="http://taichinhsmart.vn/ma-giam-gia/ma-giam-gia-tiki">
