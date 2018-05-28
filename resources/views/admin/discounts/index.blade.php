@@ -31,6 +31,7 @@
 
                     <tr>
                         <th>#</th>
+                        <th>HOT?</th>
                         <th>Tên</th>
                         <th>Ảnh banner</th>
                         <th>Thời gian</th>
@@ -104,6 +105,7 @@
             },
             columns: [
                 {data: 'id', name: 'id'},
+                {data: 'is_hot', name: 'is_hot'},
                 {data: 'name', name: 'name'},
                 {data: 'image', name: 'image'},
                 {data: 'time', name: 'time'},

@@ -47,6 +47,15 @@ class DiscountController extends AdminController
 
                 return $text;
             })
+            ->addColumn('is_hot', function ($discount) {
+                $text = '';
+
+                if ($discount->is_hot == 1) {
+                    $text = ' <label class="label label-danger">HOT</label>';
+                }
+
+                return $text;
+            })
             ->editColumn('is_coupon', function ($discount) {
                 $text = '';
 
@@ -71,7 +80,7 @@ class DiscountController extends AdminController
 
                 return $url;
             })
-            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time', 'content'])
+            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time', 'content', 'is_hot'])
             ->make(true);
     }
 
@@ -121,7 +130,10 @@ class DiscountController extends AdminController
         $data = $request->all();
 
         try {
-            $data['end_time'] = Carbon::parse($data['end_time'])->toDateString();
+            if (!empty($data['end_time'])) {
+                $data['end_time'] = Carbon::parse($data['end_time'])->toDateString();
+            }
+
             $data['image_local'] = ($request->file('image_local') && $request->file('image_local')->isValid()) ? $this->saveImage($request->file('image_local')) : '';
             $data['root_id'] = md5(time().$data['end_time']);
             if (empty($data['aff_link'])) {
