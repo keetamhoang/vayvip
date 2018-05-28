@@ -16,6 +16,20 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="control-label col-md-2">Thẻ meta:description</label>
+                <div class="col-md-9">
+                                <textarea class="form-control" placeholder="Điền thẻ meta:description"
+                                          name="desc_meta">{{ $post->desc_meta }}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Thẻ meta:keyword</label>
+                <div class="col-md-9">
+                                <textarea class="form-control" placeholder="Điền thẻ meta:keyword"
+                                          name="keyword_meta">{{ $post->keyword_meta }}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-2 control-label">Danh mục</label>
                 <div class="col-md-6">
                     @php $parentIds = \App\Models\Category::all() @endphp

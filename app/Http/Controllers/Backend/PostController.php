@@ -16,7 +16,7 @@ class PostController extends AdminController
     }
 
     public function postAttribute(Request $request) {
-        $posts = Post::all();
+        $posts = Post::orderBy('id','desc');
 
         return $this->datatable($posts);
     }

@@ -664,6 +664,16 @@ abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body,
     font-weight: bold;
 }
 
+.newscontent .content .title-p {
+    font-size: 28px;
+    line-height: 34px;
+    color: #181818;
+    font-weight: normal;
+    display: inline-block;
+    font-family: SFD-Bold;
+    margin-top: -6px;
+}
+
 @media (max-width: 768px) {
     .bgadmtoptotal {
         padding: 34px;
