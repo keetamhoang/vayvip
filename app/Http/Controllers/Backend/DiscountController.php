@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Components\Unit;
 use App\Models\Coupon;
 use App\Models\Discount;
 use App\Models\KmProduct;
@@ -139,6 +140,8 @@ class DiscountController extends AdminController
             if (empty($data['aff_link'])) {
                 $data['aff_link'] = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
             }
+
+            $data['slug'] = Unit::create_slug($data['name']);
 
             $discount = Discount::create($data);
 

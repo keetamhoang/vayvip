@@ -451,6 +451,14 @@ footer img {
     max-width: 72%;
 }
 
+.slider-bar img {
+    width: 100%;
+}
+
+.banner-mgg {
+    display: none;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
@@ -560,5 +568,14 @@ footer img {
 
     .brand-image {
         display: none;
+    }
+
+    .banner-mgg {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .banner-mgg img {
+        width: 100%;
     }
 }

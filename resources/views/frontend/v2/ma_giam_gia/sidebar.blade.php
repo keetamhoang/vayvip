@@ -1,5 +1,11 @@
 <div class="col-sm-3">
     <div class="widget">
+        <div class="slider-bar">
+            {{--<a href="https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=https%3A%2F%2Fshopee.vn%2F&utm_medium=banner&utm_source=sidebar-taichinhsmart" target="_blank"><img src="/assets/image/ma-giam-gia-lazada.png" alt="tất cả mã giảm giá"></a>--}}
+            <a href="https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn%2Fpages%2Fi%2Fvn%2Fact%2Flp-flash-sale&aff_sub1=sidebar-taichinhsmart&aff_sub2=banner&redirect_type=mobile" target="_blank"><img src="/assets/image/banner-flash-sale.jpg" alt="flash sale không thể bỏ lỡ"></a>
+        </div>
+    </div>
+    <div class="widget">
         <!-- /widget heading -->
         <div class="widget-heading">
             <h3 class="widget-title text-dark">

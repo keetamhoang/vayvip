@@ -1,6 +1,11 @@
 User-agent: *
+Allow: /
+Allow: sitemap: https://taichinhsmart.vn/sitemap.xml
+
 Disallow: /admin*
-Disallow: ?s=*
-Disallow: ?id=*
-Disallow: ?position=*
+Disallow: /*?s=*
+Disallow: /*?id=*
+Disallow: /*&position=*
 Disallow: /index.php*
+
+Sitemap: https://taichinhsmart.vn/sitemap.xml
