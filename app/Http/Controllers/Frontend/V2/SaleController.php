@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend\V2;
 
 use App\Models\Discount;
+use App\Models\DiscountCategory;
 use App\Models\KmProduct;
 use App\Models\Partner;
 use Carbon\Carbon;
@@ -26,29 +27,58 @@ class SaleController extends Controller
         $desc = 'Thỏa sức mua sắm với những mã giảm giá lazada mới nhất, cập nhật nhiều chương trình khuyến mãi Lazada trong tháng '.Carbon::now()->format('m/Y').' giúp tiết kiệm đến 40% giá trị đơn hàng.';
         $image = '/new/assets/images/lazada1.png';
 
-        $countMost = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->count();
-        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
-        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
+        $partner = Partner::where('name', 'Lazada')->first();
 
-        $mosts = Cache::remember('mostsLazada', 5, function () {
-            return Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
-        });
+        if ($partner->type == 1) {
+            $categories = DiscountCategory::where('partner_id', $partner->id)->get();
 
-        $coupons = Cache::remember('couponsLazada', 5, function () {
-            return Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
-        });
+            $coupons = [];
 
-        $deals = Cache::remember('dealsLazada', 5, function () {
-            return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
-        });
+            $hots = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
+
+            if (count($hots) > 0) {
+                $coupons['hots'] = ['discounts' => $hots];
+            }
+
+            foreach ($categories as $category) {
+                $discounts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->where('discount_category_id', $category->id)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(10)->get();
+
+                if (count($discounts) > 0) {
+                    $coupons[$category->id] = [
+                        'cate' => $category,
+                        'discounts' => $discounts
+                    ];
+                }
+            }
+
+            $others = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->whereNull('discount_category_id')->orderBy('id', 'desc')->limit(10)->get();
+
+            $coupons['others'] = ['discounts' => $others];
+
+//            dd($coupons);
+        } else {
+            $countMost = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->count();
+            $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->count();
+            $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->count();
+
+            $mosts = Cache::remember('mostsLazada', 5, function () {
+                return Discount::VN()->where('status', 0)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+            });
+
+            $coupons = Cache::remember('couponsLazada', 5, function () {
+                return Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+            });
+
+            $deals = Cache::remember('dealsLazada', 5, function () {
+                return Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', 'lazada')->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(25)->get();
+            });
+        }
 
 //        $partner = Cache::remember('partnerLazada', 5, function () {
 //            return Partner::where('name', 'Lazada')->first();
 //        });
 
-        $partner = Partner::where('name', 'Lazada')->first();
-
-        return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
+        return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner', 'categories'));
     }
 
     public function tiki() {

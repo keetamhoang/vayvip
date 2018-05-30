@@ -4,7 +4,6 @@ body {
 
 .header .top-nav {
     background: linear-gradient(to left, #33cccc, #086a87);
-    /*background: linear-gradient(to right, #29ABE2 , #54BCE8 , #7FCDEE , #A9DDF3);*/
 }
 
 .header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
@@ -457,6 +456,23 @@ footer img {
 
 .banner-mgg {
     display: none;
+}
+
+.title-discount-category {
+    background: linear-gradient(to right, #33cccc, #0a81a5);
+    border: none !important;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.new-widget {
+    margin-bottom: 10px;
 }
 
 @media (max-width: 986px) {

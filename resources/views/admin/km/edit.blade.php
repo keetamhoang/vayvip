@@ -37,6 +37,17 @@
                                           name="desc_bot">{{ $post->desc_bot }}</textarea>
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Hiển thị trang theo kiểu mới? (Phân loại theo từng danh mục)</label>
+                <div class="col-md-9">
+                    <div class="mt-checkbox-inline">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="type" value="1" @if($post->type == 1) checked @endif>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="form-actions">
             <div class="row">

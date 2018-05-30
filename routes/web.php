@@ -30,6 +30,14 @@ Route::group(['prefix' => 'admin',
         Route::get('don-vi-khuyen-mai/{id}', 'Backend\DiscountController@kmEdit');
         Route::post('don-vi-khuyen-mai/update', 'Backend\DiscountController@kmUpdate');
 
+        Route::get('don-vi-khuyen-mai/{id}/phan-loai', 'Backend\DiscountCategoryController@categories');
+        Route::get('don-vi-khuyen-mai/{id}/them', 'Backend\DiscountCategoryController@add');
+        Route::get('discount-categories/{id}', 'Backend\DiscountCategoryController@edit');
+        Route::post('don-vi-khuyen-mai/phan-loai/store', 'Backend\DiscountCategoryController@store');
+        Route::post('don-vi-khuyen-mai/phan-loai/update', 'Backend\DiscountCategoryController@update');
+        Route::post('don-vi-khuyen-mai/phan-loai/change', 'Backend\DiscountCategoryController@change');
+        Route::get('discountCategoryAttribute.data', 'Backend\DiscountCategoryController@discountCategoryAttribute');
+
         Route::get('codes', 'Backend\CodeController@codeIndex');
         Route::get('codeAttribute.data', 'Backend\CodeController@codeAttribute');
         Route::get('codes/add', 'Backend\CodeController@codeCreate');

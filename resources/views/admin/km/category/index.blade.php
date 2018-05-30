@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('content')
-    <h3 class="h3-title">Quản lý bài viết theo từng đơn vị (Lazada, Tiki, Grab, Shopee...)</h3>
+    <h3 class="h3-title">Danh sách danh mục khuyến mãi được phân loại của trang <b>{{ $partner->name }}</b></h3>
 
     @include('flash_message')
 
@@ -12,7 +12,7 @@
     </div>
 
     <div>
-        <a href="{{ url('admin/don-vi-khuyen-mai/them') }}" class="btn btn-primary">Thêm mới</a>
+        <a href="{{ url('admin/don-vi-khuyen-mai/'.$partner->id.'/them') }}" class="btn btn-primary">Thêm danh mục mới</a>
     </div>
 
     <div class="row" style="margin-top: 20px">
@@ -21,11 +21,9 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Đơn vị</th>
-                    {{--<th>Tiêu đề</th>--}}
-                    <th>Mô tả trên</th>
-                    <th>Miêu tả dưới</th>
-                    <th>Phân loại coupon</th>
+                    <th>Tiêu đề</th>
+                    <th>Mô tả</th>
+                    <th>Số coupon</th>
                     <th>Hành động</th>
                 </tr>
                 </thead>
@@ -84,18 +82,16 @@
 //            ],
             searching: false,
             ajax: {
-                url: '{{ url('admin/kmAttribute.data') }}',
+                url: '{{ url('admin/discountCategoryAttribute.data') }}',
                 data: function (d) {
-
+                    d.id = '{{ $partner->id }}'
                 }
             },
             columns: [
                 {data: 'id', name: 'id'},
-                {data: 'name', name: 'name'},
-//                {data: 'title', name: 'title'},
-                {data: 'desc_up', name: 'desc_up'},
-                {data: 'desc_bot', name: 'desc_bot'},
-                {data: 'categories', name: 'categories'},
+                {data: 'title', name: 'title'},
+                {data: 'content', name: 'content'},
+                {data: 'count_coupon', name: 'count_coupon'},
                 {data: 'action', name: 'action'},
             ],
 

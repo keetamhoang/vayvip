@@ -37,6 +37,7 @@
                         <th>Thời gian</th>
                         <th>Có Coupon?</th>
                         <th>Nguồn</th>
+                        <th>Phân danh mục</th>
                         <th>Mô tả</th>
                         <th>View Total</th>
                         <th>Hành động</th>
@@ -111,6 +112,7 @@
                 {data: 'time', name: 'time'},
                 {data: 'is_coupon', name: 'is_coupon'},
                 {data: 'merchant', name: 'merchant'},
+                {data: 'discount_category_id', name: 'discount_category_id'},
                 {data: 'content', name: 'content'},
                 {data: 'count_view', name: 'count_view'},
                 {data: 'action', name: 'action'},
@@ -186,6 +188,30 @@
                     $('#order-detail').html('');
                 }
             })
+        });
+
+        $(document).ready(function () {
+            $(document).on('change', '.phanmuc', function () {
+                var id = $(this).attr('data-id');
+                var value = $(this).val();
+
+                $.ajax({
+                    url: '{{ url('/admin/don-vi-khuyen-mai/phan-loai/change') }}',
+                    dataType: 'json',
+                    type: 'post',
+                    data : {
+                        id: id,
+                        value: value
+                    },
+                    success: function (response) {
+                        if (response.status == 1) {
+                            swal(response.message, '', 'success');
+                        } else {
+                            swal(response.message, '', 'warning');
+                        }
+                    }
+                });
+            });
         });
 
     </script>

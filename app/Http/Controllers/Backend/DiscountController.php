@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Components\Unit;
 use App\Models\Coupon;
 use App\Models\Discount;
+use App\Models\DiscountCategory;
 use App\Models\KmProduct;
 use App\Models\Partner;
 use Carbon\Carbon;
@@ -24,7 +25,7 @@ class DiscountController extends AdminController
     public function discountAttribute(Request $request) {
         $type = $request->input('type');
 
-        $discounts = Discount::orderBy('id', 'desc')->get();
+        $discounts = Discount::VN()->orderBy('id', 'desc');
 
         return $this->datatable($discounts);
     }
@@ -65,6 +66,23 @@ class DiscountController extends AdminController
                 }
 
                 return $text;
+            })->editColumn('name', function ($discount) {
+                $text = '<a href="/admin/discounts/'.$discount->id.'">'.$discount->name.'</a>';
+
+                return $text;
+            })->editColumn('discount_category_id', function ($discount) {
+                $text = '<select style="width: 200px" class="form-control phanmuc" data-id="'.$discount->id.'"><option value="">--Không--</option>';
+
+                $categories = DiscountCategory::all();
+
+                foreach ($categories as $category){
+                    $html = '<option value="'.$category->id.'" '.($discount->discount_category_id == $category->id ? 'selected' : '').'>['.$category->partner->name.'] - '.$category->title.'</option>';
+                    $text.=$html;
+                }
+
+                $text .= '</select>';
+
+                return $text;
             })
             ->editColumn('merchant', function ($discount) {
                 $text = '<a href="https://'.$discount->domain. '" target="_blank">'.$discount->merchant.'</a>';
@@ -81,7 +99,7 @@ class DiscountController extends AdminController
 
                 return $url;
             })
-            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time', 'content', 'is_hot'])
+            ->rawColumns(['action', 'merchant', 'image', 'is_coupon', 'time', 'content', 'is_hot', 'name', 'discount_category_id'])
             ->make(true);
     }
 
@@ -272,7 +290,7 @@ class DiscountController extends AdminController
     {
         return DataTables::of($posts)
             ->editColumn('desc_up', function ($brand) {
-                $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_up.'</p></div>';
+                $html = '<div style="height: 300px;width: 500px; overflow: hidden"><p>'.$brand->desc_up.'</p></div>';
 
                 return $html;
             })
@@ -281,7 +299,12 @@ class DiscountController extends AdminController
 
                 return $html;
             })->editColumn('desc_bot', function ($brand) {
-                $html = '<div style="height: 300px; overflow: hidden"><p>'.$brand->desc_bot.'</p></div>';
+                $html = '<div style="height: 300px;width: 500px; overflow: hidden"><p>'.$brand->desc_bot.'</p></div>';
+
+                return $html;
+            })->addColumn('categories', function ($brand) {
+
+                $html = '<a class="btn btn-danger" href="/admin/don-vi-khuyen-mai/'.$brand->id.'/phan-loai">Sửa</a>';
 
                 return $html;
             })
@@ -291,7 +314,7 @@ class DiscountController extends AdminController
 
                 return $url;
             })
-            ->rawColumns(['action', 'desc_up', 'desc_bot', 'name'])
+            ->rawColumns(['action', 'desc_up', 'desc_bot', 'name', 'categories'])
             ->make(true);
     }
 
@@ -328,6 +351,9 @@ class DiscountController extends AdminController
 
     public function kmUpdate(Request $request) {
         $data = $request->all();
+        if (empty($data['type'])) {
+            $data['type'] = 0;
+        }
 
         $category = Partner::find($data['id']);
 
