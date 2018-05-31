@@ -23,9 +23,15 @@ class DiscountController extends AdminController
     }
 
     public function discountAttribute(Request $request) {
-        $type = $request->input('type');
+        $merchant = $request->input('merchant');
 
-        $discounts = Discount::VN()->orderBy('id', 'desc');
+        $discounts = Discount::VN();
+
+        if (!empty($merchant)) {
+            $discounts = $discounts->where('merchant', $merchant);
+        }
+
+        $discounts = $discounts->orderBy('id', 'desc');
 
         return $this->datatable($discounts);
     }

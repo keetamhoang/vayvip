@@ -23,6 +23,7 @@ class SaleController extends Controller
 
     public function lazada() {
         $store = 'Lazada';
+        $merchant = 'lazada';
         $name = 'Mã Giảm Giá Lazada tháng '.Carbon::now()->format('m/Y') .' mới nhất, khuyến mãi Lazada cập nhật liên tục mỗi ngày';
         $desc = 'Thỏa sức mua sắm với những mã giảm giá lazada mới nhất, cập nhật nhiều chương trình khuyến mãi Lazada trong tháng '.Carbon::now()->format('m/Y').' giúp tiết kiệm đến 40% giá trị đơn hàng.';
         $image = '/new/assets/images/lazada1.png';
@@ -34,14 +35,14 @@ class SaleController extends Controller
 
             $coupons = [];
 
-            $hots = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
+            $hots = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
 
             if (count($hots) > 0) {
                 $coupons['hots'] = ['discounts' => $hots];
             }
 
             foreach ($categories as $category) {
-                $discounts = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->where('discount_category_id', $category->id)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(10)->get();
+                $discounts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('discount_category_id', $category->id)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(10)->get();
 
                 if (count($discounts) > 0) {
                     $coupons[$category->id] = [
@@ -51,7 +52,7 @@ class SaleController extends Controller
                 }
             }
 
-            $others = Discount::VN()->where('status', 0)->where('merchant', 'lazada')->whereNull('discount_category_id')->orderBy('id', 'desc')->limit(10)->get();
+            $others = Discount::VN()->where('status', 0)->where('merchant', $merchant)->whereNull('discount_category_id')->orderBy('id', 'desc')->limit(10)->get();
 
             $coupons['others'] = ['discounts' => $others];
 
@@ -107,15 +108,44 @@ class SaleController extends Controller
         $desc = 'Bạn sẽ thỏa sức mua sắm với những mã giảm giá, chương trình khuyến mãi Shopee tháng '.Carbon::now()->format('m/Y').' mới nhất';
         $image = '/new/assets/images/shopee1.jpg';
 
-        $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
-        $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
-        $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
-
-        $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-        $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
-
         $partner = Partner::where('name', 'Shopee')->first();
+
+        if ($partner->type == 1) {
+            $categories = DiscountCategory::where('partner_id', $partner->id)->get();
+
+            $coupons = [];
+
+            $hots = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
+
+            if (count($hots) > 0) {
+                $coupons['hots'] = ['discounts' => $hots];
+            }
+
+            foreach ($categories as $category) {
+                $discounts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('discount_category_id', $category->id)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(10)->get();
+
+                if (count($discounts) > 0) {
+                    $coupons[$category->id] = [
+                        'cate' => $category,
+                        'discounts' => $discounts
+                    ];
+                }
+            }
+
+            $others = Discount::VN()->where('status', 0)->where('merchant', $merchant)->whereNull('discount_category_id')->orderBy('id', 'desc')->limit(10)->get();
+
+            $coupons['others'] = ['discounts' => $others];
+
+//            dd($coupons);
+        } else {
+            $countMost = Discount::VN()->where('status', 0)->where('merchant', $merchant)->count();
+            $countCoupon = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->count();
+            $countDeal = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->count();
+
+            $mosts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+            $coupons = Discount::VN()->where('status', 0)->where('is_coupon', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+            $deals = Discount::VN()->where('status', 0)->where('is_coupon', '!=', 1)->where('merchant', $merchant)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->get();
+        }
 
         return view('frontend.v2.ma_giam_gia.store', compact('store', 'image', 'name', 'desc', 'countCoupon', 'countDeal', 'countMost', 'mosts', 'coupons', 'deals', 'partner'));
     }

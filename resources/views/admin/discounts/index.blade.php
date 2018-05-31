@@ -9,13 +9,26 @@
         @else
             Quản lý khuyến mại (Tất cả)
         @endif
-
     </h3>
 
     @include('flash_message')
 
     <div class="portlet-title">
+        <div class="row">
+            <div class="col col-lg-3">
+                @php $merchants = \App\Models\Merchant::all(); @endphp
+                <select class="form-control" id="merchant">
 
+                    <option value="">--Chọn đơn vị--</option>
+                    @foreach($merchants as $merchant)
+                        <option value="{{ $merchant->name }}">{{ $merchant->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col col-lg-3">
+                <button class="btn btn-danger" id="loc">Lọc</button>
+            </div>
+        </div>
     </div>
     <div class="portlet-body form">
     </div>
@@ -101,7 +114,7 @@
             ajax: {
                 url: '{{ url('admin/discountAttribute.data') }}',
                 data: function (d) {
-                    d.type = '{{ $type }}'
+                    d.merchant = $('#merchant').val();
                 }
             },
             columns: [
@@ -145,6 +158,10 @@
                     }
                 }
             });
+        });
+
+        $(document).on('click', '#loc', function () {
+            orderTable.ajax.reload();
         });
 
         $(document).on('click', '.delete-btn', function (e) {
