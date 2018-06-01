@@ -20,7 +20,7 @@
 
 @section('content')
     <section class="banner-mgg">
-        <a href="http://go.ecotrackings.com//?token=XXIojgGJSvKuZJFGKvUzW&url=http%3A%2F%2Fwww.lazada.vn&sub1=tachinhsmart&sub2=banner&sub3=&sub4=&network_id=lazadamobile" onclick="window.open('{{ url('ma-giam-gia/ma-giam-gia-hot') }}')" target="_self"><img src="/assets/image/ma-giam-gia-lazada.png" alt="tất cả mã giảm giá HOT"></a>
+        <a rel="nofollow" href="http://go.ecotrackings.com//?token=XXIojgGJSvKuZJFGKvUzW&url=http%3A%2F%2Fwww.lazada.vn&sub1=tachinhsmart&sub2=banner&sub3=&sub4=&network_id=lazadamobile" onclick="window.open('{{ url('ma-giam-gia/ma-giam-gia-hot') }}')" target="_self"><img src="/assets/image/ma-giam-gia-lazada.png" alt="tất cả mã giảm giá HOT"></a>
     </section>
     <section class="results m-t-30">
         <div class="row">

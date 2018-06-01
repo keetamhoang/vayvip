@@ -15,7 +15,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">{{ $coupon->coupon_save }}</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -34,7 +34,7 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title">
-                            <a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a>
+                            <a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a>
                         </p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
@@ -60,7 +60,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -77,7 +77,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">KM</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -95,7 +95,7 @@
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
                         <p class="coupon-title">
-                            <a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                            <a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -120,7 +120,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -145,7 +145,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">{{ $coupon->coupon_save }}</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -163,7 +163,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -176,7 +176,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -188,7 +188,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">KM</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -205,7 +205,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -218,7 +218,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -237,7 +237,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">{{ $coupon->coupon_save }}</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -255,7 +255,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -268,7 +268,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -280,7 +280,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">KM</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -297,7 +297,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -310,7 +310,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -330,7 +330,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">{{ $coupon->coupon_save }}</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -348,7 +348,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -361,7 +361,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">{{ $coupon->coupon_code }}</span> <span class="btn-hover">Lấy mã</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
@@ -373,7 +373,7 @@
                         <div class="savings text-center">
                             <div>
                                 <div class="large">KM</div>
-                                <div class="small"><a href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
+                                <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
                                     <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
@@ -390,7 +390,7 @@
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
                             <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
                         </ul>
-                        <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
+                        <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
                             @if (!empty($most->image))
@@ -403,7 +403,7 @@
                     </div>
                     <!-- end:Coupon cont -->
                     <div class="button-contain col-sm-3 text-center">
-                        <a class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
+                        <a rel="nofollow" class="btn-code" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self"> <span class="partial-code">Click để xem</span> <span class="btn-hover">Xem ngay</span> </a>
                         <div class="brand-image">
                             <img src="{{ $most->merchantN->image }}" alt="{{ $most->name }}">
                         </div>
