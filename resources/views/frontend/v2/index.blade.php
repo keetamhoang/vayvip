@@ -459,7 +459,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                    @php $randomKms = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(7)->get() @endphp
+                    @php $randomKms = \App\Models\Discount::VN()->where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(7)->get() @endphp
 
                     @foreach($randomKms as $randomKm)
                         <div class="media">

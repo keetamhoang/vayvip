@@ -1,6 +1,10 @@
 <?php
 namespace App\Components;
 
+use App\Models\Discount;
+use App\Models\DiscountCategory;
+use Carbon\Carbon;
+
 class Unit {
     public static function create_slug($string) {
         $search = array (
@@ -121,5 +125,47 @@ class Unit {
         }
 
         return true;
+    }
+
+    public static function convertDateFormat($original) {
+        $original = str_replace('DD', Carbon::now()->day, $original);
+        $original = str_replace('MM', Carbon::now()->month, $original);
+        $original = str_replace('YY', Carbon::now()->year, $original);
+
+        return $original;
+    }
+
+    public static function getNewDetailStore($store, $partner, $merchant) {
+        $descHot = 'Cập nhật các mã giảm giá '.$store.' tháng '.Carbon::now()->month.' cực hot dùng được cho mọi đơn hàng. Đây là những mã khuyến mãi được săn đón nhiều nhất, bởi bạn không cần quan tâm đến sản phẩm nào mới là sản phẩm được khuyến mãi. Bạn chỉ cần chọn đúng mặt hàng bạn cần mua và áp dụng mã giảm giá '.$store.' cho cả đơn hàng. Nhanh tay copy mã giảm giá '.$store.' phía dưới đi nào';
+
+        $categories = DiscountCategory::where('partner_id', $partner->id)->get();
+
+        $coupons = [];
+
+        $hots = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
+
+        if (count($hots) > 0) {
+            $coupons['hots'] = [
+                'discounts' => $hots,
+                'desc' => $descHot
+            ];
+        }
+
+        foreach ($categories as $category) {
+            $discounts = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('discount_category_id', $category->id)->orderBy('is_hot', 'desc')->orderBy('count_view', 'desc')->limit(10)->get();
+
+            if (count($discounts) > 0) {
+                $coupons[$category->id] = [
+                    'cate' => $category,
+                    'discounts' => $discounts
+                ];
+            }
+        }
+
+        $others = Discount::VN()->where('status', 0)->where('merchant', $merchant)->whereNull('discount_category_id')->orderBy('id', 'desc')->limit(10)->get();
+
+        $coupons['others'] = ['discounts' => $others];
+
+        return $coupons;
     }
 }
