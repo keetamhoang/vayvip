@@ -30,10 +30,10 @@
             <!-- Main component for a primary marketing message or call to action -->
             <div class="slide-wrap shadow">
                 <div class="main-slider">
-                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="one"> <img src="/new/assets/images/ma-giam-gia-banner-2.png" alt="Mã giảm giá HOT nhất"> </a>
-                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="two"> <img src="/new/assets/images/ma-giam-gia-banner-1.png" alt="Mã giảm giá khuyến mại HOT nhất"> </a>
-                    <a href="{{ url('vay-von/dang-ky') }}" class="item" data-hash="three"> <img src="/new/assets/images/vay-von-tin-dung-banner-2.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
-                    <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="one"> <img src="/new/assets/images/ma-giam-gia-banner-2.jpg" alt="Mã giảm giá HOT nhất"> </a>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="two"> <img src="/new/assets/images/ma-giam-gia-banner-1.jpg" alt="Mã giảm giá khuyến mại HOT nhất"> </a>
+                    <a href="{{ url('vay-von/dang-ky') }}" class="item" data-hash="three"> <img src="/new/assets/images/vay-von-tin-dung-banner-2.jpg" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
+                    <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.jpg" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
                 </div>
                 <!-- /.carosuel -->
                 <div class="carousel-tabs clearfix hidden-xs">

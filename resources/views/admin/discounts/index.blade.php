@@ -26,6 +26,16 @@
                 </select>
             </div>
             <div class="col col-lg-3">
+                @php $categories = \App\Models\DiscountCategory::all(); @endphp
+                <select class="form-control select2" id="discount-category">
+
+                    <option value="">--Chọn danh mục trong trang--</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ '['.$category->partner->name.'] - '.$category->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col col-lg-3">
                 <input class="form-control" name="code" placeholder="Tìm mã giảm giá" id="code">
             </div>
 
@@ -106,9 +116,9 @@
         var orderTable = $('#orders-table').DataTable({
             processing: true,
             bServerSide: true,
-            // "order": [[0, "desc"]],
+             "order": [[0, "desc"]],
 //            dom: 'lBfrtip',
-            "aaSorting": [],
+//            "aaSorting": [],
             // scrollX: true,
 //            stateSave: true,
 //            buttons: [
@@ -120,6 +130,7 @@
                 data: function (d) {
                     d.merchant = $('#merchant').val();
                     d.code = $('#code').val();
+                    d.category = $('#discount-category').val();
                 }
             },
             columns: [
