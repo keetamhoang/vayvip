@@ -18,7 +18,7 @@
                                 <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Coupon</div>
                                 @if (auth('admin')->check())
-                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Sửa</a></div>
+                                    <div class="type"><a href="{{ url('admin/discounts/'.$most->id) }}" target="_blank">Edit</a></div>
                                 @endif
                             </div>
                         </div>
@@ -27,11 +27,11 @@
                     <!-- end:Coupon data -->
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
-                            <li class="sale label label-pink">Mã giảm giá</li>
+                            <li class="sale label label-pink">Coupon</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title">
                             <a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a>
@@ -43,7 +43,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
@@ -76,7 +76,7 @@
                     <div class="coupon-data col-sm-2 text-center">
                         <div class="savings text-center">
                             <div>
-                                <div class="large">KM</div>
+                                <div class="large">DEAL</div>
                                 <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
@@ -89,10 +89,10 @@
                     <!-- end:Coupon data -->
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
-                            <li class="sale label label-primary">Deal khuyến mãi</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="sale label label-primary">Deal</li>
+                            <li class="popular label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title">
                             <a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
@@ -103,7 +103,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
                     {{--<li class="list-inline-item">--}}
@@ -159,9 +159,9 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Mã giảm giá</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -171,7 +171,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -187,7 +187,7 @@
                     <div class="coupon-data col-sm-2 text-center">
                         <div class="savings text-center">
                             <div>
-                                <div class="large">KM</div>
+                                <div class="large">DEAL</div>
                                 <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
@@ -200,10 +200,10 @@
                     <!-- end:Coupon data -->
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
-                            <li class="sale label label-primary">Deal khuyến mãi</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="sale label label-primary">Deal</li>
+                            <li class="popular label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -213,7 +213,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -251,9 +251,9 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Mã giảm giá</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -263,7 +263,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -279,7 +279,7 @@
                     <div class="coupon-data col-sm-2 text-center">
                         <div class="savings text-center">
                             <div>
-                                <div class="large">KM</div>
+                                <div class="large">DEAL</div>
                                 <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
@@ -292,10 +292,10 @@
                     <!-- end:Coupon data -->
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
-                            <li class="sale label label-primary">Deal khuyến mãi</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="sale label label-primary">Deal</li>
+                            <li class="popular label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -305,7 +305,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -344,9 +344,9 @@
                         <ul class="list-inline list-unstyled">
                             <li class="sale label label-pink">Mã giảm giá</li>
                             <li class="label label-info">{{ $coupon->coupon_save }}</li>
-                            <li class="label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -356,7 +356,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
@@ -372,7 +372,7 @@
                     <div class="coupon-data col-sm-2 text-center">
                         <div class="savings text-center">
                             <div>
-                                <div class="large">KM</div>
+                                <div class="large">DEAL</div>
                                 <div class="small"><a rel="nofollow" href="{{ $most->aff_link }}" target="_blank">{{ $most->merchant }}</a></div>
                                 <div class="type">Deal</div>
                                 @if (auth('admin')->check())
@@ -385,10 +385,10 @@
                     <!-- end:Coupon data -->
                     <div class="coupon-contain col-sm-7">
                         <ul class="list-inline list-unstyled">
-                            <li class="sale label label-primary">Deal khuyến mãi</li>
-                            <li class="popular label label-success">HSD: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
+                            <li class="sale label label-primary">Deal</li>
+                            <li class="popular label label-success">EXP: {{ \Carbon\Carbon::parse($most->end_time)->format('d/m/Y') }}</li>
                             <li><span class="verified  text-success"><i class="ti-face-smile"></i>Verified</span> </li>
-                            <li><span class="used-count">{{ $most->count_view }} người đã dùng</span> </li>
+                            <li><span class="used-count">{{ $most->count_view }} used</span> </li>
                         </ul>
                         <p class="coupon-title"><a rel="nofollow" href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
@@ -398,7 +398,7 @@
                                     <img src="{{ $most->image }}" alt="{{ $most->name }}">
                                 </div>
                             @endif
-                            <p class="view-detail show-more">...Xem chi tiết</p>
+                            <p class="view-detail show-more">...View detail</p>
                         </div>
                     </div>
                     <!-- end:Coupon cont -->
