@@ -38,9 +38,11 @@
                         </p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
@@ -96,9 +98,11 @@
                             <a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     {{--<ul class="coupon-details list-inline">--}}
@@ -162,9 +166,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
@@ -202,9 +208,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
@@ -250,9 +258,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
@@ -290,9 +300,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
@@ -339,9 +351,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>
@@ -379,9 +393,11 @@
                         <p class="coupon-title"><a href="{{ $most->aff_link }}" data-id="{{ $most->id }}" onclick="window.open('?id={{ $most->id }}&position=1')" target="_self">{{ $most->name }}</a></p>
                         <div class="short-desc-p">
                             {!! $most->content !!}
+                            @if (!empty($most->image))
                             <div class="detail-coupon">
                                 <img src="{{ $most->image }}" alt="{{ $most->name }}">
                             </div>
+                            @endif
                             <p class="view-detail show-more">...Xem chi tiết</p>
                         </div>
                     </div>

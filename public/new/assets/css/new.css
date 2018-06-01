@@ -483,6 +483,10 @@ footer img {
     font-size: 23px;
 }
 
+.short-desc-p img {
+    max-width: 100%;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;

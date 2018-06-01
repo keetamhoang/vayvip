@@ -207,9 +207,11 @@
                                     <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
                                     <div class="short-desc-p">
                                         {!! $code->content !!}
+                                        @if (!empty($code->image))
                                         <div class="detail-coupon">
                                             <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                         </div>
+                                        @endif
                                         <p class="view-detail show-more">...Xem chi tiết</p>
                                     </div>
                                 </div>
@@ -246,9 +248,11 @@
                                         <p class="coupon-title"><a href="{{ $code->aff_link }}" data-id="{{ $code->id }}" onclick="window.open('?id={{ $code->id }}&position=1')" target="_self">{{ $code->name }}</a></p>
                                         <div class="short-desc-p">
                                             {!! $code->content !!}
+                                            @if (!empty($code->image))
                                             <div class="detail-coupon">
                                                 <img src="{{ $code->image }}" alt="{{ $code->name }}">
                                             </div>
+                                            @endif
                                             <p class="view-detail show-more">...Xem chi tiết</p>
                                         </div>
                                     </div>

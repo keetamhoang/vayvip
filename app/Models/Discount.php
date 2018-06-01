@@ -19,7 +19,11 @@ class Discount extends Model
     {
 
         if (!empty($this->attributes['image_local'])) {
-            return $this->attributes['image_local'];
+            if ($this->attributes['image_local'] != '/assets/image/khuyenmai.png') {
+                return $this->attributes['image_local'];
+            } else {
+                return '';
+            }
         }
 
         return $this->attributes['image'];

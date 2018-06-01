@@ -387,6 +387,10 @@ class DiscountController extends AdminController
             return redirect()->back()->with('error', 'Không tồn tại');
         }
 
+        if (empty($data['is_hot'])) {
+            $data['is_hot'] = 0;
+        }
+
         try {
             $startTime = Carbon::parse($data['start_time'])->toDateString();
             $endTime = Carbon::parse($data['end_time'])->toDateString();
