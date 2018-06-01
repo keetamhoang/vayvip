@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col col-lg-3">
                 @php $merchants = \App\Models\Merchant::all(); @endphp
-                <select class="form-control" id="merchant">
+                <select class="form-control select2" id="merchant">
 
                     <option value="">--Chọn đơn vị--</option>
                     @foreach($merchants as $merchant)
@@ -26,6 +26,10 @@
                 </select>
             </div>
             <div class="col col-lg-3">
+                <input class="form-control" name="code" placeholder="Tìm mã giảm giá" id="code">
+            </div>
+
+            <div class="col col-lg-1">
                 <button class="btn btn-danger" id="loc">Lọc</button>
             </div>
         </div>
@@ -115,6 +119,7 @@
                 url: '{{ url('admin/discountAttribute.data') }}',
                 data: function (d) {
                     d.merchant = $('#merchant').val();
+                    d.code = $('#code').val();
                 }
             },
             columns: [

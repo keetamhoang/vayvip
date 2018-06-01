@@ -250,12 +250,17 @@
 <script src="/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
 <script src="/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <script src="/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 <!-- Google Code for Universal Analytics -->
 <!-- End -->
 
 <!-- Google Tag Manager -->
 <script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+
     CKEDITOR.config.filebrowserImageUploadUrl = '{!! route('uploadPhoto').'?_token='.csrf_token() !!}';
 
     $.ajaxSetup({

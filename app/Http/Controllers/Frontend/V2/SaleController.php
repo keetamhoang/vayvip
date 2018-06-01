@@ -28,6 +28,8 @@ class SaleController extends Controller
         $desc = 'Thỏa sức mua sắm với những mã giảm giá lazada mới nhất, cập nhật nhiều chương trình khuyến mãi Lazada trong tháng '.Carbon::now()->format('m/Y').' giúp tiết kiệm đến 40% giá trị đơn hàng.';
         $image = '/new/assets/images/lazada1.png';
 
+        $descHot = 'Cập nhật các mã giảm giá Lazada tháng 6 cực hot dùng được cho mọi đơn hàng. Đây là những mã khuyến mãi được săn đón nhiều nhất, bởi bạn không cần quan tâm đến sản phẩm nào mới là sản phẩm được khuyến mãi. Bạn chỉ cần chọn đúng mặt hàng bạn cần mua và áp dụng mã giảm giá Lazada cho cả đơn hàng. Nhanh tay copy mã giảm giá Lazada phía dưới đi nào';
+
         $partner = Partner::where('name', 'Lazada')->first();
 
         if ($partner->type == 1) {
@@ -38,7 +40,10 @@ class SaleController extends Controller
             $hots = Discount::VN()->where('status', 0)->where('merchant', $merchant)->where('is_hot', 1)->orderBy('count_view', 'desc')->limit(10)->get();
 
             if (count($hots) > 0) {
-                $coupons['hots'] = ['discounts' => $hots];
+                $coupons['hots'] = [
+                    'discounts' => $hots,
+                    'desc' => $descHot
+                ];
             }
 
             foreach ($categories as $category) {

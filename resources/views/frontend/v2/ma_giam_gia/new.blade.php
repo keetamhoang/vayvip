@@ -2,9 +2,9 @@
     <div class="widget new-widget">
         <!-- /widget heading -->
         <div class="widget-heading title-discount-category">
-            <h2 class="text-white text-center padding-0 margin-0">
+            <h2 class="text-white text-center padding-0 margin-0 uppercase">
                 @if ($key == 'hots')
-                    Mã giảm giá {{ $store }} HOT nhất tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
+                    MÃ GIẢM GIÁ {{ $store }} HOT NHẤT THÁNG {{ \Carbon\Carbon::now()->format('m/Y') }}
                 @elseif ($key == 'others')
                     Mã giảm giá, khuyến mãi hấp dẫn khác
                 @else
@@ -13,6 +13,11 @@
             </h2>
             <div class="clearfix"></div>
         </div>
+        @if ($key == 'hots')
+            <div class="widget-body">
+                {{ $coupon['desc'] }}
+            </div>
+        @endif
         @if (!empty($coupon['cate']->content))
             <div class="widget-body">
                 {!! $coupon['cate']->content !!}

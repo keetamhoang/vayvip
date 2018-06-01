@@ -24,14 +24,20 @@ class DiscountController extends AdminController
 
     public function discountAttribute(Request $request) {
         $merchant = $request->input('merchant');
+        $code = $request->input('code');
+        $code = trim($code);
 
-        $discounts = Discount::VN();
-
-        if (!empty($merchant)) {
-            $discounts = $discounts->where('merchant', $merchant);
+        if (!empty($code)) {
+            $discounts = Discount::join('coupons', 'coupons.discount_id', '=', 'discounts.id')->selectRaw('discounts.*')->where('coupons.coupon_code', $code);
+        } else {
+            $discounts = Discount::VN();
         }
 
-        $discounts = $discounts->orderBy('id', 'desc');
+        if (!empty($merchant)) {
+            $discounts = $discounts->where('discounts.merchant', $merchant);
+        }
+
+        $discounts = $discounts->orderBy('discounts.id', 'desc');
 
         return $this->datatable($discounts);
     }

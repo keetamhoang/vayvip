@@ -69,7 +69,7 @@
                 <label class="col-md-2 control-label">Merchant</label>
                 @php $names = \App\Models\Merchant::all(); @endphp
                 <div class="col-md-9">
-                    <select class="form-control" name="merchant">
+                    <select class="form-control select2" name="merchant">
                         <option>--- Chọn đơn vị ---</option>
                         @foreach($names as $name)
                             <option value="{{ strtolower($name->name) }}">{{ $name->name }}</option>

@@ -475,6 +475,14 @@ footer img {
     margin-bottom: 10px;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.title-discount-category h2 {
+    font-size: 23px;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
@@ -593,5 +601,9 @@ footer img {
 
     .banner-mgg img {
         width: 100%;
+    }
+
+    .title-discount-category {
+        padding: 5px !important;
     }
 }
