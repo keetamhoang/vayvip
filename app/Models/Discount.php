@@ -17,6 +17,7 @@ class Discount extends Model
 
     public function getImageAttribute()
     {
+//        return '';
 
         if (!empty($this->attributes['image_local'])) {
             if ($this->attributes['image_local'] != '/assets/image/khuyenmai.png') {
