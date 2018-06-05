@@ -465,7 +465,7 @@
                         <div class="media">
                             {{--http://placehold.it/64x64--}}
                             <div class="media-left media-middle a-image"> <a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}"
-                                                                             style="background: url({{ $randomKm->image }}) no-repeat center;"></a> </div>
+                                                                             style="background: url({{ $randomKm->imageThumb }}) no-repeat center;"></a> </div>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}">{{ $randomKm->name }}</a></h4>
                                 <div class="media-div">

@@ -17,7 +17,7 @@ class Discount extends Model
 
     public function getImageAttribute()
     {
-//        return '';
+        return '';
 
         if (!empty($this->attributes['image_local'])) {
             if ($this->attributes['image_local'] != '/assets/image/khuyenmai.png') {
@@ -29,6 +29,15 @@ class Discount extends Model
 
         return $this->attributes['image'];
 
+    }
+
+    public function getImageThumbAttribute()
+    {
+        if (!empty($this->attributes['image_local'])) {
+            return $this->attributes['image_local'];
+        }
+
+        return $this->attributes['image'];
     }
 
     public function merchant()
