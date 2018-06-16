@@ -264,3 +264,5 @@ Route::group(['prefix' => 'v2'], function () {
 });
 
 Route::get('coupons', 'Frontend\V2\HomeController@index');
+Route::get('test', 'Frontend\V2\HomeController@test');
+Route::post('test', 'Frontend\V2\HomeController@testSubmit');

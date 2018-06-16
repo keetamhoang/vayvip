@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend\V2;
 
 use App\Models\Coupon;
 use App\Models\Discount;
+use App\Models\Test;
 use Carbon\Carbon;
 use Illuminate\Filesystem\Cache;
 use Illuminate\Http\Request;
@@ -93,5 +94,22 @@ class HomeController extends Controller
         $exps = Discount::VN()->where('status', 0)->where('end_time', '>=', Carbon::now()->toDateString())->orderBy('is_hot', 'desc')->orderBy('end_time', 'asc')->orderBy('count_view', 'desc')->get();
 
         return view('frontend.v2.en.index', compact('mosts', 'coupons', 'deals', 'exps'));
+    }
+
+    public function test() {
+        return view('frontend.test');
+    }
+
+    public function testSubmit(Request $request) {
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $data = $request->all();
+
+        Test::create($data);
+
+        return response([
+            'status' => 1
+        ]);
     }
 }
