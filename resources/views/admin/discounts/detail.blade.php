@@ -27,6 +27,17 @@
         <input type="hidden" name="id" value="{{ $discount->id }}">
         <div class="form-body">
             <div class="form-group">
+                <label class="col-md-2 control-label">HOT?</label>
+                <div class="col-md-9">
+                    <div class="mt-checkbox-inline">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="is_hot" value="1" {{ $discount->is_hot == 1 ? 'checked' : '' }}>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-2 control-label">Id</label>
                 <div class="col-md-10">
                     <input type="text" name="root_id" class="form-control" placeholder="Điền email" value="{{ $discount->root_id }}" disabled>

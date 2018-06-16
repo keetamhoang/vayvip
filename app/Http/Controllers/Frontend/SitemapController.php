@@ -20,14 +20,14 @@ class SitemapController extends Controller
         $magiamgia = Discount::where('status', 0)->orderBy('created_at', 'desc')->first();
         $tintuctaichinh = Post::where('category_id', 1)->orderBy('updated_at', 'desc')->first();
         $muasamhomnay = Post::where('category_id', 2)->orderBy('updated_at', 'desc')->first();
-        $lazada = Code::where('name', 'lazada')->orderBy('id', 'desc')->first();
-        $tiki = Code::where('name', 'tiki')->orderBy('id', 'desc')->first();
-        $shopee = Code::where('name', 'shopee')->orderBy('id', 'desc')->first();
-        $grab = Code::where('name', 'grab')->orderBy('id', 'desc')->first();
-        $yes24 = Code::where('name', 'yes24')->orderBy('id', 'desc')->first();
-        $adayroi = Code::where('name', 'adayroi')->orderBy('id', 'desc')->first();
-        $lotte = Code::where('name', 'lotte')->orderBy('id', 'desc')->first();
-        $dulich = Code::where('name', 'dulich')->orderBy('id', 'desc')->first();
+        $lazada = Discount::where('merchant', 'lazada')->orderBy('id', 'desc')->first();
+        $tiki = Discount::where('merchant', 'tikivn')->orderBy('id', 'desc')->first();
+        $shopee = Discount::where('merchant', 'shopee')->orderBy('id', 'desc')->first();
+        $grab = Discount::where('merchant', 'grab')->orderBy('id', 'desc')->first();
+        $yes24 = Discount::where('merchant', 'yes24vn')->orderBy('id', 'desc')->first();
+        $adayroi = Discount::where('merchant', 'adayroi')->orderBy('id', 'desc')->first();
+        $lotte = Discount::where('merchant', 'lottevn')->orderBy('id', 'desc')->first();
+        $dulich = Discount::whereIn('merchant', ['mytourvn', 'vntrip', 'vietravel', 'bookin', 'gotadi', 'fiditour', 'ivivu', 'bestprice'])->orderBy('id', 'desc')->first();
 
         return response()->view('frontend.sitemap.trangchinh', compact('magiamgia', 'tintuctaichinh', 'muasamhomnay', 'lazada', 'tiki', 'shopee', 'grab',
             'yes24', 'adayroi', 'lotte', 'dulich'))

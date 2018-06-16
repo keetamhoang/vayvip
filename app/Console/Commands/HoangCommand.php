@@ -2,10 +2,14 @@
 
 namespace App\Console\Commands;
 
+use App\Components\Unit;
 use App\Models\Code;
 use App\Models\Discount;
 use Goutte\Client;
 use Illuminate\Console\Command;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Image;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\SitemapIndex;
 
@@ -40,69 +44,55 @@ class HoangCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(Request $request)
     {
-        $client = new Client();
-
-        // tiki chanh tuoi
-        $res = $client->request('GET', 'https://chanhtuoi.com/ma-giam-gia-tiki-khuyen-mai.html');
-
-        $res->filter('.cs-row')->each(function ($node, $i) {
-            try {
-                $a = $node->filter('.cs-row-pri .ec-code')->text();
-
-                $data['code'] = trim($a);
-            } catch (\Exception $ex) {
-                $this->line('ERROR1: '.$ex->getMessage().'|'.$i);
-            }
-
-            if (!empty($data['code'])) {
-                $checkCode = Code::where('code', $data['code'])->where('name', 'tiki')->first();
-
-                if (empty($checkCode)) {
-
+        Discount::where('status', 0)->chunk(200, function ($discounts) use ($request) {
+            foreach ($discounts as $discount) {
+                if (!empty($discount->image_local)) {
                     try {
-                        $percent = $node->filter('.cs-col-exp-1 p')->eq(1)->text();
-                        $percent = trim($percent);
-                        $percent = preg_replace("/[\n\r]/", "", $percent);
-                        $percent = str_replace('Khuyến mãi:', '', $percent);
-                        $data['percent'] = trim($percent);
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR2: '.$ex->getMessage());
-                    }
-                    try {
-                        $data['type_km'] = 'COUPON';
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR3: '.$ex->getMessage());
-                    }
+                        $file = base64_encode(file_get_contents($discount->image));
 
-                    try {
-                        $title = $node->filter('.cs-row-pri .cs-des')->text();
-                        $data['title'] = trim($title);
-                    } catch (\Exception $ex) {
-                        $this->line('ERROR4: '.$ex->getMessage());
-                    }
+                        $image = Image::make($file);
 
-                    try {
+                        $width = $image->width();
+                        $height = $image->height();
 
-                        if ($node->filter('.cs-col-exp-1')->count() > 0) {
-                            $desc = $node->filter('.cs-col-exp-1')->html();
-                            $data['desc'] = trim($desc);
+                        if ($width > 650) {
+                            $newHeight = round(650 * $height / $width);
+                            $image->resize(650, $newHeight);
                         }
 
+                        $slug = Unit::create_slug($discount->name);
+
+                        $filename = 'ma-giam-gia-' . $discount->merchant . '-' . $slug . '-' . time() . uniqid() . '.jpg';
+
+                        @unlink(public_path($discount->image_local));
+
+                        $image->save('public/uploads/' .  $filename);
+
+
+//                        $file = $discount->image;
+//
+//                        $files = file_get_contents($file);
+//
+//                        $filename = basename($file);
+//
+//                        $filename = 'ma-giam-gia-' . $discount->merchant . '-' . time() . uniqid() . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+//
+//                        Storage::disk('public')->put($filename, $files, 'public');
+
+                        $discount->update([
+                            'image_local' => '/uploads/' . $filename
+                        ]);
                     } catch (\Exception $ex) {
-                        $this->line('ERROR6: '.$ex->getMessage());
-                    }
+                        $this->line($ex->getMessage() . '|' . $ex->getLine() . '|' . $discount->id);
 
-                    if (!empty($data)) {
-                        $data['name'] = 'tiki';
-                        $data['type'] = 1; //coupon
-
-                        Code::create($data);
+                        $discount->update([
+                            'image_local' => '/assets/image/khuyenmai.png'
+                        ]);
                     }
                 }
             }
-            dd(1);
         });
     }
 }

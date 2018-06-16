@@ -1,16 +1,20 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>{{ $post->title }} | TaichinhSMART.vn</title>
+    <title>{{ $post->title }}</title>
 @endsection
 
 @section('meta')
     <meta property="og:url" content="http://taichinhsmart.vn/{{ $post->slug }}">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{ $post->title }} | TaichinhSMART.vn"/>
+    <meta property="og:title" content="{{ $post->title }}"/>
     <meta property="og:description"
-          content="{!!  !empty(trim($post->short_desc)) ? $post->short_desc : 'Tài chính thông minh trong tầm tay của bạn.'  !!}"/>
+          content="{{ !empty($post->desc_meta) ? $post->desc_meta : 'Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…' }}"/>
     <meta property="og:image" content="http://taichinhsmart.vn{{ $post->image }}"/>
+
+    <meta name="description"
+          content="{{ !empty($post->desc_meta) ? $post->desc_meta : 'Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…' }}"/>
+    <meta name="keywords" content="{{ $post->keyword_meta }}"/>
 @endsection
 
 @section('style')
@@ -43,9 +47,9 @@
                                 <div class="content" id="mainDetail">
 
 
-                                    <h1 class="title">
+                                    <p class="title title-p">
                                         {{ $post->title }}
-                                    </h1>
+                                    </p>
                                     <div class="timeandcatdetail">
                                         <span class="time">
                                         {{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i') }}

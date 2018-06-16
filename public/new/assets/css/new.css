@@ -4,7 +4,6 @@ body {
 
 .header .top-nav {
     background: linear-gradient(to left, #33cccc, #086a87);
-    /*background: linear-gradient(to right, #29ABE2 , #54BCE8 , #7FCDEE , #A9DDF3);*/
 }
 
 .header .navigation-menu, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .nav.nav-tabs, .nav.nav-tabs > li > a, .nav.tabs-vertical > li > a, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a i, .tabs-vertical > li.active > a:focus, .tabs-vertical > li.active > a:hover {
@@ -412,15 +411,99 @@ footer img {
 
 .dk-alert, .dk-alert-footer { display: none}
 
+.see-more button {
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.view-detail {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    text-align: right;
+    color: #00b8f1;
+}
+
+.view-detail:hover {
+    cursor: pointer;
+    color: #f03;
+}
+
+.detail-coupon {
+    margin-top: 10px;
+}
+
+.short-desc-p {
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.brand-image {
+    padding: 3px 10px 0;
+}
+
+.brand-image img {
+    max-width: 72%;
+}
+
+.slider-bar img {
+    width: 100%;
+}
+
+.banner-mgg {
+    display: none;
+}
+
+.title-discount-category {
+    background: linear-gradient(to right, #33cccc, #0a81a5);
+    border: none !important;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.new-widget {
+    margin-bottom: 10px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.title-discount-category h2 {
+    font-size: 23px;
+}
+
+.short-desc-p img {
+    max-width: 100%;
+}
+
 @media (max-width: 986px) {
     .navbar-nav {
         display: none;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 }
 
 @media (max-width: 1075px) {
     .navbar-custom .container {
         width: 100%;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 }
 
@@ -436,6 +519,10 @@ footer img {
     .header .top-nav .topbar-left .logo img {
         min-width: 120px;
         max-width: 120px;
+    }
+
+    .view-detail {
+        cursor: pointer;
     }
 
     .slide-wrap {
@@ -505,5 +592,22 @@ footer img {
 
     .newsletter-logo {
         display: none;
+    }
+
+    .brand-image {
+        display: none;
+    }
+
+    .banner-mgg {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .banner-mgg img {
+        width: 100%;
+    }
+
+    .title-discount-category {
+        padding: 5px !important;
     }
 }

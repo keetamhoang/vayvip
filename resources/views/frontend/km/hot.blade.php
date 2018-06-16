@@ -42,7 +42,7 @@
                                 <!-- kksr-fuel --><a href="#1" class="" style="display: block;"></a><a href="#2" class="" style="display: block;"></a><a href="#3" class="" style="display: block;"></a><a href="#4"></a><a href="#5"></a>
                             </div>
                             <!-- kksr-stars -->
-                            <div class="kksr-legend"><div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">    <div itemprop="name" class="kksr-title"></div><span itemprop="ratingValue">4.6</span> sao / <span itemprop="ratingCount">1185</span> votes    <meta itemprop="bestRating" content="5">    <meta itemprop="worstRating" content="1">    <div itemprop="itemReviewed" itemscope="" itemtype="http://schema.org/CreativeWork">    <!-- Product properties -->    </div></div></div>
+                            <div class="kksr-legend"><div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">    <div itemprop="name" class="kksr-title"></div><span itemprop="ratingValue">4.8</span> sao / <span itemprop="ratingCount">1185</span> votes    <meta itemprop="bestRating" content="5">    <meta itemprop="worstRating" content="1">    <div itemprop="itemReviewed" itemscope="" itemtype="http://schema.org/CreativeWork">    <!-- Product properties -->    </div></div></div>
                             <!-- kksr-legend -->
                         </div>
                         <!-- kk-star-ratings -->

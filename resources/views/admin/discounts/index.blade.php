@@ -9,13 +9,40 @@
         @else
             Quản lý khuyến mại (Tất cả)
         @endif
-
     </h3>
 
     @include('flash_message')
 
     <div class="portlet-title">
+        <div class="row">
+            <div class="col col-lg-3">
+                @php $merchants = \App\Models\Merchant::all(); @endphp
+                <select class="form-control select2" id="merchant">
 
+                    <option value="">--Chọn đơn vị--</option>
+                    @foreach($merchants as $merchant)
+                        <option value="{{ $merchant->name }}">{{ $merchant->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col col-lg-3">
+                @php $categories = \App\Models\DiscountCategory::all(); @endphp
+                <select class="form-control select2" id="discount-category">
+
+                    <option value="">--Chọn danh mục trong trang--</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ '['.$category->partner->name.'] - '.$category->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="col col-lg-3">
+                <input class="form-control" name="code" placeholder="Tìm mã giảm giá" id="code">
+            </div>
+
+            <div class="col col-lg-1">
+                <button class="btn btn-danger" id="loc">Lọc</button>
+            </div>
+        </div>
     </div>
     <div class="portlet-body form">
     </div>
@@ -31,11 +58,13 @@
 
                     <tr>
                         <th>#</th>
+                        <th>HOT?</th>
                         <th>Tên</th>
                         <th>Ảnh banner</th>
                         <th>Thời gian</th>
                         <th>Có Coupon?</th>
                         <th>Nguồn</th>
+                        <th>Phân danh mục</th>
                         <th>Mô tả</th>
                         <th>View Total</th>
                         <th>Hành động</th>
@@ -87,9 +116,9 @@
         var orderTable = $('#orders-table').DataTable({
             processing: true,
             bServerSide: true,
-            // "order": [[0, "desc"]],
+             "order": [[0, "desc"]],
 //            dom: 'lBfrtip',
-            "aaSorting": [],
+//            "aaSorting": [],
             // scrollX: true,
 //            stateSave: true,
 //            buttons: [
@@ -99,16 +128,20 @@
             ajax: {
                 url: '{{ url('admin/discountAttribute.data') }}',
                 data: function (d) {
-                    d.type = '{{ $type }}'
+                    d.merchant = $('#merchant').val();
+                    d.code = $('#code').val();
+                    d.category = $('#discount-category').val();
                 }
             },
             columns: [
                 {data: 'id', name: 'id'},
+                {data: 'is_hot', name: 'is_hot'},
                 {data: 'name', name: 'name'},
                 {data: 'image', name: 'image'},
                 {data: 'time', name: 'time'},
                 {data: 'is_coupon', name: 'is_coupon'},
                 {data: 'merchant', name: 'merchant'},
+                {data: 'discount_category_id', name: 'discount_category_id'},
                 {data: 'content', name: 'content'},
                 {data: 'count_view', name: 'count_view'},
                 {data: 'action', name: 'action'},
@@ -141,6 +174,10 @@
                     }
                 }
             });
+        });
+
+        $(document).on('click', '#loc', function () {
+            orderTable.ajax.reload();
         });
 
         $(document).on('click', '.delete-btn', function (e) {
@@ -184,6 +221,30 @@
                     $('#order-detail').html('');
                 }
             })
+        });
+
+        $(document).ready(function () {
+            $(document).on('change', '.phanmuc', function () {
+                var id = $(this).attr('data-id');
+                var value = $(this).val();
+
+                $.ajax({
+                    url: '{{ url('/admin/don-vi-khuyen-mai/phan-loai/change') }}',
+                    dataType: 'json',
+                    type: 'post',
+                    data : {
+                        id: id,
+                        value: value
+                    },
+                    success: function (response) {
+                        if (response.status == 1) {
+                            swal(response.message, '', 'success');
+                        } else {
+                            swal(response.message, '', 'warning');
+                        }
+                    }
+                });
+            });
         });
 
     </script>

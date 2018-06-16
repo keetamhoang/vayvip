@@ -10,5 +10,6 @@ CKEDITOR.editorConfig = function( config ) {
 	//do not add extra paragraph to html
 	config.autoParagraph = false;
 	config.allowedContent = true;
-
+    config.htmlEncodeOutput = false;
+    config.entities = false;
 };

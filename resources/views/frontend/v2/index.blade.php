@@ -1,14 +1,14 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
+    <title>Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ</title>
 @endsection
 
 @section('meta')
     <meta property="og:url" content="https://taichinhsmart.vn">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Mã giảm giá ngày {{ \Carbon\Carbon::now()->format('d/m') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
+          content="Mã giảm giá tháng {{ \Carbon\Carbon::now()->format('m/Y') }} - ma giam gia cập nhật hàng giờ - ĐỪNG BỎ LỠ"/>
     <meta property="og:description"
           content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
@@ -30,13 +30,13 @@
             <!-- Main component for a primary marketing message or call to action -->
             <div class="slide-wrap shadow">
                 <div class="main-slider">
-                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="one"> <img src="/new/assets/images/ma-giam-gia-banner-2.png" alt="Mã giảm giá HOT nhất"> </a>
-                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="two"> <img src="/new/assets/images/ma-giam-gia-banner-1.png" alt="Mã giảm giá khuyến mại HOT nhất"> </a>
-                    <a href="{{ url('vay-von/dang-ky') }}" class="item" data-hash="three"> <img src="/new/assets/images/vay-von-tin-dung-banner-2.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
-                    <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.png" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="one"> <img src="/new/assets/images/ma-giam-gia-banner-2.jpg" alt="Mã giảm giá HOT nhất"> </a>
+                    <a href="{{ url('ma-giam-gia/ma-giam-gia-hot') }}" class="item" data-hash="two"> <img src="/new/assets/images/ma-giam-gia-banner-1.jpg" alt="Mã giảm giá khuyến mại HOT nhất"> </a>
+                    <a href="{{ url('vay-von/dang-ky') }}" class="item" data-hash="three"> <img src="/new/assets/images/vay-von-tin-dung-banner-2.jpg" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
+                    <a href="{{ url('tin-dung/dang-ky') }}" class="item" data-hash="four"> <img src="/new/assets/images/the-tin-dung-banner-1.jpg" alt="Đăng ký vay vốn tín dụng NHANH"> </a>
                 </div>
                 <!-- /.carosuel -->
-                <div class="carousel-tabs clearfix">
+                <div class="carousel-tabs clearfix hidden-xs">
                     <a class="col-sm-3 tab url" href="#three">
                         <div class="media">
                             <div class="media-left media-middle"> <img src="/new/assets/images/ma-giam-gia-banner-2-small.png" alt="Mã giảm giá HOT nhất"> </div>
@@ -459,13 +459,13 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                    @php $randomKms = \App\Models\Discount::where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(7)->get() @endphp
+                    @php $randomKms = \App\Models\Discount::VN()->where('status', 0)->where('is_coupon', 0)->inRandomOrder()->limit(7)->get() @endphp
 
                     @foreach($randomKms as $randomKm)
                         <div class="media">
                             {{--http://placehold.it/64x64--}}
                             <div class="media-left media-middle a-image"> <a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}"
-                                                                             style="background: url({{ $randomKm->image }}) no-repeat center;"></a> </div>
+                                                                             style="background: url({{ $randomKm->imageThumb }}) no-repeat center;"></a> </div>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="{{ $randomKm->aff_link }}" target="_blank" title="{{ $randomKm->name }}">{{ $randomKm->name }}</a></h4>
                                 <div class="media-div">

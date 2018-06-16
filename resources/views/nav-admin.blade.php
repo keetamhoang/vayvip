@@ -142,13 +142,19 @@
             <ul class="sub-menu">
                 <li class="nav-item start">
                     <a href="{{ url('admin/discounts') }}" class="nav-link ">
-                        <span class="title">Chương trình Km</span>
+                        <span class="title">DS chương trình KM</span>
                         <span class="selected"></span>
                     </a>
                 </li>
                 <li class="nav-item start">
                     <a href="{{ url('admin/km-products') }}" class="nav-link ">
-                        <span class="title">Sản phẩm Km</span>
+                        <span class="title">DS sản phẩm KM</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item start">
+                    <a href="{{ url('admin/discounts/add') }}" class="nav-link ">
+                        <span class="title">Thêm mới Coupon</span>
                         <span class="selected"></span>
                     </a>
                 </li>
@@ -165,7 +171,7 @@
             <ul class="sub-menu">
                 <li class="nav-item start">
                     <a href="{{ url('admin/don-vi-khuyen-mai') }}" class="nav-link ">
-                        <span class="title">Danh sách</span>
+                        <span class="title">Danh sách trang</span>
                         <span class="selected"></span>
                     </a>
                 </li>
@@ -176,38 +182,38 @@
                     </a>
                 </li>
 
-                <li class="nav-item start">
-                    <a href="{{ url('admin/codes/add') }}" class="nav-link ">
-                        <span class="title">Thêm mới Coupon</span>
-                        <span class="selected"></span>
-                    </a>
-                </li>
+                {{--<li class="nav-item start">--}}
+                    {{--<a href="{{ url('admin/codes/add') }}" class="nav-link ">--}}
+                        {{--<span class="title">Thêm mới Coupon</span>--}}
+                        {{--<span class="selected"></span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
             </ul>
         </li>
 
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-gift"></i>
-                    <span class="title">Quản lý Coupon</span>
-                    <span class="selected"></span>
-                    <span class="arrow open"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item start">
-                        <a href="{{ url('admin/codes') }}" class="nav-link ">
-                            <span class="title">Danh sách</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
+            {{--<li class="nav-item">--}}
+                {{--<a href="javascript:;" class="nav-link nav-toggle">--}}
+                    {{--<i class="fa fa-gift"></i>--}}
+                    {{--<span class="title">Quản lý Coupon</span>--}}
+                    {{--<span class="selected"></span>--}}
+                    {{--<span class="arrow open"></span>--}}
+                {{--</a>--}}
+                {{--<ul class="sub-menu">--}}
+                    {{--<li class="nav-item start">--}}
+                        {{--<a href="{{ url('admin/codes') }}" class="nav-link ">--}}
+                            {{--<span class="title">Danh sách</span>--}}
+                            {{--<span class="selected"></span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
 
-                    <li class="nav-item start">
-                        <a href="{{ url('admin/codes/add') }}" class="nav-link ">
-                            <span class="title">Thêm mới Coupon</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+                    {{--<li class="nav-item start">--}}
+                        {{--<a href="{{ url('admin/codes/add') }}" class="nav-link ">--}}
+                            {{--<span class="title">Thêm mới Coupon</span>--}}
+                            {{--<span class="selected"></span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
             {{--<li class="nav-item">--}}
                 {{--<a href="javascript:;" class="nav-link nav-toggle">--}}
                     {{--<i class="fa fa-gift"></i>--}}

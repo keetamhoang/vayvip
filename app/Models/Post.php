@@ -8,12 +8,12 @@ class Post extends Model
 {
     protected $fillable = [
         'title', 'short_desc', 'content', 'form', 'category_id', 'account_id', 'status', 'type', 'is_highlight', 'image', 'slug', 'pixel', 'aff_link',
-        'is_review'
+        'is_review', 'desc_meta', 'keyword_meta'
     ];
 
     public function getSlugAttribute()
     {
-        return 'tin-tuc/' . $this->attributes['slug'].'-'.$this->attributes['id'];
+        return '/tin-tuc/' . $this->attributes['slug'].'-'.$this->attributes['id'];
     }
 
     public function account()

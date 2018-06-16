@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ session()->get('web') == 'vi' ? 'vi' : 'en' }}">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="vi" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64597649-5"></script>
     <script>
@@ -10,14 +12,15 @@
 
         gtag('config', 'UA-64597649-5');
     </script>
-
-    <meta charset="utf-8" />
+    <meta name="robots" content="index, follow, noodp">
+    <meta name='revisit-after' content='1 days' />
 
     @yield('title')
 
+    <meta property="fb:app_id" content="114309889249840">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta content="" name="description" />
-    <meta content="" name="author" />
+    {{--<meta content="" name="description" />--}}
+    {{--<meta content="" name="author" />--}}
 
     @yield('meta')
 
@@ -46,6 +49,18 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    {{--<script type="application/ld+json">--}}
+        {{--{--}}
+        {{--"@context": "http://schema.org",--}}
+        {{--"@type": "WebSite",--}}
+        {{--"@id":"#website",--}}
+        {{--"url": "https://taichinhsmart.vn",--}}
+        {{--"name": "Mã giảm giám, coupon, deal HOT hôm nay - mã giảm giá cập nhật hàng giờ - ĐỪNG BỎ LỠ",--}}
+        {{--"description": "Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…",--}}
+        {{--"sameAs" : [ "https://www.facebook.com/keetamhoang"]--}}
+        {{--}--}}
+    {{--</script>--}}
 </head>
 <body>
 <div class="site-wrapper" data-animsition-in="fade-in" data-animsition-out="fade-out">
@@ -250,6 +265,7 @@
 <script src="/new/assets/js/animsition.min.js"></script>
 <script src="/new/owl.carousel/owl.carousel.min.js"></script>
 <script src="/js/clipboard.min.js"></script>
+<script src="/js/sw.js"></script>
 <!-- Kupon js -->
 <script src="/new/assets/js/kupon.js"></script>
 
@@ -377,6 +393,23 @@
                 }
             });
         });
+
+    });
+
+    $(document).on('click', '.show-more', function (e) {
+        $(this).parent().css('overflow', 'visible');
+        $(this).parent().css('height', 'auto');
+        $(this).css('position', 'unset');
+        $(this).html('Thu gọn');
+        $(this).addClass('show-less');
+    });
+
+    $(document).on('click', '.show-less', function (e) {
+        $(this).parent().css('overflow', 'hidden');
+        $(this).parent().css('height', '20px');
+        $(this).css('position', 'absolute');
+        $(this).html('...Xem chi tiết');
+        $(this).removeClass('show-less');
     })
 </script>
 

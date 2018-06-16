@@ -8,7 +8,7 @@ class Discount extends Model
 {
     protected $fillable = [
         'aff_link', 'content', 'domain', 'end_time', 'root_id', 'image', 'link', 'merchant', 'name', 'start_time', 'status', 'type', 'merchant_id',
-        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot', 'local', 'end_time_text'
+        'slug', 'is_coupon', 'is_banner', 'count_view', 'image_local', 'is_hot', 'local', 'end_time_text', 'discount_category_id'
     ];
 
     protected $dates = [
@@ -17,13 +17,27 @@ class Discount extends Model
 
     public function getImageAttribute()
     {
+        return '';
 
+        if (!empty($this->attributes['image_local'])) {
+            if ($this->attributes['image_local'] != '/assets/image/khuyenmai.png') {
+                return $this->attributes['image_local'];
+            } else {
+                return '';
+            }
+        }
+
+        return $this->attributes['image'];
+
+    }
+
+    public function getImageThumbAttribute()
+    {
         if (!empty($this->attributes['image_local'])) {
             return $this->attributes['image_local'];
         }
 
         return $this->attributes['image'];
-
     }
 
     public function merchant()
@@ -33,7 +47,7 @@ class Discount extends Model
 
     public function merchantN()
     {
-        return $this->belongsTo('App\Models\Merchant', 'merchant_id', 'id');
+        return $this->belongsTo('App\Models\Merchant', 'merchant', 'name');
     }
 
     public function getSlugAttribute()

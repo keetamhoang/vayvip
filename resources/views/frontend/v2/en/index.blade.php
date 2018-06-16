@@ -1,27 +1,23 @@
 @extends('frontend.v2.layout')
 
 @section('title')
-    <title>Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('d/m') }} - promotions update real time - Let's shopping</title>
+    <title>Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('m/Y') }} - promotions update real time - Let's shopping</title>
 @endsection
 
 @section('meta')
     <meta property="og:url" content="https://my.nowvoucher.com">
     <meta property="og:type" content="website"/>
     <meta property="og:title"
-          content="Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('d/m') }} - promotions update real time - Let's shopping"/>
+          content="Voucher coupons offers deal HOT {{ \Carbon\Carbon::now()->format('m/Y') }} - promotions update real time - Let's shopping"/>
     <meta property="og:description"
-          content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
+          content="Shop now with the largest selection of top brands and products in the region - all in a single website! Discover new products, compare smartphone prices and products. Get the latest coupon and voucher codes for Lazada, Zalora, Qoo10, Uber, Grab Car, and more!"/>
     <meta property="og:image" content="http://taichinhsmart.vn/assets/image/khuyenmai.png"/>
 
     <meta name="description"
-          content="Tổng hợp mã giảm giá, khuyến mãi HOT từ các trang mua sắm online uy tín tại Việt Nam như Lazada, Tiki, Adayroi,... Chia sẻ kinh nghiệm mua sắm online…"/>
+          content="Shop now with the largest selection of top brands and products in the region - all in a single website! Discover new products, compare smartphone prices and products. Get the latest coupon and voucher codes for Lazada, Zalora, Qoo10, Uber, Grab Car, and more!"/>
 
     <meta name="keywords"
           content=""/>
-@endsection
-
-@section('h1_seo')
-    <h1 class="h1-seo">Tổng hợp mã giảm giá mới, khuyến mãi HOT trong tháng {{ \Carbon\Carbon::now()->format('m/Y') }}</h1>
 @endsection
 
 @section('content')

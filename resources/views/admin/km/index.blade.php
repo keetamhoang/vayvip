@@ -25,6 +25,7 @@
                     {{--<th>Tiêu đề</th>--}}
                     <th>Mô tả trên</th>
                     <th>Miêu tả dưới</th>
+                    <th>Phân loại coupon</th>
                     <th>Hành động</th>
                 </tr>
                 </thead>
@@ -94,6 +95,7 @@
 //                {data: 'title', name: 'title'},
                 {data: 'desc_up', name: 'desc_up'},
                 {data: 'desc_bot', name: 'desc_bot'},
+                {data: 'categories', name: 'categories'},
                 {data: 'action', name: 'action'},
             ],
 

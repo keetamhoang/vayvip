@@ -75,11 +75,10 @@
                 <div class="hero intro1 text-center vay-vip-xe-may">
                     <img src="/assets/image/vay-vip-logo.png">
                     <div class="vay-vip-col ">
-                        <div class="col-md-4 phe-duyet vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Đã vay nơi khác vẫn có thể được hỗ trợ</div>
-                        <div class="col-md-4 col-4-width vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Tư vấn ngay trong 24h</div>
-                        <div class="col-md-4 col-4-width    vay-vip-content khong-tham-dinh"><img class="ul-icon"
-                                                                                                  src="/assets/image/ul-icon.png"> Hồ sơ thủ tục đơn giản
-                        </div>
+                        <div class="col-md-4 phe-duyet vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Không cần thế chấp bất cứ tài sản gì</div>
+                        <div class="col-md-4 col-4-width vay-vip-content"><img class="ul-icon" src="/assets/image/ul-icon.png"> Nhận tiền về ngay trong 24h</div>
+                        <div class="col-md-4 col-4-width  vay-vip-content khong-tham-dinh"><img class="ul-icon"
+                                                                                                  src="/assets/image/ul-icon.png"> Hồ sơ đơn giản chỉ cần CMND</div>
 
                     </div>
 
@@ -99,31 +98,31 @@
                             {{--</div>--}}
                         {{--</div>--}}
                         <div class="row">
-                            <div class="col-md-4 col">
+                            <div class="col-md-4 col-md-offset-2 col">
                                 <div class="inputt input_change">
                                     <span class="message_icon"><img src="/assets/image/icon_name.png"></span>
                                     <input type="text" required="" placeholder="Họ và tên" id="top-name"
                                            class="form-control name" name="name">
                                 </div>
                             </div>
-                            <div class="col-md-4 col">
+                            <div class="col-md-4 col-md-offset-0 col">
                                 <div class="inputt input_change">
                                     <span class="message_icon"><span class="message_icon"><img src="/assets/image/icon_phone.png"></span></span>
                                     <input type="text" required="" placeholder="Số điện thoại " id="top-phone"
                                            class="form-control phone" name="phone">
                                 </div>
                             </div>
-                            <div class="col-md-4 col">
-                                <div class="inputt input_change">
-                                    <span class="message_icon"><span class="message_icon"><img src="/assets/image/money.png"></span></span>
-                                    <input type="text" required="" placeholder="Số tiền muốn vay " id="top-email"
-                                           class="form-control phone" name="email">
-                                </div>
-                            </div>
+                            {{--<div class="col-md-4 col">--}}
+                                {{--<div class="inputt input_change">--}}
+                                    {{--<span class="message_icon"><span class="message_icon"><img src="/assets/image/money.png"></span></span>--}}
+                                    {{--<input type="text" required="" placeholder="Số tiền muốn vay " id="top-email"--}}
+                                           {{--class="form-control phone" name="email">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <div class="col-md-4 col-md-offset-4 col">
                                 <div class="sunmite_button">
                                     {{--<button name="ok" type="submit" id="dang-ky-btn"><i class="fa fa-hand-point-right"></i> Đăng ký khoản vay ngay</button>--}}
-                                    <a href="#" id="dangkyngay"><img src="/assets/image/dangkyngay.png"></a>
+                                    <a href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com" id="dangkyngay"><img src="/assets/image/dangkyngay.png"></a>
                                 </div>
                             </div>
                         </div>
@@ -140,72 +139,72 @@
     </div>
     <!-- HOME SLIDER -->
     <!-- about  area -->
-    <div class="about_area" id="khoan-vay" style="padding-bottom:0px">
-        <div class="container">
+    <div class="about_area" id="khoan-vay" style="padding:0px;">
+        {{--<div class="container">--}}
 
-            <div class="row">
-                <!--section title-->
-                <div class="col-md-12">
-                    <div class="section_title">
-                        <h2 class="title">Bạn muốn vay bao nhiêu?</h2>
-                        <!--span class="title-border"></span-->
-                        <div class="title-border-img"><img src="/assets/image/title-border.png"></div>
+            {{--<div class="row">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-12">--}}
+                    {{--<div class="section_title">--}}
+                        {{--<h2 class="title">Bạn muốn vay bao nhiêu?</h2>--}}
+                        {{--<!--span class="title-border"></span-->--}}
+                        {{--<div class="title-border-img"><img src="/assets/image/title-border.png"></div>--}}
 
-                    </div>
-                </div>
-                <!--end section title-->
-            </div>
-            <div class="text-center">Dùng chuột để chọn khoản vay và thời hạn vay</div>
-            <div class="row main_slider">
-                <!--section title-->
-                <div class="col-md-2 col-md-offset-1">
-                    <label>SỐ TIỀN VAY</label>
-
-
-                </div>
-                <div class="col-md-8">
-                    <input class="loan_slider" id="so_tien_vay" type="text" name="so_tien_vay" data-provide="slider"
-                           data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="20"
-                           data-slider-tooltip="hide" style="display: none;" data-value="20" value="20">
-                </div>
-
-            </div>
-            <div class="row main_slider">
-                <!--section title-->
-                <div class="col-md-2 col-md-offset-1">
-                    <label>KỲ HẠN VAY</label>
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!--end section title-->--}}
+            {{--</div>--}}
+            {{--<div class="text-center">Dùng chuột để chọn khoản vay và thời hạn vay</div>--}}
+            {{--<div class="row main_slider">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-2 col-md-offset-1">--}}
+                    {{--<label>SỐ TIỀN VAY</label>--}}
 
 
-                </div>
-                <div class="col-md-8">
-                    <input class="loan_slider" id="ky_han_vay" type="text" name="ky_han_vay" data-provide="slider"
-                           data-slider-min="1" data-slider-max="36" data-slider-step="1" data-slider-value="6"
-                           data-slider-tooltip="hide" style="display: none;" data-value="6" value="6">
-                </div>
+                {{--</div>--}}
+                {{--<div class="col-md-8">--}}
+                    {{--<input class="loan_slider" id="so_tien_vay" type="text" name="so_tien_vay" data-provide="slider"--}}
+                           {{--data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="20"--}}
+                           {{--data-slider-tooltip="hide" style="display: none;" data-value="20" value="20">--}}
+                {{--</div>--}}
 
-            </div>
-            <div class="row main_slider so_tien">
-                <!--section title-->
-                <div class="col-md-4 col-md-offset-1">
-                    <label>SỐ TIỀN CẦN TRẢ HÀNG THÁNG</label>
-
-
-                </div>
-                <div class="col-md-3 so_tien_container">
-                    <label id="so_tien_hang_thang"> 3.490.606</label><span> đồng<sup><i>(*)</i></sup></span>
-                    <span class="tham_khao"> (*) Thông tin trên chỉ mang tính chất tham khảo</span>
-                </div>
-                <div class="col-md-3">
-                    <div class="sunmite_button">
-                        <a href="#vay-ngay"
-                           class="button">NHẬN NGAY KHOẢN VAY</a>
-                    </div>
-                </div>
-
-            </div>
+            {{--</div>--}}
+            {{--<div class="row main_slider">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-2 col-md-offset-1">--}}
+                    {{--<label>KỲ HẠN VAY</label>--}}
 
 
-        </div>
+                {{--</div>--}}
+                {{--<div class="col-md-8">--}}
+                    {{--<input class="loan_slider" id="ky_han_vay" type="text" name="ky_han_vay" data-provide="slider"--}}
+                           {{--data-slider-min="1" data-slider-max="36" data-slider-step="1" data-slider-value="6"--}}
+                           {{--data-slider-tooltip="hide" style="display: none;" data-value="6" value="6">--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
+            {{--<div class="row main_slider so_tien">--}}
+                {{--<!--section title-->--}}
+                {{--<div class="col-md-4 col-md-offset-1">--}}
+                    {{--<label>SỐ TIỀN CẦN TRẢ HÀNG THÁNG</label>--}}
+
+
+                {{--</div>--}}
+                {{--<div class="col-md-3 so_tien_container">--}}
+                    {{--<label id="so_tien_hang_thang"> 3.490.606</label><span> đồng<sup><i>(*)</i></sup></span>--}}
+                    {{--<span class="tham_khao"> (*) Thông tin trên chỉ mang tính chất tham khảo</span>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-3">--}}
+                    {{--<div class="sunmite_button">--}}
+                        {{--<a href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com"--}}
+                           {{--class="button">ĐĂNG KÝ VAY NGAY</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
+
+
+        {{--</div>--}}
         <div class="features">
             <div class="container">
                 <div class="row">
@@ -222,7 +221,7 @@
                         <div class="icon"><img src="/assets/image/icon2.png"></div>
                         <div class="about_content">
                             <!--h2><span>Thủ tục đơn giản</span></h2-->
-                            <p>Thủ tục, chứng từ cực kỳ đơn giản</p>
+                            <p>Thủ tục cực kì đơn giản chỉ cần số CMND</p>
                         </div>
                     </div>
                     <!--single Item-->
@@ -230,7 +229,7 @@
                         <div class="icon"><img src="/assets/image/icon3.png"></div>
                         <div class="about_content">
                             <!--h2><span>Simple Documents</span></h2-->
-                            <p>Phê duyệt và nhận tiền nhanh chóng, giải quyết nhu cầu cần tiền nhanh của bạn</p>
+                            <p>Điền chính xác thông tin chắc chắn được phê duyệt vay</p>
                         </div>
                     </div>
                     <!--single Item-->
@@ -238,7 +237,7 @@
                         <div class="icon"><img src="/assets/image/icon4.png"></div>
                         <div class="about_content">
                             <!--h2><span>Up to 500 million</span></h2-->
-                            <p>Số tiền vay lên đến 500 triệu, đáp ứng đầy đủ nhu cầu vay tiêu dùng</p>
+                            <p>Và tuyệt nhất, nhận tiền ngay trong ngày !!!</p>
                         </div>
                     </div>
                     <!-- end single Item-->
@@ -255,7 +254,7 @@
                 <!--section title-->
                 <div class="col-md-12">
                     <div class="section_title">
-                        <h2 class="title">Các gói vay tiêu dùng từ tài chính smart</h2>
+                        <h2 class="title">gói vay tiêu dùng từ tài chính smart</h2>
                         <!--span class="title-border"></span-->
                         <div class="title-border-img"><img src="/assets/image/title-border.png"></div>
                     </div>
@@ -265,25 +264,23 @@
             <div class="row">
                 <div class="pricing-container">
                     <!--single Pricing Table-->
-                    <div class="col-md-3 pd">
+                    <div class="col-md-5 pd col-md-offset-1">
                         <div class="pricing">
                             <div class="pricing_content">
                                 <div class="single_pricint">
                                     <div class="prising_top">
-                                        <h2>KH có thu nhập từ lương</h2>
+                                        <h2>Điều kiện để vay</h2>
                                     </div>
                                     <div class="prising_middle">
-                                        <p>
-                                            Khách hàng đang công tác tại các doanh nghiệp, nhận lương bằng tiền mặt hoặc
-                                            chuyển khoản. <br>
+                                        <p>Hoàn thành đầy đủ thông tin để nhận phê duyệt tự động, tiền về tài khoản ngay trong 24h<br>
                                         </p>
                                         <ul>
                                             <br>
                                             <br>
-                                            <li class="no-border"><b>Hồ sơ yêu cầu:</b></li>
-                                            <li>Bản sao CMND/ Hộ chiếu/Thẻ căn cước</li>
-                                            <li>Chứng từ chứng minh nơi ở hiện tại</li>
-                                            <li>Hồ sơ chứng minh thu nhập và công việc</li>
+                                            <li class="no-border"><b>Điều kiện đơn giản để đăng ký:</b></li>
+                                            <li>Từ 22-60 tuổi</li>
+                                            <li>Hoàn thành đầy đủ thông tin đăng ký, thường sẽ chỉ mất 3 phút của bạn để hoàn thành việc đăng ký vay vốn</li>
+                                            <li>Lưu ý: ảnh CMT và tài khoản nhận tiền có thể gửi sau</li>
 
                                         </ul>
                                     </div>
@@ -296,25 +293,22 @@
                     </div>
 
                     <!--end  single Pricing Table-->
-                    <div class="col-md-3 pd">
+                    <div class="col-md-5 pd col-md-offset-0">
                         <div class="pricing">
                             <div class="pricing_content">
                                 <div class="single_pricint">
                                     <div class="prising_top">
-                                        <h2>KH là các cá nhân kinh doanh</h2>
+                                        <h2>Khoản vay nhanh chóng, bảo mật</h2>
                                     </div>
                                     <div class="prising_middle">
-                                        <p>
-                                            Khách hàng là các cá nhân kinh doanh tại chợ hoặc các tuyến phố hoặc làng
-                                            nghề<br><br>
+                                        <p>Nếu bạn cần một khoản vay vốn gấp để tiêu dùng, đừng nên bỏ qua hình thức vay tiện lời này<br><br>
                                         </p>
                                         <ul>
                                             <br>
-                                            <br>
-                                            <li class="no-border"><b>Hồ sơ yêu cầu:</b></li>
-                                            <li>Bản sao CMND/Hộ chiếu/Thẻ căn cước</li>
-                                            <li>Chứng từ chứng minh nơi ở hiện tại</li>
-                                            <li>HS chứng minh thu nhập &amp; kinh doanh</li>
+                                            <li class="no-border"><b>Quyền lợi của người vay:</b></li>
+                                            <li>Nhận khoản vay ngay trong ngày</li>
+                                            <li>Sau khi thanh toán lần vay đầu, từ lần 2 chỉ cần đăng ký vay, tiền sẽ về tài khoản ngay lập tức</li>
+                                            <li>Bảo mật 100%, không làm phiền xác nhận người thân</li>
 
 
                                         </ul>
@@ -328,75 +322,75 @@
                     </div>
                     <!--end  single Pricing Table-->
 
-                    <div class="col-md-3 pd">
-                        <div class="pricing">
-                            <div class="pricing_content">
-                                <div class="single_pricint">
-                                    <div class="prising_top">
-                                        <h2>KH công tác tại trường học,<br> bệnh viện</h2>
-                                    </div>
-                                    <div class="prising_middle">
-                                        <p>
-                                            Khách hàng là giáo viên công tác tại trường mầm non đến đại học. Khách hàng là
-                                            bác sĩ, y tá, điều dưỡng…và các vị trí khác đang công tác tại bệnh viện, cơ sở y
-                                            tế.
-                                        </p>
-                                        <ul>
-                                            <li class="no-border"><b>Hồ sơ yêu cầu:</b></li>
-                                            <li>Bản sao CMND/Hộ chiếu/Thẻ căn cước</li>
-                                            <li>Hồ sơ chứng minh thu nhập và môn học giảng dạy.</li>
+                    {{--<div class="col-md-3 pd">--}}
+                        {{--<div class="pricing">--}}
+                            {{--<div class="pricing_content">--}}
+                                {{--<div class="single_pricint">--}}
+                                    {{--<div class="prising_top">--}}
+                                        {{--<h2>KH công tác tại trường học,<br> bệnh viện</h2>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="prising_middle">--}}
+                                        {{--<p>--}}
+                                            {{--Khách hàng là giáo viên công tác tại trường mầm non đến đại học. Khách hàng là--}}
+                                            {{--bác sĩ, y tá, điều dưỡng…và các vị trí khác đang công tác tại bệnh viện, cơ sở y--}}
+                                            {{--tế.--}}
+                                        {{--</p>--}}
+                                        {{--<ul>--}}
+                                            {{--<li class="no-border"><b>Hồ sơ yêu cầu:</b></li>--}}
+                                            {{--<li>Bản sao CMND/Hộ chiếu/Thẻ căn cước</li>--}}
+                                            {{--<li>Hồ sơ chứng minh thu nhập và môn học giảng dạy.</li>--}}
 
-                                            <li class="hol"></li>
+                                            {{--<li class="hol"></li>--}}
 
-                                        </ul>
-                                    </div>
-                                    <div class="prising_bottom">
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="prising_bottom">--}}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end  single Pricing Table-->
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--end  single Pricing Table-->--}}
 
-                    <div class="col-md-3 pd">
-                        <div class="pricing">
-                            <div class="pricing_content">
-                                <div class="single_pricint">
-                                    <div class="prising_top">
-                                        <h2>KH thuộc các đối tượng khác</h2>
-                                    </div>
-                                    <div class="prising_middle">
-                                        <p>
-                                            Khách hàng không có chứng minh thu nhập: học sinh, sinh viên, người nội trợ,…<br><br>
-                                        </p>
-                                        <ul>
-                                            <br>
-                                            <br>
-                                            <li class="no-border"><b>Hồ sơ yêu cầu:</b></li>
-                                            <li>Bản sao CMND/Hộ chiếu/Thẻ căn cước</li>
-                                            <li>Chứng từ chứng minh nơi ở hiện tại (giấy tạm trú tạm vắng,...)</li>
-                                            <li class="hol"></li>
+                    {{--<div class="col-md-3 pd">--}}
+                        {{--<div class="pricing">--}}
+                            {{--<div class="pricing_content">--}}
+                                {{--<div class="single_pricint">--}}
+                                    {{--<div class="prising_top">--}}
+                                        {{--<h2>KH thuộc các đối tượng khác</h2>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="prising_middle">--}}
+                                        {{--<p>--}}
+                                            {{--Khách hàng không có chứng minh thu nhập: học sinh, sinh viên, người nội trợ,…<br><br>--}}
+                                        {{--</p>--}}
+                                        {{--<ul>--}}
+                                            {{--<br>--}}
+                                            {{--<br>--}}
+                                            {{--<li class="no-border"><b>Hồ sơ yêu cầu:</b></li>--}}
+                                            {{--<li>Bản sao CMND/Hộ chiếu/Thẻ căn cước</li>--}}
+                                            {{--<li>Chứng từ chứng minh nơi ở hiện tại (giấy tạm trú tạm vắng,...)</li>--}}
+                                            {{--<li class="hol"></li>--}}
 
 
-                                        </ul>
-                                    </div>
-                                    <div class="prising_bottom">
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="prising_bottom">--}}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <!--single Pricing Table-->
                 </div>
             </div>
-            <p style="margin: 13px 0px 0px;">*Lưu ý: các đối tác cho vay của <a href="{{ url('/') }}">Tài chính SMART</a> có thể yêu cầu thêm một số thông tin bổ sung khi liên lạc trực tiếp nếu cần.</p>
+            <p style="margin: 13px 0px 0px;">*Lưu ý: bạn nhớ hoàn thành đầy đủ thông tin và để ý nghe điện thoại xác nhận khoản vay từ hệ thống trong vài tiếng sau đó, nếu bạn không nghe điện thoại sẽ bị ghi chú là thông tin không đúng và sẽ rất khó đăng ký về sau nhé.</p>
             <div class="row text-center action_btn_mid action_btn">
                 <div class="col-md-12">
                     <div class="sunmite_button">
-                        <a href="#vay-ngay"
-                           class="button">NHẬN NGAY KHOẢN VAY</a>
+                        <a href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com"
+                           class="button">ĐĂNG KÝ VAY NGAY</a>
                     </div>
                 </div>
             </div>
@@ -467,48 +461,48 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" id="headingThree1">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-                                       href="{{ url('/') }}#collapseThree1"
-                                       aria-expanded="false"><i class="fa fa-check"></i>03. Tôi muốn vay tiền nhanh để mua xe máy mới tôi liên hệ tại đâu?</a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree1" class="panel-collapse collapse" aria-expanded="false">
-                                <div class="panel-body">
-                                    Quý khách để lại thông tin tại <a
-                                            href="#vay-ngay"><b>đây</b></a>
+                        {{--<div class="panel panel-default">--}}
+                            {{--<div class="panel-heading" id="headingThree1">--}}
+                                {{--<h4 class="panel-title">--}}
+                                    {{--<a class="collapsed" data-toggle="collapse" data-parent="#accordion"--}}
+                                       {{--href="{{ url('/') }}#collapseThree1"--}}
+                                       {{--aria-expanded="false"><i class="fa fa-check"></i>03. Tôi muốn vay tiền nhanh để mua xe máy mới tôi liên hệ tại đâu?</a>--}}
+                                {{--</h4>--}}
+                            {{--</div>--}}
+                            {{--<div id="collapseThree1" class="panel-collapse collapse" aria-expanded="false">--}}
+                                {{--<div class="panel-body">--}}
+                                    {{--Quý khách để lại thông tin tại <a--}}
+                                            {{--href="#vay-ngay"><b>đây</b></a>--}}
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" id="headingThree2">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-                                       href="{{ url('/') }}#collapseThree2"
-                                       aria-expanded="false"><i class="fa fa-check"></i>04. Tôi muốn vay sửa nhà nhưng không
-                                        thế chấp có được không?</a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree2" class="panel-collapse collapse" aria-expanded="false">
-                                <div class="panel-body">
-                                    Nếu bạn có thu nhập ổn định đủ để đảm bảo chi trả khoản vay, bạn hoàn toàn có thể vay tín chấp mà không cần thế chấp tài sản.
-                                </div>
-                            </div>
-                        </div>
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="panel panel-default">--}}
+                            {{--<div class="panel-heading" id="headingThree2">--}}
+                                {{--<h4 class="panel-title">--}}
+                                    {{--<a class="collapsed" data-toggle="collapse" data-parent="#accordion"--}}
+                                       {{--href="{{ url('/') }}#collapseThree2"--}}
+                                       {{--aria-expanded="false"><i class="fa fa-check"></i>04. Tôi muốn vay sửa nhà nhưng không--}}
+                                        {{--thế chấp có được không?</a>--}}
+                                {{--</h4>--}}
+                            {{--</div>--}}
+                            {{--<div id="collapseThree2" class="panel-collapse collapse" aria-expanded="false">--}}
+                                {{--<div class="panel-body">--}}
+                                    {{--Nếu bạn có thu nhập ổn định đủ để đảm bảo chi trả khoản vay, bạn hoàn toàn có thể vay tín chấp mà không cần thế chấp tài sản.--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <div class="panel panel-default">
                             <div class="panel-heading" id="headingThree3">
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree3"
-                                       aria-expanded="false"><i class="fa fa-check"></i>05. Vì sao tôi không nên vay tiền nóng bên ngoài mà nên vay tín chấp tại Tài chính SMART?</a>
+                                       aria-expanded="false"><i class="fa fa-check"></i>03. Vì sao tôi không nên vay tiền nóng bên ngoài mà nên vay tín chấp tại Tài chính SMART?</a>
                                 </h4>
                             </div>
                             <div id="collapseThree3" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
-                                    Vay tín chấp ở các đối tác của Tài chính SMART có các ưu điểm: Lãi suất thấp hơn, thủ tục hồ sơ rõ ràng, thời gian giải quyết hồ sơ vay nhanh chóng. Khách hàng không mất bất kỳ khoản phí nào khác. Và không bị rủi ro khác.
+                                    Vay tín chấp ở các đối tác của Tài chính SMART có các ưu điểm: Thủ tục hồ sơ rõ ràng, thời gian giải quyết hồ sơ vay nhanh chóng. Khách hàng không mất bất kỳ khoản phí nào khác. Và không bị rủi ro khác.
                                 </div>
                             </div>
                         </div>
@@ -517,7 +511,7 @@
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree4"
-                                       aria-expanded="false"><i class="fa fa-check"></i>06. Thủ tục vay tiêu dùng tín chấp
+                                       aria-expanded="false"><i class="fa fa-check"></i>04. Thủ tục vay tiêu dùng tín chấp
                                         có phức tạp không?</a>
                                 </h4>
                             </div>
@@ -532,7 +526,7 @@
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree5"
-                                       aria-expanded="false"><i class="fa fa-check"></i>07. Tôi muốn biết hồ sơ vay tín chấp
+                                       aria-expanded="false"><i class="fa fa-check"></i>05. Tôi muốn biết hồ sơ vay tín chấp
                                         của tôi còn bao nhiêu dư nợ, tôi phải làm sao?</a>
                                 </h4>
                             </div>
@@ -548,7 +542,7 @@
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree7"
-                                       aria-expanded="false"><i class="fa fa-check"></i>08. Khi tôi có nhu cầu cơ cấu lại khoản vay tín chấp thì có được giải quyết không?</a>
+                                       aria-expanded="false"><i class="fa fa-check"></i>06. Khi tôi có nhu cầu cơ cấu lại khoản vay tín chấp thì có được giải quyết không?</a>
                                 </h4>
                             </div>
                             <div id="collapseThree7" class="panel-collapse collapse" aria-expanded="false">
@@ -563,7 +557,7 @@
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree8"
-                                       aria-expanded="false"><i class="fa fa-check"></i>09. Khoản vay tín chấp của tôi có tự
+                                       aria-expanded="false"><i class="fa fa-check"></i>07. Khoản vay tín chấp của tôi có tự
                                         động gia hạn không (tiếp tục một kỳ hạn mới khi đến hạn)</a>
                                 </h4>
                             </div>
@@ -580,7 +574,7 @@
                                 <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                        href="{{ url('/') }}#collapseThree9"
-                                       aria-expanded="false"><i class="fa fa-check"></i>10. Tôi có được tham gia các chương trình ưu đãi mới không?</a>
+                                       aria-expanded="false"><i class="fa fa-check"></i>08. Tôi có được tham gia các chương trình ưu đãi mới không?</a>
                                 </h4>
                             </div>
                             <div id="collapseThree9" class="panel-collapse collapse" aria-expanded="false"
@@ -768,14 +762,14 @@
 
                 {{--<div class="col-md-2">--}}
                 {{--</div>--}}
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-offset-2 col">
                     <div class="inputt input_change">
                         <span class="message_icon"><img src="/assets/image/icon_name.png"></span>
                         <input type="text" required="" placeholder="Họ và tên" id="bot-name" class="form-control name"
                                name="name">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-offset-0 col">
                     <div class="inputt input_change">
                     <span class="message_icon"><span class="message_icon"><img
                                     src="/assets/image/icon_phone.png"></span></span>
@@ -783,17 +777,17 @@
                                class="form-control phone" name="phone">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="inputt input_change">
-                    <span class="message_icon"><span class="message_icon"><img
-                                    src="/assets/image/money.png"></span></span>
-                        <input type="text" required="" placeholder="Số tiền muốn vay" id="bot-email"
-                               class="form-control phone" name="email">
-                    </div>
-                </div>
+                {{--<div class="col-md-4">--}}
+                    {{--<div class="inputt input_change">--}}
+                    {{--<span class="message_icon"><span class="message_icon"><img--}}
+                                    {{--src="/assets/image/money.png"></span></span>--}}
+                        {{--<input type="text" required="" placeholder="Số tiền muốn vay" id="bot-email"--}}
+                               {{--class="form-control phone" name="email">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="col-md-4 col-md-offset-4">
                     <div class="sunmite_button">
-                        <a id="dang-ky-bot-btn" href="#"><img src="/assets/image/dangkyngay.png"></a>
+                        <a id="dang-ky-bot-btn" href="https://doctordong.vn/?utm_source=leadbit&utm_medium=cpa&utm_campaign=1847&utm_content=5AF182A67EED7B749102CF34&&aff_sub=1&host=thetopleadbit.com"><img src="/assets/image/dangkyngay.png"></a>
                     </div>
                 </div>
 
@@ -1022,26 +1016,26 @@
                 });
             });
 
-            $('#dang-ky-bot-btn').click(function (e) {
-                e.preventDefault();
+            {{--$('#dang-ky-bot-btn').click(function (e) {--}}
+                {{--e.preventDefault();--}}
 
-                var name = $('#bot-name').val();
-                var phone = $('#bot-phone').val();
-                var email = $('#bot-email').val();
+                {{--var name = $('#bot-name').val();--}}
+                {{--var phone = $('#bot-phone').val();--}}
+                {{--var email = $('#bot-email').val();--}}
 
-                if (name.trim() == '' || phone.trim() == '' || email.trim() == '') {
-                    alert('Không được để trống thông tin của bạn!');
-                    return;
-                }
+                {{--if (name.trim() == '' || phone.trim() == '' || email.trim() == '') {--}}
+                    {{--alert('Không được để trống thông tin của bạn!');--}}
+                    {{--return;--}}
+                {{--}--}}
 
-                var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                {{--var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;--}}
 
-                @if(\Session::has('vayvon'))
-                    url += '&' + '{{ \Session::get('vayvon') }}';
-                @endif
+                {{--@if(\Session::has('vayvon'))--}}
+                    {{--url += '&' + '{{ \Session::get('vayvon') }}';--}}
+                {{--@endif--}}
 
-                window.location = url;
-            });
+                {{--window.location = url;--}}
+            {{--});--}}
 
             $('#top-bank, #bot-bank').on('change', function () {
                 if (this.value == 'UNKNOWN') {
@@ -1049,25 +1043,25 @@
                 }
             });
 
-            $('#dangkyngay').click(function (e) {
-                e.preventDefault();
-                var name = $('#top-name').val().trim();
-                var phone = $('#top-phone').val().trim();
-                var email = $('#top-email').val().trim();
+            {{--$('#dangkyngay').click(function (e) {--}}
+                {{--e.preventDefault();--}}
+                {{--var name = $('#top-name').val().trim();--}}
+                {{--var phone = $('#top-phone').val().trim();--}}
+                {{--var email = $('#top-email').val().trim();--}}
 
-                if (name == '' || phone == '' || email == '') {
-                    alert('Bạn hãy điền đủ thông tin.');
-                    return;
-                }
+                {{--if (name == '' || phone == '' || email == '') {--}}
+                    {{--alert('Bạn hãy điền đủ thông tin.');--}}
+                    {{--return;--}}
+                {{--}--}}
 
-                var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;
+                {{--var url = "https://taichinhsmart.vn/vay-von/dang-ky?name=" + name + '&phone=' + phone + '&money=' + email;--}}
 
-                @if(\Session::has('vayvon'))
-                    url += '&' + '{{ \Session::get('vayvon') }}';
-                @endif
+                {{--@if(\Session::has('vayvon'))--}}
+                    {{--url += '&' + '{{ \Session::get('vayvon') }}';--}}
+                {{--@endif--}}
 
-                window.location = url;
-            });
+                {{--window.location = url;--}}
+            {{--});--}}
         });
     </script>
 

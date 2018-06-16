@@ -8,7 +8,11 @@ a, img, input {
     outline: 0;
 }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp {
+.navbar-nav a {
+    font-size: 14px;
+}
+
+abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp {
     border: 0;
     margin: 0;
     padding: 0;
@@ -658,6 +662,16 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     content: "Diễn Viên Việt Anh: ";
     color: rgb(7, 29, 197);
     font-weight: bold;
+}
+
+.newscontent .content .title-p {
+    font-size: 28px;
+    line-height: 34px;
+    color: #181818;
+    font-weight: normal;
+    display: inline-block;
+    font-family: SFD-Bold;
+    margin-top: -6px;
 }
 
 @media (max-width: 768px) {

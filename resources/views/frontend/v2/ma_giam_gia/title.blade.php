@@ -1,11 +1,11 @@
 @if ($store == 'Lazada')
-    Mã giảm giá Lazada, Voucher Lazada khuyến mãi HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
+    Mã giảm giá Lazada, khuyến mãi Lazada HOT tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Tiki')
     Mã giảm giá Tiki tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Tiki khuyến mãi 200K
 @elseif ($store == 'Shopee')
     Mã giảm giá Shopee, Voucher Shopee khuyến mãi tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Grab')
-    Xem mã khuyến mãi Grab hôm nay ngày {{ \Carbon\Carbon::now()->format('d/m/Y') }}
+    [CẬP NHẬT] Mã khuyến mãi Grab: GrabBike, GrabCar tháng {{ \Carbon\Carbon::now()->format('m/Y') }}
 @elseif ($store == 'Yes24')
     Mã giảm giá Yes24 tháng {{ \Carbon\Carbon::now()->format('m/Y') }}, Coupon Yes24 khuyến mãi mới nhất
 @elseif ($store == 'Adayroi')

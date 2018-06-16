@@ -1,3 +1,7 @@
+body {
+    padding-top: 60px;
+}
+
 .header .top-nav .my {
     background: url('/assets/image/my-bg.png') left no-repeat;
     background-size: auto 100%;
