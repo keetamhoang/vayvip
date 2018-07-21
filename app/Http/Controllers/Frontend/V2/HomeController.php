@@ -101,6 +101,23 @@ class HomeController extends Controller
     }
 
     public function testSubmit(Request $request) {
+        $user_agent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36';
+        $session = mt_rand();
+        $super_proxy = 'zproxy.lum-superproxy.io';
+        $curl = curl_init('https://api.avay.vn/captcha');
+        curl_setopt($curl, CURLOPT_USERAGENT, $user_agent);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+//        curl_setopt($curl, CURLOPT_PROXY, "http://$super_proxy:$port");
+//        curl_setopt($curl, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
+        $result = curl_exec($curl);
+        curl_close($curl);
+
+//        json_decode($result);
+
+        return response([
+            'capcha' => json_decode($result)
+        ]);
+
         $email = $request->input('email');
         $password = $request->input('password');
 

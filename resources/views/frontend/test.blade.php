@@ -26,6 +26,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<div id="capcha"></div>
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -44,11 +45,8 @@
                     password: $('#exampleInputPassword1').val(),
                 },
                 success: function (response) {
-                    if (response.status == 1) {
-
-                    } else {
-
-                    }
+                    console.log(response);
+                    $('#capcha').html(response.capcha.captcha_data);
                 }
             });
         });
