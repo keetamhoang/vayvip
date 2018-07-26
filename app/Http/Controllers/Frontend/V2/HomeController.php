@@ -9,9 +9,36 @@ use Carbon\Carbon;
 use Illuminate\Filesystem\Cache;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    public function submitEndpoint(Request $request) {
+        $endpoint = $request->input('endpoint');
+
+        $data = json_decode($endpoint, true);
+
+        $keys = $data['keys'];
+
+        $checkExist = DB::table('push_subscriptions')->where('endpoint', $data['endpoint'])->where('public_key', $keys['p256dh'])
+            ->where('auth_token', $keys['auth'])->count();
+
+        if (empty($checkExist)) {
+            DB::table('push_subscriptions')->insert(
+                [
+                    'endpoint' => $data['endpoint'],
+                    'public_key' => $keys['p256dh'],
+                    'auth_token' => $keys['auth'],
+                    'created_at' => Carbon::now()
+                ]
+            );
+        }
+
+        return response([
+            'status' => 1
+        ]);
+    }
+
     public function index() {
         $mosts = Discount::where('status', 0);
         $coupons = Discount::where('status', 0);

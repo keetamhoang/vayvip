@@ -61,6 +61,7 @@ class GetKm extends Command
         $output = json_decode($output, true);
 
         if (empty($output['message'])) {
+            $isNew = false;
 
             foreach ($output['data'] as $each) {
                 try {
@@ -101,6 +102,7 @@ class GetKm extends Command
 //                        KmCategory::where('discount_id', $checkDiscount->id)->delete();
 //                        Banner::where('discount_id', $checkDiscount->id)->delete();
                     } else {
+                        $isNew = true;
                         $checkDiscount = Discount::create($dataDiscount);
 
                         if (count($each['coupons']) > 0) {
@@ -130,6 +132,10 @@ class GetKm extends Command
                 } catch (\Exception $ex) {
                     $this->line($ex->getMessage() . '|' . $ex->getLine());
                 }
+            }
+
+            if ($isNew) {
+                Unit::sendNotiWeb();
             }
         } else {
             $this->line($output['message']);

@@ -13,9 +13,11 @@
 
     <If "%{HTTP_HOST} != 'vayvip.local'">
     <If "%{HTTP_HOST} != 'en.vayvip.local'">
+    <If "%{HTTP_HOST} != 'localhost'">
         RewriteEngine On
         RewriteCond %{HTTPS} !=on
         RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+    </If>
     </If>
     </If>
 

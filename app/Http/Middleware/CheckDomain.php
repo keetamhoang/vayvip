@@ -18,7 +18,7 @@ class CheckDomain
     {
         $domain = $request->getHost();
 
-        if ($domain == 'taichinhsmart.vn' || $domain == 'vayvip.local') {
+        if ($domain == 'taichinhsmart.vn' || $domain == 'vayvip.local' || $domain == 'localhost') {
             session()->put('web', 'vi');
         } else if ($domain == 'nowvoucher.com') {
             session()->put('web', 'sg');

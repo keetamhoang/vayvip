@@ -162,6 +162,14 @@ Route::get('tim-kiem', 'Frontend\V2\SaleController@search');
 Route::get('used', 'Frontend\HomeController@used');
 Route::get('get-detail', 'Frontend\V2\HomeController@getDetail');
 
+
+Route::post('submit-endpoint', 'Frontend\V2\HomeController@submitEndpoint');
+
+// Push Subscriptions
+Route::post('subscriptions', 'Frontend\V2\PushSubscriptionController@update');
+Route::post('subscriptions/delete', 'Frontend\V2\PushSubscriptionController@destroy');
+
+
 Route::group(['prefix' => 'ma-giam-gia'], function () {
     Route::get('/', 'Frontend\V2\SaleController@index');
     Route::get('load-more', 'Frontend\SaleController@loadMore');

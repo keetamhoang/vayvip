@@ -265,7 +265,7 @@
 <script src="/new/assets/js/animsition.min.js"></script>
 <script src="/new/owl.carousel/owl.carousel.min.js"></script>
 <script src="/js/clipboard.min.js"></script>
-<script src="/js/sw.js"></script>
+<script src="/main.js"></script>
 <!-- Kupon js -->
 <script src="/new/assets/js/kupon.js"></script>
 

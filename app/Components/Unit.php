@@ -3,8 +3,12 @@ namespace App\Components;
 
 use App\Models\Discount;
 use App\Models\DiscountCategory;
+use App\Models\PushSubscrtiption;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Minishlink\WebPush\Subscription;
+use Minishlink\WebPush\WebPush;
 
 class Unit {
     public static function create_slug($string) {
@@ -176,5 +180,37 @@ class Unit {
         });
 
         return $coupons;
+    }
+
+    public static function sendNotiWeb() {
+        $auth = array(
+            'VAPID' => array(
+                'subject' => 'https://github.com/Minishlink/web-push-php-example/',
+                'publicKey' => env('VAPID_PUBLIC_KEY'),
+                'privateKey' => env('VAPID_PRIVATE_KEY')
+            ),
+        );
+
+        $webPush = new WebPush($auth);
+
+        PushSubscrtiption::chunk(100, function ($endpoints) use ($webPush) {
+            foreach ($endpoints as $e) {
+                $notification = [
+                    'subscription' => Subscription::create([
+                        'endpoint' => $e->endpoint,
+                        'publicKey' => $e->public_key,
+                        'authToken' => $e->auth_token,
+                    ]),
+                    'payload' => 'hello !',
+                ];
+
+                $webPush->sendNotification(
+                    $notification['subscription'],
+                    $notification['payload'] // optional (defaults null)
+                );
+            }
+        });
+
+        $webPush->flush();
     }
 }
