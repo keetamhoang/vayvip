@@ -14,6 +14,7 @@ use App\Console\Commands\GetKmMasOffer;
 use App\Console\Commands\GetKmProduct;
 use App\Console\Commands\HoangCommand;
 use App\Console\Commands\LazadaEco;
+use App\Console\Commands\SendNoti;
 use App\Console\Commands\UpdateExpireKm;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -38,7 +39,8 @@ class Kernel extends ConsoleKernel
         CrawlerChanhTuoi::class,
         CrawlerMaGiamGia::class,
         GetKmMasOffer::class,
-        LazadaEco::class
+        LazadaEco::class,
+        SendNoti::class
     ];
 
     /**
@@ -64,6 +66,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('download:image')
             ->hourly()->withoutOverlapping()->appendOutputTo(storage_path('download_image_cron.log'));
+
+        $schedule->command('send:noti')
+            ->cron('0 */4 * * *')->withoutOverlapping()->appendOutputTo(storage_path('send_noti_cron.log'));
 
         $schedule->command('update:expire-km')
             ->at('01:00')->withoutOverlapping()->appendOutputTo(storage_path('update_expire_km_cron.log'));
