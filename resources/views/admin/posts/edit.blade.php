@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('content')
-    <h3 class="h3-title">Chỉnh sửa bài viết <a class="btn btn-primary" href="{{ url('tin-tuc').'/'.$post->slug }}"> Xem bài viết</a></h3>
+    <h3 class="h3-title">Chỉnh sửa bài viết <a class="btn btn-primary" href="{{ url($post->slug) }}"> Xem bài viết</a></h3>
 
     @include('flash_message')
 
