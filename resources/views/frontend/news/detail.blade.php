@@ -47,9 +47,9 @@
                                 <div class="content" id="mainDetail">
 
 
-                                    <p class="title title-p">
+                                    <h1 class="title title-p">
                                         {{ $post->title }}
-                                    </p>
+                                    </h1>
                                     <div class="timeandcatdetail">
                                         <span class="time">
                                         {{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i') }}
