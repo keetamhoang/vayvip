@@ -173,7 +173,7 @@ class DiscountController extends AdminController
             $data['image_local'] = ($request->file('image_local') && $request->file('image_local')->isValid()) ? $this->saveImage($request->file('image_local')) : '';
             $data['root_id'] = md5(time().$data['end_time']);
             if (empty($data['aff_link'])) {
-                $data['aff_link'] = 'https://go.masoffer.net/v1/z9nKzyD-mcvzbqvynrjfuiXJNC57n0a3hQz_GbL6QDI?url=https%3A%2F%2Fwww.lazada.vn&redirect_type=mobile';
+                $data['aff_link'] = 'https://fast.accesstrade.com.vn/deep_link/4773432748394255215?url=https%3A%2F%2Fshopee.vn%2Fflash_sale%2F';
             }
 
             $data['slug'] = Unit::create_slug($data['name']);
